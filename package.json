@@ -2,7 +2,7 @@
   "name": "scrapbox-parser",
   "version": "1.0.0",
   "description": "parse Scrapbox notation to JavaScript Object",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "jest test",
     "lint": "standard",
@@ -23,7 +23,10 @@
   },
   "homepage": "https://github.com/progfay/scrapbox-parser#readme",
   "devDependencies": {
+    "@types/node": "^12.0.8",
     "jest": "^24.8.0",
-    "standard": "^12.0.1"
-  }
+    "standard": "^12.0.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {}
 }
