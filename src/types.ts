@@ -60,7 +60,7 @@ export type TableNodeType = {
 
 export type _LineType = {
   indent: number
-  content: string
+  text: string
 }
 
 export type LineType = {
