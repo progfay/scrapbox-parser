@@ -1,3 +1,5 @@
+import { PageType, LineType } from './types'
+
 const parse = (input: string): PageType => {
   const _lines: Array<string> = input.trim().split('\n')
   const title: string = _lines.shift() || 'Untitled'
