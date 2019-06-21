@@ -1,5 +1,6 @@
 export type PathType = 'absolute' | 'relative' | 'root'
 export type DecorationType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '*' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
+export type NodeType = PlainNodeType | ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | CodeBlockNodeType | IconNodeType | QuoteNodeType | TableNodeType
 
 export type PlainNodeType = {
   type: 'plain'
@@ -37,13 +38,13 @@ export type CodeNodeType = {
 
 export type CodeBlockNodeType = {
   type: 'codeBlock'
-  fileName: 'hello.js'
-  content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
+  fileName: string
+  content: string
 }
 export type IconNodeType = {
   type: 'icon'
   pathType: PathType
-  path: '/icons/check'
+  path: string
 }
 
 export type QuoteNodeType = {
@@ -57,7 +58,10 @@ export type TableNodeType = {
   cells: Array<Array<string>>
  }
 
-export type NodeType = PlainNodeType | ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | CodeBlockNodeType | IconNodeType | QuoteNodeType | TableNodeType
+export type _LineType = {
+  indent: number
+  content: string
+}
 
 export type LineType = {
   indent: number
