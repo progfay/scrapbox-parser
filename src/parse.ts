@@ -3,7 +3,7 @@ import convertToLineComponents from './convertToLineComponents'
 import parseToLines from './parseToLines'
 
 const parse = (input: string): PageType => {
-  const lineComponents: Array<LineComponentType> = input.trim()
+  const lineComponents: Array<LineComponentType> = convertToLineComponents(input.trim())
 
   const firstLine: LineComponentType = lineComponents.shift() || { indent: 0, text: '' }
   const title: string = firstLine.text || 'Untitled'
