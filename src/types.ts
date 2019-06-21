@@ -58,7 +58,7 @@ export type TableNodeType = {
   cells: Array<Array<string>>
  }
 
-export type _LineType = {
+export type LineComponentType = {
   indent: number
   text: string
 }

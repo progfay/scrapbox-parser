@@ -1,15 +1,15 @@
-import { PlainNodeType, _LineType, LineType } from './types'
+import { PlainNodeType, LineComponentType, LineType } from './types'
 
 const createPlainNode = (text: string): PlainNodeType => ({
   type: 'plain',
   text: text.trim()
 })
 
-const parseToLines = (_lines: Array<_LineType>): Array<LineType> => {
+const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType> => {
   const lines: Array<LineType> = []
 
-  while (_lines.length > 0) {
-    const line = _lines.shift()
+  while (lineComponents.length > 0) {
+    const line = lineComponents.shift()
     if (!line) continue
     const { indent, text } = line
     lines.push(
