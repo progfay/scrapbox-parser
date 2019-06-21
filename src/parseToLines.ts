@@ -6,10 +6,21 @@ const createPlainNode = (text: string): PlainNodeType => ({
 })
 
 const parseToLines = (_lines: Array<_LineType>): Array<LineType> => {
-  return _lines.map((_line: _LineType): LineType => ({
-    indent: _line.indent,
-    nodes: [ createPlainNode(_line.content) ]
-  }))
+  const lines: Array<LineType> = []
+
+  while (_lines.length > 0) {
+    const line = _lines.shift()
+    if (!line) continue
+    const { indent, content } = line
+    lines.push(
+      {
+        indent,
+        nodes: [ createPlainNode(content) ]
+      }
+    )
+  }
+
+  return lines
 }
 
 export default parseToLines
