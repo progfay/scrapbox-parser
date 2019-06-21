@@ -1,8 +1,7 @@
+/* global describe it expect */
+
 import * as fs from 'fs'
 import parse from '../src'
-
-// const fs = require('fs')
-// const parse = require('../src')
 
 describe('parser', () => {
   it('/help/Syntax', () => {
