@@ -53,7 +53,7 @@
       }
     },
     "testMatch": [
-      "**/__tests__/*.+(ts|js)"
+      "**/__tests__/**/*.test.ts"
     ]
   }
 }
