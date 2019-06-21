@@ -4,6 +4,7 @@
   "description": "parse Scrapbox notation to JavaScript Object",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc -p ./tsconfig.json",
     "test": "jest",
     "lint": "eslint src/*",
     "lint:fix": "eslint --fix src/*"
