@@ -274,7 +274,7 @@
 		  "nodes": [
 			 {
 				"type": "plain",
-				"text": "Adding the link at the end also works, as before: "
+				"text": "Adding the link at the end also works, as before:"
 			 }
 		  ]
 	   },
@@ -824,7 +824,7 @@
 		  "nodes": [
 			 {
 				"type": "plain",
-				"text": "An example: "
+				"text": "An example:"
 			 }
 		  ]
 	   },
