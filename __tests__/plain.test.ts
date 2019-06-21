@@ -21,6 +21,22 @@ describe('plain', () => {
     ])
   })
 
+  it('Blank line', () => {
+    const input = ''
+    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    expect(parseToLines(lineComponents)).toEqual([
+      {
+        indent: 0,
+        nodes: [
+          {
+            type: 'plain',
+            text: ''
+          }
+        ]
+      }
+    ])
+  })
+
   it('Keep tail space', () => {
     const input = 'Tail space ->  '
     const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
