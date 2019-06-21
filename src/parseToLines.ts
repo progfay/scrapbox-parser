@@ -2,7 +2,7 @@ import { PlainNodeType, LineComponentType, LineType } from './types'
 
 const createPlainNode = (text: string): PlainNodeType => ({
   type: 'plain',
-  text: text.trim()
+  text: text.trimLeft()
 })
 
 const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType> => {
