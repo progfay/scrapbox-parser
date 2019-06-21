@@ -4,7 +4,9 @@
   "description": "parse Scrapbox notation to JavaScript Object",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/*",
+    "lint:fix": "eslint --fix src/*"
   },
   "repository": {
     "type": "git",
