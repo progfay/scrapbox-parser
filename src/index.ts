@@ -1,3 +1,3 @@
-import parse from './parseToLines'
+import parse from './parse'
 export default parse
 export * from './types'
