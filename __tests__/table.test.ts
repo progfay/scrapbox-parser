@@ -64,7 +64,7 @@ ${'\t'}${'\t'}${'\t'}`
     const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
-        indent: 1,
+        indent: 0,
         nodes: [
           {
             type: 'table',
@@ -82,7 +82,7 @@ ${'\t'}${'\t'}${'\t'}`
   it('Staggered table', () => {
     const input = `table:Staggered
 ${'\t'}1${'\t'}2${'\t'}3${'\t'}4
-${'\t'}1 ${'\t'}2 ${'\t'}3
+${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1
 ${'\t'}1${'\t'}2
 ${'\t'}`
@@ -99,7 +99,7 @@ ${'\t'}`
               [ '1', '2', '3' ],
               [ '1' ],
               [ '1', '2' ],
-              [ ]
+              [ '' ]
             ]
           }
         ]
@@ -109,15 +109,15 @@ ${'\t'}`
 
   it('Consecutive table', () => {
     const input = `table:hello
-  ${'\t'}1${'\t'}2${'\t'}3
-  ${'\t'}1 ${'\t'}2 ${'\t'}3
-  ${'\t'}------${'\t'}------${'\t'}------
-  ${'\t'}a${'\t'}b${'\t'}c
-  table:hello
-  ${'\t'}1${'\t'}2${'\t'}3
-  ${'\t'}1 ${'\t'}2 ${'\t'}3
-  ${'\t'}------${'\t'}------${'\t'}------
-  ${'\t'}a${'\t'}b${'\t'}c`
+${'\t'}1${'\t'}2${'\t'}3
+${'\t'}1 ${'\t'}2 ${'\t'}3
+${'\t'}------${'\t'}------${'\t'}------
+${'\t'}a${'\t'}b${'\t'}c
+table:hello
+${'\t'}1${'\t'}2${'\t'}3
+${'\t'}1 ${'\t'}2 ${'\t'}3
+${'\t'}------${'\t'}------${'\t'}------
+${'\t'}a${'\t'}b${'\t'}c`
     const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
