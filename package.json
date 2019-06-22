@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "test": "jest",
-    "lint": "eslint src/**/*",
-    "lint:fix": "eslint --fix src/**/*"
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint --fix . --ext .ts"
   },
   "repository": {
     "type": "git",
