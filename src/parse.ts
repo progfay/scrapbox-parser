@@ -1,6 +1,10 @@
-import { PageType, LineComponentType, LineType } from './types'
-import convertToLineComponents from './convertToLineComponents'
+import { LineType, LineComponentType, convertToLineComponents } from './line'
 import parseToLines from './parseToLines'
+
+type PageType = {
+  title: string
+  lines: Array<LineType>
+}
 
 const parse = (input: string): PageType => {
   const lineComponents: Array<LineComponentType> = convertToLineComponents(input.trim())

@@ -1,11 +1,6 @@
 export type PathType = 'absolute' | 'relative' | 'root'
 export type DecorationType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '*' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
-export type NodeType = PlainNodeType | ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | CodeBlockNodeType | IconNodeType | QuoteNodeType | TableNodeType
-
-export type PlainNodeType = {
-  type: 'plain'
-  text: string
-}
+export type NodeType = ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | IconNodeType | QuoteNodeType | TableNodeType
 
 export type ImageNodeType = {
   type: 'image'
@@ -36,11 +31,6 @@ export type CodeNodeType = {
   text: string
 }
 
-export type CodeBlockNodeType = {
-  type: 'codeBlock'
-  fileName: string
-  content: string
-}
 export type IconNodeType = {
   type: 'icon'
   pathType: PathType
@@ -57,18 +47,3 @@ export type TableNodeType = {
   fileName: string
   cells: Array<Array<string>>
  }
-
-export type LineComponentType = {
-  indent: number
-  text: string
-}
-
-export type LineType = {
-  indent: number
-  nodes: Array<NodeType>
-}
-
-export type PageType = {
-  title: string
-  lines: Array<LineType>
-}

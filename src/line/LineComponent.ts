@@ -1,6 +1,9 @@
-import { LineComponentType } from './types'
+export type LineComponentType = {
+  indent: number
+  text: string
+}
 
-const convertToLineComponent = (lines: string): Array<LineComponentType> => (
+export const convertToLineComponents = (lines: string): Array<LineComponentType> => (
   lines.split('\n')
     .map((line: string): LineComponentType => {
       const lineMatcher = line.match(/^\s*/)
@@ -8,5 +11,3 @@ const convertToLineComponent = (lines: string): Array<LineComponentType> => (
       return { indent, text: line }
     })
 )
-
-export default convertToLineComponent
