@@ -6,10 +6,10 @@ export type ImageNodeType = {
   type: 'image'
   src: string
   link: string
- }
+}
 
 export type LinkNodeType = {
-  type:'link'
+  type: 'link'
   pathType: PathType
   href: string
   content: string

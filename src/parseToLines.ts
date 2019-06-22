@@ -21,7 +21,7 @@ const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType>
         lines.push(
           {
             indent,
-            nodes: [ createCodeBlockNode(codeBlockLineComponents) ]
+            nodes: [createCodeBlockNode(codeBlockLineComponents)]
           }
         )
         codeBlockLineComponents = []
@@ -36,7 +36,7 @@ const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType>
         lines.push(
           {
             indent,
-            nodes: [ createTableNode(tableLineComponents) ]
+            nodes: [createTableNode(tableLineComponents)]
           }
         )
         tableLineComponents = []
@@ -56,7 +56,7 @@ const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType>
     lines.push(
       {
         indent,
-        nodes: [ createPlainNode(text) ]
+        nodes: [createPlainNode(text)]
       }
     )
   }
@@ -65,7 +65,7 @@ const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType>
     lines.push(
       {
         indent: codeBlockLineComponents[0].indent,
-        nodes: [ createCodeBlockNode(codeBlockLineComponents) ]
+        nodes: [createCodeBlockNode(codeBlockLineComponents)]
       }
     )
   }
@@ -74,7 +74,7 @@ const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType>
     lines.push(
       {
         indent: tableLineComponents[0].indent,
-        nodes: [ createTableNode(tableLineComponents) ]
+        nodes: [createTableNode(tableLineComponents)]
       }
     )
   }
