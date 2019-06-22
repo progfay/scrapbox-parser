@@ -1,13 +1,15 @@
 /* global describe it expect */
 
-import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/line/parseToLines'
+import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
+import { BlockType } from '../src/block'
+import { convertToBlocks } from '../src/parse'
 
 describe('plain', () => {
   it('Simple plain text', () => {
     const input = 'Plain text'
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -22,8 +24,9 @@ describe('plain', () => {
 
   it('Blank line', () => {
     const input = ''
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -38,8 +41,9 @@ describe('plain', () => {
 
   it('Keep tail space', () => {
     const input = 'Tail space ->  '
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [

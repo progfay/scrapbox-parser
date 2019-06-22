@@ -1,7 +1,8 @@
 /* global describe it expect */
 
-import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/line/parseToLines'
+import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
+import { BlockType } from '../src/block'
+import { convertToBlocks } from '../src/parse'
 
 describe('Code Block', () => {
   it('Simple code block', () => {
@@ -11,8 +12,9 @@ describe('Code Block', () => {
    console.log("hello")
    // You can also write comments!
  }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -33,8 +35,9 @@ describe('Code Block', () => {
     console.log("hello")
     // You can also write comments!
   }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -57,8 +60,9 @@ describe('Code Block', () => {
     // You can also write comments!
   }
  Bullet`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -103,8 +107,9 @@ code:hello.js
    console.log("hello")
    // You can also write comments!
  }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [

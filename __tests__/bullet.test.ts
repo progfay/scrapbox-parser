@@ -1,13 +1,15 @@
 /* global describe it expect */
 
-import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/line/parseToLines'
+import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
+import { BlockType } from '../src/block'
+import { convertToBlocks } from '../src/parse'
 
 describe('bullet', () => {
   it('Single-byte space indent', () => {
     const input = ' Single-byte space'
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -22,8 +24,9 @@ describe('bullet', () => {
 
   it('Double-byte space indent', () => {
     const input = '　Double-byte space'
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -39,8 +42,9 @@ describe('bullet', () => {
   it('Tab indent', () => {
     // eslint-disable-next-line no-tabs
     const input = '	Tab'
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -54,14 +58,13 @@ describe('bullet', () => {
   })
 
   it('Multi lines bullet', () => {
-    const input = `
-no bullet (indent: 0)
+    const input = `no bullet (indent: 0)
  first bullet (indent: 1)
   second bullet (indent: 2)
-   third bullet (indent: 3)
-`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input.trim())
-    expect(parseToLines(lineComponents)).toEqual([
+   third bullet (indent: 3)`
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [

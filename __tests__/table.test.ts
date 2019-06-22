@@ -1,8 +1,9 @@
 /* global describe it expect */
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
-import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/line/parseToLines'
+import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
+import { BlockType } from '../src/block'
+import { convertToBlocks } from '../src/parse'
 
 describe('Table', () => {
   it('Simple table', () => {
@@ -11,8 +12,9 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
 ${'\t'}a${'\t'}b${'\t'}c`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -37,8 +39,9 @@ ${'\t'}a${'\t'}b${'\t'}c`
  ${'\t'}1 ${'\t'}2 ${'\t'}3
  ${'\t'}------${'\t'}------${'\t'}------
  ${'\t'}a${'\t'}b${'\t'}c`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 1,
         nodes: [
@@ -58,11 +61,12 @@ ${'\t'}a${'\t'}b${'\t'}c`
   })
 
   it('Table with empty cells', () => {
-    const input = `table: 
-${'\t'} ${'\t'}　${'\t'}  
+    const input = `table:
+${'\t'} ${'\t'}　${'\t'}
 ${'\t'}${'\t'}${'\t'}`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -86,8 +90,9 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1
 ${'\t'}1${'\t'}2
 ${'\t'}`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
@@ -118,8 +123,9 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
 ${'\t'}a${'\t'}b${'\t'}c`
-    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
-    expect(parseToLines(lineComponents)).toEqual([
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
       {
         indent: 0,
         nodes: [
