@@ -1,8 +1,8 @@
 import { NodeType } from '../node'
 
-export type LineType = {
+export type BlockType = {
   indent: number
   nodes: Array<NodeType>
 }
 
-export * from './LineComponent'
+export * from './BlockComponent'

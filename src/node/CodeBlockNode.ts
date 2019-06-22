@@ -1,4 +1,4 @@
-import { LineComponentType } from '../line'
+import { BlockComponentType } from '../block'
 
 export type CodeBlockNodeType = {
   type: 'codeBlock'
@@ -6,8 +6,8 @@ export type CodeBlockNodeType = {
   content: string
 }
 
-export const createCodeBlockNode = (lineComponents: Array<LineComponentType>): CodeBlockNodeType => {
-  const head: LineComponentType = lineComponents.shift() || { indent: 0, text: '' }
+export const createCodeBlockNode = (blockComponents: Array<BlockComponentType>): CodeBlockNodeType => {
+  const head: BlockComponentType = blockComponents.shift() || { indent: 0, text: '' }
   const { indent, text } = head
   const match = text.match(/^\s*code:(.+)$/)
   if (!match) {
@@ -22,8 +22,8 @@ export const createCodeBlockNode = (lineComponents: Array<LineComponentType>): C
   return {
     type: 'codeBlock',
     fileName,
-    content: lineComponents
-      .map((lineComponent: LineComponentType): string => lineComponent.text.substring(indent + 1))
+    content: blockComponents
+      .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
       .join('\n')
   }
 }

@@ -1,4 +1,4 @@
-import { LineComponentType } from '../line'
+import { BlockComponentType } from '../block'
 
 export type TableNodeType = {
   type: 'table'
@@ -6,8 +6,8 @@ export type TableNodeType = {
   cells: Array<Array<string>>
 }
 
-export const createTableNode = (lineComponents: Array<LineComponentType>): TableNodeType => {
-  const head: LineComponentType = lineComponents.shift() || { indent: 0, text: '' }
+export const createTableNode = (blockComponents: Array<BlockComponentType>): TableNodeType => {
+  const head: BlockComponentType = blockComponents.shift() || { indent: 0, text: '' }
   const { indent, text } = head
   const match = text.match(/^\s*table:(.+)$/)
   if (!match) {
@@ -22,8 +22,8 @@ export const createTableNode = (lineComponents: Array<LineComponentType>): Table
   return {
     type: 'table',
     fileName,
-    cells: lineComponents
-      .map((lineComponent: LineComponentType): string => lineComponent.text.substring(indent + 1))
-      .map((line: string): Array<string> => line.split('\t'))
+    cells: blockComponents
+      .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
+      .map((block: string): Array<string> => block.split('\t'))
   }
 }

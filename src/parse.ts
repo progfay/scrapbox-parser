@@ -1,19 +1,19 @@
-import { LineType, LineComponentType, convertToLineComponents } from './line'
-import parseToLines from './line/parseToLines'
+import { BlockType, BlockComponentType, convertToBlockComponents } from './block'
+import parseToBlocks from './block/parseToBlocks'
 
 type PageType = {
   title: string
-  lines: Array<LineType>
+  blocks: Array<BlockType>
 }
 
 const parse = (input: string): PageType => {
-  const lineComponents: Array<LineComponentType> = convertToLineComponents(input.trim())
+  const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input.trim())
 
-  const firstLine: LineComponentType = lineComponents.shift() || { indent: 0, text: '' }
-  const title: string = firstLine.text || 'Untitled'
-  const lines: Array<LineType> = parseToLines(lineComponents)
+  const firstBlock: BlockComponentType = blockComponents.shift() || { indent: 0, text: '' }
+  const title: string = firstBlock.text || 'Untitled'
+  const blocks: Array<BlockType> = parseToBlocks(blockComponents)
 
-  return { title, lines }
+  return { title, blocks }
 }
 
 export default parse
