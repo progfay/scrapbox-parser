@@ -2,7 +2,7 @@
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
 import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/parseToLines'
+import parseToLines from '../src/line/parseToLines'
 
 describe('Table', () => {
   it('Simple table', () => {

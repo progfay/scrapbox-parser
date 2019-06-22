@@ -1,7 +1,7 @@
-import { LineType, LineComponentType } from './line'
-import { createPlainNode } from './node/PlainNode'
-import { createCodeBlockNode } from './node/CodeBlockNode'
-import { createTableNode } from './node/TableNode'
+import { LineType, LineComponentType } from '.'
+import { createPlainNode } from '../node/PlainNode'
+import { createCodeBlockNode } from '../node/CodeBlockNode'
+import { createTableNode } from '../node/TableNode'
 
 const parseToLines = (lineComponents: Array<LineComponentType>): Array<LineType> => {
   const lines: Array<LineType> = []

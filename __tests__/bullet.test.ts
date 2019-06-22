@@ -1,7 +1,7 @@
 /* global describe it expect */
 
 import { LineComponentType, convertToLineComponents } from '../src/line'
-import parseToLines from '../src/parseToLines'
+import parseToLines from '../src/line/parseToLines'
 
 describe('bullet', () => {
   it('Single-byte space indent', () => {

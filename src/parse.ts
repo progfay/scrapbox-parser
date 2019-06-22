@@ -1,5 +1,5 @@
 import { LineType, LineComponentType, convertToLineComponents } from './line'
-import parseToLines from './parseToLines'
+import parseToLines from './line/parseToLines'
 
 type PageType = {
   title: string
