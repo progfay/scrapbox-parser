@@ -7,15 +7,19 @@ type PageType = {
   blocks: Array<BlockType>
 }
 
+export const convertToBlocks = (blockComponents: Array<BlockComponentType>): Array<BlockType> => {
+  const packedBlockComponents: Array<PackedBlockComponentType> = packBlockComponents(blockComponents)
+  return packedBlockComponents
+    .map(convertToBlock)
+    .filter(isBlock)
+}
+
 const parse = (input: string): PageType => {
   const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input.trim())
 
   const firstBlock: BlockComponentType = blockComponents.shift() || { indent: 0, text: '' }
   const title: string = firstBlock.text || 'Untitled'
-  const packedBlockComponents: Array<PackedBlockComponentType> = packBlockComponents(blockComponents)
-  const blocks: Array<BlockType> = packedBlockComponents
-    .map(convertToBlock)
-    .filter(isBlock)
+  const blocks = convertToBlocks(blockComponents)
 
   return { title, blocks }
 }
