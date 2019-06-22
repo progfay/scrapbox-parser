@@ -12,6 +12,7 @@ describe('bullet', () => {
     expect(blocks).toEqual([
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -29,6 +30,7 @@ describe('bullet', () => {
     expect(blocks).toEqual([
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -47,6 +49,7 @@ describe('bullet', () => {
     expect(blocks).toEqual([
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -67,6 +70,7 @@ describe('bullet', () => {
     expect(blocks).toEqual([
       {
         indent: 0,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -76,6 +80,7 @@ describe('bullet', () => {
       },
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -85,6 +90,7 @@ describe('bullet', () => {
       },
       {
         indent: 2,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -94,6 +100,7 @@ describe('bullet', () => {
       },
       {
         indent: 3,
+        type: 'line',
         nodes: [
           {
             type: 'plain',

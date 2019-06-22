@@ -17,17 +17,13 @@ ${'\t'}a${'\t'}b${'\t'}c`
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'table',
-            fileName: 'hello',
-            cells: [
-              ['1', '2', '3'],
-              ['1 ', '2 ', '3'],
-              ['------', '------', '------'],
-              ['a', 'b', 'c']
-            ]
-          }
+        type: 'table',
+        fileName: 'hello',
+        cells: [
+          ['1', '2', '3'],
+          ['1 ', '2 ', '3'],
+          ['------', '------', '------'],
+          ['a', 'b', 'c']
         ]
       }
     ])
@@ -44,40 +40,32 @@ ${'\t'}a${'\t'}b${'\t'}c`
     expect(blocks).toEqual([
       {
         indent: 1,
-        nodes: [
-          {
-            type: 'table',
-            fileName: 'bulleted',
-            cells: [
-              ['1', '2', '3'],
-              ['1 ', '2 ', '3'],
-              ['------', '------', '------'],
-              ['a', 'b', 'c']
-            ]
-          }
+        type: 'table',
+        fileName: 'bulleted',
+        cells: [
+          ['1', '2', '3'],
+          ['1 ', '2 ', '3'],
+          ['------', '------', '------'],
+          ['a', 'b', 'c']
         ]
       }
     ])
   })
 
   it('Table with empty cells', () => {
-    const input = `table:
-${'\t'} ${'\t'}　${'\t'}
+    const input = `table:${' '}
+${'\t'} ${'\t'}　${'\t'}${'  '}
 ${'\t'}${'\t'}${'\t'}`
     const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'table',
-            fileName: ' ',
-            cells: [
-              [' ', '　', '  '],
-              ['', '', '']
-            ]
-          }
+        type: 'table',
+        fileName: ' ',
+        cells: [
+          [' ', '　', '  '],
+          ['', '', '']
         ]
       }
     ])
@@ -95,18 +83,14 @@ ${'\t'}`
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'table',
-            fileName: 'Staggered',
-            cells: [
-              ['1', '2', '3', '4'],
-              ['1', '2', '3'],
-              ['1'],
-              ['1', '2'],
-              ['']
-            ]
-          }
+        type: 'table',
+        fileName: 'Staggered',
+        cells: [
+          ['1', '2', '3', '4'],
+          ['1', '2', '3'],
+          ['1'],
+          ['1', '2'],
+          ['']
         ]
       }
     ])
@@ -128,32 +112,24 @@ ${'\t'}a${'\t'}b${'\t'}c`
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'table',
-            fileName: 'hello',
-            cells: [
-              ['1', '2', '3'],
-              ['1 ', '2 ', '3'],
-              ['------', '------', '------'],
-              ['a', 'b', 'c']
-            ]
-          }
+        type: 'table',
+        fileName: 'hello',
+        cells: [
+          ['1', '2', '3'],
+          ['1 ', '2 ', '3'],
+          ['------', '------', '------'],
+          ['a', 'b', 'c']
         ]
       },
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'table',
-            fileName: 'hello',
-            cells: [
-              ['1', '2', '3'],
-              ['1 ', '2 ', '3'],
-              ['------', '------', '------'],
-              ['a', 'b', 'c']
-            ]
-          }
+        type: 'table',
+        fileName: 'hello',
+        cells: [
+          ['1', '2', '3'],
+          ['1 ', '2 ', '3'],
+          ['------', '------', '------'],
+          ['a', 'b', 'c']
         ]
       }
     ])

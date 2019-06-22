@@ -17,13 +17,9 @@ describe('Code Block', () => {
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'codeBlock',
-            fileName: 'hello.js',
-            content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
-          }
-        ]
+        type: 'codeBlock',
+        fileName: 'hello.js',
+        content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
       }
     ])
   })
@@ -40,13 +36,9 @@ describe('Code Block', () => {
     expect(blocks).toEqual([
       {
         indent: 1,
-        nodes: [
-          {
-            type: 'codeBlock',
-            fileName: 'hello.js',
-            content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
-          }
-        ]
+        type: 'codeBlock',
+        fileName: 'hello.js',
+        content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
       }
     ])
   })
@@ -65,6 +57,7 @@ describe('Code Block', () => {
     expect(blocks).toEqual([
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -74,16 +67,13 @@ describe('Code Block', () => {
       },
       {
         indent: 1,
-        nodes: [
-          {
-            type: 'codeBlock',
-            fileName: 'hello.js',
-            content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
-          }
-        ]
+        type: 'codeBlock',
+        fileName: 'hello.js',
+        content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
       },
       {
         indent: 1,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -112,23 +102,15 @@ code:hello.js
     expect(blocks).toEqual([
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'codeBlock',
-            fileName: 'hello.js',
-            content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
-          }
-        ]
+        type: 'codeBlock',
+        fileName: 'hello.js',
+        content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
       },
       {
         indent: 0,
-        nodes: [
-          {
-            type: 'codeBlock',
-            fileName: 'hello.js',
-            content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
-          }
-        ]
+        type: 'codeBlock',
+        fileName: 'hello.js',
+        content: 'function () {\n  alert(document.location.href)\n  console.log("hello")\n  // You can also write comments!\n}'
       }
     ])
   })

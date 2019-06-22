@@ -12,6 +12,7 @@ describe('plain', () => {
     expect(blocks).toEqual([
       {
         indent: 0,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -29,6 +30,7 @@ describe('plain', () => {
     expect(blocks).toEqual([
       {
         indent: 0,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
@@ -46,6 +48,7 @@ describe('plain', () => {
     expect(blocks).toEqual([
       {
         indent: 0,
+        type: 'line',
         nodes: [
           {
             type: 'plain',
