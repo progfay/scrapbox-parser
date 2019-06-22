@@ -7,6 +7,7 @@ export type CodeBlockComponentType = {
 }
 
 export type CodeBlockType = {
+  indent: number
   type: 'codeBlock'
   fileName: string
   content: string
@@ -23,6 +24,7 @@ export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): Code
   const match = text.match(/^\s*code:(.+)$/)
   if (!match) {
     return {
+      indent: 0,
       type: 'codeBlock',
       fileName: '',
       content: ''
@@ -31,6 +33,7 @@ export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): Code
 
   const fileName: string = match[1]
   return {
+    indent,
     type: 'codeBlock',
     fileName,
     content: components

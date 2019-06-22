@@ -7,6 +7,7 @@ export type TableComponentType = {
 }
 
 export type TableType = {
+  indent: number
   type: 'table'
   fileName: string
   cells: Array<Array<string>>
@@ -23,6 +24,7 @@ export const convertToTable = (tableComponent: TableComponentType): TableType =>
   const match = text.match(/^\s*table:(.+)$/)
   if (!match) {
     return {
+      indent: 0,
       type: 'table',
       fileName: '',
       cells: []
@@ -31,6 +33,7 @@ export const convertToTable = (tableComponent: TableComponentType): TableType =>
 
   const fileName: string = match[1]
   return {
+    indent,
     type: 'table',
     fileName,
     cells: components
