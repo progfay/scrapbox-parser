@@ -1,6 +1,6 @@
 export type PathType = 'absolute' | 'relative' | 'root'
 export type DecorationType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '*' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
-export type NodeType = ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | IconNodeType | QuoteNodeType | TableNodeType
+export type NodeType = ImageNodeType | LinkNodeType | DecorationNodeType | StrongNodeType | CodeNodeType | IconNodeType | QuoteNodeType
 
 export type ImageNodeType = {
   type: 'image'
@@ -41,9 +41,3 @@ export type QuoteNodeType = {
   type: 'quote'
   nodes: Array<NodeType>
 }
-
-export type TableNodeType = {
-  type: 'table'
-  fileName: string
-  cells: Array<Array<string>>
- }
