@@ -1,7 +1,6 @@
 /* global describe it expect */
 
-import { LineComponentType } from '../src/types'
-import convertToLineComponent from '../src/convertToLineComponents'
+import { LineComponentType, convertToLineComponents } from '../src/line'
 import parseToLines from '../src/parseToLines'
 
 describe('Code Block', () => {
@@ -12,7 +11,7 @@ describe('Code Block', () => {
    console.log("hello")
    // You can also write comments!
  }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,
@@ -34,7 +33,7 @@ describe('Code Block', () => {
     console.log("hello")
     // You can also write comments!
   }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 1,
@@ -58,7 +57,7 @@ describe('Code Block', () => {
     // You can also write comments!
   }
  Bullet`
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 1,
@@ -104,7 +103,7 @@ code:hello.js
    console.log("hello")
    // You can also write comments!
  }`
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,

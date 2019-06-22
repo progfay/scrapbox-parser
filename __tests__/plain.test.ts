@@ -1,13 +1,12 @@
 /* global describe it expect */
 
-import { LineComponentType } from '../src/types'
-import convertToLineComponent from '../src/convertToLineComponents'
+import { LineComponentType, convertToLineComponents } from '../src/line'
 import parseToLines from '../src/parseToLines'
 
 describe('plain', () => {
   it('Simple plain text', () => {
     const input = 'Plain text'
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,
@@ -23,7 +22,7 @@ describe('plain', () => {
 
   it('Blank line', () => {
     const input = ''
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,
@@ -39,7 +38,7 @@ describe('plain', () => {
 
   it('Keep tail space', () => {
     const input = 'Tail space ->  '
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,

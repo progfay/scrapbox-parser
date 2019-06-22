@@ -1,13 +1,12 @@
 /* global describe it expect */
 
-import { LineComponentType } from '../src/types'
-import convertToLineComponent from '../src/convertToLineComponents'
+import { LineComponentType, convertToLineComponents } from '../src/line'
 import parseToLines from '../src/parseToLines'
 
 describe('bullet', () => {
   it('Single-byte space indent', () => {
     const input = ' Single-byte space'
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 1,
@@ -23,7 +22,7 @@ describe('bullet', () => {
 
   it('Double-byte space indent', () => {
     const input = '　Double-byte space'
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 1,
@@ -40,7 +39,7 @@ describe('bullet', () => {
   it('Tab indent', () => {
     // eslint-disable-next-line no-tabs
     const input = '	Tab'
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input)
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input)
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 1,
@@ -61,7 +60,7 @@ no bullet (indent: 0)
   second bullet (indent: 2)
    third bullet (indent: 3)
 `
-    const lineComponents: Array<LineComponentType> = convertToLineComponent(input.trim())
+    const lineComponents: Array<LineComponentType> = convertToLineComponents(input.trim())
     expect(parseToLines(lineComponents)).toEqual([
       {
         indent: 0,
