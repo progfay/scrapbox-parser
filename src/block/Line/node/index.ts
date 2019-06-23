@@ -1,7 +1,7 @@
 import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
 import { StrongNodeType, createStrongNode, strongRegExp } from './StrongNode'
 import { DecorationNodeType, createDecorationNode, decorationRegExp } from './DecorationNode'
-import { CodeNodeType } from './CodeNode'
+import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
 import { LinkNodeType } from './LinkNode'
 import { ImageNodeType } from './ImageNode'
 import { IconNodeType } from './IconNode'
@@ -19,16 +19,32 @@ export type LineNodeType = QuoteNodeType
 export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
   if (text === '') return []
 
-  if (!quoted) {
+  if (!nested && !quoted) {
     const quoteMatch = text.match(quoteRegExp)
     if (quoteMatch) {
-      const [, content] = quoteMatch
-      const nodes = convertToLineNodes(content, { nested, quoted: true })
+      const [, target] = quoteMatch
+      const nodes = convertToLineNodes(target, { nested, quoted: true })
       return [ createQuoteNode(nodes) ]
     }
   }
 
   if (!nested) {
+    const codeCommandMatch = text.match(codeCommandRegExp)
+    if (codeCommandMatch) {
+      const [, target] = codeCommandMatch
+      return [ createCodeNode(target) ]
+    }
+
+    const codeMatch = text.match(codeRegExp)
+    if (codeMatch) {
+      const [, left, target, right] = codeMatch
+      return [
+        ...convertToLineNodes(left, { nested, quoted }),
+        createCodeNode(target),
+        ...convertToLineNodes(right, { nested, quoted })
+      ]
+    }
+
     const strongMatch = text.match(strongRegExp)
     if (strongMatch) {
       const [, left, target, right] = strongMatch
