@@ -1,3 +1,5 @@
+export const urlRegExp = /^(.*?)https?:\/\/[^\s\]]+(.*)$/
+
 type AbsoluteLinkNodeType = {
   type: 'link'
   pathType: 'absolute'
@@ -19,8 +21,28 @@ type RelativeLinkNodeType = {
 
 export type LinkNodeType = AbsoluteLinkNodeType | RootLinkNodeType | RelativeLinkNodeType
 
-export const createLineNode = (href: string, content: string = ''): LinkNodeType => {
-  if (/^https?:\/\//.test(href)) {
+const linkRegExp = /^(?<href>https?:\/\/[^\s\]]+)$/
+const leftLinkRegExp = /^(?<href>https?:\/\/[^\s\]]+)\s+(?<content>[^\]]*[^\s])$/
+const rightLinkRegExp = /^(?<content>[^\]]*[^\s])\s+(?<href>https?:\/\/[^\s\]]+)$/
+const rootLinkRegExp = /^(?<href>\/[^\]]+)$/
+
+type LinkMatchType = {
+  groups: {
+    href: string
+    content?: string
+  }
+}
+
+const isLinkMatch = (obj: any): obj is LinkMatchType => (
+  obj && obj.groups && obj.groups.href
+)
+
+export const createLinkNode = (text: string): LinkNodeType => {
+  const absoluteLinkMatch = text.match(linkRegExp) ||
+                            text.match(leftLinkRegExp) ||
+                            text.match(rightLinkRegExp)
+  if (isLinkMatch(absoluteLinkMatch)) {
+    const { href, content = '' } = absoluteLinkMatch.groups
     return {
       type: 'link',
       pathType: 'absolute',
@@ -29,7 +51,9 @@ export const createLineNode = (href: string, content: string = ''): LinkNodeType
     }
   }
 
-  if (/^\//.test(href)) {
+  const rootLinkMatch = text.match(rootLinkRegExp)
+  if (isLinkMatch(rootLinkMatch)) {
+    const { href } = rootLinkMatch.groups
     return {
       type: 'link',
       pathType: 'root',
@@ -40,6 +64,6 @@ export const createLineNode = (href: string, content: string = ''): LinkNodeType
   return {
     type: 'link',
     pathType: 'relative',
-    href
+    href: text
   }
 }

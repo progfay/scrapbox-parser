@@ -2,7 +2,7 @@ import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
 import { StrongNodeType, createStrongNode, strongRegExp } from './StrongNode'
 import { DecorationNodeType, createDecorationNode, decorationRegExp } from './DecorationNode'
 import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
-import { LinkNodeType } from './LinkNode'
+import { LinkNodeType, createLinkNode, urlRegExp } from './LinkNode'
 import { ImageNodeType } from './ImageNode'
 import { IconNodeType } from './IconNode'
 import { PlainNodeType, createPlainNode } from './PlainNode'
@@ -15,6 +15,8 @@ export type LineNodeType = QuoteNodeType
                          | ImageNodeType
                          | IconNodeType
                          | PlainNodeType
+
+const brakcetRegExp = /^(.*?)\[([^[\]]+)\](.*)$/
 
 export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
   if (text === '') return []
@@ -64,6 +66,29 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
         ...convertToLineNodes(right, { nested, quoted })
       ]
     }
+  }
+
+  const brakcetMatch = text.match(brakcetRegExp)
+  if (brakcetMatch) {
+    const [, left, target, right] = brakcetMatch
+
+    const lineNode: LineNodeType = createLinkNode(target)
+
+    return [
+      ...convertToLineNodes(left, { nested, quoted }),
+      lineNode,
+      ...convertToLineNodes(right, { nested, quoted })
+    ]
+  }
+
+  const urlMatch = text.match(urlRegExp)
+  if (urlMatch) {
+    const [, left, target, right] = urlMatch
+    return [
+      ...convertToLineNodes(left, { nested, quoted }),
+      createLinkNode(target),
+      ...convertToLineNodes(right, { nested, quoted })
+    ]
   }
 
   return [ createPlainNode(text) ]
