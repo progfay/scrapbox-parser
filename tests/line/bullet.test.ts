@@ -1,8 +1,8 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
-import { BlockType } from '../src/block'
-import { convertToBlocks } from '../src/parse'
+import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
+import { BlockType } from '../../src/block'
+import { convertToBlocks } from '../../src/parse'
 
 describe('bullet', () => {
   it('Single-byte space indent', () => {

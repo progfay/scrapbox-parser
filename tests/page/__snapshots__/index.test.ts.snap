@@ -1,0 +1,901 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page https://scrapbox.io/help/Syntax 1`] = `
+Object {
+  "blocks": Array [
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "link": "",
+          "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+          "type": "image",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "decos": Array [
+            "*-1",
+          ],
+          "nodes": Array [
+            Object {
+              "text": "Mouse-based editing",
+              "type": "plain",
+            },
+          ],
+          "type": "decoration",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "link": "",
+          "src": "https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc/thumb/1000",
+          "type": "image",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Internal Links",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+        Object {
+          "text": " (linking to another page on scrapbox)",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[link]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇒ ",
+          "type": "plain",
+        },
+        Object {
+          "href": "Link",
+          "pathType": "relative",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "External  Links",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+        Object {
+          "text": " (linking to another web page)",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "http://google.com",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇒ ",
+          "type": "plain",
+        },
+        Object {
+          "content": "",
+          "href": "http://google.com",
+          "pathType": "absolute",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[http://google.com Google]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇒ ",
+          "type": "plain",
+        },
+        Object {
+          "content": "Google",
+          "href": "http://google.com",
+          "pathType": "absolute",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "text": "or",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[Google http://google.com]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇒ ",
+          "type": "plain",
+        },
+        Object {
+          "content": "Google",
+          "href": "http://google.com",
+          "pathType": "absolute",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Images",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Direct mage link ↓",
+          "type": "plain",
+        },
+        Object {
+          "text": "[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
+          "type": "code",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "link": "",
+          "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+          "type": "image",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Clickable Thumbnail Links",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "↓ ",
+          "type": "plain",
+        },
+        Object {
+          "text": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
+          "type": "code",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "link": "http://cutedog.com",
+          "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+          "type": "image",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Adding the link at the end also works, as before:",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 2,
+      "nodes": Array [
+        Object {
+          "text": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]",
+          "type": "code",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Linking to other scrapbox projects",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[/projectname/pagename]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇛ ",
+          "type": "plain",
+        },
+        Object {
+          "href": "/icons/check",
+          "pathType": "root",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[/projectname]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇛ ",
+          "type": "plain",
+        },
+        Object {
+          "href": "/icons",
+          "pathType": "root",
+          "type": "link",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Icons",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[ben.icon]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇛  ",
+          "type": "plain",
+        },
+        Object {
+          "path": "ben",
+          "pathType": "relative",
+          "type": "icon",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[/icons/todo.icon]",
+          "type": "code",
+        },
+        Object {
+          "text": " ⇛ ",
+          "type": "plain",
+        },
+        Object {
+          "path": "/icons/todo",
+          "pathType": "root",
+          "type": "icon",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Bold text",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[[Bold]]",
+          "type": "code",
+        },
+        Object {
+          "text": " or ",
+          "type": "plain",
+        },
+        Object {
+          "text": "[* Bold]",
+          "type": "code",
+        },
+        Object {
+          "text": "⇒ ",
+          "type": "plain",
+        },
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Bold",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Italic text",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[/ italic]",
+          "type": "code",
+        },
+        Object {
+          "text": "⇛ ",
+          "type": "plain",
+        },
+        Object {
+          "decos": Array [
+            "/",
+          ],
+          "nodes": Array [
+            Object {
+              "text": "italic",
+              "type": "plain",
+            },
+          ],
+          "type": "decoration",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": " Strikethrough text",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "[- strikethrough]",
+          "type": "code",
+        },
+        Object {
+          "text": "⇛ ",
+          "type": "plain",
+        },
+        Object {
+          "decos": Array [
+            "-",
+          ],
+          "nodes": Array [
+            Object {
+              "text": "strikethrough",
+              "type": "plain",
+            },
+          ],
+          "type": "decoration",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "link": "",
+          "src": "https://gyazo.com/00ab07461d502db91c8ae170276d1396/thumb/1000",
+          "type": "image",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Bullet points",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Press space or tab on a new line to indent and create a bullet point",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 2,
+      "nodes": Array [
+        Object {
+          "text": "Press backspace to remove the indent  / bullet point",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Hashtags / internal links",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "#tag",
+          "type": "code",
+        },
+        Object {
+          "text": " and  ",
+          "type": "plain",
+        },
+        Object {
+          "text": "[link]",
+          "type": "code",
+        },
+        Object {
+          "text": " work the same to create a link but also define related pages you can find later",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Add links in the middle of a sentence to branch off as you type or add tags at the end to organize.",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": "Block quote",
+              "type": "plain",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "text": " use the right arrow ",
+              "type": "plain",
+            },
+            Object {
+              "text": ">",
+              "type": "code",
+            },
+            Object {
+              "text": " at the beginning of a line to get a block quote",
+              "type": "plain",
+            },
+          ],
+          "type": "quote",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "href": "Code notation",
+              "pathType": "relative",
+              "type": "link",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Use backquotes or backticks, \`,  to highlight code",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "e.g. ",
+          "type": "plain",
+        },
+        Object {
+          "text": "function() {  return true }",
+          "type": "code",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "href": "Code block notation",
+              "pathType": "relative",
+              "type": "link",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Typing ",
+          "type": "plain",
+        },
+        Object {
+          "text": "code:filename.extension",
+          "type": "code",
+        },
+        Object {
+          "text": "or",
+          "type": "plain",
+        },
+        Object {
+          "text": "code:filename",
+          "type": "code",
+        },
+        Object {
+          "text": "can be used to create a new code snippet and and display it as a block",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 2,
+      "nodes": Array [
+        Object {
+          "text": "Language names may be abbreviated",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "content": "function () {
+  alert(document.location.href)
+  console.log(\\"hello\\")
+  // You can also write comments!
+}",
+      "fileName": "hello.js",
+      "indent": 1,
+      "type": "codeBlock",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [],
+      "type": "line",
+    },
+    Object {
+      "indent": 0,
+      "nodes": Array [
+        Object {
+          "nodes": Array [
+            Object {
+              "href": "Tables",
+              "pathType": "relative",
+              "type": "link",
+            },
+          ],
+          "type": "strong",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Type table: tablename to create a table",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "Use tab to move to the next column, use enter to move to the next row.",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "indent": 1,
+      "nodes": Array [
+        Object {
+          "text": "An example:",
+          "type": "plain",
+        },
+      ],
+      "type": "line",
+    },
+    Object {
+      "cells": Array [
+        Array [
+          "1",
+          "2",
+          "3",
+        ],
+        Array [
+          "1 ",
+          "2 ",
+          "3",
+        ],
+        Array [
+          "------",
+          "------",
+          "------",
+        ],
+        Array [
+          "a",
+          "b",
+          "c",
+        ],
+      ],
+      "fileName": "hello",
+      "indent": 0,
+      "type": "table",
+    },
+  ],
+  "title": "Syntax",
+}
+`;

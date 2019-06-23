@@ -1,9 +1,9 @@
 /* global describe it expect */
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
-import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
-import { BlockType } from '../src/block'
-import { convertToBlocks } from '../src/parse'
+import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
+import { BlockType } from '../../src/block'
+import { convertToBlocks } from '../../src/parse'
 
 describe('Table', () => {
   it('Simple table', () => {
