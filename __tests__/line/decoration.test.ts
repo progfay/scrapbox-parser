@@ -3,7 +3,7 @@
 import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
 import { BlockType } from '../../src/block'
 import { LineType } from '../../src/block/Line'
-import { DecorationType } from '../../src/block/Line/DecorationNode'
+import { DecorationType, DecorationNodeType } from '../../src/block/Line/node/DecorationNode'
 import { convertToBlocks } from '../../src/parse'
 
 const createDecorartionNode = (decos: Array<DecorationType>, text: string): LineType => ({
@@ -69,9 +69,9 @@ describe('decoration', () => {
     const input = '[**********!"#%&\'()*+,-./{|}<>_~ decos]'
     const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const received = ((blocks[0] as LineType).nodes[0] as DecorationNodeType).decos
     const decos: Array<DecorationType> = ['*-10', '!', '"', '#', '%', '&', '\'', '(', ')', '+', ',', '-', '.', '/', '{', '|', '}', '<', '>', '_', '~']
-    const answer: Array<LineType> = [createDecorartionNode(decos, 'decos')]
-    expect(blocks).toEqual(answer)
+    expect(new Set<DecorationType>(received)).toEqual(new Set<DecorationType>(decos))
   })
 
   it('Decoration * overflow', () => {
