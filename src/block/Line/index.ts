@@ -1,13 +1,11 @@
 import { BlockComponentType } from '../BlockComponent'
 import { PackedBlockComponentType } from '../PackedBlockComponent'
-import { createPlainNode, PlainNodeType } from './PlainNode'
+import { LineNodeType, convertToLineNodes } from './node'
 
 export type LineComponentType = {
   type: 'line'
   component: BlockComponentType
 }
-
-export type LineNodeType = PlainNodeType
 
 export type LineType = {
   indent: number
@@ -24,8 +22,6 @@ export const convertToLine = (lineComponent: LineComponentType): LineType => {
   return {
     indent,
     type: 'line',
-    nodes: [
-      createPlainNode(text.substring(indent))
-    ]
+    nodes: convertToLineNodes(text.substring(indent))
   }
 }
