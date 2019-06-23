@@ -1,4 +1,4 @@
-export const urlRegExp = /^(.*?)https?:\/\/[^\s\]]+(.*)$/
+export const urlRegExp = /^(.*?)(https?:\/\/[^\s\]]+)(.*)$/
 
 type AbsoluteLinkNodeType = {
   type: 'link'
