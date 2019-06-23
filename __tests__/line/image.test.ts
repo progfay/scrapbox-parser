@@ -35,7 +35,7 @@ describe('image', () => {
         nodes: [
           {
             type: 'image',
-            src: 'http://example.com/image.png',
+            src: 'https://example.com/image.JPG',
             link: ''
           }
         ]
@@ -44,7 +44,7 @@ describe('image', () => {
   })
 
   it('HTTP jpeg image with special and japanese chars', () => {
-    const input = '[HTTP://example.com/~!@#$%^&*()_+`-={[}\\\'"?,.<>|/画像.jpeg]'
+    const input = '[http://example.com/~!@#$%^&*()_+`-={}\\\'"?,.<>|/画像.jpeg]'
     const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
@@ -54,7 +54,7 @@ describe('image', () => {
         nodes: [
           {
             type: 'image',
-            src: 'HTTP://example.com/~!@#$%^&*()_+`-={[}\\\'"?,.<>|/画像.jpeg',
+            src: 'http://example.com/~!@#$%^&*()_+`-={}\\\'"?,.<>|/画像.jpeg',
             link: ''
           }
         ]
@@ -74,7 +74,7 @@ describe('image', () => {
         nodes: [
           {
             type: 'image',
-            src: 'http://example.com/image.svg',
+            src: 'https://example.com/image.svg',
             link: 'https://example.com/'
           }
         ]
@@ -85,7 +85,7 @@ describe('image', () => {
         nodes: [
           {
             type: 'image',
-            src: 'http://example.com/image.GIF',
+            src: 'https://example.com/image.GIF',
             link: 'https://example.com/'
           }
         ]
