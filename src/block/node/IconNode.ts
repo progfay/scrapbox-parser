@@ -1,4 +1,4 @@
-export const iconRegExp = /^(.*)\.icon(\*(\d+))?$/
+export const iconRegExp = /^(.*?)\[(.*)\.icon(\*(\d+))?\](.*)$/
 
 export type IconNodeType = {
   type: 'icon'
