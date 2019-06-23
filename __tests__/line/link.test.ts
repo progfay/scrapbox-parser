@@ -153,7 +153,7 @@ describe('link', () => {
           {
             type: 'link',
             pathType: 'root',
-            href: 'project/page name'
+            href: '/project/page name'
           }
         ]
       }
