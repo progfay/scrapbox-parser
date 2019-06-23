@@ -19,7 +19,7 @@ export type LineNodeType = QuoteNodeType
 const brakcetRegExp = /^(.*?)\[([^[\]]+)\](.*)$/
 
 export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
-  if (text === '') return []
+  if (!text) return []
 
   if (!nested && !quoted) {
     const quoteMatch = text.match(quoteRegExp)
