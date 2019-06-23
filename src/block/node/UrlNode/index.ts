@@ -9,7 +9,7 @@ export type UrlNodeType = ExternalLinkNodeType
 type UrlMatchType = {
   groups: {
     href: string
-    content?: string
+    content: string
   }
 }
 
