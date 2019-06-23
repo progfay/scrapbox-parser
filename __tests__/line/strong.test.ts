@@ -4,9 +4,9 @@ import { BlockComponentType, convertToBlockComponents } from '../../src/block/Bl
 import { BlockType } from '../../src/block'
 import { convertToBlocks } from '../../src/parse'
 
-describe('line', () => {
-  it('Line that have multi node', () => {
-    const input = '[Link][Link]'
+describe('strong', () => {
+  it('Simple strong', () => {
+    const input = '[[Simple strong]]'
     const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
@@ -15,22 +15,21 @@ describe('line', () => {
         type: 'line',
         nodes: [
           {
-            type: 'link',
-            pathType: 'relative',
-            href: 'Link'
-          },
-          {
-            type: 'link',
-            pathType: 'relative',
-            href: 'Link'
+            type: 'strong',
+            nodes: [
+              {
+                type: 'plain',
+                text: 'Simple strong'
+              }
+            ]
           }
         ]
       }
     ])
   })
 
-  it('Line that have nested node', () => {
-    const input = '[* [Link]]'
+  it('[[]] is not strong', () => {
+    const input = '[[]]'
     const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
@@ -39,15 +38,8 @@ describe('line', () => {
         type: 'line',
         nodes: [
           {
-            type: 'decoration',
-            decos: ['*-1'],
-            nodes: [
-              {
-                type: 'link',
-                pathType: 'relative',
-                href: 'Link'
-              }
-            ]
+            type: 'plain',
+            text: '[[]]'
           }
         ]
       }
