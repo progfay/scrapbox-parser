@@ -1,40 +1,34 @@
 {
 	"title": "Syntax",
-	"lines": [
+	"blocks": [
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "image",
-				"src": "https: //gyazo.com/0f82099330f378fe4917a1b4a5fe8815",
+				"src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
 				"link": ""
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "decoration",
-				"deco": [
+				"decos": [
 				   "*-1"
 				],
 				"nodes": [
@@ -47,17 +41,24 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "image",
-				"src": "https: //gyazo.com/a515ab169b1e371641f7e04bfa92adbc",
-				"content": ""
+				"src": "https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc/thumb/1000",
+				"link": ""
 			 }
 		  ]
-	   },
+		 },
+		 {
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
+		 },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -75,7 +76,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -88,13 +90,18 @@
 			 {
 				"type": "link",
 				"pathType": "relative",
-				"href": "Link",
-				"content": ""
+				"href": "Link"
 			 }
 		  ]
-	   },
+		 },
+		 {
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
+		 },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -112,7 +119,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -131,7 +139,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -144,13 +153,14 @@
 			 {
 				"type": "link",
 				"pathType": "absolute",
-				"href": "http: //google.com",
+				"href": "http://google.com",
 				"content": "Google"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -159,11 +169,12 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
-				"text": "[Google http: //google.com]"
+				"text": "[Google http://google.com]"
 			 },
 			 {
 				"type": "plain",
@@ -172,22 +183,19 @@
 			 {
 				"type": "link",
 				"pathType": "absolute",
-				"href": "http: //google.com",
+				"href": "http://google.com",
 				"content": "Google"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -201,7 +209,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -209,31 +218,29 @@
 			 },
 			 {
 				"type": "code",
-				"text": "[https: //gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
+				"text": "[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "image",
-				"src": "https: //i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+				"src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
 				"link": ""
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -247,7 +254,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -255,22 +263,24 @@
 			 },
 			 {
 				"type": "code",
-				"text": "[http: //cutedog.com https: //i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
+				"text": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "image",
-				"src": "https: //i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
-				"link": "http: //cutedog.com"
+				"src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+				"link": "http://cutedog.com"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -279,25 +289,23 @@
 		  ]
 	   },
 	   {
-		  "indent": 2,
+			"indent": 2,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
-				"text": "[https: //i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http: //cutedog.com]"
+				"text": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -311,7 +319,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -322,14 +331,15 @@
 				"text": " ⇛ "
 			 },
 			 {
-				"type": "icon",
+				"type": "link",
 				"pathType": "root",
-				"path": "/icons/check"
+				"href": "/icons/check"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -340,23 +350,20 @@
 				"text": " ⇛ "
 			 },
 			 {
-				"type": "icon",
+				"type": "link",
 				"pathType": "root",
-				"path": "/icons"
+				"href": "/icons"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -370,7 +377,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -388,7 +396,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -406,16 +415,13 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -429,7 +435,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -448,32 +455,70 @@
 				"text": "⇒ "
 			 },
 			 {
-				"indent": 0,
+				"type": "strong",
 				"nodes": [
 				   {
-					  "type": "strong",
-					  "nodes": [
-						 {
-							"type": "plain",
-							"text": "Bold"
-						 }
-					  ]
+					  "type": "plain",
+					  "text": "Bold"
+				   }
+				]
+			 }
+		  ]
+		 },
+		 {
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
+	   },
+	   {
+			"indent": 0,
+			"type": "line",
+		  "nodes": [
+			 {
+				"type": "strong",
+				"nodes": [
+				   {
+					  "type": "plain",
+					  "text": "Italic text"
 				   }
 				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
+				"type": "code",
+				"text": "[/ italic]"
+			 },
+			 {
 				"type": "plain",
-				"text": ""
+				"text": "⇛ "
+			 },
+			 {
+				"type": "decoration",
+				"decos": [
+				   "/"
+				],
+				"nodes": [
+				   {
+					  "type": "plain",
+					  "text": "italic"
+				   }
+				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
+	   },
+	   {
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -487,7 +532,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -499,39 +545,37 @@
 			 },
 			 {
 				"type": "decoration",
-				"deco": [
-				   "/"
+				"decos": [
+				   "-"
 				],
 				"nodes": [
 				   {
 					  "type": "plain",
-					  "text": "italic"
+					  "text": "strikethrough"
 				   }
 				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "image",
-				"src": "https: //gyazo.com/00ab07461d502db91c8ae170276d1396",
+				"src": "https://gyazo.com/00ab07461d502db91c8ae170276d1396/thumb/1000",
 				"link": ""
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -545,7 +589,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -554,7 +599,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 2,
+			"indent": 2,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -563,16 +609,13 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -586,7 +629,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "code",
@@ -607,7 +651,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -616,16 +661,13 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -639,7 +681,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "quote",
@@ -661,16 +704,13 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -678,15 +718,15 @@
 				   {
 					  "type": "link",
 					  "pathType": "relative",
-					  "href": "Code notation",
-					  "content": ""
+					  "href": "Code notation"
 				   }
 				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -695,7 +735,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -708,16 +749,13 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -725,15 +763,15 @@
 				   {
 					  "type": "link",
 					  "pathType": "relative",
-					  "href": "Code block notation",
-					  "content": ""
+					  "href": "Code block notation"
 				   }
 				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -741,7 +779,7 @@
 			 },
 			 {
 				"type": "code",
-				"text": "code: filename.extension"
+				"text": "code:filename.extension"
 			 },
 			 {
 				"type": "plain",
@@ -749,7 +787,7 @@
 			 },
 			 {
 				"type": "code",
-				"text": "code: filename"
+				"text": "code:filename"
 			 },
 			 {
 				"type": "plain",
@@ -758,7 +796,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 2,
+			"indent": 2,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -767,26 +806,19 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
-		  "nodes": [
-			 {
-				"type": "codeBlock",
-				"fileName": "hello.js",
-				"content": "function () {\n  alert(document.location.href)\n  console.log(\"hello\")\n  // You can also write comments!\n}"
-			 }
-		  ]
+			"indent": 1,
+			"type": "codeBlock",
+			"fileName": "hello.js",
+			"content": "function () {\n  alert(document.location.href)\n  console.log(\"hello\")\n  // You can also write comments!\n}"
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "plain",
-				"text": ""
-			 }
-		  ]
+			"indent": 0,
+			"type": "line",
+		  "nodes": []
 	   },
 	   {
-		  "indent": 0,
+			"indent": 0,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "strong",
@@ -794,24 +826,25 @@
 				   {
 					  "type": "link",
 					  "pathType": "relative",
-					  "href": "Tables",
-					  "content": ""
+					  "href": "Tables"
 				   }
 				]
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
-				"text": "Type table:  tablename to create a table"
+				"text": "Type table: tablename to create a table"
 			 }
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -820,7 +853,8 @@
 		  ]
 	   },
 	   {
-		  "indent": 1,
+			"indent": 1,
+			"type": "line",
 		  "nodes": [
 			 {
 				"type": "plain",
@@ -829,34 +863,30 @@
 		  ]
 	   },
 	   {
-		  "indent": 0,
-		  "nodes": [
-			 {
-				"type": "table",
-				"fileName": "hello",
-				"cells": [
-				   [
-					  "1",
-					  "2",
-					  "3"
-				   ],
-				   [
-					  "1 ",
-					  "2 ",
-					  "3"
-				   ],
-				   [
-					  "------",
-					  "------",
-					  "------"
-				   ],
-				   [
-					  "a",
-					  "b",
-					  "c"
-				   ]
+			"indent": 0,
+			"type": "table",
+			"fileName": "hello",
+			"cells": [
+				[
+					"1",
+					"2",
+					"3"
+				],
+			[
+					"1 ",
+					"2 ",
+					"3"
+				],
+				[
+					"------",
+					"------",
+					"------"
+				],
+				[
+					"a",
+					"b",
+					"c"
 				]
-			 }
 		  ]
 	   }
 	]
