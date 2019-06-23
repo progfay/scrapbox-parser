@@ -39,12 +39,7 @@ describe('quote', () => {
         nodes: [
           {
             type: 'quote',
-            nodes: [
-              {
-                type: 'plain',
-                text: ''
-              }
-            ]
+            nodes: []
           }
         ]
       }
