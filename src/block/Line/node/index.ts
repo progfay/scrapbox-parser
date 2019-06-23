@@ -17,6 +17,8 @@ export type LineNodeType = QuoteNodeType
                          | PlainNodeType
 
 export const convertToLineNodes = (text: string, nested: boolean = false): Array<LineNodeType> => {
+  if (text === '') return []
+
   if (!nested) {
     if (quoteRegExp.test(text)) {
       const nodes = convertToLineNodes(text.substring(1), true)
