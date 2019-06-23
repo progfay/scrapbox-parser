@@ -1,6 +1,6 @@
 import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
-import { StrongNodeType } from './StrongNode'
-import { DecorationNodeType } from './DecorationNode'
+import { StrongNodeType, createStrongNode, strongRegExp } from './StrongNode'
+import { DecorationNodeType, createDecorationNode, decorationRegExp } from './DecorationNode'
 import { CodeNodeType } from './CodeNode'
 import { LinkNodeType } from './LinkNode'
 import { ImageNodeType } from './ImageNode'
@@ -23,6 +23,18 @@ export const convertToLineNodes = (text: string, nested: boolean = false): Array
     if (quoteRegExp.test(text)) {
       const nodes = convertToLineNodes(text.substring(1), true)
       return [ createQuoteNode(nodes) ]
+    }
+
+    const strongMatcher = text.match(strongRegExp)
+    if (strongMatcher) {
+      const [, left, target, right] = strongMatcher
+      return [...convertToLineNodes(left), createStrongNode(convertToLineNodes(target)), ...convertToLineNodes(right)]
+    }
+
+    const decorationMatcher = text.match(decorationRegExp)
+    if (decorationMatcher) {
+      const [, left, decoChars, target, right] = decorationMatcher
+      return [...convertToLineNodes(left), createDecorationNode(decoChars, convertToLineNodes(target)), ...convertToLineNodes(right)]
     }
   }
 
