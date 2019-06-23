@@ -1,4 +1,4 @@
-import { BlockType, convertToBlock, isBlock } from './block'
+import { BlockType, convertToBlock } from './block'
 import { BlockComponentType, convertToBlockComponents } from './block/BlockComponent'
 import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlockComponent'
 
@@ -11,7 +11,7 @@ export const convertToBlocks = (blockComponents: Array<BlockComponentType>): Arr
   const packedBlockComponents: Array<PackedBlockComponentType> = packBlockComponents(blockComponents)
   return packedBlockComponents
     .map(convertToBlock)
-    .filter(isBlock)
+    .filter((block: BlockType | undefined): block is BlockType => Boolean(block))
 }
 
 const parse = (input: string): PageType => {
