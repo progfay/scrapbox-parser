@@ -4,7 +4,7 @@ import { DecorationNodeType, createDecorationNode, decorationRegExp } from './De
 import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
 import { LinkNodeType, createLinkNode, urlRegExp } from './LinkNode'
 import { ImageNodeType } from './ImageNode'
-import { IconNodeType } from './IconNode'
+import { IconNodeType, createIconNode, iconRegExp } from './IconNode'
 import { PlainNodeType, createPlainNode } from './PlainNode'
 
 export type LineNodeType = QuoteNodeType
@@ -72,11 +72,20 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
   if (brakcetMatch) {
     const [, left, target, right] = brakcetMatch
 
-    const lineNode: LineNodeType = createLinkNode(target)
+    const iconMatch = target.match(iconRegExp)
+    if (iconMatch) {
+      const [, path, , num = '1'] = iconMatch
+      const iconNode = createIconNode(path)
+      return [
+        ...convertToLineNodes(left, { nested, quoted }),
+        ...new Array(parseInt(num)).fill(iconNode),
+        ...convertToLineNodes(right, { nested, quoted })
+      ]
+    }
 
     return [
       ...convertToLineNodes(left, { nested, quoted }),
-      lineNode,
+      createLinkNode(target),
       ...convertToLineNodes(right, { nested, quoted })
     ]
   }
