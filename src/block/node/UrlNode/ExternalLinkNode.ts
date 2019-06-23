@@ -5,7 +5,7 @@ export type ExternalLinkNodeType = {
   content: string
 }
 
-export const createExternalLinkNodeType = (href: string, content: string): ExternalLinkNodeType => ({
+export const createExternalLinkNode = (href: string, content: string): ExternalLinkNodeType => ({
   type: 'link',
   pathType: 'absolute',
   href,

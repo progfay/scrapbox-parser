@@ -4,7 +4,6 @@ import { DecorationNodeType, createDecorationNode, decorationRegExp } from './De
 import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
 import { UrlNodeType, createUrlNode, urlRegExp, leftUrlRegExp, rightUrlRegExp, isUrlMatch } from './UrlNode'
 import { InternalLinkNodeType, createInternalLinkNode, internalLinkRegExp } from './InternalLinkNode'
-import { ImageNodeType } from './ImageNode'
 import { IconNodeType, createIconNode, iconRegExp } from './IconNode'
 import { PlainNodeType, createPlainNode } from './PlainNode'
 
@@ -14,7 +13,6 @@ export type LineNodeType = QuoteNodeType
                          | CodeNodeType
                          | UrlNodeType
                          | InternalLinkNodeType
-                         | ImageNodeType
                          | IconNodeType
                          | PlainNodeType
 
