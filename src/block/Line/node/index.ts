@@ -16,25 +16,37 @@ export type LineNodeType = QuoteNodeType
                          | IconNodeType
                          | PlainNodeType
 
-export const convertToLineNodes = (text: string, nested: boolean = false): Array<LineNodeType> => {
+export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
   if (text === '') return []
 
-  if (!nested) {
-    if (quoteRegExp.test(text)) {
-      const nodes = convertToLineNodes(text.substring(1), true)
+  if (!quoted) {
+    const quoteMatch = text.match(quoteRegExp)
+    if (quoteMatch) {
+      const [, content] = quoteMatch
+      const nodes = convertToLineNodes(content, { nested, quoted: true })
       return [ createQuoteNode(nodes) ]
     }
+  }
 
-    const strongMatcher = text.match(strongRegExp)
-    if (strongMatcher) {
-      const [, left, target, right] = strongMatcher
-      return [...convertToLineNodes(left), createStrongNode(convertToLineNodes(target)), ...convertToLineNodes(right)]
+  if (!nested) {
+    const strongMatch = text.match(strongRegExp)
+    if (strongMatch) {
+      const [, left, target, right] = strongMatch
+      return [
+        ...convertToLineNodes(left, { nested, quoted }),
+        createStrongNode(convertToLineNodes(target, { nested: true, quoted })),
+        ...convertToLineNodes(right, { nested, quoted })
+      ]
     }
 
-    const decorationMatcher = text.match(decorationRegExp)
-    if (decorationMatcher) {
-      const [, left, decoChars, target, right] = decorationMatcher
-      return [...convertToLineNodes(left), createDecorationNode(decoChars, convertToLineNodes(target)), ...convertToLineNodes(right)]
+    const decorationMatch = text.match(decorationRegExp)
+    if (decorationMatch) {
+      const [, left, decoChars, target, right] = decorationMatch
+      return [
+        ...convertToLineNodes(left, { nested, quoted }),
+        createDecorationNode(decoChars, convertToLineNodes(target, { nested: true, quoted })),
+        ...convertToLineNodes(right, { nested, quoted })
+      ]
     }
   }
 
