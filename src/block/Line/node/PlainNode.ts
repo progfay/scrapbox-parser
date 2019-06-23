@@ -5,5 +5,5 @@ export type PlainNodeType = {
 
 export const createPlainNode = (text: string): PlainNodeType => ({
   type: 'plain',
-  text: text.trimLeft()
+  text: text
 })
