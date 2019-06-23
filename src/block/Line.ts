@@ -1,5 +1,5 @@
-import { BlockComponentType } from '../BlockComponent'
-import { PackedBlockComponentType } from '../PackedBlockComponent'
+import { BlockComponentType } from './BlockComponent'
+import { PackedBlockComponentType } from './PackedBlockComponent'
 import { LineNodeType, convertToLineNodes } from './node'
 
 export type LineComponentType = {
