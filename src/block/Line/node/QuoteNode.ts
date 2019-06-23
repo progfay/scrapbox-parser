@@ -1,5 +1,7 @@
 import { LineNodeType } from '.'
 
+export const quoteRegExp = /^>(.*)$/
+
 export type QuoteNodeType = {
   type: 'quote'
   nodes: Array<LineNodeType>

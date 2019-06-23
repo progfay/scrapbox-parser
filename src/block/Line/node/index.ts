@@ -1,4 +1,4 @@
-import { QuoteNodeType } from './QuoteNode'
+import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
 import { StrongNodeType } from './StrongNode'
 import { DecorationNodeType } from './DecorationNode'
 import { CodeNodeType } from './CodeNode'
@@ -16,6 +16,13 @@ export type LineNodeType = QuoteNodeType
                          | IconNodeType
                          | PlainNodeType
 
-export const convertToLineNodes = (text: string): Array<LineNodeType> => {
+export const convertToLineNodes = (text: string, nested: boolean = false): Array<LineNodeType> => {
+  if (!nested) {
+    if (quoteRegExp.test(text)) {
+      const nodes = convertToLineNodes(text.substring(1), true)
+      return [ createQuoteNode(nodes) ]
+    }
+  }
+
   return [ createPlainNode(text) ]
 }
