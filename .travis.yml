@@ -2,3 +2,5 @@ language: node_js
 node_js:
   - 'stable'
   - 'lts/*'
+
+script: yarn run test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

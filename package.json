@@ -9,7 +9,7 @@
     "build": "tsc -p ./tsconfig.json",
     "predoc": "rm -rf docs",
     "doc": "typedoc --out docs ./src",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix . --ext .ts"
@@ -34,6 +34,7 @@
     "@types/node": "^12.0.8",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^1.10.2",
+    "coveralls": "^3.0.4",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",
