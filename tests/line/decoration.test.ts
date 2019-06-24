@@ -3,7 +3,7 @@
 import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
 import { BlockType } from '../../src/block'
 import { LineType } from '../../src/block/Line'
-import { DecorationType, DecorationNodeType } from '../../src/block/Line/node/DecorationNode'
+import { DecorationType, DecorationNodeType } from '../../src/block/node/DecorationNode'
 import { convertToBlocks } from '../../src/parse'
 
 const createDecorartionNode = (decos: Array<DecorationType>, text: string): LineType => ({
