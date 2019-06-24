@@ -1,5 +1,5 @@
 {
-  "name": "@progfay/scrapbox-parser",
+  "name": "scrapbox-parser",
   "version": "1.0.0",
   "description": "parse Scrapbox notation to JavaScript Object",
   "main": "./lib/index.js",
