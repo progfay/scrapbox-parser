@@ -8,8 +8,6 @@
     "prebuild": "rm -rf lib",
     "build": "tsc -p ./tsconfig.json",
     "prepare": "npm run build",
-    "predoc": "rm -rf docs",
-    "doc": "typedoc --out docs ./src",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "lint": "eslint . --ext .ts",
@@ -44,7 +42,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
-    "typedoc": "^0.14.2",
     "typescript": "^3.5.2"
   },
   "dependencies": {},
