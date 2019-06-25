@@ -7,6 +7,7 @@
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc -p ./tsconfig.json",
+    "prepare": "npm run build",
     "predoc": "rm -rf docs",
     "doc": "typedoc --out docs ./src",
     "test": "jest --coverage",
