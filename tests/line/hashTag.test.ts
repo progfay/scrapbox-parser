@@ -47,12 +47,12 @@ describe('hashTag', () => {
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
-        indent: 1,
+        indent: 0,
         type: 'line',
         nodes: [
           {
             type: 'plain',
-            href: '#'
+            text: '#'
           }
         ]
       }
@@ -65,7 +65,7 @@ describe('hashTag', () => {
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
-        indent: 1,
+        indent: 0,
         type: 'line',
         nodes: [
           {
@@ -83,7 +83,7 @@ describe('hashTag', () => {
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
-        indent: 1,
+        indent: 0,
         type: 'line',
         nodes: [
           {
@@ -109,7 +109,7 @@ describe('hashTag', () => {
     const blocks: Array<BlockType> = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
-        indent: 1,
+        indent: 0,
         type: 'line',
         nodes: [
           {
