@@ -5,6 +5,7 @@ import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './C
 import { UrlNodeType, createUrlNode, httpRegExp, urlRegExp, leftUrlRegExp, rightUrlRegExp, isUrlMatch } from './UrlNode'
 import { InternalLinkNodeType, createInternalLinkNode, internalLinkRegExp } from './InternalLinkNode'
 import { IconNodeType, createIconNode, iconRegExp } from './IconNode'
+import { HashTagNodeType, hashTagRegExp, createHashTagNode } from './HashTagNode'
 import { PlainNodeType, createPlainNode } from './PlainNode'
 
 export type LineNodeType = QuoteNodeType
@@ -14,6 +15,7 @@ export type LineNodeType = QuoteNodeType
                          | UrlNodeType
                          | InternalLinkNodeType
                          | IconNodeType
+                         | HashTagNodeType
                          | PlainNodeType
 
 export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
@@ -106,6 +108,16 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
     return [
       ...convertToLineNodes(left, { nested, quoted }),
       createUrlNode(target, ''),
+      ...convertToLineNodes(right, { nested, quoted })
+    ]
+  }
+
+  const hashTagMatch = text.match(hashTagRegExp)
+  if (hashTagMatch) {
+    const [, left, target, right] = hashTagMatch
+    return [
+      ...convertToLineNodes(left, { nested, quoted }),
+      createHashTagNode(target),
       ...convertToLineNodes(right, { nested, quoted })
     ]
   }
