@@ -2,7 +2,7 @@ import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
 import { StrongNodeType, createStrongNode, strongRegExp } from './StrongNode'
 import { DecorationNodeType, createDecorationNode, decorationRegExp } from './DecorationNode'
 import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
-import { UrlNodeType, createUrlNode, urlRegExp, leftUrlRegExp, rightUrlRegExp, isUrlMatch } from './UrlNode'
+import { UrlNodeType, createUrlNode, httpRegExp, urlRegExp, leftUrlRegExp, rightUrlRegExp, isUrlMatch } from './UrlNode'
 import { InternalLinkNodeType, createInternalLinkNode, internalLinkRegExp } from './InternalLinkNode'
 import { IconNodeType, createIconNode, iconRegExp } from './IconNode'
 import { PlainNodeType, createPlainNode } from './PlainNode'
@@ -100,9 +100,9 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
     ]
   }
 
-  const urlMatch = text.match(/^(.*?)(https?:\/\/[^\s\]]+)(.*)$/)
-  if (urlMatch) {
-    const [, left, target, right] = urlMatch
+  const httpMatch = text.match(httpRegExp)
+  if (httpMatch) {
+    const [, left, target, right] = httpMatch
     return [
       ...convertToLineNodes(left, { nested, quoted }),
       createUrlNode(target, ''),

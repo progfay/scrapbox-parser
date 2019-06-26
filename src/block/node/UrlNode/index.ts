@@ -1,6 +1,7 @@
 import { ExternalLinkNodeType, createExternalLinkNode } from './ExternalLinkNode'
 import { ImageNodeType, createImageNode } from './ImageNode'
 
+export const httpRegExp = /^(.*?)(https?:\/\/[^\s\]]+)(.*)$/
 export const urlRegExp = /^(.*?)\[(?<href>https?:\/\/[^\s\]]+)(?<content>)\](.*)$/
 export const leftUrlRegExp = /^(.*?)\[(?<href>https?:\/\/[^\s\]]+)\s+(?<content>[^\]]*[^\s])\](.*)$/
 export const rightUrlRegExp = /^(.*?)\[(?<content>[^\]]*[^\s])\s+(?<href>https?:\/\/[^\s\]]+)\](.*)$/
