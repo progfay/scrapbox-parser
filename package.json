@@ -10,6 +10,7 @@
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix . --ext .ts"
   },

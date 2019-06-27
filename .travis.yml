@@ -3,4 +3,4 @@ node_js:
   - 'stable'
   - 'lts/*'
 
-script: npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+script: npm test && npm run coverage
