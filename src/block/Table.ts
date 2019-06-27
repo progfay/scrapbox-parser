@@ -1,5 +1,6 @@
 import { BlockComponentType } from './BlockComponent'
 import { PackedBlockComponentType } from './PackedBlockComponent'
+import { convertToLineNodes, LineNodeType } from './node'
 
 export type TableComponentType = {
   type: 'table'
@@ -10,7 +11,7 @@ export type TableType = {
   indent: number
   type: 'table'
   fileName: string
-  cells: Array<Array<string>>
+  cells: Array<Array<Array<LineNodeType>>>
 }
 
 export const isTableComponent = (packedBlockComponent: PackedBlockComponentType): packedBlockComponent is TableComponentType => (
@@ -38,6 +39,9 @@ export const convertToTable = (tableComponent: TableComponentType): TableType =>
     fileName,
     cells: components
       .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
-      .map((block: string): Array<string> => block.split('\t'))
+      .map((block: string): Array<Array<LineNodeType>> => block
+        .split('\t')
+        .map((block: string): Array<LineNodeType> => convertToLineNodes(block, { nested: true, quoted: false }))
+      )
   }
 }

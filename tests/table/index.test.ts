@@ -5,6 +5,87 @@ import { BlockComponentType, convertToBlockComponents } from '../../src/block/Bl
 import { BlockType } from '../../src/block'
 import { convertToBlocks } from '../../src/parse'
 
+const defaultTableCells = [
+  [
+    [
+      {
+        type: 'plain',
+        text: '1'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: '2'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: '3'
+      }
+    ]
+  ],
+  [
+    [{
+      type: 'plain',
+      text: '1 '
+    }],
+    [
+      {
+        type: 'plain',
+        text: '2 '
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: '3'
+      }
+    ]
+  ],
+  [
+    [
+      {
+        type: 'plain',
+        text: '------'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: '------'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: '------'
+      }
+    ]
+  ],
+  [
+    [
+      {
+        type: 'plain',
+        text: 'a'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: 'b'
+      }
+    ],
+    [
+      {
+        type: 'plain',
+        text: 'c'
+      }
+    ]
+  ]
+]
+
 describe('Table', () => {
   it('Simple table', () => {
     const input = `table:hello
@@ -19,12 +100,7 @@ ${'\t'}a${'\t'}b${'\t'}c`
         indent: 0,
         type: 'table',
         fileName: 'hello',
-        cells: [
-          ['1', '2', '3'],
-          ['1 ', '2 ', '3'],
-          ['------', '------', '------'],
-          ['a', 'b', 'c']
-        ]
+        cells: defaultTableCells
       }
     ])
   })
@@ -42,12 +118,7 @@ ${'\t'}a${'\t'}b${'\t'}c`
         indent: 1,
         type: 'table',
         fileName: 'bulleted',
-        cells: [
-          ['1', '2', '3'],
-          ['1 ', '2 ', '3'],
-          ['------', '------', '------'],
-          ['a', 'b', 'c']
-        ]
+        cells: defaultTableCells
       }
     ])
   })
@@ -64,8 +135,31 @@ ${'\t'}${'\t'}${'\t'}`
         type: 'table',
         fileName: ' ',
         cells: [
-          [' ', '　', '  '],
-          ['', '', '']
+          [
+            [
+              {
+                type: 'plain',
+                text: ' '
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '　'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '  '
+              }
+            ]
+          ],
+          [
+            [],
+            [],
+            []
+          ]
         ]
       }
     ])
@@ -86,11 +180,77 @@ ${'\t'}`
         type: 'table',
         fileName: 'Staggered',
         cells: [
-          ['1', '2', '3', '4'],
-          ['1', '2', '3'],
-          ['1'],
-          ['1', '2'],
-          ['']
+          [
+            [
+              {
+                type: 'plain',
+                text: '1'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '2'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '3'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '4'
+              }
+            ]
+          ],
+          [
+            [
+              {
+                type: 'plain',
+                text: '1'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '2'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '3'
+              }
+            ]
+          ],
+          [
+            [
+              {
+                type: 'plain',
+                text: '1'
+              }
+            ]
+          ],
+          [
+            [
+              {
+                type: 'plain',
+                text: '1'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: '2'
+              }
+            ]
+          ],
+          [
+            []
+          ]
         ]
       }
     ])
@@ -114,22 +274,48 @@ ${'\t'}a${'\t'}b${'\t'}c`
         indent: 0,
         type: 'table',
         fileName: 'hello',
-        cells: [
-          ['1', '2', '3'],
-          ['1 ', '2 ', '3'],
-          ['------', '------', '------'],
-          ['a', 'b', 'c']
-        ]
+        cells: defaultTableCells
       },
       {
         indent: 0,
         type: 'table',
         fileName: 'hello',
+        cells: defaultTableCells
+      }
+    ])
+  })
+
+  it('Table with link', () => {
+    const input = `table:table with link
+${'\t'}[Link]${'\t'}This is [Link]`
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'table',
+        fileName: 'table with link',
         cells: [
-          ['1', '2', '3'],
-          ['1 ', '2 ', '3'],
-          ['------', '------', '------'],
-          ['a', 'b', 'c']
+          [
+            [
+              {
+                type: 'link',
+                pathType: 'relative',
+                href: 'Link'
+              }
+            ],
+            [
+              {
+                type: 'plain',
+                text: 'This is '
+              },
+              {
+                type: 'link',
+                pathType: 'relative',
+                href: 'Link'
+              }
+            ]
+          ]
         ]
       }
     ])

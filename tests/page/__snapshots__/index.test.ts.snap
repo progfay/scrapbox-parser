@@ -871,24 +871,84 @@ Object {
     Object {
       "cells": Array [
         Array [
-          "1",
-          "2",
-          "3",
+          Array [
+            Object {
+              "text": "1",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "2",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "3",
+              "type": "plain",
+            },
+          ],
         ],
         Array [
-          "1 ",
-          "2 ",
-          "3",
+          Array [
+            Object {
+              "text": "1 ",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "2 ",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "3",
+              "type": "plain",
+            },
+          ],
         ],
         Array [
-          "------",
-          "------",
-          "------",
+          Array [
+            Object {
+              "text": "------",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "------",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "------",
+              "type": "plain",
+            },
+          ],
         ],
         Array [
-          "a",
-          "b",
-          "c",
+          Array [
+            Object {
+              "text": "a",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "b",
+              "type": "plain",
+            },
+          ],
+          Array [
+            Object {
+              "text": "c",
+              "type": "plain",
+            },
+          ],
         ],
       ],
       "fileName": "hello",
