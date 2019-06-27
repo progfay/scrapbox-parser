@@ -53,4 +53,41 @@ describe('line', () => {
       }
     ])
   })
+
+  it('Multi `]`', () => {
+    const input = '[* [Link]`code`[Link]]'
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'decoration',
+            decos: ['*-1'],
+            nodes: [
+              {
+                type: 'plain',
+                text: '[Link'
+              }
+            ]
+          },
+          {
+            type: 'code',
+            text: 'code'
+          },
+          {
+            type: 'link',
+            pathType: 'relative',
+            href: 'Link'
+          },
+          {
+            type: 'plain',
+            text: ']'
+          }
+        ]
+      }
+    ])
+  })
 })
