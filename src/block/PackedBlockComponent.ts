@@ -10,11 +10,8 @@ export const packBlockComponents = (blockComponents: Array<BlockComponentType>):
   let codeBlockComponents: Array<BlockComponentType> = []
   let tableComponents: Array<BlockComponentType> = []
 
-  while (blockComponents.length > 0) {
-    const blockComponent = blockComponents.shift()
-    if (!blockComponent) continue
+  for (const blockComponent of blockComponents) {
     const { indent, text } = blockComponent
-
     if (codeBlockComponents.length > 0) {
       if (indent > codeBlockComponents[0].indent) {
         codeBlockComponents.push(blockComponent)

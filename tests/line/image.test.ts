@@ -173,4 +173,47 @@ describe('image', () => {
       }
     ])
   })
+
+  it('Gyazo image with link', () => {
+    const input = `[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]
+[https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
+[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]`
+    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
+    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'image',
+            src: 'https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000',
+            link: 'https://example.com'
+          }
+        ]
+      },
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'image',
+            src: 'https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000',
+            link: 'https://example.com'
+          }
+        ]
+      },
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'image',
+            src: 'https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000',
+            link: 'https://gyazo.com/7057219f5b20ca8afd122945b72453d3'
+          }
+        ]
+      }
+    ])
+  })
 })

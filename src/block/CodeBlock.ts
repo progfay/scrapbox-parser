@@ -19,24 +19,15 @@ export const isCodeBlockComponent = (packedBlockComponent: PackedBlockComponentT
 
 export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): CodeBlockType => {
   const { components } = blockComponent
-  const head: BlockComponentType = components.shift() || { indent: 0, text: '' }
+  const [head, ...body] = components
   const { indent, text } = head
-  const match = text.match(/^\s*code:(.+)$/)
-  if (!match) {
-    return {
-      indent: 0,
-      type: 'codeBlock',
-      fileName: '',
-      content: ''
-    }
-  }
+  const fileName: string = text.replace(/^\s*code:/, '')
 
-  const fileName: string = match[1]
   return {
     indent,
     type: 'codeBlock',
     fileName,
-    content: components
+    content: body
       .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
       .join('\n')
   }

@@ -31,7 +31,7 @@ const isGyazoImageUrl = (text: string): boolean => (
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
 )
 
-export const createUrlNode = (href: string, content: string = ''): UrlNodeType => {
+export const createUrlNode = (href: string, content: string): UrlNodeType => {
   if (content === '') return isImageUrl(href) ? createImageNode(href, content) : createExternalLinkNode(href, content)
   if (content && !isUrl(content)) return createExternalLinkNode(href, content)
   if (isGyazoImageUrl(content)) return createImageNode(content, href)

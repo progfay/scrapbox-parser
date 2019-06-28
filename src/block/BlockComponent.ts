@@ -7,7 +7,7 @@ export const convertToBlockComponents = (blocks: string): Array<BlockComponentTy
   blocks.split('\n')
     .map((block: string): BlockComponentType => {
       const blockMatcher = block.match(/^\s*/)
-      const indent: number = blockMatcher ? blockMatcher[0].length : 0
+      const indent = blockMatcher![0].length
       return { indent, text: block }
     })
 )

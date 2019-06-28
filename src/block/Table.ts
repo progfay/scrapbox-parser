@@ -20,24 +20,15 @@ export const isTableComponent = (packedBlockComponent: PackedBlockComponentType)
 
 export const convertToTable = (tableComponent: TableComponentType): TableType => {
   const { components } = tableComponent
-  const head: BlockComponentType = components.shift() || { indent: 0, text: '' }
+  const [head, ...body] = components
   const { indent, text } = head
-  const match = text.match(/^\s*table:(.+)$/)
-  if (!match) {
-    return {
-      indent: 0,
-      type: 'table',
-      fileName: '',
-      cells: []
-    }
-  }
+  const fileName = text.replace(/^\s*table:/, '')
 
-  const fileName: string = match[1]
   return {
     indent,
     type: 'table',
     fileName,
-    cells: components
+    cells: body
       .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
       .map((block: string): Array<Array<LineNodeType>> => block
         .split('\t')

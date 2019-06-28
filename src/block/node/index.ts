@@ -73,7 +73,7 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
                    text.match(rightUrlRegExp)
   if (isUrlMatch(UrlMatch)) {
     const [, left, , , right] = UrlMatch
-    const { href, content = '' } = UrlMatch.groups
+    const { href, content } = UrlMatch.groups
     return [
       ...convertToLineNodes(left, { nested, quoted }),
       createUrlNode(href, content),
