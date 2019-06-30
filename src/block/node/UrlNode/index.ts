@@ -32,10 +32,7 @@ const isGyazoImageUrl = (text: string): boolean => (
 )
 
 export const createUrlNode = (href: string, content: string): UrlNodeType => {
-  if (content === '') return isImageUrl(href) ? createImageNode(href, content) : createExternalLinkNode(href, content)
-  if (content && !isUrl(content)) return createExternalLinkNode(href, content)
-  if (isGyazoImageUrl(content)) return createImageNode(content, href)
-  if (isGyazoImageUrl(href)) return createImageNode(href, content)
-  if (isImageUrl(content)) return createImageNode(content, href)
+  if (!isUrl(content) && !isImageUrl(href)) return createExternalLinkNode(href, content)
+  if (isImageUrl(content)) [href, content] = [content, href]
   return createImageNode(href, content)
 }
