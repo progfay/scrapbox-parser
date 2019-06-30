@@ -70,7 +70,8 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
 
   const UrlMatch = text.match(urlRegExp) ||
                    text.match(leftUrlRegExp) ||
-                   text.match(rightUrlRegExp)
+                   text.match(rightUrlRegExp) ||
+                   text.match(httpRegExp)
   if (isUrlMatch(UrlMatch)) {
     const [, left, , , right] = UrlMatch
     const { href, content } = UrlMatch.groups
@@ -98,16 +99,6 @@ export const convertToLineNodes = (text: string, { nested, quoted } = { nested: 
     return [
       ...convertToLineNodes(left, { nested, quoted }),
       createInternalLinkNode(target),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  const httpMatch = text.match(httpRegExp)
-  if (httpMatch) {
-    const [, left, target, right] = httpMatch
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createUrlNode(target, ''),
       ...convertToLineNodes(right, { nested, quoted })
     ]
   }
