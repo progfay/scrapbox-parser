@@ -7,68 +7,39 @@ export type PackedBlockComponentType = CodeBlockComponentType | TableComponentTy
 
 export const packBlockComponents = (blockComponents: Array<BlockComponentType>): Array<PackedBlockComponentType> => {
   const packedBlockComponents: Array<PackedBlockComponentType> = []
-  let codeBlockComponents: Array<BlockComponentType> = []
-  let tableComponents: Array<BlockComponentType> = []
+  let packingComponent: ((CodeBlockComponentType | TableComponentType) & { indent: number }) | null = null
 
   for (const blockComponent of blockComponents) {
     const { indent, text } = blockComponent
-    if (codeBlockComponents.length > 0) {
-      if (indent > codeBlockComponents[0].indent) {
-        codeBlockComponents.push(blockComponent)
+    if (packingComponent) {
+      if (indent > packingComponent.indent) {
+        packingComponent.components.push(blockComponent)
         continue
       } else {
-        packedBlockComponents.push({
-          type: 'codeBlock',
-          components: codeBlockComponents
-        })
-        codeBlockComponents = []
+        packedBlockComponents.push(packingComponent)
+        packingComponent = null
       }
     }
 
-    if (tableComponents.length > 0) {
-      if (indent > tableComponents[0].indent) {
-        tableComponents.push(blockComponent)
-        continue
-      } else {
-        packedBlockComponents.push({
-          type: 'table',
-          components: tableComponents
-        })
-        tableComponents = []
-      }
+    const isCodeBlock = text.match(/^\s*code:(.+)$/)
+    const isTable = text.match(/^\s*table:(.+)$/)
+    if (isCodeBlock || isTable) {
+      packingComponent = {
+        type: isCodeBlock ? 'codeBlock' : 'table',
+        components: [ blockComponent ],
+        indent
+      } as ((CodeBlockComponentType | TableComponentType) & { indent: number })
+    } else {
+      packedBlockComponents.push(
+        {
+          type: 'line',
+          component: blockComponent
+        }
+      )
     }
-
-    if (text.match(/^\s*code:(.+)$/)) {
-      codeBlockComponents.push(blockComponent)
-      continue
-    }
-
-    if (text.match(/^\s*table:(.+)$/)) {
-      tableComponents.push(blockComponent)
-      continue
-    }
-
-    packedBlockComponents.push(
-      {
-        type: 'line',
-        component: blockComponent
-      }
-    )
   }
 
-  if (codeBlockComponents.length > 0) {
-    packedBlockComponents.push({
-      type: 'codeBlock',
-      components: codeBlockComponents
-    })
-  }
-
-  if (tableComponents.length > 0) {
-    packedBlockComponents.push({
-      type: 'table',
-      components: tableComponents
-    })
-  }
+  if (packingComponent) packedBlockComponents.push(packingComponent)
 
   return packedBlockComponents
 }
