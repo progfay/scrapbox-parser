@@ -112,25 +112,6 @@ describe('image', () => {
     ])
   })
 
-  it('Image with double image link', () => {
-    const input = '[https://example.com/forward.png https://example.com/backward.png]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'image',
-            src: 'https://example.com/backward.png',
-            link: 'https://example.com/forward.png'
-          }
-        ]
-      }
-    ])
-  })
-
   it('Gyazo image', () => {
     const input = `[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
 [https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
