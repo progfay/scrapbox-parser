@@ -2,6 +2,7 @@
   "name": "@progfay/scrapbox-parser",
   "version": "1.2.0",
   "description": "parse Scrapbox notation to JavaScript Object",
+  "files": ["lib"],
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
