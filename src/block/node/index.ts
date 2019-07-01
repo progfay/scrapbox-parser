@@ -1,12 +1,12 @@
-import { QuoteNodeType, createQuoteNode, quoteRegExp } from './QuoteNode'
-import { StrongNodeType, createStrongNode, strongRegExp } from './StrongNode'
-import { DecorationNodeType, createDecorationNode, decorationRegExp } from './DecorationNode'
-import { CodeNodeType, createCodeNode, codeRegExp, codeCommandRegExp } from './CodeNode'
-import { UrlNodeType, createUrlNode, httpRegExp, urlRegExp, leftUrlRegExp, rightUrlRegExp, isUrlMatch } from './UrlNode'
-import { InternalLinkNodeType, createInternalLinkNode, internalLinkRegExp } from './InternalLinkNode'
-import { IconNodeType, createIconNode, iconRegExp } from './IconNode'
-import { HashTagNodeType, hashTagRegExp, createHashTagNode } from './HashTagNode'
-import { PlainNodeType, createPlainNode } from './PlainNode'
+import { QuoteNodeType, QuoteNodeParser } from './QuoteNode'
+import { StrongNodeType, StrongNodeParser } from './StrongNode'
+import { DecorationNodeType, DecorationNodeParser } from './DecorationNode'
+import { CodeNodeType, CodeNodeParser } from './CodeNode'
+import { UrlNodeType, UrlNodeParser } from './UrlNode'
+import { InternalLinkNodeType, InternalLinkNodeParser } from './InternalLinkNode'
+import { IconNodeType, IconNodeParser } from './IconNode'
+import { HashTagNodeType, HashTagNodeParser } from './HashTagNode'
+import { PlainNodeType, PlainNodeParser } from './PlainNode'
 
 export type LineNodeType = QuoteNodeType
                          | StrongNodeType
@@ -18,109 +18,35 @@ export type LineNodeType = QuoteNodeType
                          | HashTagNodeType
                          | PlainNodeType
 
-export const convertToLineNodes = (text: string, { nested, quoted } = { nested: false, quoted: false }): Array<LineNodeType> => {
-  if (!text) return []
-
-  if (!nested && !quoted) {
-    const quoteMatch = text.match(quoteRegExp)
-    if (quoteMatch) {
-      const [, target] = quoteMatch
-      const nodes = convertToLineNodes(target, { nested, quoted: true })
-      return [ createQuoteNode(nodes) ]
-    }
-  }
-
-  if (!nested) {
-    const codeCommandMatch = text.match(codeCommandRegExp)
-    if (codeCommandMatch) {
-      const [, target] = codeCommandMatch
-      return [ createCodeNode(target) ]
-    }
-
-    const codeMatch = text.match(codeRegExp)
-    if (codeMatch) {
-      const [, left, target, right] = codeMatch
-      return [
-        ...convertToLineNodes(left, { nested, quoted }),
-        createCodeNode(target),
-        ...convertToLineNodes(right, { nested, quoted })
-      ]
-    }
-
-    const strongMatch = text.match(strongRegExp)
-    if (strongMatch) {
-      const [, left, target, right] = strongMatch
-      return [
-        ...convertToLineNodes(left, { nested, quoted }),
-        createStrongNode(convertToLineNodes(target, { nested: true, quoted })),
-        ...convertToLineNodes(right, { nested, quoted })
-      ]
-    }
-
-    const decorationMatch = text.match(decorationRegExp)
-    if (decorationMatch) {
-      const [, left, decoChars, target, right] = decorationMatch
-      return [
-        ...convertToLineNodes(left, { nested, quoted }),
-        createDecorationNode(decoChars, convertToLineNodes(target, { nested: true, quoted })),
-        ...convertToLineNodes(right, { nested, quoted })
-      ]
-    }
-  }
-
-  const UrlMatch = text.match(urlRegExp) ||
-                   text.match(leftUrlRegExp) ||
-                   text.match(rightUrlRegExp)
-  if (isUrlMatch(UrlMatch)) {
-    const [, left, , , right] = UrlMatch
-    const { href, content } = UrlMatch.groups
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createUrlNode(href, content),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  const iconMatch = text.match(iconRegExp)
-  if (iconMatch) {
-    const [, left, path, , num = '1', right] = iconMatch
-    const iconNode = createIconNode(path)
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      ...new Array(parseInt(num)).fill(iconNode),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  const internalLinkMatch = text.match(internalLinkRegExp)
-  if (internalLinkMatch) {
-    const [, left, target, right] = internalLinkMatch
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createInternalLinkNode(target),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  const httpMatch = text.match(httpRegExp)
-  if (httpMatch) {
-    const [, left, target, right] = httpMatch
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createUrlNode(target, ''),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  const hashTagMatch = text.match(hashTagRegExp)
-  if (hashTagMatch) {
-    const [, left, target, right] = hashTagMatch
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createHashTagNode(target),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
-
-  return [ createPlainNode(text) ]
+export type ParserOptionType = {
+  nested: boolean
+  quoted: boolean
 }
+export type NextParserType = () => Array<LineNodeType>
+export type ParserType = (text: string, opt: ParserOptionType, next: NextParserType) => Array<LineNodeType>
+
+const FalselyEliminator: ParserType = (text, _opt, next) => {
+  if (!text) return []
+  return next()
+}
+
+const combineNodeParsers = (...parsers: Array<ParserType>) => {
+  return (text: string = '', opt: ParserOptionType = { nested: false, quoted: false }): Array<LineNodeType> => (
+    parsers.slice().reverse().reduce(
+      (acc: NextParserType, parser: ParserType): NextParserType => () => parser(text, opt, acc),
+      () => PlainNodeParser(text)
+    )()
+  )
+}
+
+export const convertToLineNodes = combineNodeParsers(
+  FalselyEliminator,
+  QuoteNodeParser,
+  CodeNodeParser,
+  StrongNodeParser,
+  UrlNodeParser,
+  DecorationNodeParser,
+  IconNodeParser,
+  InternalLinkNodeParser,
+  HashTagNodeParser
+)
