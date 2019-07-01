@@ -1,17 +1,17 @@
-import { LineNodeType } from '.'
+import { ParserType, LineNodeType, convertToLineNodes } from '.'
+
+const decorationRegExp = /^(.*?)\[([!"#%&'()*+,-./{|}<>_~]+) ((?:\[[^\]]+\]|[^\]])+)\](.*)$/
 
 export type DecorationCharType = '*' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
 export type AsteriskDecorationCharType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '*-10'
 export type DecorationType = Exclude<DecorationCharType, '*'> | AsteriskDecorationCharType
-
-export const decorationRegExp = /^(.*?)\[([!"#%&'()*+,-./{|}<>_~]+) ((?:\[[^\]]+\]|[^\]])+)\](.*)$/
 export type DecorationNodeType = {
   type: 'decoration'
   decos: Array<DecorationType>
   nodes: Array<LineNodeType>
 }
 
-export const createDecorationNode = (decoChars: string, nodes: Array<LineNodeType>): DecorationNodeType => {
+const createDecorationNode = (decoChars: string, nodes: Array<LineNodeType>): DecorationNodeType => {
   const decoSet = new Set<string>(decoChars)
   if (decoSet.has('*')) {
     const asteriskCount = decoChars.split('*').length - 1
@@ -24,4 +24,18 @@ export const createDecorationNode = (decoChars: string, nodes: Array<LineNodeTyp
     decos: Array.from(decoSet) as Array<DecorationType>,
     nodes
   }
+}
+
+export const DecorationNodeParser: ParserType = (text, { nested, quoted }, next) => {
+  if (nested) return next()
+
+  const decorationMatch = text.match(decorationRegExp)
+  if (!decorationMatch) return next()
+
+  const [, left, decoChars, target, right] = decorationMatch
+  return [
+    ...convertToLineNodes(left, { nested, quoted }),
+    createDecorationNode(decoChars, convertToLineNodes(target, { nested: true, quoted })),
+    ...convertToLineNodes(right, { nested, quoted })
+  ]
 }

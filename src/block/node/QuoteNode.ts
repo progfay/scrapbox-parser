@@ -1,13 +1,22 @@
-import { LineNodeType } from '.'
+import { ParserType, LineNodeType, convertToLineNodes } from '.'
 
-export const quoteRegExp = /^>(.*)$/
+const quoteRegExp = /^>(.*)$/
 
 export type QuoteNodeType = {
   type: 'quote'
   nodes: Array<LineNodeType>
 }
 
-export const createQuoteNode = (nodes: Array<LineNodeType>): QuoteNodeType => ({
+const createQuoteNode = (text: string): QuoteNodeType => ({
   type: 'quote',
-  nodes
+  nodes: convertToLineNodes(text, { nested: false, quoted: true })
 })
+
+export const QuoteNodeParser: ParserType = (text, { nested, quoted }, next) => {
+  if (nested || quoted) return next()
+  const quoteMatch = text.match(quoteRegExp)
+  if (!quoteMatch) return next()
+
+  const [, target] = quoteMatch
+  return [ createQuoteNode(target) ]
+}

@@ -1,4 +1,6 @@
-export const iconRegExp = /^(.*?)\[(.*)\.icon(\*(\d+))?\](.*)$/
+import { ParserType, convertToLineNodes } from '.'
+
+const iconRegExp = /^(.*?)\[(.*)\.icon(\*(\d+))?\](.*)$/
 
 export type IconNodeType = {
   type: 'icon'
@@ -6,8 +8,23 @@ export type IconNodeType = {
   path: string
 }
 
-export const createIconNode = (path: string): IconNodeType | null => ({
+const createIconNode = (path: string): IconNodeType | null => ({
   type: 'icon',
   pathType: /^\//.test(path) ? 'root' : 'relative',
   path
 })
+
+export const IconNodeParser: ParserType = (text, { nested, quoted }, next) => {
+  if (nested) return next()
+
+  const iconMatch = text.match(iconRegExp)
+  if (!iconMatch) return next()
+
+  const [, left, path, , num = '1', right] = iconMatch
+  const iconNode = createIconNode(path)
+  return [
+    ...convertToLineNodes(left, { nested, quoted }),
+    ...new Array(parseInt(num)).fill(iconNode),
+    ...convertToLineNodes(right, { nested, quoted })
+  ]
+}

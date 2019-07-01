@@ -1,11 +1,27 @@
-export const hashTagRegExp = /^(.+? )?#(\S+)(.*)?$/
+import { ParserType, convertToLineNodes } from '.'
+
+const hashTagRegExp = /^(.+? )?#(\S+)(.*)?$/
 
 export type HashTagNodeType = {
   type: 'hashTag'
   href: string
 }
 
-export const createHashTagNode = (href: string): HashTagNodeType => ({
+const createHashTagNode = (href: string): HashTagNodeType => ({
   type: 'hashTag',
   href
 })
+
+export const HashTagNodeParser: ParserType = (text, { nested, quoted }, next) => {
+  if (nested) return next()
+
+  const hashTagMatch = text.match(hashTagRegExp)
+  if (!hashTagMatch) return next()
+
+  const [, left, target, right] = hashTagMatch
+  return [
+    ...convertToLineNodes(left, { nested, quoted }),
+    createHashTagNode(target),
+    ...convertToLineNodes(right, { nested, quoted })
+  ]
+}
