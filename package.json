@@ -47,23 +47,6 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {},
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
-    },
-    "testMatch": [
-      "**/tests/**/*.test.ts"
-    ]
-  },
   "publishConfig": {
     "access": "public"
   }
