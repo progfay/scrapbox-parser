@@ -25,7 +25,7 @@ export type ParserOptionType = {
 export type NextParserType = () => Array<LineNodeType>
 export type ParserType = (text: string, opt: ParserOptionType, next: NextParserType) => Array<LineNodeType>
 
-const FalselyEliminator: ParserType = (text, _opt, next) => {
+const FalsyEliminator: ParserType = (text, _opt, next) => {
   if (!text) return []
   return next()
 }
@@ -40,7 +40,7 @@ const combineNodeParsers = (...parsers: Array<ParserType>) => {
 }
 
 export const convertToLineNodes = combineNodeParsers(
-  FalselyEliminator,
+  FalsyEliminator,
   QuoteNodeParser,
   CodeNodeParser,
   StrongNodeParser,
