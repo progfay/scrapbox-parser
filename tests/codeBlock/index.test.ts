@@ -12,8 +12,8 @@ describe('Code Block', () => {
    console.log("hello")
    // You can also write comments!
  }`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -31,8 +31,8 @@ describe('Code Block', () => {
     console.log("hello")
     // You can also write comments!
   }`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -52,8 +52,8 @@ describe('Code Block', () => {
     // You can also write comments!
   }
  Bullet`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -97,8 +97,8 @@ code:hello.js
    console.log("hello")
    // You can also write comments!
  }`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,

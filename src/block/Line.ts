@@ -9,7 +9,7 @@ export type LineComponentType = {
 export type LineType = {
   indent: number
   type: 'line'
-  nodes: Array<LineNodeType>
+  nodes: LineNodeType[]
 }
 
 export const convertToLine = (lineComponent: LineComponentType): LineType => {

@@ -7,8 +7,8 @@ import { convertToBlocks } from '../../src/parse'
 describe('line', () => {
   it('Line that have multi node', () => {
     const input = '[Link][Link]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -31,8 +31,8 @@ describe('line', () => {
 
   it('Line that have nested node', () => {
     const input = '[* [Link]]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -56,8 +56,8 @@ describe('line', () => {
 
   it('Multi `]`', () => {
     const input = '[* [Link]`code`[Link]]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,

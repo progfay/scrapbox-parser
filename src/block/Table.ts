@@ -4,14 +4,14 @@ import { convertToLineNodes, LineNodeType } from './node'
 
 export type TableComponentType = {
   type: 'table'
-  components: Array<BlockComponentType>
+  components: BlockComponentType[]
 }
 
 export type TableType = {
   indent: number
   type: 'table'
   fileName: string
-  cells: Array<Array<Array<LineNodeType>>>
+  cells: LineNodeType[][][]
 }
 
 export const isTableComponent = (packedBlockComponent: PackedBlockComponentType): packedBlockComponent is TableComponentType => (
@@ -30,9 +30,9 @@ export const convertToTable = (tableComponent: TableComponentType): TableType =>
     fileName,
     cells: body
       .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
-      .map((block: string): Array<Array<LineNodeType>> => block
+      .map((block: string): LineNodeType[][] => block
         .split('\t')
-        .map((block: string): Array<LineNodeType> => convertToLineNodes(block, { nested: true, quoted: false }))
+        .map((block: string): LineNodeType[] => convertToLineNodes(block, { nested: true, quoted: false }))
       )
   }
 }

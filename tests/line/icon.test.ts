@@ -7,8 +7,8 @@ import { convertToBlocks } from '../../src/parse'
 describe('icon', () => {
   it('Simple root icon', () => {
     const input = '[/icons/+1.icon]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -26,8 +26,8 @@ describe('icon', () => {
 
   it('Simple relative icon', () => {
     const input = '[me.icon]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -45,8 +45,8 @@ describe('icon', () => {
 
   it('Multiple icons', () => {
     const input = '[me.icon*3]'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,

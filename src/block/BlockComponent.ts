@@ -3,7 +3,7 @@ export type BlockComponentType = {
   text: string
 }
 
-export const convertToBlockComponents = (blocks: string): Array<BlockComponentType> => (
+export const convertToBlockComponents = (blocks: string): BlockComponentType[] => (
   blocks.split('\n')
     .map((block: string): BlockComponentType => {
       const blockMatcher = block.match(/^\s*/)

@@ -7,8 +7,8 @@ import { convertToBlocks } from '../../src/parse'
 describe('code', () => {
   it('Simple code with backquote', () => {
     const input = '`Simple code`'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -25,8 +25,8 @@ describe('code', () => {
 
   it('Simple code with $', () => {
     const input = '$ Simple code'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -43,8 +43,8 @@ describe('code', () => {
 
   it('Empty code with backquote', () => {
     const input = '``'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -61,8 +61,8 @@ describe('code', () => {
 
   it('`$` is not code', () => {
     const input = '$'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -79,8 +79,8 @@ describe('code', () => {
 
   it('`$ ` is not code', () => {
     const input = '$ '
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -97,8 +97,8 @@ describe('code', () => {
 
   it('`$s` is not code', () => {
     const input = '$not code'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -115,8 +115,8 @@ describe('code', () => {
 
   it('Bulleted code with backquote', () => {
     const input = ' `Bulleted code`'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -133,8 +133,8 @@ describe('code', () => {
 
   it('Bulleted code with $', () => {
     const input = ' $ Bulleted code'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,

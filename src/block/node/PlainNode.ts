@@ -10,6 +10,6 @@ export const createPlainNode = (text: string): PlainNodeType => ({
   text: text
 })
 
-export const PlainNodeParser = (text: string): Array<LineNodeType> => {
+export const PlainNodeParser = (text: string): LineNodeType[] => {
   return [ createPlainNode(text) ]
 }

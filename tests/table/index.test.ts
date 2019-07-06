@@ -93,8 +93,8 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
 ${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -111,8 +111,8 @@ ${'\t'}a${'\t'}b${'\t'}c`
  ${'\t'}1 ${'\t'}2 ${'\t'}3
  ${'\t'}------${'\t'}------${'\t'}------
  ${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -127,8 +127,8 @@ ${'\t'}a${'\t'}b${'\t'}c`
     const input = `table:${' '}
 ${'\t'} ${'\t'}　${'\t'}${'  '}
 ${'\t'}${'\t'}${'\t'}`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -172,8 +172,8 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1
 ${'\t'}1${'\t'}2
 ${'\t'}`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -267,8 +267,8 @@ ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
 ${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
@@ -288,8 +288,8 @@ ${'\t'}a${'\t'}b${'\t'}c`
   it('Table with link', () => {
     const input = `table:table with link
 ${'\t'}[Link]${'\t'}This is [Link]`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,

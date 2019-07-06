@@ -22,16 +22,16 @@ export type ParserOptionType = {
   nested: boolean
   quoted: boolean
 }
-export type NextParserType = () => Array<LineNodeType>
-export type ParserType = (text: string, opt: ParserOptionType, next: NextParserType) => Array<LineNodeType>
+export type NextParserType = () => LineNodeType[]
+export type ParserType = (text: string, opt: ParserOptionType, next: NextParserType) => LineNodeType[]
 
 const FalsyEliminator: ParserType = (text, _opt, next) => {
   if (!text) return []
   return next()
 }
 
-const combineNodeParsers = (...parsers: Array<ParserType>) => {
-  return (text: string = '', opt: ParserOptionType = { nested: false, quoted: false }): Array<LineNodeType> => (
+const combineNodeParsers = (...parsers: ParserType[]) => {
+  return (text: string = '', opt: ParserOptionType = { nested: false, quoted: false }): LineNodeType[] => (
     parsers.slice().reverse().reduce(
       (acc: NextParserType, parser: ParserType): NextParserType => () => parser(text, opt, acc),
       () => PlainNodeParser(text)

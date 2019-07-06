@@ -4,16 +4,16 @@ import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlo
 
 type PageType = {
   title: string
-  blocks: Array<BlockType>
+  blocks: BlockType[]
 }
 
-export const convertToBlocks = (blockComponents: Array<BlockComponentType>): Array<BlockType> => {
-  const packedBlockComponents: Array<PackedBlockComponentType> = packBlockComponents(blockComponents)
+export const convertToBlocks = (blockComponents: BlockComponentType[]): BlockType[] => {
+  const packedBlockComponents: PackedBlockComponentType[] = packBlockComponents(blockComponents)
   return packedBlockComponents.map(convertToBlock)
 }
 
 const parse = (input: string): PageType => {
-  const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input.trim())
+  const blockComponents: BlockComponentType[] = convertToBlockComponents(input.trim())
 
   const [firstBlock, ...body] = blockComponents
   const title = firstBlock && firstBlock.text ? firstBlock.text : 'Untitled'

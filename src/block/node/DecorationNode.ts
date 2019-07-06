@@ -7,11 +7,11 @@ export type AsteriskDecorationCharType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' |
 export type DecorationType = Exclude<DecorationCharType, '*'> | AsteriskDecorationCharType
 export type DecorationNodeType = {
   type: 'decoration'
-  decos: Array<DecorationType>
-  nodes: Array<LineNodeType>
+  decos: DecorationType[]
+  nodes: LineNodeType[]
 }
 
-const createDecorationNode = (decoChars: string, nodes: Array<LineNodeType>): DecorationNodeType => {
+const createDecorationNode = (decoChars: string, nodes: LineNodeType[]): DecorationNodeType => {
   const decoSet = new Set<string>(decoChars)
   if (decoSet.has('*')) {
     const asteriskCount = decoChars.split('*').length - 1
@@ -21,7 +21,7 @@ const createDecorationNode = (decoChars: string, nodes: Array<LineNodeType>): De
 
   return {
     type: 'decoration',
-    decos: Array.from(decoSet) as Array<DecorationType>,
+    decos: Array.from(decoSet) as DecorationType[],
     nodes
   }
 }

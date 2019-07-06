@@ -4,10 +4,10 @@ const strongRegExp = /^(.*?)\[\[(.+?[\]]*)\]\](.*)$/
 
 export type StrongNodeType = {
   type: 'strong'
-  nodes: Array<LineNodeType>
+  nodes: LineNodeType[]
 }
 
-const createStrongNode = (nodes: Array<LineNodeType>): StrongNodeType => ({
+const createStrongNode = (nodes: LineNodeType[]): StrongNodeType => ({
   type: 'strong',
   nodes
 })

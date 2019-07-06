@@ -5,8 +5,8 @@ import { LineComponentType } from './Line'
 
 export type PackedBlockComponentType = CodeBlockComponentType | TableComponentType | LineComponentType
 
-export const packBlockComponents = (blockComponents: Array<BlockComponentType>): Array<PackedBlockComponentType> => {
-  const packedBlockComponents: Array<PackedBlockComponentType> = []
+export const packBlockComponents = (blockComponents: BlockComponentType[]): PackedBlockComponentType[] => {
+  const packedBlockComponents: PackedBlockComponentType[] = []
   let packingComponent: ((CodeBlockComponentType | TableComponentType) & { indent: number }) | null = null
 
   for (const blockComponent of blockComponents) {

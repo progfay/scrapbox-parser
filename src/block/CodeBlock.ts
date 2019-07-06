@@ -3,7 +3,7 @@ import { PackedBlockComponentType } from './PackedBlockComponent'
 
 export type CodeBlockComponentType = {
   type: 'codeBlock'
-  components: Array<BlockComponentType>
+  components: BlockComponentType[]
 }
 
 export type CodeBlockType = {

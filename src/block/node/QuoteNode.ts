@@ -4,7 +4,7 @@ const quoteRegExp = /^>(.*)$/
 
 export type QuoteNodeType = {
   type: 'quote'
-  nodes: Array<LineNodeType>
+  nodes: LineNodeType[]
 }
 
 const createQuoteNode = (text: string): QuoteNodeType => ({

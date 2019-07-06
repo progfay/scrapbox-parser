@@ -7,8 +7,8 @@ import { convertToBlocks } from '../../src/parse'
 describe('bullet', () => {
   it('Single-byte space indent', () => {
     const input = ' Single-byte space'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -25,8 +25,8 @@ describe('bullet', () => {
 
   it('Double-byte space indent', () => {
     const input = '　Double-byte space'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -44,8 +44,8 @@ describe('bullet', () => {
   it('Tab indent', () => {
     // eslint-disable-next-line no-tabs
     const input = '	Tab'
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 1,
@@ -65,8 +65,8 @@ describe('bullet', () => {
  first bullet (indent: 1)
   second bullet (indent: 2)
    third bullet (indent: 3)`
-    const blockComponents: Array<BlockComponentType> = convertToBlockComponents(input)
-    const blocks: Array<BlockType> = convertToBlocks(blockComponents)
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
       {
         indent: 0,
