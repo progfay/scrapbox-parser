@@ -28,7 +28,7 @@ export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): Code
     type: 'codeBlock',
     fileName,
     content: body
-      .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
+      .map((component: BlockComponentType): string => component.text.substring(indent + 1))
       .join('\n')
   }
 }

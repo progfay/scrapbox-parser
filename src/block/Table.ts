@@ -30,7 +30,7 @@ export const convertToTable = (tableComponent: TableComponentType): TableType =>
     fileName,
     cells: body
       .map((blockComponent: BlockComponentType): string => blockComponent.text.substring(indent + 1))
-      .map((block: string): LineNodeType[][] => block
+      .map((text: string): LineNodeType[][] => text
         .split('\t')
         .map((block: string): LineNodeType[] => convertToLineNodes(block, { nested: true, quoted: false }))
       )

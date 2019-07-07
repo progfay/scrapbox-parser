@@ -23,12 +23,14 @@ export const CodeNodeParser: ParserType = (text, { nested, quoted }, next) => {
   }
 
   const codeMatch = text.match(codeRegExp)
-  if (!codeMatch) return next()
+  if (codeMatch) {
+    const [, left, target, right] = codeMatch
+    return [
+      ...convertToLineNodes(left, { nested, quoted }),
+      createCodeNode(target),
+      ...convertToLineNodes(right, { nested, quoted })
+    ]
+  }
 
-  const [, left, target, right] = codeMatch
-  return [
-    ...convertToLineNodes(left, { nested, quoted }),
-    createCodeNode(target),
-    ...convertToLineNodes(right, { nested, quoted })
-  ]
+  return next()
 }
