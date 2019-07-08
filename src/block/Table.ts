@@ -14,8 +14,8 @@ export type TableType = {
   cells: LineNodeType[][][]
 }
 
-export const isTableComponent = (packedBlockComponent: PackedBlockComponentType): packedBlockComponent is TableComponentType => (
-  packedBlockComponent.type === 'table'
+export const isTableComponent = (component: PackedBlockComponentType): component is TableComponentType => (
+  component.type === 'table'
 )
 
 export const convertToTable = (tableComponent: TableComponentType): TableType => {
