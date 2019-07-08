@@ -7,7 +7,7 @@ export type PlainNodeType = {
 
 export const createPlainNode = (text: string): PlainNodeType => ({
   type: 'plain',
-  text: text
+  text
 })
 
 export const PlainNodeParser = (text: string): LineNodeType[] => {
