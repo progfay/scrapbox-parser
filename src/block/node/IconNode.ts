@@ -24,7 +24,7 @@ export const IconNodeParser: ParserType = (text, { nested, quoted }, next) => {
   const iconNode = createIconNode(path)
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    ...new Array(parseInt(num)).fill(iconNode),
+    ...new Array(parseInt(num, 10)).fill(iconNode),
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }
