@@ -2,6 +2,7 @@ import { QuoteNodeType, QuoteNodeParser } from './QuoteNode'
 import { StrongNodeType, StrongNodeParser } from './StrongNode'
 import { DecorationNodeType, DecorationNodeParser } from './DecorationNode'
 import { CodeNodeType, CodeNodeParser } from './CodeNode'
+import { BlankNodeType, BlankNodeParser } from './BlankNode'
 import { UrlNodeType, UrlNodeParser } from './UrlNode'
 import { InternalLinkNodeType, InternalLinkNodeParser } from './InternalLinkNode'
 import { IconNodeType, IconNodeParser } from './IconNode'
@@ -12,6 +13,7 @@ export type LineNodeType = QuoteNodeType
                          | StrongNodeType
                          | DecorationNodeType
                          | CodeNodeType
+                         | BlankNodeType
                          | UrlNodeType
                          | InternalLinkNodeType
                          | IconNodeType
@@ -43,6 +45,7 @@ export const convertToLineNodes = combineNodeParsers(
   FalsyEliminator,
   QuoteNodeParser,
   CodeNodeParser,
+  BlankNodeParser,
   StrongNodeParser,
   UrlNodeParser,
   DecorationNodeParser,
