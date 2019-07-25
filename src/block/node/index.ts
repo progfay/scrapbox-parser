@@ -4,6 +4,7 @@ import { DecorationNodeType, DecorationNodeParser } from './DecorationNode'
 import { CodeNodeType, CodeNodeParser } from './CodeNode'
 import { BlankNodeType, BlankNodeParser } from './BlankNode'
 import { UrlNodeType, UrlNodeParser } from './UrlNode'
+import { GoogleMapNodeType, GoogleMapNodeParser } from './GoogleMapNode'
 import { InternalLinkNodeType, InternalLinkNodeParser } from './InternalLinkNode'
 import { IconNodeType, IconNodeParser } from './IconNode'
 import { HashTagNodeType, HashTagNodeParser } from './HashTagNode'
@@ -15,6 +16,7 @@ export type LineNodeType = QuoteNodeType
                          | CodeNodeType
                          | BlankNodeType
                          | UrlNodeType
+                         | GoogleMapNodeType
                          | InternalLinkNodeType
                          | IconNodeType
                          | HashTagNodeType
@@ -50,6 +52,7 @@ export const convertToLineNodes = combineNodeParsers(
   UrlNodeParser,
   DecorationNodeParser,
   IconNodeParser,
+  GoogleMapNodeParser,
   InternalLinkNodeParser,
   HashTagNodeParser
 )
