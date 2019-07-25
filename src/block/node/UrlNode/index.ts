@@ -16,7 +16,7 @@ type UrlMatchType = {
   }
 }
 
-export const isUrlMatch = (obj: any): obj is UrlMatchType => (
+const isUrlMatch = (obj: any): obj is UrlMatchType => (
   obj && obj.groups && obj.groups.href
 )
 
