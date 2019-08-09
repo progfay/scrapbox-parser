@@ -4,6 +4,15 @@
 
 parse Scrapbox notation to JavaScript Object
 
+## Installation
+
+```sh
+$ npm i @progfay/scrapbox-parser
+```
+
+
+## Usage
+
 ```js
 import parse from '@progfay/scrapbox-parser'
 import fetch from 'node-fetch'
