@@ -32,10 +32,11 @@ export const StrongImageNodeParser: ParserType = (text, { nested, quoted }, next
   if (!isStrongImageMatch(StrongImageMatch)) return next()
 
   const { left, src, right } = StrongImageMatch.groups
+  const isGyazoImage = /https?:\/\/([0-9a-z\-]+\.)?gyazo\.com\/[0-9a-f]{32}/.test(src)
 
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    createStrongImageNode(src),
+    createStrongImageNode(src + (isGyazoImage ? '/thumb/1000' : '')),
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }
