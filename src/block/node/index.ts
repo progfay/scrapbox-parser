@@ -1,4 +1,5 @@
 import { QuoteNodeType, QuoteNodeParser } from './QuoteNode'
+import { StrongImageNodeType, StrongImageNodeParser } from './StrongImageNode'
 import { StrongIconNodeType, StrongIconNodeParser } from './StrongIconNode'
 import { StrongNodeType, StrongNodeParser } from './StrongNode'
 import { DecorationNodeType, DecorationNodeParser } from './DecorationNode'
@@ -12,6 +13,7 @@ import { HashTagNodeType, HashTagNodeParser } from './HashTagNode'
 import { PlainNodeType, PlainNodeParser } from './PlainNode'
 
 export type LineNodeType = QuoteNodeType
+                         | StrongImageNodeType
                          | StrongIconNodeType
                          | StrongNodeType
                          | DecorationNodeType
@@ -50,6 +52,7 @@ export const convertToLineNodes = combineNodeParsers(
   QuoteNodeParser,
   CodeNodeParser,
   BlankNodeParser,
+  StrongImageNodeParser,
   StrongIconNodeParser,
   StrongNodeParser,
   UrlNodeParser,
