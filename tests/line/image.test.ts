@@ -5,8 +5,9 @@ import { BlockType } from '../../src/block'
 import { convertToBlocks } from '../../src/parse'
 
 describe('image', () => {
-  it('Simple HTTP png image', () => {
-    const input = '[http://example.com/image.png]'
+  it('Simple image', () => {
+    const input = `[http://example.com/image.png]
+[https://example.com/image.JPG]`
     const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
     const blocks: BlockType[] = convertToBlocks(blockComponents)
     expect(blocks).toEqual([
@@ -20,15 +21,7 @@ describe('image', () => {
             link: ''
           }
         ]
-      }
-    ])
-  })
-
-  it('Simple HTTPS JPG image', () => {
-    const input = '[https://example.com/image.JPG]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+      },
       {
         indent: 0,
         type: 'line',

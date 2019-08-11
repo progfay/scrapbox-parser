@@ -4,7 +4,7 @@ import { BlockComponentType, convertToBlockComponents } from '../../src/block/Bl
 import { BlockType } from '../../src/block'
 import { convertToBlocks } from '../../src/parse'
 
-describe('strong icon', () => {
+describe('strongIcon', () => {
   it('Simple root strong icon', () => {
     const input = '[[/icons/+1.icon]]'
     const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
