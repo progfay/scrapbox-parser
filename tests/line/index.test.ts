@@ -29,7 +29,7 @@ describe('line', () => {
     ])
   })
 
-  it('Line that have nested node', () => {
+  it('Decoration line includes internal link', () => {
     const input = '[* [Link]]'
     const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
     const blocks: BlockType[] = convertToBlocks(blockComponents)
@@ -46,6 +46,32 @@ describe('line', () => {
                 type: 'link',
                 pathType: 'relative',
                 href: 'Link'
+              }
+            ]
+          }
+        ]
+      }
+    ])
+  })
+
+  it('Decoration line includes internal link', () => {
+    const input = '[* [https://example.com example]]'
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'decoration',
+            decos: ['*-1'],
+            nodes: [
+              {
+                type: 'link',
+                pathType: 'absolute',
+                href: 'https://example.com',
+                content: 'example'
               }
             ]
           }
