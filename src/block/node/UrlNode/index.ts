@@ -41,8 +41,6 @@ const createUrlNode = (href: string, content: string): UrlNodeType => {
 }
 
 export const UrlNodeParser: ParserType = (text, { nested, quoted }, next) => {
-  if (nested) return next()
-
   const UrlMatch = text.match(urlRegExp) ||
                    text.match(leftUrlRegExp) ||
                    text.match(rightUrlRegExp) ||

@@ -82,4 +82,34 @@ describe('decoration', () => {
     const answer: LineType[] = [createDecorartionNode(decos, '11*')]
     expect(blocks).toEqual(answer)
   })
+
+  it('Decoration similar with externalLink', () => {
+    const input = '[* hoge https://example.com]'
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'decoration',
+            decos: ['*-1'],
+            nodes: [
+              {
+                type: 'plain',
+                text: 'hoge '
+              },
+              {
+                type: 'link',
+                pathType: 'absolute',
+                href: 'https://example.com',
+                content: ''
+              }
+            ]
+          }
+        ]
+      }
+    ])
+  })
 })
