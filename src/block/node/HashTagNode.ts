@@ -1,6 +1,6 @@
 import { ParserType, convertToLineNodes } from '.'
 
-const hashTagRegExp = /^(.+? )?#(\S+)(.*)?$/
+const hashTagRegExp = /^(.*? )?#(\S+)(.*)?$/
 
 export type HashTagNodeType = {
   type: 'hashTag'
