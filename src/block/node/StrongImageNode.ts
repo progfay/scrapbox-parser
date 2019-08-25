@@ -1,7 +1,7 @@
 import { ParserType, convertToLineNodes } from '.'
 
 const strongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg))\]\](?<right>.*)$/i
-const gyazoStrongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/([0-9a-z\-]+\.)?gyazo\.com\/[0-9a-f]{32})\]\](?<right>.*)$/
+const gyazoStrongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32})\]\](?<right>.*)$/
 
 export type StrongImageNodeType = {
   type: 'strongImage'
@@ -32,7 +32,7 @@ export const StrongImageNodeParser: ParserType = (text, { nested, quoted }, next
   if (!isStrongImageMatch(StrongImageMatch)) return next()
 
   const { left, src, right } = StrongImageMatch.groups
-  const isGyazoImage = /https?:\/\/([0-9a-z\-]+\.)?gyazo\.com\/[0-9a-f]{32}/.test(src)
+  const isGyazoImage = /https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}/.test(src)
 
   return [
     ...convertToLineNodes(left, { nested, quoted }),

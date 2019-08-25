@@ -33,7 +33,7 @@ describe('strongImage', () => {
           }
         ]
       },
-            {
+      {
         indent: 0,
         type: 'line',
         nodes: [
@@ -85,7 +85,7 @@ describe('strongImage', () => {
         nodes: [
           {
             type: 'strongImage',
-            src: 'https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000',
+            src: 'https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000'
           }
         ]
       }
