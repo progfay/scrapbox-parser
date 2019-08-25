@@ -120,4 +120,38 @@ describe('hashTag', () => {
       }
     ])
   })
+
+  it('Multiple hashTag', () => {
+    const input = '#hoge #fuga #piyo'
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'hashTag',
+            href: 'hoge'
+          },
+          {
+            type: 'plain',
+            text: ' '
+          },
+          {
+            type: 'hashTag',
+            href: 'fuga'
+          },
+          {
+            type: 'plain',
+            text: ' '
+          },
+          {
+            type: 'hashTag',
+            href: 'piyo'
+          }
+        ]
+      }
+    ])
+  })
 })
