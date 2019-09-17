@@ -159,4 +159,24 @@ describe('link', () => {
       }
     ])
   })
+
+  it('Link with link', () => {
+    const input = '[https://example.com https://example.com]'
+    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
+    const blocks: BlockType[] = convertToBlocks(blockComponents)
+    expect(blocks).toEqual([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'link',
+            pathType: 'absolute',
+            href: 'https://example.com',
+            content: 'https://example.com'
+          }
+        ]
+      }
+    ])
+  })
 })
