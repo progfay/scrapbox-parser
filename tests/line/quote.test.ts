@@ -45,27 +45,4 @@ describe('quote', () => {
       }
     ])
   })
-
-  it('Bulleted quote', () => {
-    const input = ' > Bulleted quote'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
-      {
-        indent: 1,
-        type: 'line',
-        nodes: [
-          {
-            type: 'quote',
-            nodes: [
-              {
-                type: 'plain',
-                text: ' Bulleted quote'
-              }
-            ]
-          }
-        ]
-      }
-    ])
-  })
 })

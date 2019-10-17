@@ -23,24 +23,6 @@ describe('hashTag', () => {
     ])
   })
 
-  it('Bulleted hashTag', () => {
-    const input = ' #tag'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
-      {
-        indent: 1,
-        type: 'line',
-        nodes: [
-          {
-            type: 'hashTag',
-            href: 'tag'
-          }
-        ]
-      }
-    ])
-  })
-
   it('Only `#` is not hashTag', () => {
     const input = '#'
     const blockComponents: BlockComponentType[] = convertToBlockComponents(input)

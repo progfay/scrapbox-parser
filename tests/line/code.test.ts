@@ -112,40 +112,4 @@ describe('code', () => {
       }
     ])
   })
-
-  it('Bulleted code with backquote', () => {
-    const input = ' `Bulleted code`'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
-      {
-        indent: 1,
-        type: 'line',
-        nodes: [
-          {
-            type: 'code',
-            text: 'Bulleted code'
-          }
-        ]
-      }
-    ])
-  })
-
-  it('Bulleted code with $', () => {
-    const input = ' $ Bulleted code'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
-      {
-        indent: 1,
-        type: 'line',
-        nodes: [
-          {
-            type: 'code',
-            text: '$ Bulleted code'
-          }
-        ]
-      }
-    ])
-  })
 })
