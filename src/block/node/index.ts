@@ -1,4 +1,5 @@
 import { QuoteNodeType, QuoteNodeParser } from './QuoteNode'
+import { HelpfeelNodeType, HelpfeelNodeParser } from './HelpfeelNode'
 import { StrongImageNodeType, StrongImageNodeParser } from './StrongImageNode'
 import { StrongIconNodeType, StrongIconNodeParser } from './StrongIconNode'
 import { StrongNodeType, StrongNodeParser } from './StrongNode'
@@ -14,6 +15,7 @@ import { HashTagNodeType, HashTagNodeParser } from './HashTagNode'
 import { PlainNodeType, PlainNodeParser } from './PlainNode'
 
 export type LineNodeType = QuoteNodeType
+                         | HelpfeelNodeType
                          | StrongImageNodeType
                          | StrongIconNodeType
                          | StrongNodeType
@@ -52,6 +54,7 @@ const combineNodeParsers = (...parsers: ParserType[]) => {
 export const convertToLineNodes = combineNodeParsers(
   FalsyEliminator,
   QuoteNodeParser,
+  HelpfeelNodeParser,
   CodeNodeParser,
   FormulaNodeParser,
   BlankNodeParser,
