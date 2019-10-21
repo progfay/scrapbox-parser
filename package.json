@@ -26,7 +26,7 @@
     "parser"
   ],
   "author": "progfay",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/progfay/scrapbox-parser/issues"
   },
