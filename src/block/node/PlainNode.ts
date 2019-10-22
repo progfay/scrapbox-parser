@@ -5,7 +5,7 @@ export type PlainNodeType = {
   text: string
 }
 
-export const createPlainNode = (text: string): PlainNodeType => ({
+const createPlainNode = (text: string): PlainNodeType => ({
   type: 'plain',
   text
 })

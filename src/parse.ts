@@ -12,7 +12,7 @@ export const convertToBlocks = (blockComponents: BlockComponentType[]): BlockTyp
   return packedBlockComponents.map(convertToBlock)
 }
 
-const parse = (input: string): PageType => {
+export const parse = (input: string): PageType => {
   const blockComponents: BlockComponentType[] = convertToBlockComponents(input.trim())
 
   const [firstBlock, ...body] = blockComponents
@@ -21,5 +21,3 @@ const parse = (input: string): PageType => {
 
   return { title, blocks }
 }
-
-export default parse
