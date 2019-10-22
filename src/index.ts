@@ -1,6 +1,7 @@
 import { parse } from './parse'
 
 export default parse
+export { PageType } from './parse'
 export { BlockType } from './block'
 export { CodeBlockType } from './block/CodeBlock'
 export { TableType } from './block/Table'

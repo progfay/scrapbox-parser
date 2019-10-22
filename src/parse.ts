@@ -2,7 +2,7 @@ import { BlockType, convertToBlock } from './block'
 import { BlockComponentType, convertToBlockComponents } from './block/BlockComponent'
 import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlockComponent'
 
-type PageType = {
+export type PageType = {
   title: string
   blocks: BlockType[]
 }
