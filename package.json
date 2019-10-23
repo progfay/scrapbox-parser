@@ -6,7 +6,7 @@
     "lib"
   ],
   "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "types": "./lib/type.d.ts",
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc -p ./tsconfig.json",
