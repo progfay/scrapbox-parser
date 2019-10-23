@@ -5,13 +5,15 @@ const internalLinkRegExp = /^(.*?)\[(\/?[^[\]]+)\](.*)$/
 export type InternalLinkNodeType = {
   type: 'link'
   pathType: 'root' | 'relative'
-  href: string
+  href: string,
+  content: string
 }
 
 const createInternalLinkNode = (href: string): InternalLinkNodeType => ({
   type: 'link',
   pathType: /^\/.*$/.test(href) ? 'root' : 'relative',
-  href
+  href,
+  content: ''
 })
 
 export const InternalLinkNodeParser: ParserType = (text, { nested, quoted }, next) => {

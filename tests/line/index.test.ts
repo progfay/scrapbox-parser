@@ -17,12 +17,14 @@ describe('line', () => {
           {
             type: 'link',
             pathType: 'relative',
-            href: 'Link'
+            href: 'Link',
+            content: ''
           },
           {
             type: 'link',
             pathType: 'relative',
-            href: 'Link'
+            href: 'Link',
+            content: ''
           }
         ]
       }
@@ -45,7 +47,8 @@ describe('line', () => {
               {
                 type: 'link',
                 pathType: 'relative',
-                href: 'Link'
+                href: 'Link',
+                content: ''
               }
             ]
           }
@@ -106,7 +109,8 @@ describe('line', () => {
           {
             type: 'link',
             pathType: 'relative',
-            href: 'Link'
+            href: 'Link',
+            content: ''
           },
           {
             type: 'plain',

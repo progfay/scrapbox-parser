@@ -57,7 +57,8 @@ describe('link', () => {
           {
             type: 'link',
             pathType: 'root',
-            href: '/project/page'
+            href: '/project/page',
+            content: ''
           }
         ]
       }
@@ -76,7 +77,8 @@ describe('link', () => {
           {
             type: 'link',
             pathType: 'relative',
-            href: 'page'
+            href: 'page',
+            content: ''
           }
         ]
       }
@@ -142,7 +144,8 @@ describe('link', () => {
           {
             type: 'link',
             pathType: 'relative',
-            href: 'page name'
+            href: 'page name',
+            content: ''
           }
         ]
       },
@@ -153,7 +156,8 @@ describe('link', () => {
           {
             type: 'link',
             pathType: 'root',
-            href: '/project/page name'
+            href: '/project/page name',
+            content: ''
           }
         ]
       }

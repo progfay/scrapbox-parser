@@ -89,6 +89,7 @@ Object {
           "type": "plain",
         },
         Object {
+          "content": "",
           "href": "Link",
           "pathType": "relative",
           "type": "link",
@@ -332,6 +333,7 @@ Object {
           "type": "plain",
         },
         Object {
+          "content": "",
           "href": "/icons/check",
           "pathType": "root",
           "type": "link",
@@ -351,6 +353,7 @@ Object {
           "type": "plain",
         },
         Object {
+          "content": "",
           "href": "/icons",
           "pathType": "root",
           "type": "link",
@@ -716,6 +719,7 @@ Object {
         Object {
           "nodes": Array [
             Object {
+              "content": "",
               "href": "Code notation",
               "pathType": "relative",
               "type": "link",
@@ -761,6 +765,7 @@ Object {
         Object {
           "nodes": Array [
             Object {
+              "content": "",
               "href": "Code block notation",
               "pathType": "relative",
               "type": "link",
@@ -828,6 +833,7 @@ Object {
         Object {
           "nodes": Array [
             Object {
+              "content": "",
               "href": "Tables",
               "pathType": "relative",
               "type": "link",

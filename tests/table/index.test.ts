@@ -301,7 +301,8 @@ ${'\t'}[Link]${'\t'}This is [Link]`
               {
                 type: 'link',
                 pathType: 'relative',
-                href: 'Link'
+                href: 'Link',
+                content: ''
               }
             ],
             [
@@ -312,7 +313,8 @@ ${'\t'}[Link]${'\t'}This is [Link]`
               {
                 type: 'link',
                 pathType: 'relative',
-                href: 'Link'
+                href: 'Link',
+                content: ''
               }
             ]
           ]
