@@ -1,7 +1,7 @@
 /* global describe it expect */
 
 import * as fs from 'fs'
-import parse from '../../src'
+import { parse } from '../../src'
 
 describe('page', () => {
   it('Empty page', () => {
