@@ -1,4 +1,4 @@
-export { PageType } from './parse'
+export { PageType, ParserType } from './parse'
 export { BlockType } from './block'
 export { CodeBlockType } from './block/CodeBlock'
 export { TableType } from './block/Table'

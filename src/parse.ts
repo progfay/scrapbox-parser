@@ -7,12 +7,14 @@ export type PageType = {
   blocks: BlockType[]
 }
 
+export type ParserType = (input: string) => PageType
+
 export const convertToBlocks = (blockComponents: BlockComponentType[]): BlockType[] => {
   const packedBlockComponents: PackedBlockComponentType[] = packBlockComponents(blockComponents)
   return packedBlockComponents.map(convertToBlock)
 }
 
-export const parse = (input: string): PageType => {
+export const parse: ParserType = input => {
   const blockComponents: BlockComponentType[] = convertToBlockComponents(input.trim())
 
   const [firstBlock, ...body] = blockComponents
