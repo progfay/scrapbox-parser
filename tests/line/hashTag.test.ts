@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('hashTag', () => {
   it('Simple hashTag', () => {
-    const input = '#tag'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('#tag').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -24,10 +19,7 @@ describe('hashTag', () => {
   })
 
   it('Only `#` is not hashTag', () => {
-    const input = '#'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('#').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -42,10 +34,7 @@ describe('hashTag', () => {
   })
 
   it('HashTag includes `#`', () => {
-    const input = '#hash#Tag'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('#hash#Tag').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -60,10 +49,7 @@ describe('hashTag', () => {
   })
 
   it('HashTag in sentence with spaces', () => {
-    const input = 'This is a #tag .'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('This is a #tag .').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -86,10 +72,7 @@ describe('hashTag', () => {
   })
 
   it('HashTag in sentence without spaces is not hashTag', () => {
-    const input = '→#notTag←'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('→#notTag←').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -104,10 +87,7 @@ describe('hashTag', () => {
   })
 
   it('Multiple hashTag', () => {
-    const input = '#hoge #fuga #piyo'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('#hoge #fuga #piyo').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

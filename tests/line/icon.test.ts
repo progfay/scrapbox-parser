@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('icon', () => {
   it('Simple root icon', () => {
-    const input = '[/icons/+1.icon]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[/icons/+1.icon]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -25,10 +20,7 @@ describe('icon', () => {
   })
 
   it('Simple relative icon', () => {
-    const input = '[me.icon]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[me.icon]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -44,10 +36,7 @@ describe('icon', () => {
   })
 
   it('Multiple icons', () => {
-    const input = '[me.icon*3]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[me.icon*3]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

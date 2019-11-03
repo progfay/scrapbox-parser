@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('plain', () => {
   it('Simple plain text', () => {
-    const input = 'Plain text'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('Plain text').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -24,10 +19,7 @@ describe('plain', () => {
   })
 
   it('Blank line', () => {
-    const input = ''
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -37,10 +29,7 @@ describe('plain', () => {
   })
 
   it('Keep tail space', () => {
-    const input = 'Tail space ->  '
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('Tail space ->  ').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

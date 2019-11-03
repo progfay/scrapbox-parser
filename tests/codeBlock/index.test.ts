@@ -1,20 +1,15 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('Code Block', () => {
   it('Simple code block', () => {
-    const input = `code:hello.js
+    expect(`code:hello.js
  function () {
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+ }`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'codeBlock',
@@ -25,15 +20,12 @@ describe('Code Block', () => {
   })
 
   it('Bulleted code block', () => {
-    const input = ` code:hello.js
+    expect(` code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
-  }`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+  }`).toEqualWhenParsing([
       {
         indent: 1,
         type: 'codeBlock',
@@ -44,17 +36,14 @@ describe('Code Block', () => {
   })
 
   it('Code block with bullet', () => {
-    const input = ` Bullet
+    expect(` Bullet
  code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
   }
- Bullet`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+ Bullet`).toEqualWhenParsing([
       {
         indent: 1,
         type: 'line',
@@ -85,7 +74,7 @@ describe('Code Block', () => {
   })
 
   it('Consecutive code blocks', () => {
-    const input = `code:hello.js
+    expect(`code:hello.js
  function () {
    alert(document.location.href)
    console.log("hello")
@@ -96,10 +85,7 @@ code:hello.js
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+ }`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'codeBlock',
