@@ -1,5 +1,7 @@
 /* global describe it expect */
 
+import '../jest-setup'
+
 import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
 import { BlockType } from '../../src/block'
 import { LineType } from '../../src/block/Line'
@@ -55,14 +57,12 @@ describe('decoration', () => {
 [> deco]
 [_ deco]
 [~ deco]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
     const decosArray: DecorationType[][] = [
       ['*-1'], ['*-2'], ['*-3'], ['*-4'], ['*-5'], ['*-6'], ['*-7'], ['*-8'], ['*-9'], ['*-10'],
       ['!'], ['"'], ['#'], ['%'], ['&'], ['\''], ['('], [')'], ['+'], [','], ['-'], ['.'], ['/'], ['{'], ['|'], ['}'], ['<'], ['>'], ['_'], ['~']
     ]
-    const answer: LineType[] = decosArray.map((decos: DecorationType[]): LineType => createDecorartionNode(decos, 'deco'))
-    expect(blocks).toEqual(answer)
+    const expected: BlockType[] = decosArray.map((decos: DecorationType[]): LineType => createDecorartionNode(decos, 'deco'))
+    expect(input).toEqualWhenParsing(expected)
   })
 
   it('All decoration', () => {
@@ -75,19 +75,13 @@ describe('decoration', () => {
   })
 
   it('Decoration * overflow', () => {
-    const input = '[*********** 11*]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
     const decos: DecorationType[] = ['*-10']
-    const answer: LineType[] = [createDecorartionNode(decos, '11*')]
-    expect(blocks).toEqual(answer)
+    const expected: LineType[] = [createDecorartionNode(decos, '11*')]
+    expect('[*********** 11*]').toEqualWhenParsing(expected)
   })
 
   it('Decoration similar with externalLink', () => {
-    const input = '[* hoge https://example.com]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[* hoge https://example.com]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

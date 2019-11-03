@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('line', () => {
   it('Line that have multi node', () => {
-    const input = '[Link][Link]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[Link][Link]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -32,10 +27,7 @@ describe('line', () => {
   })
 
   it('Decoration line includes internal link', () => {
-    const input = '[* [Link]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[* [Link]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -58,10 +50,7 @@ describe('line', () => {
   })
 
   it('Decoration line includes internal link', () => {
-    const input = '[* [https://example.com example]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[* [https://example.com example]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -84,10 +73,7 @@ describe('line', () => {
   })
 
   it('Multi `]`', () => {
-    const input = '[* [Link]`code`[Link]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[* [Link]`code`[Link]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

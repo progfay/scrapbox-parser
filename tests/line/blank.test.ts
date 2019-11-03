@@ -1,16 +1,11 @@
 /* global describe it expect */
 /* eslint-disable no-irregular-whitespace */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('blank', () => {
   it('Simple half-space blank', () => {
-    const input = `[ ]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[ ]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -25,10 +20,7 @@ describe('blank', () => {
   })
 
   it('Simple double-byte space blank', () => {
-    const input = `[　]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[　]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -43,10 +35,7 @@ describe('blank', () => {
   })
 
   it('Simple tab blank', () => {
-    const input = `[\t]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[\t]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -61,10 +50,7 @@ describe('blank', () => {
   })
 
   it('Multi char blank', () => {
-    const input = `[ 　 \t　\t ]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[ 　 \t　\t ]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -79,10 +65,7 @@ describe('blank', () => {
   })
 
   it('Blank in the sentence', () => {
-    const input = `sentence[ ]sentence`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('sentence[ ]sentence').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -105,10 +88,7 @@ describe('blank', () => {
   })
 
   it('[] is not blank', () => {
-    const input = `[]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -123,10 +103,7 @@ describe('blank', () => {
   })
 
   it('Blank in the [*** ]', () => {
-    const input = `[*** [ ]]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[*** [ ]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

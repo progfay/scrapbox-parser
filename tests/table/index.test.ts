@@ -1,11 +1,10 @@
 /* global describe it expect */
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
+import { LineNodeType } from '../../src/block/node'
 
-const defaultTableCells = [
+const defaultTableCells: LineNodeType[][][] = [
   [
     [
       {
@@ -88,14 +87,11 @@ const defaultTableCells = [
 
 describe('Table', () => {
   it('Simple table', () => {
-    const input = `table:hello
+    expect(`table:hello
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
-${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+${'\t'}a${'\t'}b${'\t'}c`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'table',
@@ -106,14 +102,11 @@ ${'\t'}a${'\t'}b${'\t'}c`
   })
 
   it('Bulleted table', () => {
-    const input = ` table:bulleted
+    expect(` table:bulleted
  ${'\t'}1${'\t'}2${'\t'}3
  ${'\t'}1 ${'\t'}2 ${'\t'}3
  ${'\t'}------${'\t'}------${'\t'}------
- ${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+ ${'\t'}a${'\t'}b${'\t'}c`).toEqualWhenParsing([
       {
         indent: 1,
         type: 'table',
@@ -124,12 +117,9 @@ ${'\t'}a${'\t'}b${'\t'}c`
   })
 
   it('Table with empty cells', () => {
-    const input = `table:${' '}
+    expect(`table:${' '}
 ${'\t'} ${'\t'}　${'\t'}${'  '}
-${'\t'}${'\t'}${'\t'}`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+${'\t'}${'\t'}${'\t'}`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'table',
@@ -166,15 +156,12 @@ ${'\t'}${'\t'}${'\t'}`
   })
 
   it('Staggered table', () => {
-    const input = `table:Staggered
+    expect(`table:Staggered
 ${'\t'}1${'\t'}2${'\t'}3${'\t'}4
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1
 ${'\t'}1${'\t'}2
-${'\t'}`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+${'\t'}`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'table',
@@ -257,7 +244,7 @@ ${'\t'}`
   })
 
   it('Consecutive table', () => {
-    const input = `table:hello
+    expect(`table:hello
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
@@ -266,10 +253,7 @@ table:hello
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
-${'\t'}a${'\t'}b${'\t'}c`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+${'\t'}a${'\t'}b${'\t'}c`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'table',
@@ -286,11 +270,8 @@ ${'\t'}a${'\t'}b${'\t'}c`
   })
 
   it('Table with link', () => {
-    const input = `table:table with link
-${'\t'}[Link]${'\t'}This is [Link]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect(`table:table with link
+${'\t'}[Link]${'\t'}This is [Link]`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'table',
