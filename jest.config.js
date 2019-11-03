@@ -11,6 +11,9 @@ module.exports = {
       tsConfig: 'tsconfig.json'
     }
   },
+  collectCoverageFrom: [
+    'src/**/*.ts'
+  ],
   testMatch: [
     '**/tests/**/*.test.ts'
   ]
