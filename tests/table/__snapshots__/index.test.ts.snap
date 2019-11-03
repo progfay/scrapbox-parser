@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Bulleted table: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "a",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "b",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "c",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "bulleted",
+    "indent": 1,
+    "type": "table",
+  },
+]
+`;
+
+exports[`Table Consecutive table: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "a",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "b",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "c",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "hello",
+    "indent": 0,
+    "type": "table",
+  },
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "a",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "b",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "c",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "hello",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
+exports[`Table Simple table: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2 ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "------",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "a",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "b",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "c",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "hello",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
+exports[`Table Staggered table: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "4",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "3",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "text": "1",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "2",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [],
+      ],
+    ],
+    "fileName": "Staggered",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
+exports[`Table Table with empty cells: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "text": " ",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "　",
+            "type": "plain",
+          },
+        ],
+        Array [
+          Object {
+            "text": "  ",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [],
+        Array [],
+        Array [],
+      ],
+    ],
+    "fileName": " ",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
+exports[`Table Table with link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "Link",
+            "pathType": "relative",
+            "type": "link",
+          },
+        ],
+        Array [
+          Object {
+            "text": "This is ",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "Link",
+            "pathType": "relative",
+            "type": "link",
+          },
+        ],
+      ],
+    ],
+    "fileName": "table with link",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;

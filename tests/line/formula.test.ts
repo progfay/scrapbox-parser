@@ -2,51 +2,14 @@
 
 describe('formula', () => {
   it('Simple formula', () => {
-    expect('[$ \\frac{3}{2}^N]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'formula',
-            formula: '\\frac{3}{2}^N'
-          }
-        ]
-      }
-    ])
+    expect('[$ \\frac{3}{2}^N]').toMatchSnapshotWhenParsing()
   })
 
   it('Formula includes [] with tail half-space', () => {
-    expect('[$ [x] ]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'formula',
-            formula: '[x]'
-          }
-        ]
-      }
-    ])
+    expect('[$ [x] ]').toMatchSnapshotWhenParsing()
   })
 
   it('Formula includes [] without tail half-space', () => {
-    expect('[$ [x]]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'formula',
-            formula: '[x'
-          },
-          {
-            type: 'plain',
-            text: ']'
-          }
-        ]
-      }
-    ])
+    expect('[$ [x]]').toMatchSnapshotWhenParsing()
   })
 })

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`code \`$ \` is not code: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "$ ",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`code \`$\` is not code: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "$",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`code \`$s\` is not code: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "$not code",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`code Empty code with backquote: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`code Simple code with $: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "$ Simple code",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`code Simple code with backquote: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "Simple code",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

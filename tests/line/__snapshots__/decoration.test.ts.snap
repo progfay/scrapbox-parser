@@ -1,0 +1,598 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`decoration Decoration * overflow: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-10",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "11*",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Decoration similar with externalLink: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "hoge ",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "https://example.com",
+            "pathType": "absolute",
+            "type": "link",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Simple decoration: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-2",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-3",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-4",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-5",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-6",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-7",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-8",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-9",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-10",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "!",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "\\"",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "#",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "%",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "&",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "'",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "(",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          ")",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "+",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          ",",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "-",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          ".",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "/",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "{",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "|",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "}",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "<",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          ">",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "_",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "~",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

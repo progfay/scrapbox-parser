@@ -3,123 +3,30 @@
 
 describe('blank', () => {
   it('Simple half-space blank', () => {
-    expect('[ ]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'blank',
-            text: ' '
-          }
-        ]
-      }
-    ])
+    expect('[ ]').toMatchSnapshotWhenParsing()
   })
 
   it('Simple double-byte space blank', () => {
-    expect('[　]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'blank',
-            text: '　'
-          }
-        ]
-      }
-    ])
+    expect('[　]').toMatchSnapshotWhenParsing()
   })
 
   it('Simple tab blank', () => {
-    expect('[\t]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'blank',
-            text: '\t'
-          }
-        ]
-      }
-    ])
+    expect('[\t]').toMatchSnapshotWhenParsing()
   })
 
   it('Multi char blank', () => {
-    expect('[ 　 \t　\t ]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'blank',
-            text: ' 　 \t　\t '
-          }
-        ]
-      }
-    ])
+    expect('[ 　 \t　\t ]').toMatchSnapshotWhenParsing()
   })
 
   it('Blank in the sentence', () => {
-    expect('sentence[ ]sentence').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: 'sentence'
-          },
-          {
-            type: 'blank',
-            text: ' '
-          },
-          {
-            type: 'plain',
-            text: 'sentence'
-          }
-        ]
-      }
-    ])
+    expect('sentence[ ]sentence').toMatchSnapshotWhenParsing()
   })
 
   it('[] is not blank', () => {
-    expect('[]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: '[]'
-          }
-        ]
-      }
-    ])
+    expect('[]').toMatchSnapshotWhenParsing()
   })
 
   it('Blank in the [*** ]', () => {
-    expect('[*** [ ]]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: '[*** '
-          },
-          {
-            type: 'blank',
-            text: ' '
-          },
-          {
-            type: 'plain',
-            text: ']'
-          }
-        ]
-      }
-    ])
+    expect('[*** [ ]]').toMatchSnapshotWhenParsing()
   })
 })

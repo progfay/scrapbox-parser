@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helpfeel No head \`?\` is not helpfeel: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "a ? not helpfeel",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`helpfeel Quoted ? is not helpfeel: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [
+          Object {
+            "text": " ? Quoted",
+            "type": "plain",
+          },
+        ],
+        "type": "quote",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`helpfeel Simple helpfeel: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "Simple helpfeel",
+        "type": "helpfeel",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

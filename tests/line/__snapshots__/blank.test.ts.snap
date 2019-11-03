@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blank [] is not blank: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "[]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Blank in the [*** ]: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "[*** ",
+        "type": "plain",
+      },
+      Object {
+        "text": " ",
+        "type": "blank",
+      },
+      Object {
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Blank in the sentence: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "sentence",
+        "type": "plain",
+      },
+      Object {
+        "text": " ",
+        "type": "blank",
+      },
+      Object {
+        "text": "sentence",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Multi char blank: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": " 　 	　	 ",
+        "type": "blank",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Simple double-byte space blank: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "　",
+        "type": "blank",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Simple half-space blank: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": " ",
+        "type": "blank",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`blank Simple tab blank: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "	",
+        "type": "blank",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

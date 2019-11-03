@@ -1,178 +1,39 @@
 /* global describe it expect */
+import '../jest-setup'
 
 describe('link', () => {
   it('Simple absolute link', () => {
-    expect('https://example.com/').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://example.com/',
-            content: ''
-          }
-        ]
-      }
-    ])
+    expect('https://example.com/').toMatchSnapshotWhenParsing()
   })
 
   it('Simple absolute link with bracket', () => {
-    expect('[https://example.com/]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://example.com/',
-            content: ''
-          }
-        ]
-      }
-    ])
+    expect('[https://example.com/]').toMatchSnapshotWhenParsing()
   })
 
   it('Simple root link', () => {
-    expect('[/project/page]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'root',
-            href: '/project/page',
-            content: ''
-          }
-        ]
-      }
-    ])
+    expect('[/project/page]').toMatchSnapshotWhenParsing()
   })
 
   it('Simple relative link', () => {
-    expect('[page]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'relative',
-            href: 'page',
-            content: ''
-          }
-        ]
-      }
-    ])
+    expect('[page]').toMatchSnapshotWhenParsing()
   })
 
   it('Link with content', () => {
     expect(`[https://example.com/   Example]
 [Example   https://example.com/]
-[https://left.com/ center https://right.com/]`).toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://example.com/',
-            content: 'Example'
-          }
-        ]
-      },
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://example.com/',
-            content: 'Example'
-          }
-        ]
-      },
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://left.com/',
-            content: 'center https://right.com/'
-          }
-        ]
-      }
-    ])
+[https://left.com/ center https://right.com/]`).toMatchSnapshotWhenParsing()
   })
 
   it('Root and relative link path can include space', () => {
     expect(`[page name]
-[/project/page name]`).toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'relative',
-            href: 'page name',
-            content: ''
-          }
-        ]
-      },
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'root',
-            href: '/project/page name',
-            content: ''
-          }
-        ]
-      }
-    ])
+[/project/page name]`).toMatchSnapshotWhenParsing()
   })
 
   it('Link with link', () => {
-    expect('[https://example.com https://example.com]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'https://example.com',
-            content: 'https://example.com'
-          }
-        ]
-      }
-    ])
+    expect('[https://example.com https://example.com]').toMatchSnapshotWhenParsing()
   })
 
   it('Link with GET parameters', () => {
-    expect('[http://example.com?key1=value1&key2=value2]').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'link',
-            pathType: 'absolute',
-            href: 'http://example.com?key1=value1&key2=value2',
-            content: ''
-          }
-        ]
-      }
-    ])
+    expect('[http://example.com?key1=value1&key2=value2]').toMatchSnapshotWhenParsing()
   })
 })

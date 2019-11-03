@@ -2,42 +2,14 @@
 
 describe('plain', () => {
   it('Simple plain text', () => {
-    expect('Plain text').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: 'Plain text'
-          }
-        ]
-      }
-    ])
+    expect('Plain text').toMatchSnapshotWhenParsing()
   })
 
   it('Blank line', () => {
-    expect('').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: []
-      }
-    ])
+    expect('').toMatchSnapshotWhenParsing()
   })
 
   it('Keep tail space', () => {
-    expect('Tail space ->  ').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: 'Tail space ->  '
-          }
-        ]
-      }
-    ])
+    expect('Tail space ->  ').toMatchSnapshotWhenParsing()
   })
 })

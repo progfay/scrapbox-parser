@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`googleMap Simple google map with NE: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "latitude": 35.6812362,
+        "longitude": 139.7649361,
+        "place": "",
+        "type": "googleMap",
+        "url": "https://www.google.com/maps/@35.6812362,139.7649361,14z",
+        "zoom": 14,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`googleMap Simple google map with SW: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "latitude": -13.70533,
+        "longitude": -69.6533372,
+        "place": "",
+        "type": "googleMap",
+        "url": "https://www.google.com/maps/@-13.70533,-69.6533372,14z",
+        "zoom": 14,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`googleMap Simple google map with place on left: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "latitude": 35.6812362,
+        "longitude": 139.7649361,
+        "place": "東京駅",
+        "type": "googleMap",
+        "url": "https://www.google.com/maps/place/%E6%9D%B1%E4%BA%AC%E9%A7%85/@35.6812362,139.7649361,14z",
+        "zoom": 14,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`googleMap Simple google map with place on right: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "latitude": 35.6812362,
+        "longitude": 139.7649361,
+        "place": "東京駅",
+        "type": "googleMap",
+        "url": "https://www.google.com/maps/place/%E6%9D%B1%E4%BA%AC%E9%A7%85/@35.6812362,139.7649361,14z",
+        "zoom": 14,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`googleMap Simple google map with zoom: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "latitude": 35.6812362,
+        "longitude": 139.7649361,
+        "place": "",
+        "type": "googleMap",
+        "url": "https://www.google.com/maps/@35.6812362,139.7649361,14z",
+        "zoom": 14,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

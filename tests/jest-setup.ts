@@ -3,26 +3,24 @@
 import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
 import { BlockType } from '../src/block'
 import { convertToBlocks } from '../src/parse'
+import { toMatchSnapshot } from 'jest-snapshot'
 
 declare global {
   namespace jest {
     interface Expect {
-      toEqualWhenParsing: (received: string, expected: BlockType[]) => CustomMatcherResult
+      toMatchSnapshotWhenParsing: (received: string) => CustomMatcherResult
     }
 
     interface Matchers<R> {
-      toEqualWhenParsing(expected: BlockType[]): CustomMatcherResult
+      toMatchSnapshotWhenParsing(): CustomMatcherResult
     }
   }
 }
 
 expect.extend({
-  toEqualWhenParsing (received: string, expected: BlockType[]): jest.CustomMatcherResult {
+  toMatchSnapshotWhenParsing (this: any, received: string): jest.CustomMatcherResult {
     const blockComponents: BlockComponentType[] = convertToBlockComponents(received)
     const blocks: BlockType[] = convertToBlocks(blockComponents)
-    return {
-      message: () => '',
-      pass: this.equals(blocks, expected)
-    }
+    return toMatchSnapshot.call(this, blocks, 'toMatchSnapshotWhenParsing')
   }
 })

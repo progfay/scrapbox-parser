@@ -2,52 +2,14 @@
 
 describe('helpfeel', () => {
   it('Simple helpfeel', () => {
-    expect('? Simple helpfeel').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'helpfeel',
-            text: 'Simple helpfeel'
-          }
-        ]
-      }
-    ])
+    expect('? Simple helpfeel').toMatchSnapshotWhenParsing()
   })
 
   it('No head `?` is not helpfeel', () => {
-    expect('a ? not helpfeel').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: 'a ? not helpfeel'
-          }
-        ]
-      }
-    ])
+    expect('a ? not helpfeel').toMatchSnapshotWhenParsing()
   })
 
   it('Quoted ? is not helpfeel', () => {
-    expect('> ? Quoted').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'quote',
-            nodes: [
-              {
-                type: 'plain',
-                text: ' ? Quoted'
-              }
-            ]
-          }
-        ]
-      }
-    ])
+    expect('> ? Quoted').toMatchSnapshotWhenParsing()
   })
 })
