@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('formula', () => {
   it('Simple formula', () => {
-    const input = '[$ \\frac{3}{2}^N]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[$ \\frac{3}{2}^N]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -24,10 +19,7 @@ describe('formula', () => {
   })
 
   it('Formula includes [] with tail half-space', () => {
-    const input = '[$ [x] ]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[$ [x] ]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -42,10 +34,7 @@ describe('formula', () => {
   })
 
   it('Formula includes [] without tail half-space', () => {
-    const input = '[$ [x]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[$ [x]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

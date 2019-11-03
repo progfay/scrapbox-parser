@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('googleMap', () => {
   it('Simple google map with NE', () => {
-    const input = '[N35.6812362,E139.7649361]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[N35.6812362,E139.7649361]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -28,10 +23,7 @@ describe('googleMap', () => {
   })
 
   it('Simple google map with SW', () => {
-    const input = '[S13.70533,W69.6533372]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[S13.70533,W69.6533372]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -50,10 +42,7 @@ describe('googleMap', () => {
   })
 
   it('Simple google map with zoom', () => {
-    const input = '[N35.6812362,E139.7649361,Z14]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[N35.6812362,E139.7649361,Z14]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -72,10 +61,7 @@ describe('googleMap', () => {
   })
 
   it('Simple google map with place on left', () => {
-    const input = '[東京駅 N35.6812362,E139.7649361,Z14]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[東京駅 N35.6812362,E139.7649361,Z14]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -94,10 +80,7 @@ describe('googleMap', () => {
   })
 
   it('Simple google map with place on right', () => {
-    const input = '[N35.6812362,E139.7649361,Z14 東京駅]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[N35.6812362,E139.7649361,Z14 東京駅]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('strong', () => {
   it('Simple strong', () => {
-    const input = '[[Simple strong]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[[Simple strong]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -29,10 +24,7 @@ describe('strong', () => {
   })
 
   it('[[]] is not strong', () => {
-    const input = '[[]]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[[]]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

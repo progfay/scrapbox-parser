@@ -1,16 +1,11 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('image', () => {
   it('Simple image', () => {
-    const input = `[http://example.com/image.png]
-[https://example.com/image.JPG]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect(`[http://example.com/image.png]
+[https://example.com/image.JPG]`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -37,10 +32,7 @@ describe('image', () => {
   })
 
   it('HTTP jpeg image with special and japanese chars', () => {
-    const input = '[http://example.com/~!@#$%^&*()_+`-={}\\\'"?,.<>|/画像.jpeg]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[http://example.com/~!@#$%^&*()_+`-={}\\\'"?,.<>|/画像.jpeg]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -56,11 +48,8 @@ describe('image', () => {
   })
 
   it('HTTPS svg and GIF image with link', () => {
-    const input = `[https://example.com/image.svg https://example.com/]
-[https://example.com/ https://example.com/image.GIF]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect(`[https://example.com/image.svg https://example.com/]
+[https://example.com/ https://example.com/image.GIF]`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -87,10 +76,7 @@ describe('image', () => {
   })
 
   it('Image with double image link', () => {
-    const input = '[https://example.com/forward.png https://example.com/backward.png]'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('[https://example.com/forward.png https://example.com/backward.png]').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -106,12 +92,9 @@ describe('image', () => {
   })
 
   it('Gyazo image', () => {
-    const input = `[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
+    expect(`[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
 [https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
-[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -149,12 +132,9 @@ describe('image', () => {
   })
 
   it('Gyazo image with link', () => {
-    const input = `[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]
+    expect(`[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]
 [https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
-[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]`
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]`).toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',

@@ -1,15 +1,10 @@
 /* global describe it expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
-import { BlockType } from '../../src/block'
-import { convertToBlocks } from '../../src/parse'
+import '../jest-setup'
 
 describe('code', () => {
   it('Simple code with backquote', () => {
-    const input = '`Simple code`'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('`Simple code`').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -24,10 +19,7 @@ describe('code', () => {
   })
 
   it('Simple code with $', () => {
-    const input = '$ Simple code'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('$ Simple code').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -42,10 +34,7 @@ describe('code', () => {
   })
 
   it('Empty code with backquote', () => {
-    const input = '``'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('``').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -60,10 +49,7 @@ describe('code', () => {
   })
 
   it('`$` is not code', () => {
-    const input = '$'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('$').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -78,10 +64,7 @@ describe('code', () => {
   })
 
   it('`$ ` is not code', () => {
-    const input = '$ '
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('$ ').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
@@ -96,10 +79,7 @@ describe('code', () => {
   })
 
   it('`$s` is not code', () => {
-    const input = '$not code'
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(input)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
-    expect(blocks).toEqual([
+    expect('$not code').toEqualWhenParsing([
       {
         indent: 0,
         type: 'line',
