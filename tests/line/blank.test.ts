@@ -1,8 +1,6 @@
 /* global describe it expect */
 /* eslint-disable no-irregular-whitespace */
 
-import '../jest-setup'
-
 describe('blank', () => {
   it('Simple half-space blank', () => {
     expect('[ ]').toEqualWhenParsing([

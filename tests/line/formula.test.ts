@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('formula', () => {
   it('Simple formula', () => {
     expect('[$ \\frac{3}{2}^N]').toEqualWhenParsing([

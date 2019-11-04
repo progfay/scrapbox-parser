@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('hashTag', () => {
   it('Simple hashTag', () => {
     expect('#tag').toEqualWhenParsing([

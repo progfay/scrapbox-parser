@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('quote', () => {
   it('Simple quote', () => {
     expect('> Simple quote').toEqualWhenParsing([
