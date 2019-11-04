@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('bullet', () => {
   it('Single-byte space indent', () => {
     expect(' Single-byte space').toEqualWhenParsing([

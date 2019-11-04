@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('icon', () => {
   it('Simple root icon', () => {
     expect('[/icons/+1.icon]').toEqualWhenParsing([

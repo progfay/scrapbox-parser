@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('googleMap', () => {
   it('Simple google map with NE', () => {
     expect('[N35.6812362,E139.7649361]').toEqualWhenParsing([

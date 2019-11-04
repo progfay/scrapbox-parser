@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 import { BlockComponentType, convertToBlockComponents } from '../../src/block/BlockComponent'
 import { BlockType } from '../../src/block'
 import { LineType } from '../../src/block/Line'

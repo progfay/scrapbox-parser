@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('line', () => {
   it('Line that have multi node', () => {
     expect('[Link][Link]').toEqualWhenParsing([

@@ -1,7 +1,6 @@
 /* global describe it expect */
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
-import '../jest-setup'
 import { LineNodeType } from '../../src/block/node'
 
 const defaultTableCells: LineNodeType[][][] = [

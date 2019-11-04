@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('link', () => {
   it('Simple absolute link', () => {
     expect('https://example.com/').toEqualWhenParsing([

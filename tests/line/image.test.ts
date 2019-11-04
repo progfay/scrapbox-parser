@@ -1,7 +1,5 @@
 /* global describe it expect */
 
-import '../jest-setup'
-
 describe('image', () => {
   it('Simple image', () => {
     expect(`[http://example.com/image.png]
