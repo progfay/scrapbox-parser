@@ -168,4 +168,20 @@ describe('image', () => {
       }
     ])
   })
+
+  it('Image with GET parameters', () => {
+    expect('[http://example.com/image.png?key1=value1&key2=value2]').toEqualWhenParsing([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'image',
+            src: 'http://example.com/image.png?key1=value1&key2=value2',
+            link: ''
+          }
+        ]
+      }
+    ])
+  })
 })

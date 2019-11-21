@@ -158,4 +158,21 @@ describe('link', () => {
       }
     ])
   })
+
+  it('Link with GET parameters', () => {
+    expect('[http://example.com?key1=value1&key2=value2]').toEqualWhenParsing([
+      {
+        indent: 0,
+        type: 'line',
+        nodes: [
+          {
+            type: 'link',
+            pathType: 'absolute',
+            href: 'http://example.com?key1=value1&key2=value2',
+            content: ''
+          }
+        ]
+      }
+    ])
+  })
 })
