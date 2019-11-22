@@ -25,7 +25,7 @@ const isUrl = (text: string): boolean => (
 )
 
 const isImageUrl = (text: string): boolean => (
-  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)$/i.test(text) || isGyazoImageUrl(text)
+  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) || isGyazoImageUrl(text)
 )
 
 const isGyazoImageUrl = (text: string): boolean => (
