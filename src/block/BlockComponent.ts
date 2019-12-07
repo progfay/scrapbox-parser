@@ -3,11 +3,11 @@ export type BlockComponentType = {
   text: string
 }
 
+export const convertToBlockComponent = (block: string): BlockComponentType => ({
+  indent: block.match(/^\s+/)?.[0].length ?? 0,
+  text: block
+})
+
 export const convertToBlockComponents = (blocks: string): BlockComponentType[] => (
-  blocks.split('\n')
-    .map((block: string): BlockComponentType => {
-      const blockMatcher = block.match(/^\s*/)
-      const indent = blockMatcher![0].length
-      return { indent, text: block }
-    })
+  blocks.split('\n').map(convertToBlockComponent)
 )
