@@ -3,7 +3,7 @@ import ConvertToBlockStream from './ConvertToBlockStream'
 import PackingBlockStream from './PackingBlockStream'
 import ParsingStream from './ParsingStream'
 
-export default class ScrapboxParserStream extends CombinedStream {
+export class ScrapboxParserStream extends CombinedStream {
   constructor () {
     super(
       new ConvertToBlockStream(),
