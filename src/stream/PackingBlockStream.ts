@@ -44,7 +44,7 @@ export default class PackingStream extends Transform {
     callback()
   }
 
-  _flash (callback: TransformCallback) {
-    if (this.packingComponent) callback(null, this.packingComponent)
+  _final (callback: TransformCallback) {
+    callback(null, this.packingComponent)
   }
 }

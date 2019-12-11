@@ -17,7 +17,7 @@ export default class ConvertToBlockStream extends Transform {
     callback()
   }
 
-  _flash (callback: TransformCallback) {
+  _final (callback: TransformCallback) {
     callback(null, convertToBlockComponent(this.rest))
   }
 }
