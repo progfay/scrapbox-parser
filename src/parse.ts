@@ -23,3 +23,9 @@ export const parse: ParserType = input => {
 
   return { title, blocks }
 }
+
+export const getTitle = (input: string): string => {
+  const match = input.match(/^\s*(.*?)\s*\n/)
+  if (!match) return 'Untitled'
+  return match[1] || 'Untiled'
+}
