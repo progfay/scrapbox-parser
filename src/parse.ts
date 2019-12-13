@@ -25,7 +25,7 @@ export const parse: ParserType = input => {
 }
 
 export const getTitle = (input: string): string => {
-  const match = input.match(/^\s*(.*?)\s*\n/)
+  const match = (`${input}\n`).match(/^\s*(\S[^\n]+)\n/)
   if (!match) return 'Untitled'
-  return match[1] || 'Untiled'
+  return match[1].trim()
 }
