@@ -1,4 +1,4 @@
-export { parse, PageType, ParserType } from './parse'
+export { parse, getTitle, PageType, ParserType } from './parse'
 export { ScrapboxParserStream } from './stream'
 export { BlockType } from './block'
 export { CodeBlockType } from './block/CodeBlock'
