@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`strong [[]] is not strong: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "[[]]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`strong Simple strong: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [
+          Object {
+            "text": "Simple strong",
+            "type": "plain",
+          },
+        ],
+        "type": "strong",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

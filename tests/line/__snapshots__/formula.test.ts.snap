@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`formula Formula includes [] with tail half-space: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "formula": "[x]",
+        "type": "formula",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`formula Formula includes [] without tail half-space: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "formula": "[x",
+        "type": "formula",
+      },
+      Object {
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`formula Simple formula: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "formula": "\\\\frac{3}{2}^N",
+        "type": "formula",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

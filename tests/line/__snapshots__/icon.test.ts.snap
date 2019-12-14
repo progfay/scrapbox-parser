@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon Multiple icons: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+      },
+      Object {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+      },
+      Object {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`icon Simple relative icon: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`icon Simple root icon: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "path": "/icons/+1",
+        "pathType": "root",
+        "type": "icon",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

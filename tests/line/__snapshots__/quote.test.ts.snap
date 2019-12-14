@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`quote Empty quote: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [],
+        "type": "quote",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`quote Simple quote: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [
+          Object {
+            "text": " Simple quote",
+            "type": "plain",
+          },
+        ],
+        "type": "quote",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

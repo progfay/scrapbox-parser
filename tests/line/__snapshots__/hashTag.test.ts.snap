@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hashTag HashTag in sentence with spaces: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "This is a ",
+        "type": "plain",
+      },
+      Object {
+        "href": "tag",
+        "type": "hashTag",
+      },
+      Object {
+        "text": " .",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`hashTag HashTag in sentence without spaces is not hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "→#notTag←",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`hashTag HashTag includes \`#\`: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "href": "hash#Tag",
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`hashTag Multiple hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "href": "hoge",
+        "type": "hashTag",
+      },
+      Object {
+        "text": " ",
+        "type": "plain",
+      },
+      Object {
+        "href": "fuga",
+        "type": "hashTag",
+      },
+      Object {
+        "text": " ",
+        "type": "plain",
+      },
+      Object {
+        "href": "piyo",
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`hashTag Only \`#\` is not hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "#",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`hashTag Simple hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "href": "tag",
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

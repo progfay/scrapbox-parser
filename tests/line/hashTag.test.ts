@@ -2,116 +2,26 @@
 
 describe('hashTag', () => {
   it('Simple hashTag', () => {
-    expect('#tag').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'hashTag',
-            href: 'tag'
-          }
-        ]
-      }
-    ])
+    expect('#tag').toMatchSnapshotWhenParsing()
   })
 
   it('Only `#` is not hashTag', () => {
-    expect('#').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: '#'
-          }
-        ]
-      }
-    ])
+    expect('#').toMatchSnapshotWhenParsing()
   })
 
   it('HashTag includes `#`', () => {
-    expect('#hash#Tag').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'hashTag',
-            href: 'hash#Tag'
-          }
-        ]
-      }
-    ])
+    expect('#hash#Tag').toMatchSnapshotWhenParsing()
   })
 
   it('HashTag in sentence with spaces', () => {
-    expect('This is a #tag .').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: 'This is a '
-          },
-          {
-            type: 'hashTag',
-            href: 'tag'
-          },
-          {
-            type: 'plain',
-            text: ' .'
-          }
-        ]
-      }
-    ])
+    expect('This is a #tag .').toMatchSnapshotWhenParsing()
   })
 
   it('HashTag in sentence without spaces is not hashTag', () => {
-    expect('→#notTag←').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'plain',
-            text: '→#notTag←'
-          }
-        ]
-      }
-    ])
+    expect('→#notTag←').toMatchSnapshotWhenParsing()
   })
 
   it('Multiple hashTag', () => {
-    expect('#hoge #fuga #piyo').toEqualWhenParsing([
-      {
-        indent: 0,
-        type: 'line',
-        nodes: [
-          {
-            type: 'hashTag',
-            href: 'hoge'
-          },
-          {
-            type: 'plain',
-            text: ' '
-          },
-          {
-            type: 'hashTag',
-            href: 'fuga'
-          },
-          {
-            type: 'plain',
-            text: ' '
-          },
-          {
-            type: 'hashTag',
-            href: 'piyo'
-          }
-        ]
-      }
-    ])
+    expect('#hoge #fuga #piyo').toMatchSnapshotWhenParsing()
   })
 })

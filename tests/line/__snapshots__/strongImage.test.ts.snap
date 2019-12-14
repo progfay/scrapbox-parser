@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`strongImage Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`strongImage HTTP jpeg strong image with special and japanese chars: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`strongImage Simple strong image: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "http://example.com/image.png",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "https://example.com/image.JPG",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "https://example.com/image.svg",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "https://example.com/image.GIF",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

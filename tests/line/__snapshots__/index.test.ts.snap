@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`line Decoration line includes internal link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "content": "",
+            "href": "Link",
+            "pathType": "relative",
+            "type": "link",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`line Decoration line includes internal link: toMatchSnapshotWhenParsing 2`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "content": "example",
+            "href": "https://example.com",
+            "pathType": "absolute",
+            "type": "link",
+          },
+        ],
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`line Line that have multi node: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "content": "",
+        "href": "Link",
+        "pathType": "relative",
+        "type": "link",
+      },
+      Object {
+        "content": "",
+        "href": "Link",
+        "pathType": "relative",
+        "type": "link",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`line Multi \`]\`: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "[Link",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+      Object {
+        "text": "code",
+        "type": "code",
+      },
+      Object {
+        "content": "",
+        "href": "Link",
+        "pathType": "relative",
+        "type": "link",
+      },
+      Object {
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

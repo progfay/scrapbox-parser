@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bullet Double-byte space indent: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 1,
+    "nodes": Array [
+      Object {
+        "text": "Double-byte space",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`bullet Multi lines bullet: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "no bullet (indent: 0)",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 1,
+    "nodes": Array [
+      Object {
+        "text": "first bullet (indent: 1)",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 2,
+    "nodes": Array [
+      Object {
+        "text": "second bullet (indent: 2)",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 3,
+    "nodes": Array [
+      Object {
+        "text": "third bullet (indent: 3)",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`bullet Single-byte space indent: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 1,
+    "nodes": Array [
+      Object {
+        "text": "Single-byte space",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`bullet Tab indent: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 1,
+    "nodes": Array [
+      Object {
+        "text": "Tab",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

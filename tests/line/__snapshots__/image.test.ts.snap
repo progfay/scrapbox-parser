@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`image Gyazo image with link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image HTTP jpeg image with special and japanese chars: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image HTTPS svg and GIF image with link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com/",
+        "src": "https://example.com/image.svg",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com/",
+        "src": "https://example.com/image.GIF",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image Image with GET parameters: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "http://example.com/image.png?key1=value1&key2=value2",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image Image with double image link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com/forward.png",
+        "src": "https://example.com/backward.png",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image Simple image: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "http://example.com/image.png",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "",
+        "src": "https://example.com/image.JPG",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
