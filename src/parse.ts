@@ -1,31 +1,21 @@
 import { BlockType, convertToBlock } from './block'
-import { BlockComponentType, convertToBlockComponents } from './block/BlockComponent'
+import { convertToBlockComponents } from './block/BlockComponent'
 import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlockComponent'
 
-export type PageType = {
-  title: string
-  blocks: BlockType[]
+export type ParserOptionType = {
+  hasTitle: boolean
 }
 
-export type ParserType = (input: string) => PageType
+export type PageType = BlockType[]
 
-export const convertToBlocks = (blockComponents: BlockComponentType[]): BlockType[] => {
-  const packedBlockComponents: PackedBlockComponentType[] = packBlockComponents(blockComponents)
+export const parse = (input: string, { hasTitle = true }: Partial<ParserOptionType> = {}): PageType => {
+  const blockComponents = convertToBlockComponents(input)
+  const packedBlockComponents: PackedBlockComponentType[] = packBlockComponents(blockComponents, { hasTitle })
   return packedBlockComponents.map(convertToBlock)
 }
 
-export const parse: ParserType = input => {
-  const blockComponents: BlockComponentType[] = convertToBlockComponents(input.trim())
-
-  const [firstBlock, ...body] = blockComponents
-  const title = firstBlock && firstBlock.text ? firstBlock.text : 'Untitled'
-  const blocks = convertToBlocks(body)
-
-  return { title, blocks }
-}
-
 export const getTitle = (input: string): string => {
-  const match = (`${input}\n`).match(/^\s*(\S[^\n]+)\n/)
+  const match = input.match(/^\s*(\S.*)\s*$/m)
   if (!match) return 'Untitled'
   return match[1].trim()
 }
