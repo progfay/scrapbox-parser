@@ -2,10 +2,10 @@
 
 describe('quote', () => {
   it('Simple quote', () => {
-    expect('> Simple quote').toMatchSnapshotWhenParsing()
+    expect('> Simple quote').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Empty quote', () => {
-    expect('>').toMatchSnapshotWhenParsing()
+    expect('>').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 })

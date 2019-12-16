@@ -1,26 +1,23 @@
 /* global expect */
 
-import { BlockComponentType, convertToBlockComponents } from '../src/block/BlockComponent'
-import { BlockType } from '../src/block'
-import { convertToBlocks } from '../src/parse'
+import { parse, ParserOptionType } from '../src/parse'
 import { toMatchSnapshot } from 'jest-snapshot'
 
 declare global {
   namespace jest {
     interface Expect {
-      toMatchSnapshotWhenParsing: (received: string) => CustomMatcherResult
+      toMatchSnapshotWhenParsing: (received: string, option: ParserOptionType) => CustomMatcherResult
     }
 
     interface Matchers<R> {
-      toMatchSnapshotWhenParsing(): CustomMatcherResult
+      toMatchSnapshotWhenParsing(option: ParserOptionType): CustomMatcherResult
     }
   }
 }
 
 expect.extend({
-  toMatchSnapshotWhenParsing (this: any, received: string): jest.CustomMatcherResult {
-    const blockComponents: BlockComponentType[] = convertToBlockComponents(received)
-    const blocks: BlockType[] = convertToBlocks(blockComponents)
+  toMatchSnapshotWhenParsing (this: any, received: string, { hasTitle }: ParserOptionType): jest.CustomMatcherResult {
+    const blocks = parse(received, { hasTitle })
     return toMatchSnapshot.call(this, blocks, 'toMatchSnapshotWhenParsing')
   }
 })

@@ -7,7 +7,7 @@ describe('Code Block', () => {
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`).toMatchSnapshotWhenParsing()
+ }`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Bulleted code block', () => {
@@ -16,7 +16,7 @@ describe('Code Block', () => {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
-  }`).toMatchSnapshotWhenParsing()
+  }`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Code block with bullet', () => {
@@ -27,7 +27,7 @@ describe('Code Block', () => {
     console.log("hello")
     // You can also write comments!
   }
- Bullet`).toMatchSnapshotWhenParsing()
+ Bullet`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Consecutive code blocks', () => {
@@ -42,6 +42,6 @@ code:hello.js
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`).toMatchSnapshotWhenParsing()
+ }`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 })

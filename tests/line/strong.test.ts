@@ -2,10 +2,10 @@
 
 describe('strong', () => {
   it('Simple strong', () => {
-    expect('[[Simple strong]]').toMatchSnapshotWhenParsing()
+    expect('[[Simple strong]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('[[]] is not strong', () => {
-    expect('[[]]').toMatchSnapshotWhenParsing()
+    expect('[[]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 })

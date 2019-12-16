@@ -9,7 +9,7 @@ describe('Table', () => {
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
-${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing()
+${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Bulleted table', () => {
@@ -17,13 +17,13 @@ ${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing()
  ${'\t'}1${'\t'}2${'\t'}3
  ${'\t'}1 ${'\t'}2 ${'\t'}3
  ${'\t'}------${'\t'}------${'\t'}------
- ${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing()
+ ${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Table with empty cells', () => {
     expect(`table:${' '}
 ${'\t'} ${'\t'}　${'\t'}${'  '}
-${'\t'}${'\t'}${'\t'}`).toMatchSnapshotWhenParsing()
+${'\t'}${'\t'}${'\t'}`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Staggered table', () => {
@@ -32,7 +32,7 @@ ${'\t'}1${'\t'}2${'\t'}3${'\t'}4
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1
 ${'\t'}1${'\t'}2
-${'\t'}`).toMatchSnapshotWhenParsing()
+${'\t'}`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Consecutive table', () => {
@@ -45,11 +45,11 @@ table:hello
 ${'\t'}1${'\t'}2${'\t'}3
 ${'\t'}1 ${'\t'}2 ${'\t'}3
 ${'\t'}------${'\t'}------${'\t'}------
-${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing()
+${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
   it('Table with link', () => {
     expect(`table:table with link
-${'\t'}[Link]${'\t'}This is [Link]`).toMatchSnapshotWhenParsing()
+${'\t'}[Link]${'\t'}This is [Link]`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 })
