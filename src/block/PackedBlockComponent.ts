@@ -1,11 +1,24 @@
+import { ParserOptionType } from '../parse'
 import { BlockComponentType } from './BlockComponent'
+import { TitleComponentType } from './Title'
 import { CodeBlockComponentType } from './CodeBlock'
 import { TableComponentType } from './Table'
 import { LineComponentType } from './Line'
 
-export type PackedBlockComponentType = CodeBlockComponentType | TableComponentType | LineComponentType
+export type PackedBlockComponentType = TitleComponentType | CodeBlockComponentType | TableComponentType | LineComponentType
 
-export const packBlockComponents = (blockComponents: BlockComponentType[]): PackedBlockComponentType[] => {
+export const packBlockComponents = (blockComponents: BlockComponentType[], { hasTitle }: ParserOptionType): PackedBlockComponentType[] => {
+  if (hasTitle) {
+    const [title, ...body] = blockComponents
+    return [
+      {
+        type: 'title',
+        text: title.text
+      },
+      ...packBlockComponents(body, { hasTitle: false })
+    ]
+  }
+
   const packedBlockComponents: PackedBlockComponentType[] = []
   let packingComponent: ((CodeBlockComponentType | TableComponentType) & { indent: number }) | null = null
 

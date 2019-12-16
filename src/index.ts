@@ -1,6 +1,7 @@
-export { parse, getTitle, PageType, ParserType } from './parse'
+export { parse, getTitle, ParserOptionType, PageType } from './parse'
 export { ScrapboxParserStream } from './stream'
 export { BlockType } from './block'
+export { TitleType } from './block/Title'
 export { CodeBlockType } from './block/CodeBlock'
 export { TableType } from './block/Table'
 export { LineType } from './block/Line'
