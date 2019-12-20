@@ -6,7 +6,7 @@ import PackingBlockStream from './PackingBlockStream'
 import ParsingStream from './ParsingStream'
 
 export class ScrapboxParserStream extends CombinedStream {
-  constructor ({ hasTitle = true, ...option }: Partial<ParserOptionType & TransformOptions>) {
+  constructor ({ hasTitle = true, ...option }: Partial<ParserOptionType & TransformOptions> = {}) {
     super(
       option,
       new ConvertToBlockStream(),
