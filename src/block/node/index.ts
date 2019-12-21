@@ -30,22 +30,22 @@ export type LineNodeType = QuoteNodeType
                          | HashTagNodeType
                          | PlainNodeType
 
-export type ParserOptionType = {
+export type NodeParserOptionType = {
   nested: boolean
   quoted: boolean
 }
-export type NextParserType = () => LineNodeType[]
-export type ParserType = (text: string, opt: ParserOptionType, next: NextParserType) => LineNodeType[]
+export type NextNodeParserType = () => LineNodeType[]
+export type NodeParserType = (text: string, opt: NodeParserOptionType, next: NextNodeParserType) => LineNodeType[]
 
-const FalsyEliminator: ParserType = (text, _opt, next) => {
+const FalsyEliminator: NodeParserType = (text, _opt, next) => {
   if (!text) return []
   return next()
 }
 
-const combineNodeParsers = (...parsers: ParserType[]) => {
-  return (text: string = '', opt: ParserOptionType = { nested: false, quoted: false }): LineNodeType[] => (
+const combineNodeParsers = (...parsers: NodeParserType[]) => {
+  return (text: string = '', opt: NodeParserOptionType = { nested: false, quoted: false }): LineNodeType[] => (
     parsers.slice().reverse().reduce(
-      (acc: NextParserType, parser: ParserType): NextParserType => () => parser(text, opt, acc),
+      (acc: NextNodeParserType, parser: NodeParserType): NextNodeParserType => () => parser(text, opt, acc),
       () => PlainNodeParser(text)
     )()
   )

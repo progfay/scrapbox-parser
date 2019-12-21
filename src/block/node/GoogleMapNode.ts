@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '.'
+import { NodeParserType, convertToLineNodes } from '.'
 
 const googleMapRegExp = /^(?<left>.*?)\[(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))(?<place>)\](?<right>.*)$/
 const leftGoogleMapRegExp = /^(?<left>.*?)\[(?<place>[^\]]*[^\s])\s+(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))\](?<right>.*)$/
@@ -46,7 +46,7 @@ const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: strin
   }
 }
 
-export const GoogleMapNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const GoogleMapNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const googleMapMatch = text.match(googleMapRegExp) ||

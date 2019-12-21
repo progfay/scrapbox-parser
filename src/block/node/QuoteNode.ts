@@ -1,4 +1,4 @@
-import { ParserType, LineNodeType, convertToLineNodes } from '.'
+import { NodeParserType, LineNodeType, convertToLineNodes } from '.'
 
 const quoteRegExp = /^>(.*)$/
 
@@ -12,7 +12,7 @@ const createQuoteNode = (text: string): QuoteNodeType => ({
   nodes: convertToLineNodes(text, { nested: false, quoted: true })
 })
 
-export const QuoteNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const QuoteNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested || quoted) return next()
   const quoteMatch = text.match(quoteRegExp)
   if (!quoteMatch) return next()

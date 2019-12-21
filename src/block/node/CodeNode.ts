@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '.'
+import { NodeParserType, convertToLineNodes } from '.'
 
 const codeRegExp = /^(.*?)`(.*?)`(.*)$/
 const codeCommandRegExp = /^(\$ .+)$/
@@ -13,7 +13,7 @@ const createCodeNode = (text: string): CodeNodeType => ({
   text
 })
 
-export const CodeNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const CodeNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const codeCommandMatch = text.match(codeCommandRegExp)

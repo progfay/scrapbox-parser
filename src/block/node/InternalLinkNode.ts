@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '.'
+import { NodeParserType, convertToLineNodes } from '.'
 
 const internalLinkRegExp = /^(.*?)\[(\/?[^[\]]+)\](.*)$/
 
@@ -16,7 +16,7 @@ const createInternalLinkNode = (href: string): InternalLinkNodeType => ({
   content: ''
 })
 
-export const InternalLinkNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const InternalLinkNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   const internalLinkMatch = text.match(internalLinkRegExp)
   if (!internalLinkMatch) return next()
 
