@@ -21,7 +21,7 @@ describe('title', () => {
   })
 
   it('Get title from huge page', () => {
-    const title = getTitle('  \n'.repeat(10**8) + 'title')
+    const title = getTitle('  \n'.repeat(10 ** 8) + 'title')
     expect(title).toEqual('title')
   })
 })
