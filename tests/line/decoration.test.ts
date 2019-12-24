@@ -1,8 +1,6 @@
 /* global describe it expect */
 
-import { LineType } from '../../src/block/Line'
-import { DecorationType, DecorationNodeType } from '../../src/block/node/DecorationNode'
-import { parse } from '../../src/parse'
+import { parse, LineType, DecorationType, DecorationNodeType } from '../../src'
 
 describe('decoration', () => {
   it('Simple decoration', () => {

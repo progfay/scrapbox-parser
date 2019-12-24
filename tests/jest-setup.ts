@@ -1,6 +1,6 @@
 /* global expect */
 
-import { parse, ParserOptionType } from '../src/parse'
+import { parse, ParserOptionType } from '../src'
 import { toMatchSnapshot } from 'jest-snapshot'
 
 declare global {

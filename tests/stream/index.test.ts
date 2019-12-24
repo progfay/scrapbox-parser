@@ -2,9 +2,7 @@
 
 import * as fs from 'fs'
 import { PassThrough, TransformCallback } from 'stream'
-import { parse } from '../../src/parse'
-import { BlockType } from '../../src/block'
-import { ScrapboxParserStream } from '../../src/stream'
+import { parse, ScrapboxParserStream, BlockType } from '../../src'
 
 const FILE_PATH = './tests/stream/body.txt'
 
