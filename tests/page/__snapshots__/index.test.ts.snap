@@ -9,6 +9,15 @@ Array [
 ]
 `;
 
+exports[`page Title Block without \`hasTitle\` option: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "text": "Title",
+    "type": "title",
+  },
+]
+`;
+
 exports[`page https://scrapbox.io/help/Syntax: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
