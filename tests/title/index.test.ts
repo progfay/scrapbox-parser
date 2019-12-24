@@ -1,6 +1,6 @@
 /* global describe it expect */
 
-import { getTitle } from '../../src/parse'
+import { getTitle } from '../../src'
 
 describe('title', () => {
   it('Get title from simple page', () => {

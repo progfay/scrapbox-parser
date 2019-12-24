@@ -1,8 +1,6 @@
 /* global describe it expect */
 /* eslint-disable no-tabs, no-irregular-whitespace */
 
-import '../jest-setup'
-
 describe('Table', () => {
   it('Simple table', () => {
     expect(`table:hello
