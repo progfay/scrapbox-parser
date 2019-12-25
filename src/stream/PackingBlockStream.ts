@@ -1,4 +1,5 @@
 import { Transform, TransformCallback } from 'stream'
+import { ParserOptionType } from '../parse'
 import { BlockComponentType } from '../block/BlockComponent'
 import { CodeBlockComponentType } from '../block/CodeBlock'
 import { TableComponentType } from '../block/Table'
@@ -6,14 +7,26 @@ import { TableComponentType } from '../block/Table'
 export type PackingComponentType = ((CodeBlockComponentType | TableComponentType) & { indent: number, components: BlockComponentType[] }) | null
 
 export default class PackingStream extends Transform {
+  shouldPackTitle: boolean
   packingComponent: PackingComponentType = null
 
-  constructor () {
+  constructor ({ hasTitle }: ParserOptionType) {
     super({ objectMode: true })
+    this.shouldPackTitle = hasTitle
   }
 
   _transform (blockComponent: BlockComponentType, _encoding: string, callback: TransformCallback): void {
     const { indent, text } = blockComponent
+
+    if (this.shouldPackTitle) {
+      callback(null, {
+        type: 'title',
+        text: blockComponent.text
+      })
+      this.shouldPackTitle = false
+      return
+    }
+
     if (this.packingComponent) {
       if (indent > this.packingComponent.indent) {
         this.packingComponent.components.push(blockComponent)

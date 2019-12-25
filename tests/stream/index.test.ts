@@ -1,28 +1,23 @@
 /* global jest describe it expect */
 
 import * as fs from 'fs'
-import { Transform, TransformCallback } from 'stream'
-import { convertToBlocks } from '../../src/parse'
-import { BlockType } from '../../src/block'
-import { convertToBlockComponents } from '../../src/block/BlockComponent'
-import { ScrapboxParserStream } from '../../src/stream'
+import { PassThrough, TransformCallback } from 'stream'
+import { parse, ScrapboxParserStream, BlockType } from '../../src'
 
 const FILE_PATH = './tests/stream/body.txt'
 
-class CheckStream extends Transform {
-  answer: BlockType[]
+class CheckStream<T> extends PassThrough {
   done: jest.DoneCallback
+  check: (chunk: T) => void
 
-  constructor (done: jest.DoneCallback) {
+  constructor (check: (chunk: T) => void, done: jest.DoneCallback) {
     super({ objectMode: true })
-    const page = fs.readFileSync(FILE_PATH, { encoding: 'utf8' })
-    const blockComponents = convertToBlockComponents(page)
-    this.answer = convertToBlocks(blockComponents)
+    this.check = check
     this.done = done
   }
 
-  _transform (block: BlockType, _encoding: string, callback: TransformCallback) {
-    expect(block).toEqual(this.answer.shift())
+  _transform (chunk: T, _encoding: string, callback: TransformCallback) {
+    this.check(chunk)
     callback()
   }
 
@@ -33,9 +28,24 @@ class CheckStream extends Transform {
 }
 
 describe('stream', () => {
-  it('Same behavior ', async (done) => {
+  it('Same behavior', async (done) => {
+    const generateChecker = () => {
+      const page = fs.readFileSync(FILE_PATH, { encoding: 'utf8' })
+      const answer = parse(page, { hasTitle: true })
+      return (block: BlockType) => {
+        expect(block).toEqual(answer.shift())
+      }
+    }
+
     fs.createReadStream(FILE_PATH, { highWaterMark: 100, encoding: 'utf8' })
       .pipe(new ScrapboxParserStream())
-      .pipe(new CheckStream(done))
+      .pipe(new CheckStream(generateChecker(), done))
+  })
+
+  it('Title Block without `hasTitle` option', async (done) => {
+    const check = (block: BlockType) => { expect(block.type).not.toEqual('title') }
+    fs.createReadStream(FILE_PATH, { highWaterMark: 100, encoding: 'utf8' })
+      .pipe(new ScrapboxParserStream({ hasTitle: false }))
+      .pipe(new CheckStream(check, done))
   })
 })

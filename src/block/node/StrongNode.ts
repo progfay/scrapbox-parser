@@ -1,4 +1,4 @@
-import { ParserType, LineNodeType, convertToLineNodes } from '.'
+import { NodeParserType, LineNodeType, convertToLineNodes } from '.'
 
 const strongRegExp = /^(.*?)\[\[(.+?[\]]*)\]\](.*)$/
 
@@ -12,7 +12,7 @@ const createStrongNode = (nodes: LineNodeType[]): StrongNodeType => ({
   nodes
 })
 
-export const StrongNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const StrongNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const strongMatch = text.match(strongRegExp)

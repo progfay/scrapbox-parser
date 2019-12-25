@@ -1,6 +1,6 @@
 /* global describe it expect */
 
-import { getTitle } from '../../src/parse'
+import { getTitle } from '../../src'
 
 describe('title', () => {
   it('Get title from simple page', () => {
@@ -21,7 +21,7 @@ describe('title', () => {
   })
 
   it('Get title from huge page', () => {
-    const title = getTitle('  \n'.repeat(10**8) + 'title')
+    const title = getTitle('  \n'.repeat(10 ** 8) + 'title')
     expect(title).toEqual('title')
   })
 })

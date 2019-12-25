@@ -1,10 +1,10 @@
-import { PassThrough, Writable } from 'stream'
+import { PassThrough, Writable, TransformOptions } from 'stream'
 
 export default class CombinedStream extends PassThrough {
   stream: Writable
 
-  constructor (...streams: Writable[]) {
-    super({ objectMode: true })
+  constructor (opt: TransformOptions, ...streams: Writable[]) {
+    super({ ...opt, objectMode: true })
 
     this.stream = streams.reduce(
       (source, destination) => source.pipe(destination),

@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '.'
+import { NodeParserType, convertToLineNodes } from '.'
 
 const formulaWithTailHalfSpaceRegExp = /^(.*?)\[\$ (.+?) \](.*)$/
 const formulaRegExp = /^(.*?)\[\$ ([^\]]+)\](.*)$/
@@ -13,7 +13,7 @@ const createFormulaNode = (formula: string): FormulaNodeType => ({
   formula
 })
 
-export const FormulaNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const FormulaNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const hashTagMatch = text.match(formulaWithTailHalfSpaceRegExp) || text.match(formulaRegExp)
