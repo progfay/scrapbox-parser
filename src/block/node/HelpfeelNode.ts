@@ -1,4 +1,4 @@
-import { ParserType } from '.'
+import { NodeParserType } from '.'
 
 const helpfeelRegExp = /^\? (.+)$/
 
@@ -12,7 +12,7 @@ const createHelpfeelNode = (text: string): HelpfeelNodeType => ({
   text
 })
 
-export const HelpfeelNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const HelpfeelNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested || quoted) return next()
 
   const helpfeelMatch = text.match(helpfeelRegExp)

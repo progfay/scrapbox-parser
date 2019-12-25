@@ -1,4 +1,4 @@
-import { ParserType, LineNodeType, convertToLineNodes } from '.'
+import { NodeParserType, LineNodeType, convertToLineNodes } from '.'
 
 const decorationRegExp = /^(.*?)\[([!"#%&'()*+,-./{|}<>_~]+) ((?:\[[^\]]+\]|[^\]])+)\](.*)$/
 
@@ -26,7 +26,7 @@ const createDecorationNode = (decoChars: string, nodes: LineNodeType[]): Decorat
   }
 }
 
-export const DecorationNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const DecorationNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const decorationMatch = text.match(decorationRegExp)

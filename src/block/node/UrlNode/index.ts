@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '../'
+import { NodeParserType, convertToLineNodes } from '../'
 import { ExternalLinkNodeType, createExternalLinkNode } from './ExternalLinkNode'
 import { ImageNodeType, createImageNode } from './ImageNode'
 
@@ -40,7 +40,7 @@ const createUrlNode = (href: string, content: string): UrlNodeType => {
   return createImageNode(href, content)
 }
 
-export const UrlNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const UrlNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   const UrlMatch = text.match(urlRegExp) ||
                    text.match(leftUrlRegExp) ||
                    text.match(rightUrlRegExp) ||

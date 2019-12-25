@@ -1,4 +1,4 @@
-import { ParserType, convertToLineNodes } from '.'
+import { NodeParserType, convertToLineNodes } from '.'
 
 const blankRegExp = /^(.*?)\[(\s+)\](.*)$/
 
@@ -12,7 +12,7 @@ const createBlankNode = (text: string): BlankNodeType => ({
   text
 })
 
-export const BlankNodeParser: ParserType = (text, { nested, quoted }, next) => {
+export const BlankNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const blankMatch = text.match(blankRegExp)
