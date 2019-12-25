@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 import * as fs from 'fs'
 
 describe('page', () => {

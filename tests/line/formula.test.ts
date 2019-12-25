@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('formula', () => {
   it('Simple formula', () => {
     expect('[$ \\frac{3}{2}^N]').toMatchSnapshotWhenParsing({ hasTitle: false })

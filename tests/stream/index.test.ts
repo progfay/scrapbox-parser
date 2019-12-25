@@ -1,5 +1,3 @@
-/* global jest describe it expect */
-
 import * as fs from 'fs'
 import { PassThrough, TransformCallback } from 'stream'
 import { parse, ScrapboxParserStream, BlockType } from '../../src'

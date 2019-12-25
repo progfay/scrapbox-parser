@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 import { getTitle } from '../../src'
 
 describe('title', () => {

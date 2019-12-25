@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('strongImage', () => {
   it('Simple strong image', () => {
     expect(`[[http://example.com/image.png]]
