@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 import { parse, LineType, DecorationType, DecorationNodeType } from '../../src'
 
 describe('decoration', () => {

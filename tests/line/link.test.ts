@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('link', () => {
   it('Simple absolute link', () => {
     expect('https://example.com/').toMatchSnapshotWhenParsing({ hasTitle: false })

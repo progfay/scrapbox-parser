@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('strongIcon', () => {
   it('Simple root strong icon', () => {
     expect('[[/icons/+1.icon]]').toMatchSnapshotWhenParsing({ hasTitle: false })

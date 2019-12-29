@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('plain', () => {
   it('Simple plain text', () => {
     expect('Plain text').toMatchSnapshotWhenParsing({ hasTitle: false })

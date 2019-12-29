@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('bullet', () => {
   it('Single-byte space indent', () => {
     expect(' Single-byte space').toMatchSnapshotWhenParsing({ hasTitle: false })

@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('Code Block', () => {
   it('Simple code block', () => {
     expect(`code:hello.js

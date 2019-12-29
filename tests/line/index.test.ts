@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('line', () => {
   it('Line that have multi node', () => {
     expect('[Link][Link]').toMatchSnapshotWhenParsing({ hasTitle: false })

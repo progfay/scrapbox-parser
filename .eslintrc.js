@@ -1,5 +1,6 @@
 module.exports = {
   'env': {
+    "jest/globals": true,
     'browser': true,
     'es6': true
   },
@@ -14,7 +15,10 @@ module.exports = {
     'sourceType': 'module',
     'project': './tsconfig.eslint.json'
   },
-  'plugins': ['@typescript-eslint'],
+  'plugins': [
+    '@typescript-eslint',
+    'jest'
+  ],
   'rules': {
     '@typescript-eslint/no-unused-vars': [2, { args: 'none' }]
   }

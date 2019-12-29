@@ -1,4 +1,3 @@
-/* global describe it expect */
 /* eslint-disable no-irregular-whitespace */
 
 describe('blank', () => {

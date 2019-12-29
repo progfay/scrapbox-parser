@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 describe('hashTag', () => {
   it('Simple hashTag', () => {
     expect('#tag').toMatchSnapshotWhenParsing({ hasTitle: false })
