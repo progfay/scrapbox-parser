@@ -10,6 +10,8 @@
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc -p ./tsconfig.json",
+    "prebuild:amd": "rm -rf dist",
+    "build:amd": "tsc -p ./tsconfig.amd.json",
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
