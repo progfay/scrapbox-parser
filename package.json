@@ -8,9 +8,11 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "prebuild": "rm -rf lib",
-    "build": "npm run build:cjs",
+    "build": "npm run build:cjs && npm run build:es2015",
+    "prebuild:cjs": "rm -rf lib",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "prebuild:es2015": "rm -rf dist",
+    "build:es2015": "tsc -p ./tsconfig.es2015.json",
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
