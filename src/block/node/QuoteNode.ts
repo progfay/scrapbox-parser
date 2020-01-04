@@ -18,5 +18,5 @@ export const QuoteNodeParser: NodeParserType = (text, { nested, quoted }, next) 
   if (!quoteMatch) return next()
 
   const [, target] = quoteMatch
-  return [ createQuoteNode(target) ]
+  return [createQuoteNode(target)]
 }

@@ -11,5 +11,5 @@ const createPlainNode = (text: string): PlainNodeType => ({
 })
 
 export const PlainNodeParser = (text: string): LineNodeType[] => {
-  return [ createPlainNode(text) ]
+  return [createPlainNode(text)]
 }

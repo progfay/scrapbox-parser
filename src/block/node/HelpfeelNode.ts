@@ -19,5 +19,5 @@ export const HelpfeelNodeParser: NodeParserType = (text, { nested, quoted }, nex
   if (!helpfeelMatch) return next()
 
   const [, target] = helpfeelMatch
-  return [ createHelpfeelNode(target) ]
+  return [createHelpfeelNode(target)]
 }
