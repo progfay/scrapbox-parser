@@ -19,7 +19,7 @@ export const CodeNodeParser: NodeParserType = (text, { nested, quoted }, next) =
   const codeCommandMatch = text.match(codeCommandRegExp)
   if (codeCommandMatch) {
     const [, target] = codeCommandMatch
-    return [ createCodeNode(target) ]
+    return [createCodeNode(target)]
   }
 
   const codeMatch = text.match(codeRegExp)
