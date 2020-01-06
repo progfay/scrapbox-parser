@@ -11,7 +11,7 @@
     "build": "npm run build:cjs && npm run build:esm",
     "prebuild:cjs": "rm -rf lib",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
-    "prebuild:esm": "rm -rf dist",
+    "prebuild:esm": "rm -rf esm",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "prepare": "npm run build",
     "test": "jest --coverage",
