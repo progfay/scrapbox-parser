@@ -3,14 +3,18 @@
   "version": "3.1.0",
   "description": "parse Scrapbox notation to JavaScript Object",
   "files": [
-    "lib"
+    "lib",
+    "esm"
   ],
   "main": "./lib/index.js",
+  "module": "./esm/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "prebuild": "rm -rf lib",
-    "build": "npm run build:cjs",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prebuild:cjs": "rm -rf lib",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "prebuild:esm": "rm -rf esm",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
