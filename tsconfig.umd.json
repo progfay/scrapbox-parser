@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./umd",
+    "declaration": false,
+    "declarationMap": false
+  }
+}
