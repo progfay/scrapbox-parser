@@ -4,17 +4,21 @@
   "description": "parse Scrapbox notation to JavaScript Object",
   "files": [
     "lib",
-    "esm"
+    "esm",
+    "umd"
   ],
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./lib/index.d.ts",
+  "unpkg": "./umd/scrapbox-parser.js",
   "scripts": {
-    "build": "npm run build:cjs && npm run build:esm",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
     "prebuild:cjs": "rm -rf lib",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "prebuild:esm": "rm -rf esm",
     "build:esm": "tsc -p ./tsconfig.esm.json",
+    "prebuild:umd": "rm -rf umd",
+    "build:umd": "webpack",
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
@@ -53,7 +57,10 @@
     "jest": "^24.9.0",
     "jest-snapshot": "^24.9.0",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.7.4"
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {},
   "publishConfig": {
