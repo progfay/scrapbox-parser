@@ -12,12 +12,22 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'ts-loader',
-          options: {
-            configFile: 'tsconfig.umd.json'
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env'
+              ]
+            }
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: 'tsconfig.umd.json'
+            }
           }
-        }
+        ]
       }
     ]
   },
