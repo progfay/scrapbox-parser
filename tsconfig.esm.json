@@ -3,5 +3,6 @@
   "compilerOptions": {
     "module": "es2015",
     "outDir": "./esm",
+    "tsBuildInfoFile": "./.esm.tsbuildinfo",
   }
 }
