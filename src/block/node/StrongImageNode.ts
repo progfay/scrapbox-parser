@@ -4,8 +4,8 @@ const strongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/[^\s\]]+\.(png|jpe
 const gyazoStrongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32})\]\](?<right>.*)$/
 
 export type StrongImageNodeType = {
-  type: 'strongImage'
-  src: string
+  readonly type: 'strongImage'
+  readonly src: string
 }
 
 type StrongImageMatchType = {

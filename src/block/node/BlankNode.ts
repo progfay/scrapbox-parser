@@ -3,8 +3,8 @@ import { NodeParserType, convertToLineNodes } from '.'
 const blankRegExp = /^(.*?)\[(\s+)\](.*)$/
 
 export type BlankNodeType = {
-  type: 'blank'
-  text: string
+  readonly type: 'blank'
+  readonly text: string
 }
 
 const createBlankNode = (text: string): BlankNodeType => ({

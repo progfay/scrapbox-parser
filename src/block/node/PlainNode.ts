@@ -1,8 +1,8 @@
 import { LineNodeType } from '.'
 
 export type PlainNodeType = {
-  type: 'plain'
-  text: string
+  readonly type: 'plain'
+  readonly text: string
 }
 
 const createPlainNode = (text: string): PlainNodeType => ({

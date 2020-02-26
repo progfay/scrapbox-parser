@@ -3,15 +3,15 @@ import { PackedBlockComponentType } from './PackedBlockComponent'
 import { convertToLineNodes, LineNodeType } from './node'
 
 export type TableComponentType = {
-  type: 'table'
-  components: BlockComponentType[]
+  readonly type: 'table'
+  readonly components: BlockComponentType[]
 }
 
 export type TableType = {
-  indent: number
-  type: 'table'
-  fileName: string
-  cells: LineNodeType[][][]
+  readonly indent: number
+  readonly type: 'table'
+  readonly fileName: string
+  readonly cells: ReadonlyArray<ReadonlyArray<ReadonlyArray<LineNodeType>>>
 }
 
 export const isTableComponent = (component: PackedBlockComponentType): component is TableComponentType => (

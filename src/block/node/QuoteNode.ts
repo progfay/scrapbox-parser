@@ -3,8 +3,8 @@ import { NodeParserType, LineNodeType, convertToLineNodes } from '.'
 const quoteRegExp = /^>(.*)$/
 
 export type QuoteNodeType = {
-  type: 'quote'
-  nodes: LineNodeType[]
+  readonly type: 'quote'
+  readonly nodes: ReadonlyArray<LineNodeType>
 }
 
 const createQuoteNode = (text: string): QuoteNodeType => ({

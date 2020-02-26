@@ -6,9 +6,9 @@ export type DecorationCharType = '*' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' 
 export type AsteriskDecorationCharType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '*-10'
 export type DecorationType = Exclude<DecorationCharType, '*'> | AsteriskDecorationCharType
 export type DecorationNodeType = {
-  type: 'decoration'
-  decos: DecorationType[]
-  nodes: LineNodeType[]
+  readonly type: 'decoration'
+  readonly decos: ReadonlyArray<DecorationType>
+  readonly nodes: ReadonlyArray<LineNodeType>
 }
 
 const createDecorationNode = (decoChars: string, nodes: LineNodeType[]): DecorationNodeType => {

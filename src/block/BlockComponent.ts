@@ -1,6 +1,6 @@
 export type BlockComponentType = {
-  indent: number
-  text: string
+  readonly indent: number
+  readonly text: string
 }
 
 export const convertToBlockComponent = (block: string): BlockComponentType => ({

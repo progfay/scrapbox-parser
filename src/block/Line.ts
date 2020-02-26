@@ -2,14 +2,14 @@ import { BlockComponentType } from './BlockComponent'
 import { LineNodeType, convertToLineNodes } from './node'
 
 export type LineComponentType = {
-  type: 'line'
-  component: BlockComponentType
+  readonly type: 'line'
+  readonly component: BlockComponentType
 }
 
 export type LineType = {
-  indent: number
-  type: 'line'
-  nodes: LineNodeType[]
+  readonly indent: number
+  readonly type: 'line'
+  readonly nodes: ReadonlyArray<LineNodeType>
 }
 
 export const convertToLine = (lineComponent: LineComponentType): LineType => {

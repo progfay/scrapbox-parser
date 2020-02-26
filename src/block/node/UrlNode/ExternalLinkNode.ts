@@ -1,8 +1,8 @@
 export type ExternalLinkNodeType = {
-  type: 'link'
-  pathType: 'absolute'
-  href: string
-  content: string
+  readonly type: 'link'
+  readonly pathType: 'absolute'
+  readonly href: string
+  readonly content: string
 }
 
 export const createExternalLinkNode = (href: string, content: string): ExternalLinkNodeType => ({

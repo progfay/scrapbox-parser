@@ -3,8 +3,8 @@ import { NodeParserType } from '.'
 const helpfeelRegExp = /^\? (.+)$/
 
 export type HelpfeelNodeType = {
-  type: 'helpfeel'
-  text: string
+  readonly type: 'helpfeel'
+  readonly text: string
 }
 
 const createHelpfeelNode = (text: string): HelpfeelNodeType => ({

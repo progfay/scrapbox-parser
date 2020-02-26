@@ -4,8 +4,8 @@ const codeRegExp = /^(.*?)`(.*?)`(.*)$/
 const codeCommandRegExp = /^(\$ .+)$/
 
 export type CodeNodeType = {
-  type: 'code'
-  text: string
+  readonly type: 'code'
+  readonly text: string
 }
 
 const createCodeNode = (text: string): CodeNodeType => ({

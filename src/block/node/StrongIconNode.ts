@@ -3,9 +3,9 @@ import { NodeParserType, convertToLineNodes } from '.'
 const iconRegExp = /^(.*?)\[\[(.*)\.icon(\*(\d+))?\]\](.*)$/
 
 export type StrongIconNodeType = {
-  type: 'strongIcon'
-  pathType: 'root' | 'relative'
-  path: string
+  readonly type: 'strongIcon'
+  readonly pathType: 'root' | 'relative'
+  readonly path: string
 }
 
 const createStrongIconNode = (path: string): StrongIconNodeType => ({

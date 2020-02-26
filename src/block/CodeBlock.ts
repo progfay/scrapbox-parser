@@ -2,15 +2,15 @@ import { BlockComponentType } from './BlockComponent'
 import { PackedBlockComponentType } from './PackedBlockComponent'
 
 export type CodeBlockComponentType = {
-  type: 'codeBlock'
-  components: BlockComponentType[]
+  readonly type: 'codeBlock'
+  readonly components: BlockComponentType[]
 }
 
 export type CodeBlockType = {
-  indent: number
-  type: 'codeBlock'
-  fileName: string
-  content: string
+  readonly indent: number
+  readonly type: 'codeBlock'
+  readonly fileName: string
+  readonly content: string
 }
 
 export const isCodeBlockComponent = (packedBlockComponent: PackedBlockComponentType): packedBlockComponent is CodeBlockComponentType => (

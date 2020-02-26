@@ -3,10 +3,10 @@ import { NodeParserType, convertToLineNodes } from '.'
 const internalLinkRegExp = /^(.*?)\[(\/?[^[\]]+)\](.*)$/
 
 export type InternalLinkNodeType = {
-  type: 'link'
-  pathType: 'root' | 'relative'
-  href: string,
-  content: string
+  readonly type: 'link'
+  readonly pathType: 'root' | 'relative'
+  readonly href: string,
+  readonly content: string
 }
 
 const createInternalLinkNode = (href: string): InternalLinkNodeType => ({

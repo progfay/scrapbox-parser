@@ -4,8 +4,8 @@ const formulaWithTailHalfSpaceRegExp = /^(.*?)\[\$ (.+?) \](.*)$/
 const formulaRegExp = /^(.*?)\[\$ ([^\]]+)\](.*)$/
 
 export type FormulaNodeType = {
-  type: 'formula'
-  formula: string
+  readonly type: 'formula'
+  readonly formula: string
 }
 
 const createFormulaNode = (formula: string): FormulaNodeType => ({

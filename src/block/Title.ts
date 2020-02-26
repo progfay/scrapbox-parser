@@ -1,13 +1,13 @@
 import { PackedBlockComponentType } from './PackedBlockComponent'
 
 export type TitleComponentType = {
-  type: 'title'
-  text: string
+  readonly type: 'title'
+  readonly text: string
 }
 
 export type TitleType = {
-  type: 'title'
-  text: string
+  readonly type: 'title'
+  readonly text: string
 }
 
 export const isTitleComponent = (component: PackedBlockComponentType): component is TitleComponentType => (

@@ -3,7 +3,7 @@ import { convertToBlockComponents } from './block/BlockComponent'
 import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlockComponent'
 
 export type ParserOptionType = {
-  hasTitle: boolean
+  readonly hasTitle: boolean
 }
 
 export type PageType = BlockType[]

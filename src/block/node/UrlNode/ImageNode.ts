@@ -1,7 +1,7 @@
 export type ImageNodeType = {
-  type: 'image'
-  src: string
-  link: string
+  readonly type: 'image'
+  readonly src: string
+  readonly link: string
 }
 
 export const createImageNode = (src: string, link: string): ImageNodeType => {

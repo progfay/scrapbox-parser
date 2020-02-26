@@ -20,12 +20,12 @@ const isGoogleMapMatch = (obj: any): obj is googleMapMatchType => (
 )
 
 export type GoogleMapNodeType = {
-  type: 'googleMap'
-  latitude: number
-  longitude: number
-  zoom: number
-  place: string
-  url: string
+  readonly type: 'googleMap'
+  readonly latitude: number
+  readonly longitude: number
+  readonly zoom: number
+  readonly place: string
+  readonly url: string
 }
 
 const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: string, place: string): GoogleMapNodeType => {

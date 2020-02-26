@@ -3,8 +3,8 @@ import { NodeParserType, convertToLineNodes } from '.'
 const hashTagRegExp = /^(.*? )?#(\S+)(.*)?$/
 
 export type HashTagNodeType = {
-  type: 'hashTag'
-  href: string
+  readonly type: 'hashTag'
+  readonly href: string
 }
 
 const createHashTagNode = (href: string): HashTagNodeType => ({

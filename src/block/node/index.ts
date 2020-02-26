@@ -31,8 +31,8 @@ export type LineNodeType = QuoteNodeType
                          | PlainNodeType
 
 export type NodeParserOptionType = {
-  nested: boolean
-  quoted: boolean
+  readonly nested: boolean
+  readonly quoted: boolean
 }
 export type NextNodeParserType = () => LineNodeType[]
 export type NodeParserType = (text: string, opt: NodeParserOptionType, next: NextNodeParserType) => LineNodeType[]
