@@ -22,7 +22,6 @@
     "prepare": "npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
-    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint -c ./.eslintrc.js .",
     "lint:fix": "eslint --fix -c ./.eslintrc.js ."
   },
@@ -49,7 +48,6 @@
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
     "babel-loader": "8.1.0",
-    "coveralls": "3.0.11",
     "eslint": "6.8.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.20.1",

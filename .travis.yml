@@ -3,4 +3,4 @@ node_js:
   - 'stable'
   - 'lts/*'
 
-script: npm run lint && npm test && npm run coverage
+script: npm run lint && npm test
