@@ -57,7 +57,7 @@
     "eslint-plugin-standard": "4.0.1",
     "jest": "25.2.7",
     "jest-snapshot": "25.2.7",
-    "ts-jest": "25.3.0",
+    "ts-jest": "25.3.1",
     "ts-loader": "6.2.2",
     "typescript": "3.8.3",
     "webpack": "4.42.1",
