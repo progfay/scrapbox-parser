@@ -1,4 +1,6 @@
-import { NodeParserType, convertToLineNodes } from '.'
+import { convertToLineNodes } from '.'
+
+import type { NodeParserType } from '.'
 
 const strongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg))\]\](?<right>.*)$/i
 const gyazoStrongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32})\]\](?<right>.*)$/

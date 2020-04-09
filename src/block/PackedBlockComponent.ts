@@ -1,9 +1,9 @@
-import { ParserOptionType } from '../parse'
-import { BlockComponentType } from './BlockComponent'
-import { TitleComponentType } from './Title'
-import { CodeBlockComponentType } from './CodeBlock'
-import { TableComponentType } from './Table'
-import { LineComponentType } from './Line'
+import type { ParserOptionType } from '../parse'
+import type { BlockComponentType } from './BlockComponent'
+import type { TitleComponentType } from './Title'
+import type { CodeBlockComponentType } from './CodeBlock'
+import type { TableComponentType } from './Table'
+import type { LineComponentType } from './Line'
 
 export type PackedBlockComponentType = TitleComponentType | CodeBlockComponentType | TableComponentType | LineComponentType
 

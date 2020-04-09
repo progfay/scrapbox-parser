@@ -1,6 +1,9 @@
-import { BlockType, convertToBlock } from './block'
+import { convertToBlock } from './block'
 import { convertToBlockComponents } from './block/BlockComponent'
-import { PackedBlockComponentType, packBlockComponents } from './block/PackedBlockComponent'
+import { packBlockComponents } from './block/PackedBlockComponent'
+
+import type { BlockType } from './block'
+import type { PackedBlockComponentType } from './block/PackedBlockComponent'
 
 export type ParserOptionType = {
   hasTitle: boolean

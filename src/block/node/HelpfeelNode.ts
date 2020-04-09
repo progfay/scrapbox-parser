@@ -1,4 +1,4 @@
-import { NodeParserType } from '.'
+import type { NodeParserType } from '.'
 
 const helpfeelRegExp = /^\? (.+)$/
 

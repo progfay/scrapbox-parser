@@ -1,6 +1,8 @@
-import { BlockComponentType } from './BlockComponent'
-import { PackedBlockComponentType } from './PackedBlockComponent'
-import { convertToLineNodes, LineNodeType } from './node'
+import { convertToLineNodes } from './node'
+
+import type { BlockComponentType } from './BlockComponent'
+import type { PackedBlockComponentType } from './PackedBlockComponent'
+import type { LineNodeType } from './node'
 
 export type TableComponentType = {
   type: 'table'
