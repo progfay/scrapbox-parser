@@ -1,5 +1,5 @@
-import { BlockComponentType } from './BlockComponent'
-import { PackedBlockComponentType } from './PackedBlockComponent'
+import type { BlockComponentType } from './BlockComponent'
+import type { PackedBlockComponentType } from './PackedBlockComponent'
 
 export type CodeBlockComponentType = {
   type: 'codeBlock'

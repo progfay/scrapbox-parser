@@ -1,8 +1,13 @@
-import { PackedBlockComponentType } from './PackedBlockComponent'
-import { TitleType, isTitleComponent, convertToTitle } from './Title'
-import { CodeBlockType, isCodeBlockComponent, convertToCodeBlock } from './CodeBlock'
-import { TableType, isTableComponent, convertToTable } from './Table'
-import { LineType, convertToLine } from './Line'
+import { isTitleComponent, convertToTitle } from './Title'
+import { isCodeBlockComponent, convertToCodeBlock } from './CodeBlock'
+import { isTableComponent, convertToTable } from './Table'
+import { convertToLine } from './Line'
+
+import type { PackedBlockComponentType } from './PackedBlockComponent'
+import type { TitleType } from './Title'
+import type { CodeBlockType } from './CodeBlock'
+import type { TableType } from './Table'
+import type { LineType } from './Line'
 
 export type BlockType = TitleType | CodeBlockType | TableType | LineType
 

@@ -1,5 +1,7 @@
-import { BlockComponentType } from './BlockComponent'
-import { LineNodeType, convertToLineNodes } from './node'
+import { convertToLineNodes } from './node'
+
+import type { BlockComponentType } from './BlockComponent'
+import type { LineNodeType } from './node'
 
 export type LineComponentType = {
   type: 'line'

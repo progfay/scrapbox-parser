@@ -1,6 +1,10 @@
-import { NodeParserType, convertToLineNodes } from '../'
-import { ExternalLinkNodeType, createExternalLinkNode } from './ExternalLinkNode'
-import { ImageNodeType, createImageNode } from './ImageNode'
+import { convertToLineNodes } from '../'
+import { createExternalLinkNode } from './ExternalLinkNode'
+import { createImageNode } from './ImageNode'
+
+import type { NodeParserType } from '../'
+import type { ExternalLinkNodeType } from './ExternalLinkNode'
+import type { ImageNodeType } from './ImageNode'
 
 const urlRegExp = /^(?<left>.*?)\[(?<href>https?:\/\/[^\s\]]+)(?<content>)\](?<right>.*)$/
 const leftUrlRegExp = /^(?<left>.*?)\[(?<href>https?:\/\/[^\s\]]+)\s+(?<content>[^\]]*[^\s])\](?<right>.*)$/

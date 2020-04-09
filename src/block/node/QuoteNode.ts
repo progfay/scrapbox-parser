@@ -1,4 +1,6 @@
-import { NodeParserType, LineNodeType, convertToLineNodes } from '.'
+import { convertToLineNodes } from '.'
+
+import type { NodeParserType, LineNodeType } from '.'
 
 const quoteRegExp = /^>(.*)$/
 

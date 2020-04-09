@@ -1,4 +1,4 @@
-import { LineNodeType } from '.'
+import type { LineNodeType } from '.'
 
 export type PlainNodeType = {
   type: 'plain'

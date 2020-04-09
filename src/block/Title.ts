@@ -1,4 +1,4 @@
-import { PackedBlockComponentType } from './PackedBlockComponent'
+import type { PackedBlockComponentType } from './PackedBlockComponent'
 
 export type TitleComponentType = {
   type: 'title'

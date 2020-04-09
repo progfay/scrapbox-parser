@@ -1,4 +1,6 @@
-import { NodeParserType, convertToLineNodes } from '.'
+import { convertToLineNodes } from '.'
+
+import type { NodeParserType } from '.'
 
 const formulaWithTailHalfSpaceRegExp = /^(.*?)\[\$ (.+?) \](.*)$/
 const formulaRegExp = /^(.*?)\[\$ ([^\]]+)\](.*)$/
