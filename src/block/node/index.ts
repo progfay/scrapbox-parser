@@ -58,15 +58,13 @@ const FalsyEliminator: NodeParserType = (text, _opt, next) => {
   return next()
 }
 
-const combineNodeParsers = (..._parsers: NodeParserType[]) => {
-  const parsers = _parsers.slice().reverse()
-  return (text: string = '', opt: NodeParserOptionType = { nested: false, quoted: false }): LineNodeType[] => (
-    parsers.reduce(
+const combineNodeParsers = (...parsers: NodeParserType[]) =>
+  (text: string = '', opt: NodeParserOptionType = { nested: false, quoted: false }): LineNodeType[] => (
+    parsers.reduceRight(
       (acc: NextNodeParserType, parser: NodeParserType): NextNodeParserType => () => parser(text, opt, acc),
       () => PlainNodeParser(text)
     )()
   )
-}
 
 export const convertToLineNodes = combineNodeParsers(
   FalsyEliminator,
