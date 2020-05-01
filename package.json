@@ -55,7 +55,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "jest": "25.5.2",
+    "jest": "25.5.3",
     "jest-snapshot": "25.5.1",
     "ts-jest": "25.4.0",
     "ts-loader": "7.0.2",
