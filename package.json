@@ -40,8 +40,8 @@
   },
   "homepage": "https://github.com/progfay/scrapbox-parser#readme",
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/preset-env": "7.9.6",
+    "@babel/core": "7.10.1",
+    "@babel/preset-env": "7.10.1",
     "@types/core-js": "2.5.3",
     "@types/jest": "25.2.3",
     "@types/node": "13.13.9",
