@@ -7,7 +7,7 @@ const internalLinkRegExp = /^(.*?)\[(\/?[^[\]]+)\](.*)$/
 export type InternalLinkNodeType = {
   type: 'link'
   pathType: 'root' | 'relative'
-  href: string,
+  href: string
   content: string
 }
 

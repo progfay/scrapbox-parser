@@ -30,21 +30,22 @@ import type { IconNodeType } from './IconNode'
 import type { HashTagNodeType } from './HashTagNode'
 import type { PlainNodeType } from './PlainNode'
 
-export type LineNodeType = QuoteNodeType
-                         | HelpfeelNodeType
-                         | StrongImageNodeType
-                         | StrongIconNodeType
-                         | StrongNodeType
-                         | FormulaNodeType
-                         | DecorationNodeType
-                         | CodeNodeType
-                         | BlankNodeType
-                         | UrlNodeType
-                         | GoogleMapNodeType
-                         | InternalLinkNodeType
-                         | IconNodeType
-                         | HashTagNodeType
-                         | PlainNodeType
+export type LineNodeType =
+| QuoteNodeType
+| HelpfeelNodeType
+| StrongImageNodeType
+| StrongIconNodeType
+| StrongNodeType
+| FormulaNodeType
+| DecorationNodeType
+| CodeNodeType
+| BlankNodeType
+| UrlNodeType
+| GoogleMapNodeType
+| InternalLinkNodeType
+| IconNodeType
+| HashTagNodeType
+| PlainNodeType
 
 export type NodeParserOptionType = {
   nested: boolean

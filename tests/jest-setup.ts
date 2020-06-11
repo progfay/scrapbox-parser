@@ -8,7 +8,7 @@ declare global {
     }
 
     interface Matchers<R, T> {
-      toMatchSnapshotWhenParsing(option?: Partial<ParserOptionType>): CustomMatcherResult
+      toMatchSnapshotWhenParsing: (option?: Partial<ParserOptionType>) => CustomMatcherResult
     }
   }
 }
