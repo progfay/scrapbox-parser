@@ -1,34 +1,34 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType, LineNodeType } from '.'
+import type { NodeParser, LineNode } from '.'
 
 const decorationRegExp = /^(.*?)\[([!"#%&'()*+,-./{|}<>_~]+) ((?:\[[^\]]+\]|[^\]])+)\](.*)$/
 
-export type DecorationCharType = '*' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
-export type AsteriskDecorationCharType = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '*-10'
-export type DecorationType = Exclude<DecorationCharType, '*'> | AsteriskDecorationCharType
-export type DecorationNodeType = {
+export type DecorationChar = '*' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
+export type AsteriskDecorationChar = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '*-10'
+export type Decoration = Exclude<DecorationChar, '*'> | AsteriskDecorationChar
+export interface DecorationNode {
   type: 'decoration'
-  decos: DecorationType[]
-  nodes: LineNodeType[]
+  decos: Decoration[]
+  nodes: LineNode[]
 }
 
-const createDecorationNode = (decoChars: string, nodes: LineNodeType[]): DecorationNodeType => {
+const createDecorationNode = (decoChars: string, nodes: LineNode[]): DecorationNode => {
   const decoSet = new Set<string>(decoChars)
   if (decoSet.has('*')) {
     const asteriskCount = decoChars.split('*').length - 1
     decoSet.delete('*')
-    decoSet.add(`*-${Math.min(asteriskCount, 10)}` as DecorationCharType)
+    decoSet.add(`*-${Math.min(asteriskCount, 10)}` as DecorationChar)
   }
 
   return {
     type: 'decoration',
-    decos: Array.from(decoSet) as DecorationType[],
+    decos: Array.from(decoSet) as Decoration[],
     nodes
   }
 }
 
-export const DecorationNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const DecorationNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const decorationMatch = text.match(decorationRegExp)

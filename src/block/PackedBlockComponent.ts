@@ -1,13 +1,13 @@
-import type { ParserOptionType } from '../parse'
-import type { BlockComponentType } from './BlockComponent'
-import type { TitleComponentType } from './Title'
-import type { CodeBlockComponentType } from './CodeBlock'
-import type { TableComponentType } from './Table'
-import type { LineComponentType } from './Line'
+import type { ParserOption } from '../parse'
+import type { BlockComponent } from './BlockComponent'
+import type { TitleComponent } from './Title'
+import type { CodeBlockComponent } from './CodeBlock'
+import type { TableComponent } from './Table'
+import type { LineComponent } from './Line'
 
-export type PackedBlockComponentType = TitleComponentType | CodeBlockComponentType | TableComponentType | LineComponentType
+export type PackedBlockComponent = TitleComponent | CodeBlockComponent | TableComponent | LineComponent
 
-export const packBlockComponents = (blockComponents: BlockComponentType[], { hasTitle }: ParserOptionType): PackedBlockComponentType[] => {
+export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitle }: ParserOption): PackedBlockComponent[] => {
   if (hasTitle) {
     const [title, ...body] = blockComponents
     return [
@@ -19,8 +19,8 @@ export const packBlockComponents = (blockComponents: BlockComponentType[], { has
     ]
   }
 
-  const packedBlockComponents: PackedBlockComponentType[] = []
-  let packingComponent: ((CodeBlockComponentType | TableComponentType) & { indent: number }) | null = null
+  const packedBlockComponents: PackedBlockComponent[] = []
+  let packingComponent: ((CodeBlockComponent | TableComponent) & { indent: number }) | null = null
 
   for (const blockComponent of blockComponents) {
     const { indent, text } = blockComponent
@@ -41,7 +41,7 @@ export const packBlockComponents = (blockComponents: BlockComponentType[], { has
         type: isCodeBlock ? 'codeBlock' : 'table',
         components: [blockComponent],
         indent
-      } as ((CodeBlockComponentType | TableComponentType) & { indent: number })
+      } as ((CodeBlockComponent | TableComponent) & { indent: number })
     } else {
       packedBlockComponents.push(
         {

@@ -1,12 +1,12 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType } from '.'
+import type { NodeParser } from '.'
 
 const googleMapRegExp = /^(?<left>.*?)\[(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))(?<place>)\](?<right>.*)$/
 const leftGoogleMapRegExp = /^(?<left>.*?)\[(?<place>[^\]]*[^\s])\s+(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))\](?<right>.*)$/
 const rightGoogleMapRegExp = /^(?<left>.*?)\[(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))\s+(?<place>[^\]]*[^\s])\](?<right>.*)$/
 
-type googleMapMatchType = {
+interface googleMapMatch {
   groups: {
     left: string
     right: string
@@ -17,11 +17,11 @@ type googleMapMatchType = {
   }
 }
 
-const isGoogleMapMatch = (obj: any): obj is googleMapMatchType => (
+const isGoogleMapMatch = (obj: any): obj is googleMapMatch => (
   obj && obj.groups && obj.groups.latitude
 )
 
-export type GoogleMapNodeType = {
+export interface GoogleMapNode {
   type: 'googleMap'
   latitude: number
   longitude: number
@@ -30,7 +30,7 @@ export type GoogleMapNodeType = {
   url: string
 }
 
-const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: string, place: string): GoogleMapNodeType => {
+const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: string, place: string): GoogleMapNode => {
   const latitude = parseFloat(_latitude.replace(/^N/, '').replace(/^S/, '-'))
   const longitude = parseFloat(_longitude.replace(/^E/, '').replace(/^W/, '-'))
   const zoom = parseInt(_zoom.replace(/^,Z/, '') || '14', 10)
@@ -48,7 +48,7 @@ const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: strin
   }
 }
 
-export const GoogleMapNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const GoogleMapNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const googleMapMatch = text.match(googleMapRegExp) ||

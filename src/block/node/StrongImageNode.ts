@@ -1,16 +1,16 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType } from '.'
+import type { NodeParser } from '.'
 
 const strongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg))\]\](?<right>.*)$/i
 const gyazoStrongImageRegExp = /^(?<left>.*?)\[\[(?<src>https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32})\]\](?<right>.*)$/
 
-export type StrongImageNodeType = {
+export interface StrongImageNode {
   type: 'strongImage'
   src: string
 }
 
-type StrongImageMatchType = {
+interface StrongImageMatch {
   groups: {
     left: string
     right: string
@@ -18,16 +18,16 @@ type StrongImageMatchType = {
   }
 }
 
-const isStrongImageMatch = (obj: any): obj is StrongImageMatchType => (
+const isStrongImageMatch = (obj: any): obj is StrongImageMatch => (
   obj && obj.groups && obj.groups.src
 )
 
-const createStrongImageNode = (src: string): StrongImageNodeType => ({
+const createStrongImageNode = (src: string): StrongImageNode => ({
   type: 'strongImage',
   src
 })
 
-export const StrongImageNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const StrongImageNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const StrongImageMatch = text.match(strongImageRegExp) || text.match(gyazoStrongImageRegExp)

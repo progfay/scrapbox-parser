@@ -1,23 +1,23 @@
-import type { BlockComponentType } from './BlockComponent'
-import type { PackedBlockComponentType } from './PackedBlockComponent'
+import type { BlockComponent } from './BlockComponent'
+import type { PackedBlockComponent } from './PackedBlockComponent'
 
-export type CodeBlockComponentType = {
+export interface CodeBlockComponent {
   type: 'codeBlock'
-  components: BlockComponentType[]
+  components: BlockComponent[]
 }
 
-export type CodeBlockType = {
+export interface CodeBlock {
   indent: number
   type: 'codeBlock'
   fileName: string
   content: string
 }
 
-export const isCodeBlockComponent = (packedBlockComponent: PackedBlockComponentType): packedBlockComponent is CodeBlockComponentType => (
+export const isCodeBlockComponent = (packedBlockComponent: PackedBlockComponent): packedBlockComponent is CodeBlockComponent => (
   packedBlockComponent.type === 'codeBlock'
 )
 
-export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): CodeBlockType => {
+export const convertToCodeBlock = (blockComponent: CodeBlockComponent): CodeBlock => {
   const { components } = blockComponent
   const [head, ...body] = components
   const { indent, text } = head
@@ -28,7 +28,7 @@ export const convertToCodeBlock = (blockComponent: CodeBlockComponentType): Code
     type: 'codeBlock',
     fileName,
     content: body
-      .map((component: BlockComponentType): string => component.text.substring(indent + 1))
+      .map((component: BlockComponent): string => component.text.substring(indent + 1))
       .join('\n')
   }
 }

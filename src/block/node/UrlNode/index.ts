@@ -2,16 +2,16 @@ import { convertToLineNodes } from '../'
 import { createExternalLinkNode } from './ExternalLinkNode'
 import { createImageNode } from './ImageNode'
 
-import type { NodeParserType } from '../'
-import type { ExternalLinkNodeType } from './ExternalLinkNode'
-import type { ImageNodeType } from './ImageNode'
+import type { NodeParser } from '../'
+import type { ExternalLinkNode } from './ExternalLinkNode'
+import type { ImageNode } from './ImageNode'
 
 const urlRegExp = /^(?<left>.*?)\[(?<href>https?:\/\/[^\s\]]+)(?<content>)\](?<right>.*)$/
 const leftUrlRegExp = /^(?<left>.*?)\[(?<href>https?:\/\/[^\s\]]+)\s+(?<content>[^\]]*[^\s])\](?<right>.*)$/
 const rightUrlRegExp = /^(?<left>.*?)\[(?<content>[^\]]*[^\s])\s+(?<href>https?:\/\/[^\s\]]+)\](?<right>.*)$/
 const httpRegExp = /^(?<left>.*?\s)?(?<href>https?:\/\/[^\s\]]+)(?<content>)(?<right>.*)$/
 
-type UrlMatchType = {
+interface UrlMatch {
   groups: {
     left: string
     right: string
@@ -20,7 +20,7 @@ type UrlMatchType = {
   }
 }
 
-const isUrlMatch = (obj: any): obj is UrlMatchType => (
+const isUrlMatch = (obj: any): obj is UrlMatch => (
   obj && obj.groups && obj.groups.href
 )
 
@@ -36,15 +36,15 @@ const isGyazoImageUrl = (text: string): boolean => (
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
 )
 
-export type UrlNodeType = ExternalLinkNodeType | ImageNodeType
+export type UrlNode = ExternalLinkNode | ImageNode
 
-const createUrlNode = (href: string, content: string): UrlNodeType => {
+const createUrlNode = (href: string, content: string): UrlNode => {
   if (!(isUrl(content) && isImageUrl(content)) && !isImageUrl(href)) return createExternalLinkNode(href, content)
   if (isImageUrl(content)) [href, content] = [content, href]
   return createImageNode(href, content)
 }
 
-export const UrlNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const UrlNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   const UrlMatch = text.match(urlRegExp) ||
                    text.match(leftUrlRegExp) ||
                    text.match(rightUrlRegExp) ||

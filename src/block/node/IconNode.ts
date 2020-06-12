@@ -1,22 +1,22 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType } from '.'
+import type { NodeParser } from '.'
 
 const iconRegExp = /^(.*?)\[(.*)\.icon(\*(\d+))?\](.*)$/
 
-export type IconNodeType = {
+export interface IconNode {
   type: 'icon'
   pathType: 'root' | 'relative'
   path: string
 }
 
-const createIconNode = (path: string): IconNodeType | null => ({
+const createIconNode = (path: string): IconNode | null => ({
   type: 'icon',
   pathType: /^\//.test(path) ? 'root' : 'relative',
   path
 })
 
-export const IconNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const IconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const iconMatch = text.match(iconRegExp)
