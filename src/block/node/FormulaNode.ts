@@ -18,7 +18,7 @@ const createFormulaNode = (formula: string): FormulaNode => ({
 export const FormulaNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
-  const hashTagMatch = text.match(formulaWithTailHalfSpaceRegExp) || text.match(formulaRegExp)
+  const hashTagMatch = text.match(formulaWithTailHalfSpaceRegExp) ?? text.match(formulaRegExp)
   if (!hashTagMatch) return next()
 
   const [, left, target, right] = hashTagMatch

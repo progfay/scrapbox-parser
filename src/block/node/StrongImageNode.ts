@@ -30,7 +30,7 @@ const createStrongImageNode = (src: string): StrongImageNode => ({
 export const StrongImageNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
-  const StrongImageMatch = text.match(strongImageRegExp) || text.match(gyazoStrongImageRegExp)
+  const StrongImageMatch = text.match(strongImageRegExp) ?? text.match(gyazoStrongImageRegExp)
   if (!isStrongImageMatch(StrongImageMatch)) return next()
 
   const { left, src, right } = StrongImageMatch.groups
