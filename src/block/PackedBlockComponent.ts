@@ -41,7 +41,7 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
         type: isCodeBlock ? 'codeBlock' : 'table',
         components: [blockComponent],
         indent
-      } as ((CodeBlockComponent | TableComponent) & { indent: number })
+      }
     } else {
       packedBlockComponents.push(
         {

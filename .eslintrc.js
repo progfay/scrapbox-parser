@@ -23,7 +23,6 @@ module.exports = {
     'jest'
   ],
   'rules': {
-    '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/prefer-optional-chain': 'off',
