@@ -2,18 +2,18 @@ import { convertToBlock } from './block'
 import { convertToBlockComponents } from './block/BlockComponent'
 import { packBlockComponents } from './block/PackedBlockComponent'
 
-import type { BlockType } from './block'
-import type { PackedBlockComponentType } from './block/PackedBlockComponent'
+import type { Block } from './block'
+import type { PackedBlockComponent } from './block/PackedBlockComponent'
 
-export type ParserOptionType = {
+export interface ParserOption {
   hasTitle: boolean
 }
 
-export type PageType = BlockType[]
+export type Page = Block[]
 
-export const parse = (input: string, { hasTitle = true }: Partial<ParserOptionType> = {}): PageType => {
+export const parse = (input: string, { hasTitle = true }: Partial<ParserOption> = {}): Page => {
   const blockComponents = convertToBlockComponents(input)
-  const packedBlockComponents: PackedBlockComponentType[] = packBlockComponents(blockComponents, { hasTitle })
+  const packedBlockComponents: PackedBlockComponent[] = packBlockComponents(blockComponents, { hasTitle })
   return packedBlockComponents.map(convertToBlock)
 }
 

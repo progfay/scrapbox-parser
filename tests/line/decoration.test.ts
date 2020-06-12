@@ -1,4 +1,4 @@
-import { parse, LineType, DecorationType, DecorationNodeType } from '../../src'
+import { parse, Line, Decoration, DecorationNode } from '../../src'
 
 describe('decoration', () => {
   it('Simple decoration', () => {
@@ -37,9 +37,9 @@ describe('decoration', () => {
   it('All decoration', () => {
     const input = '[**********!"#%&\'()*+,-./{|}<>_~ decos]'
     const blocks = parse(input, { hasTitle: false })
-    const received = ((blocks[0] as LineType).nodes[0] as DecorationNodeType).decos
-    const decos: DecorationType[] = ['*-10', '!', '"', '#', '%', '&', '\'', '(', ')', '+', ',', '-', '.', '/', '{', '|', '}', '<', '>', '_', '~']
-    expect(new Set<DecorationType>(received)).toEqual(new Set<DecorationType>(decos))
+    const received = ((blocks[0] as Line).nodes[0] as DecorationNode).decos
+    const decos: Decoration[] = ['*-10', '!', '"', '#', '%', '&', '\'', '(', ')', '+', ',', '-', '.', '/', '{', '|', '}', '<', '>', '_', '~']
+    expect(new Set<Decoration>(received)).toEqual(new Set<Decoration>(decos))
   })
 
   it('Decoration * overflow', () => {

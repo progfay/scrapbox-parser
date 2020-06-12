@@ -1,20 +1,20 @@
 import { convertToLineNodes } from './node'
 
-import type { BlockComponentType } from './BlockComponent'
-import type { LineNodeType } from './node'
+import type { BlockComponent } from './BlockComponent'
+import type { LineNode } from './node'
 
-export type LineComponentType = {
+export interface LineComponent {
   type: 'line'
-  component: BlockComponentType
+  component: BlockComponent
 }
 
-export type LineType = {
+export interface Line {
   indent: number
   type: 'line'
-  nodes: LineNodeType[]
+  nodes: LineNode[]
 }
 
-export const convertToLine = (lineComponent: LineComponentType): LineType => {
+export const convertToLine = (lineComponent: LineComponent): Line => {
   const { indent, text } = lineComponent.component
   return {
     indent,

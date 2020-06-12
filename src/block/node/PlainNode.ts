@@ -1,15 +1,15 @@
-import type { LineNodeType } from '.'
+import type { LineNode } from '.'
 
-export type PlainNodeType = {
+export interface PlainNode {
   type: 'plain'
   text: string
 }
 
-const createPlainNode = (text: string): PlainNodeType => ({
+const createPlainNode = (text: string): PlainNode => ({
   type: 'plain',
   text
 })
 
-export const PlainNodeParser = (text: string): LineNodeType[] => {
+export const PlainNodeParser = (text: string): LineNode[] => {
   return [createPlainNode(text)]
 }

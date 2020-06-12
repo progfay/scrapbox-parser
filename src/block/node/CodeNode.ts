@@ -1,21 +1,21 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType } from '.'
+import type { NodeParser } from '.'
 
 const codeRegExp = /^(.*?)`(.*?)`(.*)$/
 const codeCommandRegExp = /^(\$ .+)$/
 
-export type CodeNodeType = {
+export interface CodeNode {
   type: 'code'
   text: string
 }
 
-const createCodeNode = (text: string): CodeNodeType => ({
+const createCodeNode = (text: string): CodeNode => ({
   type: 'code',
   text
 })
 
-export const CodeNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const CodeNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const codeCommandMatch = text.match(codeCommandRegExp)

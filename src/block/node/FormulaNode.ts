@@ -1,21 +1,21 @@
 import { convertToLineNodes } from '.'
 
-import type { NodeParserType } from '.'
+import type { NodeParser } from '.'
 
 const formulaWithTailHalfSpaceRegExp = /^(.*?)\[\$ (.+?) \](.*)$/
 const formulaRegExp = /^(.*?)\[\$ ([^\]]+)\](.*)$/
 
-export type FormulaNodeType = {
+export interface FormulaNode {
   type: 'formula'
   formula: string
 }
 
-const createFormulaNode = (formula: string): FormulaNodeType => ({
+const createFormulaNode = (formula: string): FormulaNode => ({
   type: 'formula',
   formula
 })
 
-export const FormulaNodeParser: NodeParserType = (text, { nested, quoted }, next) => {
+export const FormulaNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const hashTagMatch = text.match(formulaWithTailHalfSpaceRegExp) || text.match(formulaRegExp)

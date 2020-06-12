@@ -1,20 +1,20 @@
-import type { PackedBlockComponentType } from './PackedBlockComponent'
+import type { PackedBlockComponent } from './PackedBlockComponent'
 
-export type TitleComponentType = {
+export interface TitleComponent {
   type: 'title'
   text: string
 }
 
-export type TitleType = {
+export interface Title {
   type: 'title'
   text: string
 }
 
-export const isTitleComponent = (component: PackedBlockComponentType): component is TitleComponentType => (
+export const isTitleComponent = (component: PackedBlockComponent): component is TitleComponent => (
   component.type === 'title'
 )
 
-export const convertToTitle = (blockComponent: TitleComponentType): TitleType => {
+export const convertToTitle = (blockComponent: TitleComponent): Title => {
   return {
     type: 'title',
     text: blockComponent.text
