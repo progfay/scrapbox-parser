@@ -18,14 +18,13 @@ export const BlankNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const blankMatch = text.match(blankRegExp)
-  if (blankMatch) {
-    const [, left, target, right] = blankMatch
-    return [
-      ...convertToLineNodes(left, { nested, quoted }),
-      createBlankNode(target),
-      ...convertToLineNodes(right, { nested, quoted })
-    ]
-  }
 
-  return next()
+  if (blankMatch === null) return next()
+
+  const [, left, target, right] = blankMatch
+  return [
+    ...convertToLineNodes(left, { nested, quoted }),
+    createBlankNode(target),
+    ...convertToLineNodes(right, { nested, quoted })
+  ]
 }

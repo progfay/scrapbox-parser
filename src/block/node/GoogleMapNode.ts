@@ -17,7 +17,7 @@ interface googleMapMatch {
   }
 }
 
-const isGoogleMapMatch = (obj: any): obj is googleMapMatch => !!(obj?.groups?.latitude)
+const isGoogleMapMatch = (obj: any): obj is googleMapMatch => (obj?.groups?.latitude !== undefined)
 
 export interface GoogleMapNode {
   type: 'googleMap'
@@ -31,8 +31,8 @@ export interface GoogleMapNode {
 const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: string, place: string): GoogleMapNode => {
   const latitude = parseFloat(_latitude.replace(/^N/, '').replace(/^S/, '-'))
   const longitude = parseFloat(_longitude.replace(/^E/, '').replace(/^W/, '-'))
-  const zoom = parseInt(_zoom.replace(/^,Z/, '') || '14', 10)
-  const url = place
+  const zoom = /^,Z\d+$/.test(_zoom) ? parseInt(_zoom.replace(/^,Z/, ''), 10) : 14
+  const url = place !== ''
     ? `https://www.google.com/maps/place/${encodeURIComponent(place)}/@${latitude},${longitude},${zoom}z`
     : `https://www.google.com/maps/@${latitude},${longitude},${zoom}z`
 

@@ -17,7 +17,7 @@ const createQuoteNode = (text: string): QuoteNode => ({
 export const QuoteNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested || quoted) return next()
   const quoteMatch = text.match(quoteRegExp)
-  if (!quoteMatch) return next()
+  if (quoteMatch === null) return next()
 
   const [, target] = quoteMatch
   return [createQuoteNode(target)]

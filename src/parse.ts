@@ -19,6 +19,5 @@ export const parse = (input: string, { hasTitle = true }: Partial<ParserOption> 
 
 export const getTitle = (input: string): string => {
   const match = input.match(/^\s*(\S.*)\s*$/m)
-  if (!match) return 'Untitled'
-  return match[1].trim()
+  return match !== null ? match[1].trim() : 'Untitled'
 }

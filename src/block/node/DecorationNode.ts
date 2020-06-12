@@ -32,7 +32,7 @@ export const DecorationNodeParser: NodeParser = (text, { nested, quoted }, next)
   if (nested) return next()
 
   const decorationMatch = text.match(decorationRegExp)
-  if (!decorationMatch) return next()
+  if (decorationMatch === null) return next()
 
   const [, left, decoChars, target, right] = decorationMatch
   return [

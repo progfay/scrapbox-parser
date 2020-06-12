@@ -20,7 +20,7 @@ export const StrongIconNodeParser: NodeParser = (text, { nested, quoted }, next)
   if (nested) return next()
 
   const iconMatch = text.match(iconRegExp)
-  if (!iconMatch) return next()
+  if (iconMatch === null) return next()
 
   const [, left, path, , num = '1', right] = iconMatch
   const iconNode = createStrongIconNode(path)

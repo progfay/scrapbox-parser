@@ -18,7 +18,7 @@ interface StrongImageMatch {
   }
 }
 
-const isStrongImageMatch = (obj: any): obj is StrongImageMatch => !!(obj?.groups?.src)
+const isStrongImageMatch = (obj: any): obj is StrongImageMatch => (obj?.groups?.src !== undefined)
 
 const createStrongImageNode = (src: string): StrongImageNode => ({
   type: 'strongImage',
