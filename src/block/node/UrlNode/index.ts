@@ -20,9 +20,7 @@ interface UrlMatch {
   }
 }
 
-const isUrlMatch = (obj: any): obj is UrlMatch => (
-  obj && obj.groups && obj.groups.href
-)
+const isUrlMatch = (obj: any): obj is UrlMatch => !!(obj?.groups?.href)
 
 const isUrl = (text: string): boolean => (
   /^https?:\/\/[^\s\]]+$/.test(text)

@@ -17,9 +17,7 @@ interface googleMapMatch {
   }
 }
 
-const isGoogleMapMatch = (obj: any): obj is googleMapMatch => (
-  obj && obj.groups && obj.groups.latitude
-)
+const isGoogleMapMatch = (obj: any): obj is googleMapMatch => !!(obj?.groups?.latitude)
 
 export interface GoogleMapNode {
   type: 'googleMap'
