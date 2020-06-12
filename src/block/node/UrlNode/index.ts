@@ -45,9 +45,9 @@ const createUrlNode = (href: string, content: string): UrlNode => {
 }
 
 export const UrlNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  const UrlMatch = text.match(urlRegExp) ||
-                   text.match(leftUrlRegExp) ||
-                   text.match(rightUrlRegExp) ||
+  const UrlMatch = text.match(urlRegExp) ??
+                   text.match(leftUrlRegExp) ??
+                   text.match(rightUrlRegExp) ??
                    text.match(httpRegExp)
   if (!isUrlMatch(UrlMatch)) return next()
 

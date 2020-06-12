@@ -36,7 +36,7 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
 
     const isCodeBlock = text.match(/^\s*code:(.+)$/)
     const isTable = text.match(/^\s*table:(.+)$/)
-    if (isCodeBlock || isTable) {
+    if (isCodeBlock ?? isTable) {
       packingComponent = {
         type: isCodeBlock ? 'codeBlock' : 'table',
         components: [blockComponent],
