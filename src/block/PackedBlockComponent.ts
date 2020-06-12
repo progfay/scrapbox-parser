@@ -24,7 +24,7 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
 
   for (const blockComponent of blockComponents) {
     const { indent, text } = blockComponent
-    if (packingComponent) {
+    if (packingComponent !== null) {
       if (indent > packingComponent.indent) {
         packingComponent.components.push(blockComponent)
         continue
@@ -34,9 +34,9 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
       }
     }
 
-    const isCodeBlock = text.match(/^\s*code:(.+)$/)
-    const isTable = text.match(/^\s*table:(.+)$/)
-    if (isCodeBlock ?? isTable) {
+    const isCodeBlock = /^\s*code:(.+)$/.test(text)
+    const isTable = /^\s*table:(.+)$/.test(text)
+    if (isCodeBlock || isTable) {
       packingComponent = {
         type: isCodeBlock ? 'codeBlock' : 'table',
         components: [blockComponent],
@@ -52,7 +52,7 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
     }
   }
 
-  if (packingComponent) packedBlockComponents.push(packingComponent)
+  if (packingComponent !== null) packedBlockComponents.push(packingComponent)
 
   return packedBlockComponents
 }

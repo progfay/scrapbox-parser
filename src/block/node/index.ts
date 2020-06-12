@@ -55,7 +55,7 @@ export type NextNodeParser = () => LineNode[]
 export type NodeParser = (text: string, opt: NodeParserOption, next: NextNodeParser) => LineNode[]
 
 const FalsyEliminator: NodeParser = (text, _opt, next) => {
-  if (!text) return []
+  if (text === '') return []
   return next()
 }
 

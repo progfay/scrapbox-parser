@@ -20,7 +20,7 @@ const createInternalLinkNode = (href: string): InternalLinkNode => ({
 
 export const InternalLinkNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   const internalLinkMatch = text.match(internalLinkRegExp)
-  if (!internalLinkMatch) return next()
+  if (internalLinkMatch === null) return next()
 
   const [, left, target, right] = internalLinkMatch
   return [

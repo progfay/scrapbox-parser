@@ -19,13 +19,13 @@ export const CodeNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const codeCommandMatch = text.match(codeCommandRegExp)
-  if (codeCommandMatch) {
+  if (codeCommandMatch !== null) {
     const [, target] = codeCommandMatch
     return [createCodeNode(target)]
   }
 
   const codeMatch = text.match(codeRegExp)
-  if (codeMatch) {
+  if (codeMatch !== null) {
     const [, left, target, right] = codeMatch
     return [
       ...convertToLineNodes(left, { nested, quoted }),
