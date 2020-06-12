@@ -2,6 +2,7 @@ import { parse, ParserOption } from '../src'
 import { toMatchSnapshot } from 'jest-snapshot'
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
     interface Expect {
       toMatchSnapshotWhenParsing: (received: string, option?: Partial<ParserOption>) => CustomMatcherResult
