@@ -4,8 +4,39 @@ import type { NodeParser, LineNode } from '.'
 
 const decorationRegExp = /^(.*?)\[([!"#%&'()*+,-./{|}<>_~]+) ((?:\[[^\]]+\]|[^\]])+)\](.*)$/
 
-export type DecorationChar = '*' | '!' | '"' | '#' | '%' | '&' | '\'' | '(' | ')' | '+' | ',' | '-' | '.' | '/' | '{' | '|' | '}' | '<' | '>' | '_' | '~'
-export type AsteriskDecorationChar = '*-1' | '*-2' | '*-3' | '*-4' | '*-5' | '*-6' | '*-7' | '*-8' | '*-9' | '*-10'
+export type DecorationChar =
+  | '*'
+  | '!'
+  | '"'
+  | '#'
+  | '%'
+  | '&'
+  | "'"
+  | '('
+  | ')'
+  | '+'
+  | ','
+  | '-'
+  | '.'
+  | '/'
+  | '{'
+  | '|'
+  | '}'
+  | '<'
+  | '>'
+  | '_'
+  | '~'
+export type AsteriskDecorationChar =
+  | '*-1'
+  | '*-2'
+  | '*-3'
+  | '*-4'
+  | '*-5'
+  | '*-6'
+  | '*-7'
+  | '*-8'
+  | '*-9'
+  | '*-10'
 export type Decoration = Exclude<DecorationChar, '*'> | AsteriskDecorationChar
 export interface DecorationNode {
   type: 'decoration'
@@ -13,7 +44,10 @@ export interface DecorationNode {
   nodes: LineNode[]
 }
 
-const createDecorationNode = (decoChars: string, nodes: LineNode[]): DecorationNode => {
+const createDecorationNode = (
+  decoChars: string,
+  nodes: LineNode[]
+): DecorationNode => {
   const decoSet = new Set<string>(decoChars)
   if (decoSet.has('*')) {
     const asteriskCount = decoChars.split('*').length - 1
@@ -28,7 +62,11 @@ const createDecorationNode = (decoChars: string, nodes: LineNode[]): DecorationN
   }
 }
 
-export const DecorationNodeParser: NodeParser = (text, { nested, quoted }, next) => {
+export const DecorationNodeParser: NodeParser = (
+  text,
+  { nested, quoted },
+  next
+) => {
   if (nested) return next()
 
   const decorationMatch = text.match(decorationRegExp)
@@ -37,7 +75,10 @@ export const DecorationNodeParser: NodeParser = (text, { nested, quoted }, next)
   const [, left, decoChars, target, right] = decorationMatch
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    createDecorationNode(decoChars, convertToLineNodes(target, { nested: true, quoted })),
+    createDecorationNode(
+      decoChars,
+      convertToLineNodes(target, { nested: true, quoted })
+    ),
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }

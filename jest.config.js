@@ -1,8 +1,5 @@
 module.exports = {
-  moduleFileExtensions: [
-    'ts',
-    'js'
-  ],
+  moduleFileExtensions: ['ts', 'js'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
@@ -11,13 +8,7 @@ module.exports = {
       tsConfig: 'tsconfig.json'
     }
   },
-  collectCoverageFrom: [
-    'src/**/*.ts'
-  ],
-  setupFilesAfterEnv: [
-    './tests/jest-setup.ts'
-  ],
-  testMatch: [
-    '**/tests/**/*.test.ts'
-  ]
+  collectCoverageFrom: ['src/**/*.ts'],
+  setupFilesAfterEnv: ['./tests/jest-setup.ts'],
+  testMatch: ['**/tests/**/*.test.ts']
 }

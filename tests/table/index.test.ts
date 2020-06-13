@@ -47,6 +47,8 @@ ${'\t'}a${'\t'}b${'\t'}c`).toMatchSnapshotWhenParsing({ hasTitle: false })
 
   it('Table with link', () => {
     expect(`table:table with link
-${'\t'}[Link]${'\t'}This is [Link]`).toMatchSnapshotWhenParsing({ hasTitle: false })
+${'\t'}[Link]${'\t'}This is [Link]`).toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 })

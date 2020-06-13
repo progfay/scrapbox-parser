@@ -8,6 +8,5 @@ export const convertToBlockComponent = (block: string): BlockComponent => ({
   text: block
 })
 
-export const convertToBlockComponents = (blocks: string): BlockComponent[] => (
+export const convertToBlockComponents = (blocks: string): BlockComponent[] =>
   blocks.split('\n').map(convertToBlockComponent)
-)

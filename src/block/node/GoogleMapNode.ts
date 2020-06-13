@@ -17,7 +17,8 @@ interface googleMapMatch {
   }
 }
 
-const isGoogleMapMatch = (obj: any): obj is googleMapMatch => (obj?.groups?.latitude !== undefined)
+const isGoogleMapMatch = (obj: any): obj is googleMapMatch =>
+  obj?.groups?.latitude !== undefined
 
 export interface GoogleMapNode {
   type: 'googleMap'
@@ -28,13 +29,23 @@ export interface GoogleMapNode {
   url: string
 }
 
-const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: string, place: string): GoogleMapNode => {
+const createGoogleMapNode = (
+  _latitude: string,
+  _longitude: string,
+  _zoom: string,
+  place: string
+): GoogleMapNode => {
   const latitude = parseFloat(_latitude.replace(/^N/, '').replace(/^S/, '-'))
   const longitude = parseFloat(_longitude.replace(/^E/, '').replace(/^W/, '-'))
-  const zoom = /^,Z\d+$/.test(_zoom) ? parseInt(_zoom.replace(/^,Z/, ''), 10) : 14
-  const url = place !== ''
-    ? `https://www.google.com/maps/place/${encodeURIComponent(place)}/@${latitude},${longitude},${zoom}z`
-    : `https://www.google.com/maps/@${latitude},${longitude},${zoom}z`
+  const zoom = /^,Z\d+$/.test(_zoom)
+    ? parseInt(_zoom.replace(/^,Z/, ''), 10)
+    : 14
+  const url =
+    place !== ''
+      ? `https://www.google.com/maps/place/${encodeURIComponent(
+          place
+        )}/@${latitude},${longitude},${zoom}z`
+      : `https://www.google.com/maps/@${latitude},${longitude},${zoom}z`
 
   return {
     type: 'googleMap',
@@ -46,15 +57,27 @@ const createGoogleMapNode = (_latitude: string, _longitude: string, _zoom: strin
   }
 }
 
-export const GoogleMapNodeParser: NodeParser = (text, { nested, quoted }, next) => {
+export const GoogleMapNodeParser: NodeParser = (
+  text,
+  { nested, quoted },
+  next
+) => {
   if (nested) return next()
 
-  const googleMapMatch = text.match(googleMapRegExp) ??
-                   text.match(leftGoogleMapRegExp) ??
-                   text.match(rightGoogleMapRegExp)
+  const googleMapMatch =
+    text.match(googleMapRegExp) ??
+    text.match(leftGoogleMapRegExp) ??
+    text.match(rightGoogleMapRegExp)
   if (!isGoogleMapMatch(googleMapMatch)) return next()
 
-  const { left, latitude, longitude, zoom, place, right } = googleMapMatch.groups
+  const {
+    left,
+    latitude,
+    longitude,
+    zoom,
+    place,
+    right
+  } = googleMapMatch.groups
   return [
     ...convertToLineNodes(left, { nested, quoted }),
     createGoogleMapNode(latitude, longitude, zoom, place),

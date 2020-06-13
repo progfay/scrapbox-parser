@@ -18,7 +18,9 @@ describe('blank', () => {
   })
 
   it('Blank in the sentence', () => {
-    expect('sentence[ ]sentence').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('sentence[ ]sentence').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('[] is not blank', () => {

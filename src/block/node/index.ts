@@ -31,41 +31,47 @@ import type { HashTagNode } from './HashTagNode'
 import type { PlainNode } from './PlainNode'
 
 export type LineNode =
-| QuoteNode
-| HelpfeelNode
-| StrongImageNode
-| StrongIconNode
-| StrongNode
-| FormulaNode
-| DecorationNode
-| CodeNode
-| BlankNode
-| UrlNode
-| GoogleMapNode
-| InternalLinkNode
-| IconNode
-| HashTagNode
-| PlainNode
+  | QuoteNode
+  | HelpfeelNode
+  | StrongImageNode
+  | StrongIconNode
+  | StrongNode
+  | FormulaNode
+  | DecorationNode
+  | CodeNode
+  | BlankNode
+  | UrlNode
+  | GoogleMapNode
+  | InternalLinkNode
+  | IconNode
+  | HashTagNode
+  | PlainNode
 
 export interface NodeParserOption {
   nested: boolean
   quoted: boolean
 }
 export type NextNodeParser = () => LineNode[]
-export type NodeParser = (text: string, opt: NodeParserOption, next: NextNodeParser) => LineNode[]
+export type NodeParser = (
+  text: string,
+  opt: NodeParserOption,
+  next: NextNodeParser
+) => LineNode[]
 
 const FalsyEliminator: NodeParser = (text, _opt, next) => {
   if (text === '') return []
   return next()
 }
 
-const combineNodeParsers = (...parsers: NodeParser[]) =>
-  (text: string = '', opt: NodeParserOption = { nested: false, quoted: false }): LineNode[] => (
-    parsers.reduceRight(
-      (acc: NextNodeParser, parser: NodeParser): NextNodeParser => () => parser(text, opt, acc),
-      () => PlainNodeParser(text)
-    )()
-  )
+const combineNodeParsers = (...parsers: NodeParser[]) => (
+  text: string = '',
+  opt: NodeParserOption = { nested: false, quoted: false }
+): LineNode[] =>
+  parsers.reduceRight(
+    (acc: NextNodeParser, parser: NodeParser): NextNodeParser => () =>
+      parser(text, opt, acc),
+    () => PlainNodeParser(text)
+  )()
 
 export const convertToLineNodes = combineNodeParsers(
   FalsyEliminator,

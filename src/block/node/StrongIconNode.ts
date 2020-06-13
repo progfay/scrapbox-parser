@@ -16,7 +16,11 @@ const createStrongIconNode = (path: string): StrongIconNode => ({
   path
 })
 
-export const StrongIconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
+export const StrongIconNodeParser: NodeParser = (
+  text,
+  { nested, quoted },
+  next
+) => {
   if (nested) return next()
 
   const iconMatch = text.match(iconRegExp)
