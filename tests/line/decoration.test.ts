@@ -38,7 +38,29 @@ describe('decoration', () => {
     const input = '[**********!"#%&\'()*+,-./{|}<>_~ decos]'
     const blocks = parse(input, { hasTitle: false })
     const received = ((blocks[0] as Line).nodes[0] as DecorationNode).decos
-    const decos: Decoration[] = ['*-10', '!', '"', '#', '%', '&', '\'', '(', ')', '+', ',', '-', '.', '/', '{', '|', '}', '<', '>', '_', '~']
+    const decos: Decoration[] = [
+      '*-10',
+      '!',
+      '"',
+      '#',
+      '%',
+      '&',
+      "'",
+      '(',
+      ')',
+      '+',
+      ',',
+      '-',
+      '.',
+      '/',
+      '{',
+      '|',
+      '}',
+      '<',
+      '>',
+      '_',
+      '~'
+    ]
     expect(new Set<Decoration>(received)).toEqual(new Set<Decoration>(decos))
   })
 
@@ -47,6 +69,8 @@ describe('decoration', () => {
   })
 
   it('Decoration similar with externalLink', () => {
-    expect('[* hoge https://example.com]').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[* hoge https://example.com]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 })

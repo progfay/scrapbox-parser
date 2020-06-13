@@ -5,7 +5,10 @@ export interface ExternalLinkNode {
   content: string
 }
 
-export const createExternalLinkNode = (href: string, content: string): ExternalLinkNode => ({
+export const createExternalLinkNode = (
+  href: string,
+  content: string
+): ExternalLinkNode => ({
   type: 'link',
   pathType: 'absolute',
   href,

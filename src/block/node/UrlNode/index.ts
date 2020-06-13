@@ -20,33 +20,32 @@ interface UrlMatch {
   }
 }
 
-const isUrlMatch = (obj: any): obj is UrlMatch => (obj?.groups?.href !== undefined)
+const isUrlMatch = (obj: any): obj is UrlMatch =>
+  obj?.groups?.href !== undefined
 
-const isUrl = (text: string): boolean => (
-  /^https?:\/\/[^\s\]]+$/.test(text)
-)
+const isUrl = (text: string): boolean => /^https?:\/\/[^\s\]]+$/.test(text)
 
-const isImageUrl = (text: string): boolean => (
-  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) || isGyazoImageUrl(text)
-)
+const isImageUrl = (text: string): boolean =>
+  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) ||
+  isGyazoImageUrl(text)
 
-const isGyazoImageUrl = (text: string): boolean => (
+const isGyazoImageUrl = (text: string): boolean =>
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
-)
 
 export type UrlNode = ExternalLinkNode | ImageNode
 
 const createUrlNode = (href: string, content: string): UrlNode => {
-  if (!(isUrl(content) && isImageUrl(content)) && !isImageUrl(href)) return createExternalLinkNode(href, content)
+  if (!(isUrl(content) && isImageUrl(content)) && !isImageUrl(href)) { return createExternalLinkNode(href, content) }
   if (isImageUrl(content)) [href, content] = [content, href]
   return createImageNode(href, content)
 }
 
 export const UrlNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  const UrlMatch = text.match(urlRegExp) ??
-                   text.match(leftUrlRegExp) ??
-                   text.match(rightUrlRegExp) ??
-                   text.match(httpRegExp)
+  const UrlMatch =
+    text.match(urlRegExp) ??
+    text.match(leftUrlRegExp) ??
+    text.match(rightUrlRegExp) ??
+    text.match(httpRegExp)
   if (!isUrlMatch(UrlMatch)) return next()
 
   const { left, href, content, right } = UrlMatch.groups

@@ -11,9 +11,15 @@ export interface ParserOption {
 
 export type Page = Block[]
 
-export const parse = (input: string, { hasTitle = true }: Partial<ParserOption> = {}): Page => {
+export const parse = (
+  input: string,
+  { hasTitle = true }: Partial<ParserOption> = {}
+): Page => {
   const blockComponents = convertToBlockComponents(input)
-  const packedBlockComponents: PackedBlockComponent[] = packBlockComponents(blockComponents, { hasTitle })
+  const packedBlockComponents: PackedBlockComponent[] = packBlockComponents(
+    blockComponents,
+    { hasTitle }
+  )
   return packedBlockComponents.map(convertToBlock)
 }
 

@@ -3,6 +3,6 @@
   "compilerOptions": {
     "module": "commonjs",
     "outDir": "./lib",
-    "tsBuildInfoFile": "./.cjs.tsbuildinfo",
-    }
+    "tsBuildInfoFile": "./.cjs.tsbuildinfo"
+  }
 }

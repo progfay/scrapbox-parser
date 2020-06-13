@@ -13,11 +13,14 @@ export interface CodeBlock {
   content: string
 }
 
-export const isCodeBlockComponent = (packedBlockComponent: PackedBlockComponent): packedBlockComponent is CodeBlockComponent => (
+export const isCodeBlockComponent = (
+  packedBlockComponent: PackedBlockComponent
+): packedBlockComponent is CodeBlockComponent =>
   packedBlockComponent.type === 'codeBlock'
-)
 
-export const convertToCodeBlock = (blockComponent: CodeBlockComponent): CodeBlock => {
+export const convertToCodeBlock = (
+  blockComponent: CodeBlockComponent
+): CodeBlock => {
   const { components } = blockComponent
   const [head, ...body] = components
   const { indent, text } = head
@@ -28,7 +31,9 @@ export const convertToCodeBlock = (blockComponent: CodeBlockComponent): CodeBloc
     type: 'codeBlock',
     fileName,
     content: body
-      .map((component: BlockComponent): string => component.text.substring(indent + 1))
+      .map((component: BlockComponent): string =>
+        component.text.substring(indent + 1)
+      )
       .join('\n')
   }
 }

@@ -12,7 +12,11 @@ const createHelpfeelNode = (text: string): HelpfeelNode => ({
   text
 })
 
-export const HelpfeelNodeParser: NodeParser = (text, { nested, quoted }, next) => {
+export const HelpfeelNodeParser: NodeParser = (
+  text,
+  { nested, quoted },
+  next
+) => {
   if (nested || quoted) return next()
 
   const helpfeelMatch = text.match(helpfeelRegExp)

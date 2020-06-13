@@ -8,10 +8,14 @@ describe('line', () => {
   })
 
   it('Decoration line includes internal link', () => {
-    expect('[* [https://example.com example]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[* [https://example.com example]]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Multi `]`', () => {
-    expect('[* [Link]`code`[Link]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[* [Link]`code`[Link]]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 })

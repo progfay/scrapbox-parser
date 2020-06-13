@@ -4,7 +4,9 @@ describe('bullet', () => {
   })
 
   it('Double-byte space indent', () => {
-    expect('　Double-byte space').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('　Double-byte space').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Tab indent', () => {

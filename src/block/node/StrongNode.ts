@@ -14,7 +14,11 @@ const createStrongNode = (nodes: LineNode[]): StrongNode => ({
   nodes
 })
 
-export const StrongNodeParser: NodeParser = (text, { nested, quoted }, next) => {
+export const StrongNodeParser: NodeParser = (
+  text,
+  { nested, quoted },
+  next
+) => {
   if (nested) return next()
 
   const strongMatch = text.match(strongRegExp)

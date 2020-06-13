@@ -5,9 +5,16 @@ import type { CodeBlockComponent } from './CodeBlock'
 import type { TableComponent } from './Table'
 import type { LineComponent } from './Line'
 
-export type PackedBlockComponent = TitleComponent | CodeBlockComponent | TableComponent | LineComponent
+export type PackedBlockComponent =
+  | TitleComponent
+  | CodeBlockComponent
+  | TableComponent
+  | LineComponent
 
-export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitle }: ParserOption): PackedBlockComponent[] => {
+export const packBlockComponents = (
+  blockComponents: BlockComponent[],
+  { hasTitle }: ParserOption
+): PackedBlockComponent[] => {
   if (hasTitle) {
     const [title, ...body] = blockComponents
     return [
@@ -20,7 +27,9 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
   }
 
   const packedBlockComponents: PackedBlockComponent[] = []
-  let packingComponent: ((CodeBlockComponent | TableComponent) & { indent: number }) | null = null
+  let packingComponent:
+  | ((CodeBlockComponent | TableComponent) & { indent: number })
+  | null = null
 
   for (const blockComponent of blockComponents) {
     const { indent, text } = blockComponent
@@ -43,12 +52,10 @@ export const packBlockComponents = (blockComponents: BlockComponent[], { hasTitl
         indent
       }
     } else {
-      packedBlockComponents.push(
-        {
-          type: 'line',
-          component: blockComponent
-        }
-      )
+      packedBlockComponents.push({
+        type: 'line',
+        component: blockComponent
+      })
     }
   }
 
