@@ -16,7 +16,7 @@
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "build:umd": "webpack",
-    "prepare": "rm .cjs.tsbuildinfo .esm.tsbuildinfo && npm run build",
+    "prepare": "rm -rf lib esm umd .cjs.tsbuildinfo .esm.tsbuildinfo && npm run build",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "lint": "eslint -c ./.eslintrc.js .",
