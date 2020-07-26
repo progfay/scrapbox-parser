@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`icon Icon and internal link on same line: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "path": "Internal link][me",
+        "pathType": "relative",
+        "type": "icon",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`icon Multiple icons: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
