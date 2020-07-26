@@ -2,7 +2,7 @@ import { convertToLineNodes } from '.'
 
 import type { NodeParser } from '.'
 
-const iconRegExp = /^(.*?)\[\[(.*)\.icon(\*(\d+))?\]\](.*)$/
+const iconRegExp = /^(.*?)\[\[([^[\]]*)\.icon(\*(\d+))?\]\](.*)$/
 
 export interface StrongIconNode {
   type: 'strongIcon'

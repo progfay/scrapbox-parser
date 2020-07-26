@@ -57,3 +57,25 @@ Array [
   },
 ]
 `;
+
+exports[`strongIcon strong icon and internal link on same line: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "content": "",
+        "href": "Internal link",
+        "pathType": "relative",
+        "type": "link",
+      },
+      Object {
+        "path": "me",
+        "pathType": "relative",
+        "type": "strongIcon",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
