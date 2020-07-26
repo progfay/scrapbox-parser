@@ -6,7 +6,13 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
-        "path": "Internal link][me",
+        "content": "",
+        "href": "Internal link",
+        "pathType": "relative",
+        "type": "link",
+      },
+      Object {
+        "path": "me",
         "pathType": "relative",
         "type": "icon",
       },
