@@ -58,7 +58,7 @@ Array [
 ]
 `;
 
-exports[`strongIcon strong icon and internal link on same line: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongIcon Strong icon and internal link on same line: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
     "indent": 0,

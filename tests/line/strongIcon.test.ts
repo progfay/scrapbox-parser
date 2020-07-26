@@ -11,7 +11,7 @@ describe('strongIcon', () => {
     expect('[[me.icon*3]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 
-  it('strong icon and internal link on same line', () => {
+  it('Strong icon and internal link on same line', () => {
     expect('[Internal link][[me.icon]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
 })
