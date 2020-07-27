@@ -19,7 +19,7 @@
     "prepare": "npm run clean && npm run build",
     "clean": "rimraf lib esm umd .cjs.tsbuildinfo .esm.tsbuildinfo",
     "test": "jest --coverage",
-    "test:update": "jest --updateSnapshot",
+    "test:update": "jest --updateSnapshot --no-cache",
     "lint": "eslint -c ./.eslintrc.js .",
     "format": "prettier --write . && eslint --fix -c ./.eslintrc.js ."
   },
