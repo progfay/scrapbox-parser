@@ -1,6 +1,10 @@
 # Scrapbox Parser
 
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![npm version](https://badge.fury.io/js/%40progfay%2Fscrapbox-parser.svg)](https://badge.fury.io/js/%40progfay%2Fscrapbox-parser) [![Build Status](https://travis-ci.org/progfay/scrapbox-parser.svg?branch=master)](https://travis-ci.org/progfay/scrapbox-parser) [![Maintainability](https://api.codeclimate.com/v1/badges/1a79f7f5f4b1785ac616/maintainability)](https://codeclimate.com/github/progfay/scrapbox-parser/maintainability)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&color=AC1500&labelColor=222222)](LICENSE)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge&labelColor=222222)](https://standardjs.com)
+[![npm version](https://img.shields.io/npm/v/@progfay/scrapbox-parser?style=for-the-badge&message=NPM&color=CB3837&logo=NPM&labelColor=222222&label=npm)](https://www.npmjs.com/package/@progfay/scrapbox-parser)
+[![Build Status](https://img.shields.io/travis/progfay/scrapbox-parser?style=for-the-badge&message=Travis+CI&color=3EAAAF&logo=Travis+CI&labelColor=222222&logoColor=FFFFFF)](https://travis-ci.org/progfay/scrapbox-parser)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/progfay/scrapbox-parser?style=for-the-badge&message=Code+Climate&labelColor=000000&logo=Code+Climate&logoColor=FFFFFF)](https://codeclimate.com/github/progfay/scrapbox-parser/maintainability)
 
 parse Scrapbox notation to JavaScript Object
 
