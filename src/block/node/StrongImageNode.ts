@@ -38,7 +38,7 @@ export const StrongImageNodeParser: NodeParser = (
   if (!isStrongImageMatch(StrongImageMatch)) return next()
 
   const { left, src, right } = StrongImageMatch.groups
-  const isGyazoImage = /https?:\/\/([0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}/.test(
+  const isGyazoImage = /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(
     src
   )
 
