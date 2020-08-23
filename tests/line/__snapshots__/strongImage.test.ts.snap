@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`strongImage Direct Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`strongImage Gyazo image: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
