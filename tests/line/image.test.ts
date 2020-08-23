@@ -46,4 +46,10 @@ describe('image', () => {
       '[http://example.com/image.png?key1=value1&key2=value2]'
     ).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
+
+  it('Direct Gyazo image', () => {
+    expect(
+      '[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]'
+    ).toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
 })
