@@ -27,10 +27,13 @@ export const StrongIconNodeParser: NodeParser = (
   if (iconMatch === null) return next()
 
   const [, left, path, , num = '1', right] = iconMatch
-  const iconNode = createStrongIconNode(path)
+  const iconNodes = new Array(parseInt(num, 10))
+    .fill({})
+    .map(_ => createStrongIconNode(path))
+
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    ...new Array(parseInt(num, 10)).fill(iconNode),
+    ...iconNodes,
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }
