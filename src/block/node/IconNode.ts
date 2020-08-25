@@ -10,7 +10,7 @@ export interface IconNode {
   path: string
 }
 
-const createIconNode = (path: string): IconNode | null => ({
+const createIconNode = (path: string): IconNode => ({
   type: 'icon',
   pathType: /^\//.test(path) ? 'root' : 'relative',
   path
@@ -23,10 +23,13 @@ export const IconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (iconMatch === null) return next()
 
   const [, left, path, , num = '1', right] = iconMatch
-  const iconNode = createIconNode(path)
+  const iconNodes = new Array(parseInt(num, 10))
+    .fill({})
+    .map(_ => createIconNode(path))
+
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    ...new Array(parseInt(num, 10)).fill(iconNode),
+    ...iconNodes,
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }
