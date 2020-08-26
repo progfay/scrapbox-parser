@@ -27,39 +27,33 @@ export const packBlockComponents = (
   }
 
   const packedBlockComponents: PackedBlockComponent[] = []
-  let packingComponent:
-  | ((CodeBlockComponent | TableComponent) & { indent: number })
-  | null = null
+  const blockComponentsLength = blockComponents.length
 
-  for (const blockComponent of blockComponents) {
-    const { indent, text } = blockComponent
-    if (packingComponent !== null) {
-      if (indent > packingComponent.indent) {
-        packingComponent.components.push(blockComponent)
-        continue
-      } else {
-        packedBlockComponents.push(packingComponent)
-        packingComponent = null
-      }
-    }
+  for (let i = 0; i < blockComponentsLength; i++) {
+    const { indent, text } = blockComponents[i]
 
     const isCodeBlock = /^\s*code:(.+)$/.test(text)
     const isTable = /^\s*table:(.+)$/.test(text)
     if (isCodeBlock || isTable) {
-      packingComponent = {
-        type: isCodeBlock ? 'codeBlock' : 'table',
-        components: [blockComponent],
-        indent
-      }
-    } else {
-      packedBlockComponents.push({
-        type: 'line',
-        component: blockComponent
-      })
-    }
-  }
+      const components: BlockComponent[] = [blockComponents[i]]
 
-  if (packingComponent !== null) packedBlockComponents.push(packingComponent)
+      while (i < blockComponentsLength - 1) {
+        if (indent >= blockComponents[i + 1].indent) break
+        components.push(blockComponents[++i])
+      }
+
+      packedBlockComponents.push({
+        type: isCodeBlock ? 'codeBlock' : 'table',
+        components
+      })
+      continue
+    }
+
+    packedBlockComponents.push({
+      type: 'line',
+      component: blockComponents[i]
+    })
+  }
 
   return packedBlockComponents
 }
