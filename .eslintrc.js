@@ -4,7 +4,13 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ['standard', 'standard-with-typescript'],
+  extends: [
+    'standard',
+    'standard-with-typescript',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react'
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -15,5 +21,8 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.eslint.json'
   },
-  plugins: ['@typescript-eslint', 'jest']
+  rules: {
+    'prettier/prettier': 'error'
+  },
+  plugins: ['@typescript-eslint', 'jest', 'prettier']
 }
