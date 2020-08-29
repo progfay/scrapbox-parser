@@ -16,20 +16,14 @@ const createStrongIconNode = (path: string): StrongIconNode => ({
   path
 })
 
-export const StrongIconNodeParser: NodeParser = (
-  text,
-  { nested, quoted },
-  next
-) => {
+export const StrongIconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const iconMatch = text.match(iconRegExp)
   if (iconMatch === null) return next()
 
   const [, left, path, , num = '1', right] = iconMatch
-  const iconNodes = new Array(parseInt(num, 10))
-    .fill({})
-    .map(_ => createStrongIconNode(path))
+  const iconNodes = new Array(parseInt(num, 10)).fill({}).map(_ => createStrongIconNode(path))
 
   return [
     ...convertToLineNodes(left, { nested, quoted }),

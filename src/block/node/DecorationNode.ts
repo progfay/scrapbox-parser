@@ -44,10 +44,7 @@ export interface DecorationNode {
   nodes: LineNode[]
 }
 
-const createDecorationNode = (
-  decoChars: string,
-  nodes: LineNode[]
-): DecorationNode => {
+const createDecorationNode = (decoChars: string, nodes: LineNode[]): DecorationNode => {
   const decoSet = new Set<string>(decoChars)
   if (decoSet.has('*')) {
     const asteriskCount = decoChars.split('*').length - 1
@@ -62,11 +59,7 @@ const createDecorationNode = (
   }
 }
 
-export const DecorationNodeParser: NodeParser = (
-  text,
-  { nested, quoted },
-  next
-) => {
+export const DecorationNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const decorationMatch = text.match(decorationRegExp)
@@ -75,10 +68,7 @@ export const DecorationNodeParser: NodeParser = (
   const [, left, decoChars, target, right] = decorationMatch
   return [
     ...convertToLineNodes(left, { nested, quoted }),
-    createDecorationNode(
-      decoChars,
-      convertToLineNodes(target, { nested: true, quoted })
-    ),
+    createDecorationNode(decoChars, convertToLineNodes(target, { nested: true, quoted })),
     ...convertToLineNodes(right, { nested, quoted })
   ]
 }

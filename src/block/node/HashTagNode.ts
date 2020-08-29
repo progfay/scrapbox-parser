@@ -14,11 +14,7 @@ const createHashTagNode = (href: string): HashTagNode => ({
   href
 })
 
-export const HashTagNodeParser: NodeParser = (
-  text,
-  { nested, quoted },
-  next
-) => {
+export const HashTagNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (nested) return next()
 
   const hashTagMatch = text.match(hashTagRegExp)

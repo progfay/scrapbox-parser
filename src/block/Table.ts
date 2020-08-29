@@ -16,9 +16,8 @@ export interface Table {
   cells: LineNode[][][]
 }
 
-export const isTableComponent = (
-  component: PackedBlockComponent
-): component is TableComponent => component.type === 'table'
+export const isTableComponent = (component: PackedBlockComponent): component is TableComponent =>
+  component.type === 'table'
 
 export const convertToTable = (tableComponent: TableComponent): Table => {
   const { components } = tableComponent
@@ -31,9 +30,7 @@ export const convertToTable = (tableComponent: TableComponent): Table => {
     type: 'table',
     fileName,
     cells: body
-      .map((blockComponent: BlockComponent): string =>
-        blockComponent.text.substring(indent + 1)
-      )
+      .map((blockComponent: BlockComponent): string => blockComponent.text.substring(indent + 1))
       .map((text: string): LineNode[][] =>
         text
           .split('\t')

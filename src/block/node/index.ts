@@ -52,11 +52,7 @@ export interface NodeParserOption {
   quoted: boolean
 }
 export type NextNodeParser = () => LineNode[]
-export type NodeParser = (
-  text: string,
-  opt: NodeParserOption,
-  next: NextNodeParser
-) => LineNode[]
+export type NodeParser = (text: string, opt: NodeParserOption, next: NextNodeParser) => LineNode[]
 
 const FalsyEliminator: NodeParser = (text, _opt, next) => {
   if (text === '') return []
@@ -68,8 +64,7 @@ const combineNodeParsers = (...parsers: NodeParser[]) => (
   opt: NodeParserOption = { nested: false, quoted: false }
 ): LineNode[] =>
   parsers.reduceRight(
-    (acc: NextNodeParser, parser: NodeParser): NextNodeParser => () =>
-      parser(text, opt, acc),
+    (acc: NextNodeParser, parser: NodeParser): NextNodeParser => () => parser(text, opt, acc),
     () => PlainNodeParser(text)
   )()
 

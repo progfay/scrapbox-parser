@@ -23,9 +23,7 @@ export const IconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
   if (iconMatch === null) return next()
 
   const [, left, path, , num = '1', right] = iconMatch
-  const iconNodes = new Array(parseInt(num, 10))
-    .fill({})
-    .map(_ => createIconNode(path))
+  const iconNodes = new Array(parseInt(num, 10)).fill({}).map(_ => createIconNode(path))
 
   return [
     ...convertToLineNodes(left, { nested, quoted }),
