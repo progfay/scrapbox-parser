@@ -14,7 +14,9 @@ describe('icon', () => {
   })
 
   it('Icon and internal link on same line', () => {
-    expect('[Internal link][me.icon]').toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[Internal link][me.icon]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Each multiple icon must be different Object', () => {

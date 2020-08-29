@@ -14,8 +14,14 @@ export type Block = Title | CodeBlock | Table | Line
 export const convertToBlock = (
   packedBlockComponent: PackedBlockComponent
 ): Block => {
-  if (isTitleComponent(packedBlockComponent)) { return convertToTitle(packedBlockComponent) }
-  if (isCodeBlockComponent(packedBlockComponent)) { return convertToCodeBlock(packedBlockComponent) }
-  if (isTableComponent(packedBlockComponent)) { return convertToTable(packedBlockComponent) }
+  if (isTitleComponent(packedBlockComponent)) {
+    return convertToTitle(packedBlockComponent)
+  }
+  if (isCodeBlockComponent(packedBlockComponent)) {
+    return convertToCodeBlock(packedBlockComponent)
+  }
+  if (isTableComponent(packedBlockComponent)) {
+    return convertToTable(packedBlockComponent)
+  }
   return convertToLine(packedBlockComponent)
 }
