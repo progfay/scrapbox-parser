@@ -26,34 +26,31 @@ export const packBlockComponents = (
     ]
   }
 
-  const packedBlockComponents: PackedBlockComponent[] = []
-  const blockComponentsLength = blockComponents.length
+  return blockComponents.reduce<PackedBlockComponent[]>((packing, component) => {
+    if (packing.length > 0) {
+      const lastBlock = packing[packing.length - 1]
 
-  for (let i = 0; i < blockComponentsLength; i++) {
-    const { indent, text } = blockComponents[i]
-
-    const isCodeBlock = /^\s*code:(.+)$/.test(text)
-    const isTable = /^\s*table:(.+)$/.test(text)
-    if (isCodeBlock || isTable) {
-      const components: BlockComponent[] = [blockComponents[i]]
-
-      while (i < blockComponentsLength - 1) {
-        if (indent >= blockComponents[i + 1].indent) break
-        components.push(blockComponents[++i])
+      if (
+        (lastBlock.type === 'codeBlock' || lastBlock.type === 'table') &&
+        component.indent > lastBlock.components[0].indent
+      ) {
+        lastBlock.components.push(component)
+        return packing
       }
-
-      packedBlockComponents.push({
-        type: isCodeBlock ? 'codeBlock' : 'table',
-        components
-      })
-      continue
     }
 
-    packedBlockComponents.push({
-      type: 'line',
-      component: blockComponents[i]
-    })
-  }
+    const isCodeBlock = /^\s*code:(.+)$/.test(component.text)
+    const isTable = /^\s*table:(.+)$/.test(component.text)
 
-  return packedBlockComponents
+    packing.push(isCodeBlock || isTable
+      ? {
+        type: isCodeBlock ? 'codeBlock' : 'table',
+        components: [component]
+      } : {
+        type: 'line',
+        component
+      })
+
+    return packing
+  }, [])
 }
