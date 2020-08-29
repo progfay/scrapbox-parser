@@ -15,9 +15,9 @@ describe('strongImage', () => {
   })
 
   it('Gyazo image', () => {
-    expect(
-      '[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]'
-    ).toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Direct Gyazo image', () => {

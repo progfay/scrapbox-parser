@@ -12,19 +12,13 @@ declare global {
     }
 
     interface Matchers<R, T> {
-      toMatchSnapshotWhenParsing: (
-        option?: Partial<ParserOption>
-      ) => CustomMatcherResult
+      toMatchSnapshotWhenParsing: (option?: Partial<ParserOption>) => CustomMatcherResult
     }
   }
 }
 
 expect.extend({
-  toMatchSnapshotWhenParsing(
-    this: any,
-    received: string,
-    option?: Partial<ParserOption>
-  ) {
+  toMatchSnapshotWhenParsing(this: any, received: string, option?: Partial<ParserOption>) {
     const blocks = parse(received, option)
     return toMatchSnapshot.call(this, blocks, 'toMatchSnapshotWhenParsing')
   }

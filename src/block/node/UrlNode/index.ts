@@ -20,14 +20,12 @@ interface UrlMatch {
   }
 }
 
-const isUrlMatch = (obj: any): obj is UrlMatch =>
-  obj?.groups?.href !== undefined
+const isUrlMatch = (obj: any): obj is UrlMatch => obj?.groups?.href !== undefined
 
 const isUrl = (text: string): boolean => /^https?:\/\/[^\s\]]+$/.test(text)
 
 const isImageUrl = (text: string): boolean =>
-  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) ||
-  isGyazoImageUrl(text)
+  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) || isGyazoImageUrl(text)
 
 const isGyazoImageUrl = (text: string): boolean =>
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)

@@ -14,9 +14,9 @@ describe('image', () => {
 
   it('HTTPS svg and GIF image with link', () => {
     expect(`[https://example.com/image.svg https://example.com/]
-[https://example.com/ https://example.com/image.GIF]`).toMatchSnapshotWhenParsing(
-      { hasTitle: false }
-    )
+[https://example.com/ https://example.com/image.GIF]`).toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Image with double image link', () => {
@@ -28,9 +28,9 @@ describe('image', () => {
   it('Gyazo image', () => {
     expect(`[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
 [https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
-[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]`).toMatchSnapshotWhenParsing(
-      { hasTitle: false }
-    )
+[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]`).toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Gyazo image with link', () => {
@@ -42,9 +42,9 @@ describe('image', () => {
   })
 
   it('Image with GET parameters', () => {
-    expect(
-      '[http://example.com/image.png?key1=value1&key2=value2]'
-    ).toMatchSnapshotWhenParsing({ hasTitle: false })
+    expect('[http://example.com/image.png?key1=value1&key2=value2]').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
   })
 
   it('Direct Gyazo image', () => {

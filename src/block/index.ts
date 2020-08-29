@@ -11,9 +11,7 @@ import type { Line } from './Line'
 
 export type Block = Title | CodeBlock | Table | Line
 
-export const convertToBlock = (
-  packedBlockComponent: PackedBlockComponent
-): Block => {
+export const convertToBlock = (packedBlockComponent: PackedBlockComponent): Block => {
   if (isTitleComponent(packedBlockComponent)) {
     return convertToTitle(packedBlockComponent)
   }
