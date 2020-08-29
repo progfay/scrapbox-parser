@@ -20,7 +20,7 @@ declare global {
 }
 
 expect.extend({
-  toMatchSnapshotWhenParsing (
+  toMatchSnapshotWhenParsing(
     this: any,
     received: string,
     option?: Partial<ParserOption>
