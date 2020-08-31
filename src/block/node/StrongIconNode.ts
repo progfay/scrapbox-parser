@@ -1,8 +1,8 @@
-import { convertToLineNodes } from '.'
+import { createNodeParser } from './creator'
 
-import type { NodeParser } from '.'
+import type { NodeCreator } from './creator'
 
-const iconRegExp = /^(.*?)\[\[([^[\]]*)\.icon(\*(\d+))?\]\](.*)$/
+const strongIconRegExp = /^(.*?)(\[\[[^[\]]*\.icon(?:\*\d+)?\]\])(.*)$/
 
 export interface StrongIconNode {
   type: 'strongIcon'
@@ -10,24 +10,20 @@ export interface StrongIconNode {
   path: string
 }
 
-const createStrongIconNode = (path: string): StrongIconNode => ({
-  type: 'strongIcon',
-  pathType: /^\//.test(path) ? 'root' : 'relative',
-  path
-})
-
-export const StrongIconNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  if (nested) return next()
-
-  const iconMatch = text.match(iconRegExp)
-  if (iconMatch === null) return next()
-
-  const [, left, path, , num = '1', right] = iconMatch
-  const iconNodes = new Array(parseInt(num, 10)).fill({}).map(_ => createStrongIconNode(path))
-
-  return [
-    ...convertToLineNodes(left, { nested, quoted }),
-    ...iconNodes,
-    ...convertToLineNodes(right, { nested, quoted })
-  ]
+const createStrongIconNode: NodeCreator<StrongIconNode> = target => {
+  const index = target.lastIndexOf('.icon')
+  const path = target.substring(2, index)
+  const numStr = target.substring(index + 5, target.length - 2)
+  const num = numStr.startsWith('*') ? parseInt(numStr.substring(1), 10) : 1
+  return new Array(num).fill({}).map(() => ({
+    type: 'strongIcon',
+    pathType: path.startsWith('/') ? 'root' : 'relative',
+    path
+  }))
 }
+
+export const StrongIconNodeParser = createNodeParser(createStrongIconNode, {
+  parseOnNested: false,
+  parseOnQuoted: true,
+  patterns: [strongIconRegExp]
+})

@@ -1,24 +1,23 @@
 import { convertToLineNodes } from '.'
+import { createNodeParser } from './creator'
 
-import type { NodeParser, LineNode } from '.'
+import type { LineNode } from '.'
+import type { NodeCreator } from './creator'
 
-const quoteRegExp = /^>(.*)$/
+const quoteRegExp = /^()(>.*)()$/
 
 export interface QuoteNode {
   type: 'quote'
   nodes: LineNode[]
 }
 
-const createQuoteNode = (text: string): QuoteNode => ({
+const createQuoteNode: NodeCreator<QuoteNode> = (target, opts) => ({
   type: 'quote',
-  nodes: convertToLineNodes(text, { nested: false, quoted: true })
+  nodes: convertToLineNodes(target.substring(1), { ...opts, quoted: true })
 })
 
-export const QuoteNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  if (nested || quoted) return next()
-  const quoteMatch = text.match(quoteRegExp)
-  if (quoteMatch === null) return next()
-
-  const [, target] = quoteMatch
-  return [createQuoteNode(target)]
-}
+export const QuoteNodeParser = createNodeParser(createQuoteNode, {
+  parseOnNested: false,
+  parseOnQuoted: false,
+  patterns: [quoteRegExp]
+})

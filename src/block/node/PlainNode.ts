@@ -1,15 +1,19 @@
-import type { LineNode } from '.'
+import { createNodeParser } from './creator'
+
+import type { NodeCreator } from './creator'
 
 export interface PlainNode {
   type: 'plain'
   text: string
 }
 
-const createPlainNode = (text: string): PlainNode => ({
+const createPlainNode: NodeCreator<PlainNode> = target => ({
   type: 'plain',
-  text
+  text: target
 })
 
-export const PlainNodeParser = (text: string): LineNode[] => {
-  return [createPlainNode(text)]
-}
+export const PlainNodeParser = createNodeParser(createPlainNode, {
+  parseOnNested: true,
+  parseOnQuoted: true,
+  patterns: [/^()(.*)()$/]
+})

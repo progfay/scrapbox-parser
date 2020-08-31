@@ -1,23 +1,9 @@
-import { convertToLineNodes } from '.'
+import { createNodeParser } from './creator'
 
-import type { NodeParser } from '.'
+import type { NodeCreator } from './creator'
 
-const googleMapRegExp = /^(?<left>.*?)\[(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))(?<place>)\](?<right>.*)$/
-const leftGoogleMapRegExp = /^(?<left>.*?)\[(?<place>[^\]]*[^\s])\s+(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))\](?<right>.*)$/
-const rightGoogleMapRegExp = /^(?<left>.*?)\[(?<latitude>([NS]\d+(\.\d+)?),(?<longitude>[EW]\d+(\.\d+)?)(?<zoom>(,Z\d+)?))\s+(?<place>[^\]]*[^\s])\](?<right>.*)$/
-
-interface googleMapMatch {
-  groups: {
-    left: string
-    right: string
-    latitude: string
-    longitude: string
-    zoom: string
-    place: string
-  }
-}
-
-const isGoogleMapMatch = (obj: any): obj is googleMapMatch => obj?.groups?.latitude !== undefined
+const placeFirstGoogleMapRegExp = /^(.*?)(\[(?:[^\]]*[^\s]\s+)?[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?\])(.*)$/
+const coordFirstGoogleMapRegExp = /^(.*?)(\[[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?(?:\s+[^\]]*[^\s])?\])(.*)$/
 
 export interface GoogleMapNode {
   type: 'googleMap'
@@ -28,15 +14,26 @@ export interface GoogleMapNode {
   url: string
 }
 
-const createGoogleMapNode = (
-  _latitude: string,
-  _longitude: string,
-  _zoom: string,
-  place: string
-): GoogleMapNode => {
-  const latitude = parseFloat(_latitude.replace(/^N/, '').replace(/^S/, '-'))
-  const longitude = parseFloat(_longitude.replace(/^E/, '').replace(/^W/, '-'))
-  const zoom = /^,Z\d+$/.test(_zoom) ? parseInt(_zoom.replace(/^,Z/, ''), 10) : 14
+const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
+  const isCoordFirst = target.startsWith('[N') || target.startsWith('[S')
+  const separatorIndex = isCoordFirst ? target.indexOf(' ') : target.lastIndexOf(' ')
+  const place =
+    separatorIndex === -1
+      ? ''
+      : isCoordFirst
+      ? target.substring(separatorIndex + 1, target.length - 1)
+      : target.substring(1, separatorIndex)
+  const coord =
+    separatorIndex === -1
+      ? target.substring(1, target.length - 1)
+      : isCoordFirst
+      ? target.substring(1, separatorIndex)
+      : target.substring(separatorIndex + 1, target.length - 1)
+  const [lat, lng, _zoom] = coord.split(',')
+
+  const latitude = parseFloat(lat.replace(/^N/, '').replace(/^S/, '-'))
+  const longitude = parseFloat(lng.replace(/^E/, '').replace(/^W/, '-'))
+  const zoom = /^Z\d+$/.test(_zoom) ? parseInt(_zoom.replace(/^Z/, ''), 10) : 14
   const url =
     place !== ''
       ? `https://www.google.com/maps/place/${encodeURIComponent(
@@ -54,19 +51,8 @@ const createGoogleMapNode = (
   }
 }
 
-export const GoogleMapNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  if (nested) return next()
-
-  const googleMapMatch =
-    text.match(googleMapRegExp) ??
-    text.match(leftGoogleMapRegExp) ??
-    text.match(rightGoogleMapRegExp)
-  if (!isGoogleMapMatch(googleMapMatch)) return next()
-
-  const { left, latitude, longitude, zoom, place, right } = googleMapMatch.groups
-  return [
-    ...convertToLineNodes(left, { nested, quoted }),
-    createGoogleMapNode(latitude, longitude, zoom, place),
-    ...convertToLineNodes(right, { nested, quoted })
-  ]
-}
+export const GoogleMapNodeParser = createNodeParser(createGoogleMapNode, {
+  parseOnNested: false,
+  parseOnQuoted: true,
+  patterns: [placeFirstGoogleMapRegExp, coordFirstGoogleMapRegExp]
+})
