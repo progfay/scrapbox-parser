@@ -1,8 +1,8 @@
-import { convertToLineNodes } from '.'
+import { createNodeParser } from './creator'
 
-import type { NodeParser } from '.'
+import type { NodeCreator } from './creator'
 
-const internalLinkRegExp = /^(.*?)\[(\/?[^[\]]+)\](.*)$/
+const internalLinkRegExp = /^(.*?)(\[\/?[^[\]]+\])(.*)$/
 
 export interface InternalLinkNode {
   type: 'link'
@@ -11,21 +11,18 @@ export interface InternalLinkNode {
   content: string
 }
 
-const createInternalLinkNode = (href: string): InternalLinkNode => ({
-  type: 'link',
-  pathType: /^\/.*$/.test(href) ? 'root' : 'relative',
-  href,
-  content: ''
-})
-
-export const InternalLinkNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  const internalLinkMatch = text.match(internalLinkRegExp)
-  if (internalLinkMatch === null) return next()
-
-  const [, left, target, right] = internalLinkMatch
-  return [
-    ...convertToLineNodes(left, { nested, quoted }),
-    createInternalLinkNode(target),
-    ...convertToLineNodes(right, { nested, quoted })
-  ]
+const createInternalLinkNode: NodeCreator<InternalLinkNode> = target => {
+  const href = target.substring(1, target.length - 1)
+  return {
+    type: 'link',
+    pathType: href.startsWith('/') ? 'root' : 'relative',
+    href,
+    content: ''
+  }
 }
+
+export const InternalLinkNodeParser = createNodeParser(createInternalLinkNode, {
+  parseOnNested: true,
+  parseOnQuoted: true,
+  patterns: [internalLinkRegExp]
+})
