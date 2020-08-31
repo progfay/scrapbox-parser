@@ -1,30 +1,27 @@
-import { convertToLineNodes } from '.'
+import { createNodeParser } from './creator'
 
-import type { NodeParser } from '.'
+import type { NodeCreator } from './creator'
 
-const formulaWithTailHalfSpaceRegExp = /^(.*?)\[\$ (.+?) \](.*)$/
-const formulaRegExp = /^(.*?)\[\$ ([^\]]+)\](.*)$/
+const formulaWithTailHalfSpaceRegExp = /^(.*?)(\[\$ .+? \])(.*)$/
+const formulaRegExp = /^(.*?)(\[\$ [^\]]+\])(.*)$/
 
 export interface FormulaNode {
   type: 'formula'
   formula: string
 }
 
-const createFormulaNode = (formula: string): FormulaNode => ({
-  type: 'formula',
-  formula
-})
+const createFormulaNode: NodeCreator<FormulaNode> = target => {
+  target = target.substring(3, target.length - 1)
+  if (target.endsWith(' ')) target = target.substring(0, target.length - 1)
 
-export const FormulaNodeParser: NodeParser = (text, { nested, quoted }, next) => {
-  if (nested) return next()
-
-  const hashTagMatch = text.match(formulaWithTailHalfSpaceRegExp) ?? text.match(formulaRegExp)
-  if (hashTagMatch === null) return next()
-
-  const [, left, target, right] = hashTagMatch
-  return [
-    ...convertToLineNodes(left, { nested, quoted }),
-    createFormulaNode(target),
-    ...convertToLineNodes(right, { nested, quoted })
-  ]
+  return {
+    type: 'formula',
+    formula: target
+  }
 }
+
+export const FormulaNodeParser = createNodeParser(createFormulaNode, {
+  parseOnNested: false,
+  parseOnQuoted: true,
+  patterns: [formulaWithTailHalfSpaceRegExp, formulaRegExp]
+})
