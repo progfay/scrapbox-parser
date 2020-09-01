@@ -5,6 +5,20 @@ import type { NodeCreator } from './creator'
 const placeFirstGoogleMapRegExp = /^(.*?)(\[(?:[^\]]*[^\s]\s+)?[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?\])(.*)$/
 const coordFirstGoogleMapRegExp = /^(.*?)(\[[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?(?:\s+[^\]]*[^\s])?\])(.*)$/
 
+interface Coordinate {
+  latitude: number
+  longitude: number
+  zoom: number
+}
+
+const parseCoordinate: (format: string) => Coordinate = format => {
+  const [lat, lng, z] = format.split(',')
+  const latitude = parseFloat(lat.replace(/^N/, '').replace(/^S/, '-'))
+  const longitude = parseFloat(lng.replace(/^E/, '').replace(/^W/, '-'))
+  const zoom = /^Z\d+$/.test(z) ? parseInt(z.replace(/^Z/, ''), 10) : 14
+  return { latitude, longitude, zoom }
+}
+
 export interface GoogleMapNode {
   type: 'googleMap'
   latitude: number
@@ -15,25 +29,16 @@ export interface GoogleMapNode {
 }
 
 const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
-  const isCoordFirst = target.startsWith('[N') || target.startsWith('[S')
-  const separatorIndex = isCoordFirst ? target.indexOf(' ') : target.lastIndexOf(' ')
-  const place =
-    separatorIndex === -1
-      ? ''
-      : isCoordFirst
-      ? target.substring(separatorIndex + 1, target.length - 1)
-      : target.substring(1, separatorIndex)
-  const coord =
-    separatorIndex === -1
-      ? target.substring(1, target.length - 1)
-      : isCoordFirst
-      ? target.substring(1, separatorIndex)
-      : target.substring(separatorIndex + 1, target.length - 1)
-  const [lat, lng, _zoom] = coord.split(',')
+  const match =
+    target.match(/^\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]$/) ??
+    target.match(/^\[([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)(?:\s+([^\]]*[^\s]))?\]$/)
 
-  const latitude = parseFloat(lat.replace(/^N/, '').replace(/^S/, '-'))
-  const longitude = parseFloat(lng.replace(/^E/, '').replace(/^W/, '-'))
-  const zoom = /^Z\d+$/.test(_zoom) ? parseInt(_zoom.replace(/^Z/, ''), 10) : 14
+  if (match === null) return []
+
+  const isCoordFirst = target.startsWith('[N') || target.startsWith('[S')
+  const [, coord, place = ''] = isCoordFirst ? match : [match[0], match[2], match[1]]
+  const { latitude, longitude, zoom } = parseCoordinate(coord)
+
   const url =
     place !== ''
       ? `https://www.google.com/maps/place/${encodeURIComponent(
