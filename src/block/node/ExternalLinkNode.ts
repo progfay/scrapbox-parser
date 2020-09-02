@@ -27,7 +27,7 @@ const createExternalLinkNode: NodeCreator<ExternalLinkNode> = target => {
   const href = match[0]
   const content = isHrefFirst
     ? target.substring(href.length).trimLeft()
-    : target.substring(0, (match.index ?? target.length) - 1).trimRight()
+    : target.substring(0, (match.index ?? 1) - 1).trimRight()
 
   return {
     type: 'link',
