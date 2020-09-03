@@ -51,8 +51,9 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
-        "text": "$ command",
-        "type": "code",
+        "symbol": "$",
+        "text": "command",
+        "type": "commandLine",
       },
     ],
     "type": "line",
