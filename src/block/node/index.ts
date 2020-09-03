@@ -6,6 +6,7 @@ import { StrongNodeParser } from './StrongNode'
 import { FormulaNodeParser } from './FormulaNode'
 import { DecorationNodeParser } from './DecorationNode'
 import { CodeNodeParser } from './CodeNode'
+import { CommandLineNodeParser } from './CommandLineNode'
 import { BlankNodeParser } from './BlankNode'
 import { UrlNodeParser } from './UrlNode'
 import { GoogleMapNodeParser } from './GoogleMapNode'
@@ -22,6 +23,7 @@ import type { StrongNode } from './StrongNode'
 import type { FormulaNode } from './FormulaNode'
 import type { DecorationNode } from './DecorationNode'
 import type { CodeNode } from './CodeNode'
+import type { CommandLineNode } from './CommandLineNode'
 import type { BlankNode } from './BlankNode'
 import type { UrlNode } from './UrlNode'
 import type { GoogleMapNode } from './GoogleMapNode'
@@ -39,6 +41,7 @@ export type LineNode =
   | FormulaNode
   | DecorationNode
   | CodeNode
+  | CommandLineNode
   | BlankNode
   | UrlNode
   | GoogleMapNode
@@ -73,6 +76,7 @@ export const convertToLineNodes = combineNodeParsers(
   QuoteNodeParser,
   HelpfeelNodeParser,
   CodeNodeParser,
+  CommandLineNodeParser,
   FormulaNodeParser,
   BlankNodeParser,
   StrongImageNodeParser,
