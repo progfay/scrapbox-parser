@@ -8,7 +8,8 @@ import { DecorationNodeParser } from './DecorationNode'
 import { CodeNodeParser } from './CodeNode'
 import { CommandLineNodeParser } from './CommandLineNode'
 import { BlankNodeParser } from './BlankNode'
-import { UrlNodeParser } from './UrlNode'
+import { ImageNodeParser } from './ImageNode'
+import { ExternalLinkNodeParser } from './ExternalLinkNode'
 import { GoogleMapNodeParser } from './GoogleMapNode'
 import { InternalLinkNodeParser } from './InternalLinkNode'
 import { IconNodeParser } from './IconNode'
@@ -25,12 +26,18 @@ import type { DecorationNode } from './DecorationNode'
 import type { CodeNode } from './CodeNode'
 import type { CommandLineNode } from './CommandLineNode'
 import type { BlankNode } from './BlankNode'
-import type { UrlNode } from './UrlNode'
+import type { ImageNode } from './ImageNode'
+import type { ExternalLinkNode } from './ExternalLinkNode'
 import type { GoogleMapNode } from './GoogleMapNode'
 import type { InternalLinkNode } from './InternalLinkNode'
 import type { IconNode } from './IconNode'
 import type { HashTagNode } from './HashTagNode'
 import type { PlainNode } from './PlainNode'
+
+/**
+ * @deprecated
+ */
+export type UrlNode = ImageNode | ExternalLinkNode
 
 export type LineNode =
   | QuoteNode
@@ -43,7 +50,8 @@ export type LineNode =
   | CodeNode
   | CommandLineNode
   | BlankNode
-  | UrlNode
+  | ImageNode
+  | ExternalLinkNode
   | GoogleMapNode
   | InternalLinkNode
   | IconNode
@@ -83,7 +91,8 @@ export const convertToLineNodes = combineNodeParsers(
   StrongIconNodeParser,
   StrongNodeParser,
   DecorationNodeParser,
-  UrlNodeParser,
+  ImageNodeParser,
+  ExternalLinkNodeParser,
   IconNodeParser,
   GoogleMapNodeParser,
   InternalLinkNodeParser,
