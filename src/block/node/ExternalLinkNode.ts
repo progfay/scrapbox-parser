@@ -14,20 +14,25 @@ export interface ExternalLinkNode {
 }
 
 const createExternalLinkNode: NodeCreator<ExternalLinkNode> = target => {
-  if (target.startsWith('[') && target.endsWith(']')) {
-    target = target.substring(1, target.length - 1)
+  if (!target.startsWith('[')) {
+    return {
+      type: 'link',
+      pathType: 'absolute',
+      href: target,
+      content: ''
+    }
   }
 
-  const isHrefFirst = /^https?:\/\/[^\s\]]/.test(target)
-  const match = target.match(isHrefFirst ? /^https?:\/\/[^\s\]]+/ : /https?:\/\/[^\s\]]+$/)
+  const isHrefFirst = /^\[https?:\/\/[^\s\]]/.test(target)
+  const match = target.match(isHrefFirst ? /^\[https?:\/\/[^\s\]]+/ : /https?:\/\/[^\s\]]+\]$/)
   if (match === null) {
     return []
   }
 
-  const href = match[0]
+  const href = match[0].replace(isHrefFirst ? /^\[/ : /\]$/, '')
   const content = isHrefFirst
-    ? target.substring(href.length).trimLeft()
-    : target.substring(0, (match.index ?? 1) - 1).trimRight()
+    ? target.substring(match[0].length, target.length - 1).trimLeft()
+    : target.substring(1, (match.index ?? 1) - 1).trimRight()
 
   return {
     type: 'link',
