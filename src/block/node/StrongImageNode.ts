@@ -2,8 +2,8 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const strongImageRegExp = /^(.*?)(\[\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)\]\])(.*)$/i
-const strongGyazoImageRegExp = /^(.*?)(\[\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}\]\])(.*)$/
+const strongImageRegExp = /\[\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)\]\]/i
+const strongGyazoImageRegExp = /\[\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}\]\]/
 
 export interface StrongImageNode {
   type: 'strongImage'

@@ -3,7 +3,7 @@ import { createNodeParser } from './creator'
 import { convertToLineNodes, LineNode } from '.'
 import type { NodeCreator } from './creator'
 
-const strongRegExp = /^(.*?)(\[\[.+?[\]]*\]\])(.*)$/
+const strongRegExp = /\[\[.+?[\]]*\]\]/
 
 export interface StrongNode {
   type: 'strong'

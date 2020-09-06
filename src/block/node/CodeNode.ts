@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const codeRegExp = /^(.*?)(`.*?`)(.*)$/
+const codeRegExp = /`.*?`/
 
 export interface CodeNode {
   type: 'code'

@@ -4,7 +4,7 @@ export interface BlockComponent {
 }
 
 export const convertToBlockComponent = (block: string): BlockComponent => ({
-  indent: block.match(/^\s+/)?.[0].length ?? 0,
+  indent: /^\s+/.exec(block)?.[0].length ?? 0,
   text: block
 })
 

@@ -2,8 +2,8 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const placeFirstGoogleMapRegExp = /^(.*?)(\[(?:[^\]]*[^\s]\s+)?[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?\])(.*)$/
-const coordFirstGoogleMapRegExp = /^(.*?)(\[[NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?(?:\s+[^\]]*[^\s])?\])(.*)$/
+const placeFirstGoogleMapRegExp = /\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]/
+const coordFirstGoogleMapRegExp = /\[([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)(?:\s+([^\]]*[^\s]))?\]/
 
 interface Coordinate {
   latitude: number
@@ -29,10 +29,7 @@ export interface GoogleMapNode {
 }
 
 const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
-  const match =
-    target.match(/^\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]$/) ??
-    target.match(/^\[([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)(?:\s+([^\]]*[^\s]))?\]$/)
-
+  const match = target.match(placeFirstGoogleMapRegExp) ?? target.match(coordFirstGoogleMapRegExp)
   if (match === null) return []
 
   const isCoordFirst = target.startsWith('[N') || target.startsWith('[S')

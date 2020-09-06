@@ -3,7 +3,7 @@ import { generateIconNodeCreator } from './IconNode'
 
 import type { NodeCreator } from './creator'
 
-const strongIconRegExp = /^(.*?)(\[\[[^[\]]*\.icon(?:\*\d+)?\]\])(.*)$/
+const strongIconRegExp = /\[\[[^[\]]*\.icon(?:\*\d+)?\]\]/
 
 export interface StrongIconNode {
   type: 'strongIcon'

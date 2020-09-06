@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const internalLinkRegExp = /^(.*?)(\[\/?[^[\]]+\])(.*)$/
+const internalLinkRegExp = /\[\/?[^[\]]+\]/
 
 export interface InternalLinkNode {
   type: 'link'
