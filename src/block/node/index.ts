@@ -34,11 +34,6 @@ import type { IconNode } from './IconNode'
 import type { HashTagNode } from './HashTagNode'
 import type { PlainNode } from './PlainNode'
 
-/**
- * @deprecated
- */
-export type UrlNode = ImageNode | ExternalLinkNode
-
 export type LineNode =
   | QuoteNode
   | HelpfeelNode
