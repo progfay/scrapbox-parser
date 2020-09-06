@@ -1,6 +1,6 @@
 import { createNodeParser } from './creator'
 
-import { convertToLineNodes } from '.'
+import { convertToNodes } from '.'
 import type { DecorationNode } from './type'
 import type { NodeCreator } from './creator'
 
@@ -58,7 +58,7 @@ const createDecorationNode: NodeCreator<DecorationNode> = (target, opts) => {
   return {
     type: 'decoration',
     decos: Array.from(decoSet) as Decoration[],
-    nodes: convertToLineNodes(text, { ...opts, nested: true })
+    nodes: convertToNodes(text, { ...opts, nested: true })
   }
 }
 

@@ -16,14 +16,14 @@ import { IconNodeParser } from './IconNode'
 import { HashTagNodeParser } from './HashTagNode'
 import { PlainNodeParser } from './PlainNode'
 
-import type { LineNode } from './type'
+import type { Node } from './type'
 
 export interface NodeParserOption {
   nested: boolean
   quoted: boolean
 }
-export type NextNodeParser = () => LineNode[]
-export type NodeParser = (text: string, opts: NodeParserOption, next?: NextNodeParser) => LineNode[]
+export type NextNodeParser = () => Node[]
+export type NodeParser = (text: string, opts: NodeParserOption, next?: NextNodeParser) => Node[]
 
 const FalsyEliminator: NodeParser = (text, _, next) => {
   if (text === '') return []
@@ -33,13 +33,13 @@ const FalsyEliminator: NodeParser = (text, _, next) => {
 const combineNodeParsers = (...parsers: NodeParser[]) => (
   text: string = '',
   opts: NodeParserOption = { nested: false, quoted: false }
-): LineNode[] =>
+): Node[] =>
   parsers.reduceRight(
     (acc: NextNodeParser, parser: NodeParser): NextNodeParser => () => parser(text, opts, acc),
     () => PlainNodeParser(text, opts)
   )()
 
-export const convertToLineNodes = combineNodeParsers(
+export const convertToNodes = combineNodeParsers(
   FalsyEliminator,
   QuoteNodeParser,
   HelpfeelNodeParser,

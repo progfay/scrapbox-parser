@@ -2,7 +2,7 @@ import type { Decoration } from './DecorationNode'
 
 export interface QuoteNode {
   type: 'quote'
-  nodes: LineNode[]
+  nodes: Node[]
 }
 
 export interface HelpfeelNode {
@@ -23,7 +23,7 @@ export interface StrongIconNode {
 
 export interface StrongNode {
   type: 'strong'
-  nodes: LineNode[]
+  nodes: Node[]
 }
 
 export interface FormulaNode {
@@ -34,7 +34,7 @@ export interface FormulaNode {
 export interface DecorationNode {
   type: 'decoration'
   decos: Decoration[]
-  nodes: LineNode[]
+  nodes: Node[]
 }
 
 export interface CodeNode {
@@ -91,7 +91,7 @@ export interface PlainNode {
   text: string
 }
 
-export type LineNode =
+export type Node =
   | QuoteNode
   | HelpfeelNode
   | StrongImageNode

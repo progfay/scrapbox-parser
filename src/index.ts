@@ -6,7 +6,7 @@ export type { CodeBlock } from './block/CodeBlock'
 export type { Table } from './block/Table'
 export type { Line } from './block/Line'
 export type {
-  LineNode,
+  Node,
   QuoteNode,
   HelpfeelNode,
   StrongImageNode,
