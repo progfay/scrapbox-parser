@@ -1,4 +1,5 @@
 import { createNodeParser } from './creator'
+import { parseIcon } from './IconNode'
 
 import type { NodeCreator } from './creator'
 
@@ -11,15 +12,8 @@ export interface StrongIconNode {
 }
 
 const createStrongIconNode: NodeCreator<StrongIconNode> = target => {
-  const index = target.lastIndexOf('.icon')
-  const path = target.substring(2, index)
-  const numStr = target.substring(index + 5, target.length - 2)
-  const num = numStr.startsWith('*') ? parseInt(numStr.substring(1), 10) : 1
-  return new Array(num).fill({}).map(() => ({
-    type: 'strongIcon',
-    pathType: path.startsWith('/') ? 'root' : 'relative',
-    path
-  }))
+  const [pathInfo, num] = parseIcon(target.substring(2, target.length - 2))
+  return new Array(num).fill({}).map(() => ({ ...pathInfo, type: 'strongIcon' }))
 }
 
 export const StrongIconNodeParser = createNodeParser(createStrongIconNode, {
