@@ -1,5 +1,5 @@
 import { createNodeParser } from './creator'
-import { parseIcon } from './IconNode'
+import { generateIconNodeCreator } from './IconNode'
 
 import type { NodeCreator } from './creator'
 
@@ -11,10 +11,7 @@ export interface StrongIconNode {
   path: string
 }
 
-const createStrongIconNode: NodeCreator<StrongIconNode> = target => {
-  const [pathInfo, num] = parseIcon(target.substring(2, target.length - 2))
-  return new Array(num).fill({}).map(() => ({ ...pathInfo, type: 'strongIcon' }))
-}
+const createStrongIconNode = generateIconNodeCreator('strongIcon') as NodeCreator<StrongIconNode>
 
 export const StrongIconNodeParser = createNodeParser(createStrongIconNode, {
   parseOnNested: false,
