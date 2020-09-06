@@ -2,9 +2,9 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const hrefFirstUrlRegExp = /^(.*?)(\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\])(.*)$/
-const contentFirstUrlRegExp = /^(.*?)(\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\])(.*)$/
-const httpRegExp = /^(.*?\s)?(https?:\/\/[^\s\]]+)(.*)$/
+const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\]/
+const contentFirstUrlRegExp = /\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
+const httpRegExp = /(?<=^| )https?:\/\/[^\s\]]+/
 
 export interface ExternalLinkNode {
   type: 'link'

@@ -4,7 +4,7 @@ import { createNodeParser } from './creator'
 import type { LineNode } from '.'
 import type { NodeCreator } from './creator'
 
-const quoteRegExp = /^()(>.*)()$/
+const quoteRegExp = /^>.*$/
 
 export interface QuoteNode {
   type: 'quote'

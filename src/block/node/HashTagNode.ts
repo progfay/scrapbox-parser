@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const hashTagRegExp = /^(.*? )?(#\S+)(.*)$/
+const hashTagRegExp = /(?<=^| )#\S+/
 
 export interface HashTagNode {
   type: 'hashTag'

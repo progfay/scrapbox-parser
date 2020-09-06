@@ -18,10 +18,13 @@ export const createNodeParser: NodeParserCreator<LineNode> = (
     if (!parseOnQuoted && opts.quoted) return next?.() ?? []
 
     for (const pattern of patterns) {
-      const match = text.match(pattern)
+      const match = pattern.exec(text)
       if (match === null) continue
-      const [, left, target, right] = match
-      const node = nodeCreator(target, opts)
+
+      const left = text.substring(0, match.index)
+      const right = text.substring(match.index + match[0].length)
+
+      const node = nodeCreator(match[0], opts)
       return [
         ...convertToLineNodes(left, opts),
         ...(Array.isArray(node) ? node : [node]),

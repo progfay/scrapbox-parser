@@ -2,8 +2,8 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const formulaWithTailHalfSpaceRegExp = /^(.*?)(\[\$ .+? \])(.*)$/
-const formulaRegExp = /^(.*?)(\[\$ [^\]]+\])(.*)$/
+const formulaWithTailHalfSpaceRegExp = /\[\$ .+? \]/
+const formulaRegExp = /\[\$ [^\]]+\]/
 
 export interface FormulaNode {
   type: 'formula'

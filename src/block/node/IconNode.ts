@@ -3,7 +3,7 @@ import { createNodeParser } from './creator'
 import type { NodeCreator } from './creator'
 import type { StrongIconNode } from './StrongIconNode'
 
-const iconRegExp = /^(.*?)(\[[^[\]]*\.icon(?:\*[1-9]\d*)?\])(.*)$/
+const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/
 
 export interface IconNode {
   type: 'icon'

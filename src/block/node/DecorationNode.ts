@@ -3,7 +3,7 @@ import { createNodeParser } from './creator'
 import { convertToLineNodes, LineNode } from '.'
 import type { NodeCreator } from './creator'
 
-const decorationRegExp = /^(.*?)(\[[!"#%&'()*+,-./{|}<>_~]+ (?:\[[^\]]+\]|[^\]])+\])(.*)$/
+const decorationRegExp = /\[[!"#%&'()*+,-./{|}<>_~]+ (?:\[[^\]]+\]|[^\]])+\]/
 
 export type DecorationChar =
   | '*'

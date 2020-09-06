@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const blankRegExp = /^(.*?)(\[\s+\])(.*)$/
+const blankRegExp = /\[\s+\]/
 
 export interface BlankNode {
   type: 'blank'

@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const helpfeelRegExp = /^()(\? .+)()$/
+const helpfeelRegExp = /^\? .+$/
 
 export interface HelpfeelNode {
   type: 'helpfeel'
