@@ -5,6 +5,8 @@ import type { NodeCreator } from './creator'
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/
 
+export function generateIconNodeCreator(type: IconNode['type']): NodeCreator<IconNode>
+export function generateIconNodeCreator(type: StrongIconNode['type']): NodeCreator<StrongIconNode>
 export function generateIconNodeCreator(
   type: (IconNode | StrongIconNode)['type']
 ): NodeCreator<IconNode | StrongIconNode> {
@@ -28,7 +30,7 @@ export function generateIconNodeCreator(
   }
 }
 
-const createIconNode = generateIconNodeCreator('icon') as NodeCreator<IconNode>
+const createIconNode = generateIconNodeCreator('icon')
 
 export const IconNodeParser = createNodeParser(createIconNode, {
   parseOnNested: false,
