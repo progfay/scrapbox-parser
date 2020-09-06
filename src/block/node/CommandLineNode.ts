@@ -2,7 +2,7 @@ import { createNodeParser } from './creator'
 
 import type { NodeCreator } from './creator'
 
-const commandLineRegExp = /^([$%]) (.+)$/
+const commandLineRegExp = /^[$%] .+$/
 
 export interface CommandLineNode {
   type: 'commandLine'
@@ -11,9 +11,9 @@ export interface CommandLineNode {
 }
 
 const createCommandLineNode: NodeCreator<CommandLineNode> = (target: string) => {
-  const match = target.match(commandLineRegExp)
-  if (match === null) return []
-  const [, symbol, text] = match
+  const symbol = target[0]
+  const text = target.substring(2)
+
   return {
     type: 'commandLine',
     symbol,
@@ -23,6 +23,6 @@ const createCommandLineNode: NodeCreator<CommandLineNode> = (target: string) => 
 
 export const CommandLineNodeParser = createNodeParser(createCommandLineNode, {
   parseOnNested: false,
-  parseOnQuoted: true,
+  parseOnQuoted: false,
   patterns: [commandLineRegExp]
 })
