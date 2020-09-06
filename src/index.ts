@@ -17,9 +17,8 @@ export type {
   CodeNode,
   BlankNode,
   ImageNode,
-  ExternalLinkNode,
+  LinkNode,
   GoogleMapNode,
-  InternalLinkNode,
   IconNode,
   HashTagNode,
   PlainNode

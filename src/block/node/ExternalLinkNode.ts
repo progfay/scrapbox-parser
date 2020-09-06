@@ -1,13 +1,13 @@
 import { createNodeParser } from './creator'
 
-import type { ExternalLinkNode } from './type'
+import type { LinkNode } from './type'
 import type { NodeCreator } from './creator'
 
 const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\]/
 const contentFirstUrlRegExp = /\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
 const httpRegExp = /(?<=^| )https?:\/\/[^\s\]]+/
 
-const createExternalLinkNode: NodeCreator<ExternalLinkNode> = target => {
+const createExternalLinkNode: NodeCreator<LinkNode> = target => {
   if (target.startsWith('[') && target.endsWith(']')) {
     target = target.substring(1, target.length - 1)
   }

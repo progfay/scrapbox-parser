@@ -1,11 +1,11 @@
 import { createNodeParser } from './creator'
 
-import type { InternalLinkNode } from './type'
+import type { LinkNode } from './type'
 import type { NodeCreator } from './creator'
 
 const internalLinkRegExp = /\[\/?[^[\]]+\]/
 
-const createInternalLinkNode: NodeCreator<InternalLinkNode> = target => {
+const createInternalLinkNode: NodeCreator<LinkNode> = target => {
   const href = target.substring(1, target.length - 1)
   return {
     type: 'link',

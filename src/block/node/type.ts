@@ -59,9 +59,9 @@ export interface ImageNode {
   link: string
 }
 
-export interface ExternalLinkNode {
+export interface LinkNode {
   type: 'link'
-  pathType: 'absolute'
+  pathType: 'absolute' | 'root' | 'relative'
   href: string
   content: string
 }
@@ -73,13 +73,6 @@ export interface GoogleMapNode {
   zoom: number
   place: string
   url: string
-}
-
-export interface InternalLinkNode {
-  type: 'link'
-  pathType: 'root' | 'relative'
-  href: string
-  content: string
 }
 
 export interface IconNode {
@@ -110,9 +103,8 @@ export type LineNode =
   | CommandLineNode
   | BlankNode
   | ImageNode
-  | ExternalLinkNode
+  | LinkNode
   | GoogleMapNode
-  | InternalLinkNode
   | IconNode
   | HashTagNode
   | PlainNode
