@@ -2,7 +2,7 @@ import { convertToLineNodes } from './node'
 
 import type { BlockComponent } from './BlockComponent'
 import type { PackedBlockComponent } from './PackedBlockComponent'
-import type { LineNode } from './node'
+import type { LineNode } from './node/type'
 
 export interface TableComponent {
   type: 'table'

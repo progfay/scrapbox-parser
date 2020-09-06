@@ -1,6 +1,7 @@
 import { convertToLineNodes } from '.'
 
-import type { LineNode, NodeParser, NodeParserOption } from '.'
+import type { NodeParser, NodeParserOption } from '.'
+import type { LineNode } from './type'
 
 export type NodeCreator<T extends LineNode> = (target: string, opts: NodeParserOption) => T | T[]
 

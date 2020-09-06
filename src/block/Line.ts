@@ -1,7 +1,7 @@
 import { convertToLineNodes } from './node'
 
 import type { BlockComponent } from './BlockComponent'
-import type { LineNode } from './node'
+import type { LineNode } from './node/type'
 
 export interface LineComponent {
   type: 'line'

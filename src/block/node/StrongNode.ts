@@ -1,14 +1,10 @@
 import { createNodeParser } from './creator'
 
-import { convertToLineNodes, LineNode } from '.'
+import { convertToLineNodes } from '.'
+import type { StrongNode } from './type'
 import type { NodeCreator } from './creator'
 
 const strongRegExp = /\[\[.+?[\]]*\]\]/
-
-export interface StrongNode {
-  type: 'strong'
-  nodes: LineNode[]
-}
 
 const createStrongNode: NodeCreator<StrongNode> = (target, opts) => ({
   type: 'strong',

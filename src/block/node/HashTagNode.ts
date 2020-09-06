@@ -1,13 +1,9 @@
 import { createNodeParser } from './creator'
 
+import type { HashTagNode } from './type'
 import type { NodeCreator } from './creator'
 
 const hashTagRegExp = /(?<=^| )#\S+/
-
-export interface HashTagNode {
-  type: 'hashTag'
-  href: string
-}
 
 const createHashTagNode: NodeCreator<HashTagNode> = target => ({
   type: 'hashTag',

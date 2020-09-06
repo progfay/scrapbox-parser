@@ -16,42 +16,7 @@ import { IconNodeParser } from './IconNode'
 import { HashTagNodeParser } from './HashTagNode'
 import { PlainNodeParser } from './PlainNode'
 
-import type { QuoteNode } from './QuoteNode'
-import type { HelpfeelNode } from './HelpfeelNode'
-import type { StrongImageNode } from './StrongImageNode'
-import type { StrongIconNode } from './StrongIconNode'
-import type { StrongNode } from './StrongNode'
-import type { FormulaNode } from './FormulaNode'
-import type { DecorationNode } from './DecorationNode'
-import type { CodeNode } from './CodeNode'
-import type { CommandLineNode } from './CommandLineNode'
-import type { BlankNode } from './BlankNode'
-import type { ImageNode } from './ImageNode'
-import type { ExternalLinkNode } from './ExternalLinkNode'
-import type { GoogleMapNode } from './GoogleMapNode'
-import type { InternalLinkNode } from './InternalLinkNode'
-import type { IconNode } from './IconNode'
-import type { HashTagNode } from './HashTagNode'
-import type { PlainNode } from './PlainNode'
-
-export type LineNode =
-  | QuoteNode
-  | HelpfeelNode
-  | StrongImageNode
-  | StrongIconNode
-  | StrongNode
-  | FormulaNode
-  | DecorationNode
-  | CodeNode
-  | CommandLineNode
-  | BlankNode
-  | ImageNode
-  | ExternalLinkNode
-  | GoogleMapNode
-  | InternalLinkNode
-  | IconNode
-  | HashTagNode
-  | PlainNode
+import type { LineNode } from './type'
 
 export interface NodeParserOption {
   nested: boolean

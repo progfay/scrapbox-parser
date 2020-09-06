@@ -1,5 +1,6 @@
 import { createNodeParser } from './creator'
 
+import type { GoogleMapNode } from './type'
 import type { NodeCreator } from './creator'
 
 const placeFirstGoogleMapRegExp = /\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]/
@@ -17,15 +18,6 @@ const parseCoordinate: (format: string) => Coordinate = format => {
   const longitude = parseFloat(lng.replace(/^E/, '').replace(/^W/, '-'))
   const zoom = /^Z\d+$/.test(z) ? parseInt(z.replace(/^Z/, ''), 10) : 14
   return { latitude, longitude, zoom }
-}
-
-export interface GoogleMapNode {
-  type: 'googleMap'
-  latitude: number
-  longitude: number
-  zoom: number
-  place: string
-  url: string
 }
 
 const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
