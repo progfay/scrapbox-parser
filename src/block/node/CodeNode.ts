@@ -1,13 +1,9 @@
 import { createNodeParser } from './creator'
 
+import type { CodeNode } from './type'
 import type { NodeCreator } from './creator'
 
 const codeRegExp = /`.*?`/
-
-export interface CodeNode {
-  type: 'code'
-  text: string
-}
 
 const createCodeNode: NodeCreator<CodeNode> = target => ({
   type: 'code',

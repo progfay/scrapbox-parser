@@ -5,20 +5,22 @@ export type { Title } from './block/Title'
 export type { CodeBlock } from './block/CodeBlock'
 export type { Table } from './block/Table'
 export type { Line } from './block/Line'
-export type { LineNode } from './block/node'
-export type { QuoteNode } from './block/node/QuoteNode'
-export type { HelpfeelNode } from './block/node/HelpfeelNode'
-export type { StrongImageNode } from './block/node/StrongImageNode'
-export type { StrongIconNode } from './block/node/StrongIconNode'
-export type { StrongNode } from './block/node/StrongNode'
-export type { FormulaNode } from './block/node/FormulaNode'
-export type { DecorationNode, Decoration } from './block/node/DecorationNode'
-export type { CodeNode } from './block/node/CodeNode'
-export type { BlankNode } from './block/node/BlankNode'
-export type { ImageNode } from './block/node/ImageNode'
-export type { ExternalLinkNode } from './block/node/ExternalLinkNode'
-export type { GoogleMapNode } from './block/node/GoogleMapNode'
-export type { InternalLinkNode } from './block/node/InternalLinkNode'
-export type { IconNode } from './block/node/IconNode'
-export type { HashTagNode } from './block/node/HashTagNode'
-export type { PlainNode } from './block/node/PlainNode'
+export type {
+  Node,
+  QuoteNode,
+  HelpfeelNode,
+  StrongImageNode,
+  StrongIconNode,
+  StrongNode,
+  FormulaNode,
+  DecorationNode,
+  CodeNode,
+  BlankNode,
+  ImageNode,
+  LinkNode,
+  GoogleMapNode,
+  IconNode,
+  HashTagNode,
+  PlainNode
+} from './block/node/type'
+export type { Decoration } from './block/node/DecorationNode'

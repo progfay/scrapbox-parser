@@ -1,14 +1,10 @@
 import { createNodeParser } from './creator'
 
+import type { StrongImageNode } from './type'
 import type { NodeCreator } from './creator'
 
 const strongImageRegExp = /\[\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)\]\]/i
 const strongGyazoImageRegExp = /\[\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}\]\]/
-
-export interface StrongImageNode {
-  type: 'strongImage'
-  src: string
-}
 
 const createStrongImageNode: NodeCreator<StrongImageNode> = target => {
   const src = target.substring(2, target.length - 2)

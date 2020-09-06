@@ -1,5 +1,6 @@
 import { createNodeParser } from './creator'
 
+import type { ImageNode } from './type'
 import type { NodeCreator } from './creator'
 
 const srcFirstStrongImageRegExp = /\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i
@@ -12,12 +13,6 @@ const isImageUrl = (text: string): boolean =>
 
 const isGyazoImageUrl = (text: string): boolean =>
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
-
-export interface ImageNode {
-  type: 'image'
-  src: string
-  link: string
-}
 
 const createImageNode: NodeCreator<ImageNode> = target => {
   const index = target.search(/\s/)

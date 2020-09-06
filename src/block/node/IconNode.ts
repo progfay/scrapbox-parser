@@ -1,15 +1,9 @@
 import { createNodeParser } from './creator'
 
+import type { IconNode, StrongIconNode } from './type'
 import type { NodeCreator } from './creator'
-import type { StrongIconNode } from './StrongIconNode'
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/
-
-export interface IconNode {
-  type: 'icon'
-  pathType: 'root' | 'relative'
-  path: string
-}
 
 export function generateIconNodeCreator(
   type: (IconNode | StrongIconNode)['type']

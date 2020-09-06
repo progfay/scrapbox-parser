@@ -1,15 +1,16 @@
-import { convertToLineNodes } from '.'
+import { convertToNodes } from '.'
 
-import type { LineNode, NodeParser, NodeParserOption } from '.'
+import type { NodeParser, NodeParserOption } from '.'
+import type { Node } from './type'
 
-export type NodeCreator<T extends LineNode> = (target: string, opts: NodeParserOption) => T | T[]
+export type NodeCreator<T extends Node> = (target: string, opts: NodeParserOption) => T | T[]
 
-type NodeParserCreator<T extends LineNode> = (
+type NodeParserCreator<T extends Node> = (
   nodeCreator: NodeCreator<T>,
   opts: { parseOnNested: boolean; parseOnQuoted: boolean; patterns: RegExp[] }
 ) => NodeParser
 
-export const createNodeParser: NodeParserCreator<LineNode> = (
+export const createNodeParser: NodeParserCreator<Node> = (
   nodeCreator,
   { parseOnNested, parseOnQuoted, patterns }
 ) => {
@@ -26,9 +27,9 @@ export const createNodeParser: NodeParserCreator<LineNode> = (
 
       const node = nodeCreator(match[0], opts)
       return [
-        ...convertToLineNodes(left, opts),
+        ...convertToNodes(left, opts),
         ...(Array.isArray(node) ? node : [node]),
-        ...convertToLineNodes(right, opts)
+        ...convertToNodes(right, opts)
       ]
     }
 

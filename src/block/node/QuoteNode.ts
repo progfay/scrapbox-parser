@@ -1,19 +1,14 @@
-import { convertToLineNodes } from '.'
+import { convertToNodes } from '.'
 import { createNodeParser } from './creator'
 
-import type { LineNode } from '.'
+import type { QuoteNode } from './type'
 import type { NodeCreator } from './creator'
 
 const quoteRegExp = /^>.*$/
 
-export interface QuoteNode {
-  type: 'quote'
-  nodes: LineNode[]
-}
-
 const createQuoteNode: NodeCreator<QuoteNode> = (target, opts) => ({
   type: 'quote',
-  nodes: convertToLineNodes(target.substring(1), { ...opts, quoted: true })
+  nodes: convertToNodes(target.substring(1), { ...opts, quoted: true })
 })
 
 export const QuoteNodeParser = createNodeParser(createQuoteNode, {

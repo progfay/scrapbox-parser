@@ -1,13 +1,9 @@
 import { createNodeParser } from './creator'
 
+import type { BlankNode } from './type'
 import type { NodeCreator } from './creator'
 
 const blankRegExp = /\[\s+\]/
-
-export interface BlankNode {
-  type: 'blank'
-  text: string
-}
 
 const createBlankNode: NodeCreator<BlankNode> = (target: string) => ({
   type: 'blank',

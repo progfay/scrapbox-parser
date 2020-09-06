@@ -1,8 +1,8 @@
-import { convertToLineNodes } from './node'
+import { convertToNodes } from './node'
 
 import type { BlockComponent } from './BlockComponent'
 import type { PackedBlockComponent } from './PackedBlockComponent'
-import type { LineNode } from './node'
+import type { Node } from './node/type'
 
 export interface TableComponent {
   type: 'table'
@@ -13,7 +13,7 @@ export interface Table {
   indent: number
   type: 'table'
   fileName: string
-  cells: LineNode[][][]
+  cells: Node[][][]
 }
 
 export const isTableComponent = (component: PackedBlockComponent): component is TableComponent =>
@@ -31,12 +31,10 @@ export const convertToTable = (tableComponent: TableComponent): Table => {
     fileName,
     cells: body
       .map((blockComponent: BlockComponent): string => blockComponent.text.substring(indent + 1))
-      .map((text: string): LineNode[][] =>
+      .map((text: string): Node[][] =>
         text
           .split('\t')
-          .map((block: string): LineNode[] =>
-            convertToLineNodes(block, { nested: true, quoted: false })
-          )
+          .map((block: string): Node[] => convertToNodes(block, { nested: true, quoted: false }))
       )
   }
 }

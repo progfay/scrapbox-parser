@@ -1,7 +1,7 @@
-import { convertToLineNodes } from './node'
+import { convertToNodes } from './node'
 
 import type { BlockComponent } from './BlockComponent'
-import type { LineNode } from './node'
+import type { Node } from './node/type'
 
 export interface LineComponent {
   type: 'line'
@@ -11,7 +11,7 @@ export interface LineComponent {
 export interface Line {
   indent: number
   type: 'line'
-  nodes: LineNode[]
+  nodes: Node[]
 }
 
 export const convertToLine = (lineComponent: LineComponent): Line => {
@@ -19,6 +19,6 @@ export const convertToLine = (lineComponent: LineComponent): Line => {
   return {
     indent,
     type: 'line',
-    nodes: convertToLineNodes(text.substring(indent))
+    nodes: convertToNodes(text.substring(indent))
   }
 }

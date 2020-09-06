@@ -1,11 +1,7 @@
 import { createNodeParser } from './creator'
 
+import type { PlainNode } from './type'
 import type { NodeCreator } from './creator'
-
-export interface PlainNode {
-  type: 'plain'
-  text: string
-}
 
 const createPlainNode: NodeCreator<PlainNode> = target => ({
   type: 'plain',

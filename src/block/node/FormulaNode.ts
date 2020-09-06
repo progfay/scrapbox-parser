@@ -1,14 +1,10 @@
 import { createNodeParser } from './creator'
 
+import type { FormulaNode } from './type'
 import type { NodeCreator } from './creator'
 
 const formulaWithTailHalfSpaceRegExp = /\[\$ .+? \]/
 const formulaRegExp = /\[\$ [^\]]+\]/
-
-export interface FormulaNode {
-  type: 'formula'
-  formula: string
-}
 
 const createFormulaNode: NodeCreator<FormulaNode> = target => {
   target = target.substring(3, target.length - 1)
