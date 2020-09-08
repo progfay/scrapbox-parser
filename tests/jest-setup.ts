@@ -1,18 +1,19 @@
 import { parse, ParserOption } from '../src'
 import { toMatchSnapshot } from 'jest-snapshot'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
-    interface Expect {
+    export interface Expect {
       toMatchSnapshotWhenParsing: (
         received: string,
         option?: Partial<ParserOption>
       ) => CustomMatcherResult
     }
 
-    interface Matchers<R, T> {
-      toMatchSnapshotWhenParsing: (option?: Partial<ParserOption>) => CustomMatcherResult
+    export interface Matchers<R> {
+      toMatchSnapshotWhenParsing: (option?: Partial<ParserOption>) => R
     }
   }
 }
