@@ -15,6 +15,7 @@ export type {
   FormulaNode,
   DecorationNode,
   CodeNode,
+  CommandLineNode,
   BlankNode,
   ImageNode,
   LinkNode,
