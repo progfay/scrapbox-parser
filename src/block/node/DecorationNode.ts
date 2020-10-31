@@ -45,12 +45,12 @@ export type Decoration = Exclude<DecorationChar, '*'> | AsteriskDecorationChar
 
 const createDecorationNode: NodeCreator<DecorationNode> = (raw, opts) => {
   const separatorIndex = raw.indexOf(' ')
-  const decoChars = raw.substring(1, separatorIndex)
+  const rawDecos = raw.substring(1, separatorIndex)
   const text = raw.substring(separatorIndex + 1, raw.length - 1)
 
-  const decoSet = new Set<string>(decoChars)
+  const decoSet = new Set<string>(rawDecos)
   if (decoSet.has('*')) {
-    const asteriskCount = decoChars.split('*').length - 1
+    const asteriskCount = rawDecos.split('*').length - 1
     decoSet.delete('*')
     decoSet.add(`*-${Math.min(asteriskCount, 10)}` as AsteriskDecorationChar)
   }
@@ -58,6 +58,7 @@ const createDecorationNode: NodeCreator<DecorationNode> = (raw, opts) => {
   return {
     type: 'decoration',
     raw,
+    rawDecos,
     decos: Array.from(decoSet) as Decoration[],
     nodes: convertToNodes(text, { ...opts, nested: true })
   }

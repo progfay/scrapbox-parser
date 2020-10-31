@@ -37,6 +37,7 @@ export interface FormulaNode extends BaseNode {
 
 export interface DecorationNode extends BaseNode {
   type: 'decoration'
+  rawDecos: string
   decos: Decoration[]
   nodes: Node[]
 }
