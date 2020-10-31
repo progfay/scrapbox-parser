@@ -19,6 +19,7 @@ Array [
           },
         ],
         "raw": "[* [Link]]",
+        "rawDecos": "*",
         "type": "decoration",
       },
     ],
@@ -46,6 +47,7 @@ Array [
           },
         ],
         "raw": "[* [https://example.com example]]",
+        "rawDecos": "*",
         "type": "decoration",
       },
     ],
@@ -96,6 +98,7 @@ Array [
           },
         ],
         "raw": "[* [Link]",
+        "rawDecos": "*",
         "type": "decoration",
       },
       Object {
