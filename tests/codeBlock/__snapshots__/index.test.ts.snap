@@ -21,6 +21,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Bullet",
         "text": "Bullet",
         "type": "plain",
       },
@@ -41,6 +42,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Bullet",
         "text": "Bullet",
         "type": "plain",
       },

@@ -7,18 +7,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -27,18 +30,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -47,18 +53,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
@@ -67,18 +76,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "c",
             "text": "c",
             "type": "plain",
           },
@@ -99,18 +111,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -119,18 +134,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -139,18 +157,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
@@ -159,18 +180,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "c",
             "text": "c",
             "type": "plain",
           },
@@ -186,18 +210,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -206,18 +233,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -226,18 +256,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
@@ -246,18 +279,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "c",
             "text": "c",
             "type": "plain",
           },
@@ -278,18 +314,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -298,18 +337,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -318,18 +360,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
@@ -338,18 +383,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "c",
             "text": "c",
             "type": "plain",
           },
@@ -370,24 +418,28 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "4",
             "text": "4",
             "type": "plain",
           },
@@ -396,18 +448,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -416,6 +471,7 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
@@ -424,12 +480,14 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
@@ -453,18 +511,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": " ",
             "text": " ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "　",
             "text": "　",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "  ",
             "text": "  ",
             "type": "plain",
           },
@@ -493,11 +554,13 @@ Array [
             "content": "",
             "href": "Link",
             "pathType": "relative",
+            "raw": "[Link]",
             "type": "link",
           },
         ],
         Array [
           Object {
+            "raw": "This is ",
             "text": "This is ",
             "type": "plain",
           },
@@ -505,6 +568,7 @@ Array [
             "content": "",
             "href": "Link",
             "pathType": "relative",
+            "raw": "[Link]",
             "type": "link",
           },
         ],

@@ -7,6 +7,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]",
         "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png",
         "type": "image",
       },
@@ -23,6 +24,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://example.com",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -34,6 +36,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://example.com",
+        "raw": "[https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -45,6 +48,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3",
+        "raw": "[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -61,6 +65,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -72,6 +77,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -83,6 +89,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw",
         "type": "image",
       },
@@ -99,6 +106,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg]",
         "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg",
         "type": "image",
       },
@@ -115,6 +123,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://example.com/",
+        "raw": "[https://example.com/image.svg https://example.com/]",
         "src": "https://example.com/image.svg",
         "type": "image",
       },
@@ -126,6 +135,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://example.com/",
+        "raw": "[https://example.com/ https://example.com/image.GIF]",
         "src": "https://example.com/image.GIF",
         "type": "image",
       },
@@ -142,6 +152,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[http://example.com/image.png?key1=value1&key2=value2]",
         "src": "http://example.com/image.png?key1=value1&key2=value2",
         "type": "image",
       },
@@ -158,6 +169,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "https://example.com/forward.png",
+        "raw": "[https://example.com/forward.png https://example.com/backward.png]",
         "src": "https://example.com/backward.png",
         "type": "image",
       },
@@ -174,6 +186,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[http://example.com/image.png]",
         "src": "http://example.com/image.png",
         "type": "image",
       },
@@ -185,6 +198,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://example.com/image.JPG]",
         "src": "https://example.com/image.JPG",
         "type": "image",
       },

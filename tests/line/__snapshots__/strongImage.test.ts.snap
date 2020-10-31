@@ -6,6 +6,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]]",
         "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png",
         "type": "strongImage",
       },
@@ -21,6 +22,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "strongImage",
       },
@@ -36,6 +38,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg]]",
         "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg",
         "type": "strongImage",
       },
@@ -51,6 +54,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[http://example.com/image.png]]",
         "src": "http://example.com/image.png",
         "type": "strongImage",
       },
@@ -61,6 +65,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[https://example.com/image.JPG]]",
         "src": "https://example.com/image.JPG",
         "type": "strongImage",
       },
@@ -71,6 +76,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[https://example.com/image.svg]]",
         "src": "https://example.com/image.svg",
         "type": "strongImage",
       },
@@ -81,6 +87,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "[[https://example.com/image.GIF]]",
         "src": "https://example.com/image.GIF",
         "type": "strongImage",
       },

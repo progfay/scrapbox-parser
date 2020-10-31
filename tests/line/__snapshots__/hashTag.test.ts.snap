@@ -6,14 +6,17 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "This is a ",
         "text": "This is a ",
         "type": "plain",
       },
       Object {
         "href": "tag",
+        "raw": "#tag",
         "type": "hashTag",
       },
       Object {
+        "raw": " .",
         "text": " .",
         "type": "plain",
       },
@@ -29,6 +32,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "→#notTag←",
         "text": "→#notTag←",
         "type": "plain",
       },
@@ -45,6 +49,7 @@ Array [
     "nodes": Array [
       Object {
         "href": "hash#Tag",
+        "raw": "#hash#Tag",
         "type": "hashTag",
       },
     ],
@@ -60,22 +65,27 @@ Array [
     "nodes": Array [
       Object {
         "href": "hoge",
+        "raw": "#hoge",
         "type": "hashTag",
       },
       Object {
+        "raw": " ",
         "text": " ",
         "type": "plain",
       },
       Object {
         "href": "fuga",
+        "raw": "#fuga",
         "type": "hashTag",
       },
       Object {
+        "raw": " ",
         "text": " ",
         "type": "plain",
       },
       Object {
         "href": "piyo",
+        "raw": "#piyo",
         "type": "hashTag",
       },
     ],
@@ -90,6 +100,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "#",
         "text": "#",
         "type": "plain",
       },
@@ -106,6 +117,7 @@ Array [
     "nodes": Array [
       Object {
         "href": "tag",
+        "raw": "#tag",
         "type": "hashTag",
       },
     ],

@@ -6,6 +6,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "$ ",
         "text": "$ ",
         "type": "plain",
       },
@@ -21,6 +22,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "$",
         "text": "$",
         "type": "plain",
       },
@@ -36,6 +38,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "$not command",
         "text": "$not command",
         "type": "plain",
       },
@@ -51,6 +54,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "$ command",
         "symbol": "$",
         "text": "command",
         "type": "commandLine",
@@ -67,6 +71,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "% command",
         "symbol": "%",
         "text": "command",
         "type": "commandLine",

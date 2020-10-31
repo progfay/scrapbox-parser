@@ -6,6 +6,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Double-byte space",
         "text": "Double-byte space",
         "type": "plain",
       },
@@ -21,6 +22,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "no bullet (indent: 0)",
         "text": "no bullet (indent: 0)",
         "type": "plain",
       },
@@ -31,6 +33,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "first bullet (indent: 1)",
         "text": "first bullet (indent: 1)",
         "type": "plain",
       },
@@ -41,6 +44,7 @@ Array [
     "indent": 2,
     "nodes": Array [
       Object {
+        "raw": "second bullet (indent: 2)",
         "text": "second bullet (indent: 2)",
         "type": "plain",
       },
@@ -51,6 +55,7 @@ Array [
     "indent": 3,
     "nodes": Array [
       Object {
+        "raw": "third bullet (indent: 3)",
         "text": "third bullet (indent: 3)",
         "type": "plain",
       },
@@ -66,6 +71,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Single-byte space",
         "text": "Single-byte space",
         "type": "plain",
       },
@@ -81,6 +87,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Tab",
         "text": "Tab",
         "type": "plain",
       },

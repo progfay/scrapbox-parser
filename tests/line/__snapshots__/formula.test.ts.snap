@@ -7,6 +7,7 @@ Array [
     "nodes": Array [
       Object {
         "formula": "[x]",
+        "raw": "[$ [x] ]",
         "type": "formula",
       },
     ],
@@ -22,9 +23,11 @@ Array [
     "nodes": Array [
       Object {
         "formula": "[x",
+        "raw": "[$ [x]",
         "type": "formula",
       },
       Object {
+        "raw": "]",
         "text": "]",
         "type": "plain",
       },
@@ -41,6 +44,7 @@ Array [
     "nodes": Array [
       Object {
         "formula": "\\\\frac{3}{2}^N",
+        "raw": "[$ \\\\frac{3}{2}^N]",
         "type": "formula",
       },
     ],

@@ -6,6 +6,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "\`\`",
         "text": "",
         "type": "code",
       },
@@ -21,6 +22,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "\`Simple code\`",
         "text": "Simple code",
         "type": "code",
       },

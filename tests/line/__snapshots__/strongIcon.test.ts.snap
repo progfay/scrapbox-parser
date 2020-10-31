@@ -8,16 +8,19 @@ Array [
       Object {
         "path": "me",
         "pathType": "relative",
+        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
       },
       Object {
         "path": "me",
         "pathType": "relative",
+        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
       },
       Object {
         "path": "me",
         "pathType": "relative",
+        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
       },
     ],
@@ -34,6 +37,7 @@ Array [
       Object {
         "path": "me",
         "pathType": "relative",
+        "raw": "[[me.icon]]",
         "type": "strongIcon",
       },
     ],
@@ -50,6 +54,7 @@ Array [
       Object {
         "path": "/icons/+1",
         "pathType": "root",
+        "raw": "[[/icons/+1.icon]]",
         "type": "strongIcon",
       },
     ],
@@ -67,11 +72,13 @@ Array [
         "content": "",
         "href": "Internal link",
         "pathType": "relative",
+        "raw": "[Internal link]",
         "type": "link",
       },
       Object {
         "path": "me",
         "pathType": "relative",
+        "raw": "[[me.icon]]",
         "type": "strongIcon",
       },
     ],

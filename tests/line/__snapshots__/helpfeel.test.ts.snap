@@ -6,6 +6,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "a ? not helpfeel",
         "text": "a ? not helpfeel",
         "type": "plain",
       },
@@ -23,10 +24,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": " ? Quoted",
             "text": " ? Quoted",
             "type": "plain",
           },
         ],
+        "raw": "> ? Quoted",
         "type": "quote",
       },
     ],
@@ -41,6 +44,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "? Simple helpfeel",
         "text": "Simple helpfeel",
         "type": "helpfeel",
       },

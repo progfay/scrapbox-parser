@@ -7,6 +7,7 @@ Array [
     "nodes": Array [
       Object {
         "nodes": Array [],
+        "raw": ">",
         "type": "quote",
       },
     ],
@@ -23,10 +24,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": " Simple quote",
             "text": " Simple quote",
             "type": "plain",
           },
         ],
+        "raw": "> Simple quote",
         "type": "quote",
       },
     ],
