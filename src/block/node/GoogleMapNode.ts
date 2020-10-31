@@ -20,11 +20,11 @@ const parseCoordinate: (format: string) => Coordinate = format => {
   return { latitude, longitude, zoom }
 }
 
-const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
-  const match = target.match(placeFirstGoogleMapRegExp) ?? target.match(coordFirstGoogleMapRegExp)
+const createGoogleMapNode: NodeCreator<GoogleMapNode> = raw => {
+  const match = raw.match(placeFirstGoogleMapRegExp) ?? raw.match(coordFirstGoogleMapRegExp)
   if (match === null) return []
 
-  const isCoordFirst = target.startsWith('[N') || target.startsWith('[S')
+  const isCoordFirst = raw.startsWith('[N') || raw.startsWith('[S')
   const [, coord, place = ''] = isCoordFirst ? match : [match[0], match[2], match[1]]
   const { latitude, longitude, zoom } = parseCoordinate(coord)
 
@@ -37,6 +37,7 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode> = target => {
 
   return {
     type: 'googleMap',
+    raw,
     latitude,
     longitude,
     zoom,

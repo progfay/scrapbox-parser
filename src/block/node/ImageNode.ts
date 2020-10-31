@@ -14,15 +14,15 @@ const isImageUrl = (text: string): boolean =>
 const isGyazoImageUrl = (text: string): boolean =>
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
 
-const createImageNode: NodeCreator<ImageNode> = target => {
-  const index = target.search(/\s/)
-  // if (index === -1) index = target.length - 2
-  const first = index !== -1 ? target.substring(1, index) : target.substring(1, target.length - 1)
-  const second = index !== -1 ? target.substring(index, target.length - 1).trimLeft() : ''
+const createImageNode: NodeCreator<ImageNode> = raw => {
+  const index = raw.search(/\s/)
+  const first = index !== -1 ? raw.substring(1, index) : raw.substring(1, raw.length - 1)
+  const second = index !== -1 ? raw.substring(index, raw.length - 1).trimLeft() : ''
   const [src, link] = isImageUrl(second) ? [second, first] : [first, second]
 
   return {
     type: 'image',
+    raw,
     src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
       ? `${src}/thumb/1000`
       : src,

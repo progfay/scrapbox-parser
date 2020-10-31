@@ -5,9 +5,10 @@ import type { NodeCreator } from './creator'
 
 const hashTagRegExp = /(?<=^| )#\S+/
 
-const createHashTagNode: NodeCreator<HashTagNode> = target => ({
+const createHashTagNode: NodeCreator<HashTagNode> = raw => ({
   type: 'hashTag',
-  href: target.substring(1)
+  raw,
+  href: raw.substring(1)
 })
 
 export const HashTagNodeParser = createNodeParser(createHashTagNode, {

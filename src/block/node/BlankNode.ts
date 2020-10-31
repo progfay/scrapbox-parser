@@ -5,9 +5,10 @@ import type { NodeCreator } from './creator'
 
 const blankRegExp = /\[\s+\]/
 
-const createBlankNode: NodeCreator<BlankNode> = (target: string) => ({
+const createBlankNode: NodeCreator<BlankNode> = (raw: string) => ({
   type: 'blank',
-  text: target.substring(1, target.length - 1)
+  raw,
+  text: raw.substring(1, raw.length - 1)
 })
 
 export const BlankNodeParser = createNodeParser(createBlankNode, {

@@ -5,10 +5,11 @@ import type { NodeCreator } from './creator'
 
 const internalLinkRegExp = /\[\/?[^[\]]+\]/
 
-const createInternalLinkNode: NodeCreator<LinkNode> = target => {
-  const href = target.substring(1, target.length - 1)
+const createInternalLinkNode: NodeCreator<LinkNode> = raw => {
+  const href = raw.substring(1, raw.length - 1)
   return {
     type: 'link',
+    raw,
     pathType: href.startsWith('/') ? 'root' : 'relative',
     href,
     content: ''

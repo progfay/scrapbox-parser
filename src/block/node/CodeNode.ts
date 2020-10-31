@@ -5,9 +5,10 @@ import type { NodeCreator } from './creator'
 
 const codeRegExp = /`.*?`/
 
-const createCodeNode: NodeCreator<CodeNode> = target => ({
+const createCodeNode: NodeCreator<CodeNode> = raw => ({
   type: 'code',
-  text: target.substring(1, target.length - 1)
+  raw,
+  text: raw.substring(1, raw.length - 1)
 })
 
 export const CodeNodeParser = createNodeParser(createCodeNode, {

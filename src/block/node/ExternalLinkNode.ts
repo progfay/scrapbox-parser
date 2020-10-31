@@ -7,21 +7,20 @@ const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\]/
 const contentFirstUrlRegExp = /\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
 const httpRegExp = /(?<=^| )https?:\/\/[^\s\]]+/
 
-const createExternalLinkNode: NodeCreator<LinkNode> = target => {
-  if (target.startsWith('[') && target.endsWith(']')) {
-    target = target.substring(1, target.length - 1)
-  }
+const createExternalLinkNode: NodeCreator<LinkNode> = raw => {
+  const inner = raw.startsWith('[') && raw.endsWith(']') ? raw.substring(1, raw.length - 1) : raw
 
-  const isHrefFirst = /^https?:\/\/[^\s\]]/.test(target)
-  const match = (isHrefFirst ? /^https?:\/\/[^\s\]]+/ : /https?:\/\/[^\s\]]+$/).exec(target)
+  const isHrefFirst = /^https?:\/\/[^\s\]]/.test(inner)
+  const match = (isHrefFirst ? /^https?:\/\/[^\s\]]+/ : /https?:\/\/[^\s\]]+$/).exec(inner)
   if (match === null) {
     return []
   }
 
-  const c = isHrefFirst ? target.substring(match[0].length) : target.substring(0, match.index - 1)
+  const c = isHrefFirst ? inner.substring(match[0].length) : inner.substring(0, match.index - 1)
 
   return {
     type: 'link',
+    raw,
     pathType: 'absolute',
     href: match[0],
     content: c.trim()

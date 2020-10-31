@@ -10,23 +10,15 @@ export function generateIconNodeCreator(type: StrongIconNode['type']): NodeCreat
 export function generateIconNodeCreator(
   type: (IconNode | StrongIconNode)['type']
 ): NodeCreator<IconNode | StrongIconNode> {
-  return target => {
-    switch (type) {
-      case 'icon':
-        target = target.substring(1, target.length - 1)
-        break
-
-      case 'strongIcon':
-        target = target.substring(2, target.length - 2)
-        break
-    }
-
+  return raw => {
+    const target =
+      type === 'icon' ? raw.substring(1, raw.length - 1) : raw.substring(2, raw.length - 2)
     const index = target.lastIndexOf('.icon')
     const path = target.substring(0, index)
     const pathType = path.startsWith('/') ? 'root' : 'relative'
     const numStr = target.substring(index + 5, target.length)
     const num = numStr.startsWith('*') ? parseInt(numStr.substring(1), 10) : 1
-    return new Array(num).fill({}).map(() => ({ path, pathType, type }))
+    return new Array(num).fill({}).map(() => ({ path, pathType, type, raw }))
   }
 }
 

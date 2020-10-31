@@ -29,6 +29,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
         "type": "image",
       },
@@ -54,10 +55,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "Mouse-based editing",
             "text": "Mouse-based editing",
             "type": "plain",
           },
         ],
+        "raw": "[* Mouse-based editing]",
         "type": "decoration",
       },
     ],
@@ -68,6 +71,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc]",
         "src": "https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc/thumb/1000",
         "type": "image",
       },
@@ -85,13 +89,16 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Internal Links",
             "text": "Internal Links",
             "type": "plain",
           },
         ],
+        "raw": "[[Internal Links]]",
         "type": "strong",
       },
       Object {
+        "raw": " (linking to another page on scrapbox)",
         "text": " (linking to another page on scrapbox)",
         "type": "plain",
       },
@@ -102,10 +109,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[link]\`",
         "text": "[link]",
         "type": "code",
       },
       Object {
+        "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
@@ -113,6 +122,7 @@ Array [
         "content": "",
         "href": "Link",
         "pathType": "relative",
+        "raw": "[Link]",
         "type": "link",
       },
     ],
@@ -129,13 +139,16 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "External  Links",
             "text": "External  Links",
             "type": "plain",
           },
         ],
+        "raw": "[[External  Links]]",
         "type": "strong",
       },
       Object {
+        "raw": " (linking to another web page)",
         "text": " (linking to another web page)",
         "type": "plain",
       },
@@ -146,10 +159,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`http://google.com\`",
         "text": "http://google.com",
         "type": "code",
       },
       Object {
+        "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
@@ -157,6 +172,7 @@ Array [
         "content": "",
         "href": "http://google.com",
         "pathType": "absolute",
+        "raw": "http://google.com",
         "type": "link",
       },
     ],
@@ -166,10 +182,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[http://google.com Google]\`",
         "text": "[http://google.com Google]",
         "type": "code",
       },
       Object {
+        "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
@@ -177,6 +195,7 @@ Array [
         "content": "Google",
         "href": "http://google.com",
         "pathType": "absolute",
+        "raw": "[http://google.com Google]",
         "type": "link",
       },
     ],
@@ -186,6 +205,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "or",
         "text": "or",
         "type": "plain",
       },
@@ -196,10 +216,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[Google http://google.com]\`",
         "text": "[Google http://google.com]",
         "type": "code",
       },
       Object {
+        "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
@@ -207,6 +229,7 @@ Array [
         "content": "Google",
         "href": "http://google.com",
         "pathType": "absolute",
+        "raw": "[Google http://google.com]",
         "type": "link",
       },
     ],
@@ -223,10 +246,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Images",
             "text": "Images",
             "type": "plain",
           },
         ],
+        "raw": "[[Images]]",
         "type": "strong",
       },
     ],
@@ -236,10 +261,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Direct mage link ↓",
         "text": "Direct mage link ↓",
         "type": "plain",
       },
       Object {
+        "raw": "\`[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
         "text": "[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "type": "code",
       },
@@ -251,6 +278,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
         "type": "image",
       },
@@ -268,10 +296,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Clickable Thumbnail Links",
             "text": "Clickable Thumbnail Links",
             "type": "plain",
           },
         ],
+        "raw": "[[Clickable Thumbnail Links]]",
         "type": "strong",
       },
     ],
@@ -281,10 +311,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "↓ ",
         "text": "↓ ",
         "type": "plain",
       },
       Object {
+        "raw": "\`[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
         "text": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "type": "code",
       },
@@ -296,6 +328,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "http://cutedog.com",
+        "raw": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
         "type": "image",
       },
@@ -306,6 +339,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Adding the link at the end also works, as before:",
         "text": "Adding the link at the end also works, as before:",
         "type": "plain",
       },
@@ -316,6 +350,7 @@ Array [
     "indent": 2,
     "nodes": Array [
       Object {
+        "raw": "\`[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]\`",
         "text": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]",
         "type": "code",
       },
@@ -333,10 +368,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Linking to other scrapbox projects",
             "text": "Linking to other scrapbox projects",
             "type": "plain",
           },
         ],
+        "raw": "[[Linking to other scrapbox projects]]",
         "type": "strong",
       },
     ],
@@ -346,10 +383,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[/projectname/pagename]\`",
         "text": "[/projectname/pagename]",
         "type": "code",
       },
       Object {
+        "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
@@ -357,6 +396,7 @@ Array [
         "content": "",
         "href": "/icons/check",
         "pathType": "root",
+        "raw": "[/icons/check]",
         "type": "link",
       },
     ],
@@ -366,10 +406,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[/projectname]\`",
         "text": "[/projectname]",
         "type": "code",
       },
       Object {
+        "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
@@ -377,6 +419,7 @@ Array [
         "content": "",
         "href": "/icons",
         "pathType": "root",
+        "raw": "[/icons]",
         "type": "link",
       },
     ],
@@ -393,10 +436,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Icons",
             "text": "Icons",
             "type": "plain",
           },
         ],
+        "raw": "[[Icons]]",
         "type": "strong",
       },
     ],
@@ -406,16 +451,19 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[ben.icon]\`",
         "text": "[ben.icon]",
         "type": "code",
       },
       Object {
+        "raw": " ⇛  ",
         "text": " ⇛  ",
         "type": "plain",
       },
       Object {
         "path": "ben",
         "pathType": "relative",
+        "raw": "[ben.icon]",
         "type": "icon",
       },
     ],
@@ -425,16 +473,19 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[/icons/todo.icon]\`",
         "text": "[/icons/todo.icon]",
         "type": "code",
       },
       Object {
+        "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
       Object {
         "path": "/icons/todo",
         "pathType": "root",
+        "raw": "[/icons/todo.icon]",
         "type": "icon",
       },
     ],
@@ -451,10 +502,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Bold text",
             "text": "Bold text",
             "type": "plain",
           },
         ],
+        "raw": "[[Bold text]]",
         "type": "strong",
       },
     ],
@@ -464,28 +517,34 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[[Bold]]\`",
         "text": "[[Bold]]",
         "type": "code",
       },
       Object {
+        "raw": " or ",
         "text": " or ",
         "type": "plain",
       },
       Object {
+        "raw": "\`[* Bold]\`",
         "text": "[* Bold]",
         "type": "code",
       },
       Object {
+        "raw": "⇒ ",
         "text": "⇒ ",
         "type": "plain",
       },
       Object {
         "nodes": Array [
           Object {
+            "raw": "Bold",
             "text": "Bold",
             "type": "plain",
           },
         ],
+        "raw": "[[Bold]]",
         "type": "strong",
       },
     ],
@@ -502,10 +561,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Italic text",
             "text": "Italic text",
             "type": "plain",
           },
         ],
+        "raw": "[[Italic text]]",
         "type": "strong",
       },
     ],
@@ -515,10 +576,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[/ italic]\`",
         "text": "[/ italic]",
         "type": "code",
       },
       Object {
+        "raw": "⇛ ",
         "text": "⇛ ",
         "type": "plain",
       },
@@ -528,10 +591,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "italic",
             "text": "italic",
             "type": "plain",
           },
         ],
+        "raw": "[/ italic]",
         "type": "decoration",
       },
     ],
@@ -548,10 +613,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": " Strikethrough text",
             "text": " Strikethrough text",
             "type": "plain",
           },
         ],
+        "raw": "[[ Strikethrough text]]",
         "type": "strong",
       },
     ],
@@ -561,10 +628,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`[- strikethrough]\`",
         "text": "[- strikethrough]",
         "type": "code",
       },
       Object {
+        "raw": "⇛ ",
         "text": "⇛ ",
         "type": "plain",
       },
@@ -574,10 +643,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "strikethrough",
             "text": "strikethrough",
             "type": "plain",
           },
         ],
+        "raw": "[- strikethrough]",
         "type": "decoration",
       },
     ],
@@ -588,6 +659,7 @@ Array [
     "nodes": Array [
       Object {
         "link": "",
+        "raw": "[https://gyazo.com/00ab07461d502db91c8ae170276d1396]",
         "src": "https://gyazo.com/00ab07461d502db91c8ae170276d1396/thumb/1000",
         "type": "image",
       },
@@ -605,10 +677,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Bullet points",
             "text": "Bullet points",
             "type": "plain",
           },
         ],
+        "raw": "[[Bullet points]]",
         "type": "strong",
       },
     ],
@@ -618,6 +692,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Press space or tab on a new line to indent and create a bullet point",
         "text": "Press space or tab on a new line to indent and create a bullet point",
         "type": "plain",
       },
@@ -628,6 +703,7 @@ Array [
     "indent": 2,
     "nodes": Array [
       Object {
+        "raw": "Press backspace to remove the indent  / bullet point",
         "text": "Press backspace to remove the indent  / bullet point",
         "type": "plain",
       },
@@ -645,10 +721,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Hashtags / internal links",
             "text": "Hashtags / internal links",
             "type": "plain",
           },
         ],
+        "raw": "[[Hashtags / internal links]]",
         "type": "strong",
       },
     ],
@@ -658,18 +736,22 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "\`#tag\`",
         "text": "#tag",
         "type": "code",
       },
       Object {
+        "raw": " and  ",
         "text": " and  ",
         "type": "plain",
       },
       Object {
+        "raw": "\`[link]\`",
         "text": "[link]",
         "type": "code",
       },
       Object {
+        "raw": " work the same to create a link but also define related pages you can find later",
         "text": " work the same to create a link but also define related pages you can find later",
         "type": "plain",
       },
@@ -680,6 +762,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Add links in the middle of a sentence to branch off as you type or add tags at the end to organize.",
         "text": "Add links in the middle of a sentence to branch off as you type or add tags at the end to organize.",
         "type": "plain",
       },
@@ -697,10 +780,12 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": "Block quote",
             "text": "Block quote",
             "type": "plain",
           },
         ],
+        "raw": "[[Block quote]]",
         "type": "strong",
       },
     ],
@@ -712,18 +797,22 @@ Array [
       Object {
         "nodes": Array [
           Object {
+            "raw": " use the right arrow ",
             "text": " use the right arrow ",
             "type": "plain",
           },
           Object {
+            "raw": "\`>\`",
             "text": ">",
             "type": "code",
           },
           Object {
+            "raw": " at the beginning of a line to get a block quote",
             "text": " at the beginning of a line to get a block quote",
             "type": "plain",
           },
         ],
+        "raw": "> use the right arrow \`>\` at the beginning of a line to get a block quote",
         "type": "quote",
       },
     ],
@@ -743,9 +832,11 @@ Array [
             "content": "",
             "href": "Code notation",
             "pathType": "relative",
+            "raw": "[Code notation]",
             "type": "link",
           },
         ],
+        "raw": "[[[Code notation]]]",
         "type": "strong",
       },
     ],
@@ -755,6 +846,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Use backquotes or backticks, \`,  to highlight code",
         "text": "Use backquotes or backticks, \`,  to highlight code",
         "type": "plain",
       },
@@ -765,10 +857,12 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "e.g. ",
         "text": "e.g. ",
         "type": "plain",
       },
       Object {
+        "raw": "\`function() {  return true }\`",
         "text": "function() {  return true }",
         "type": "code",
       },
@@ -789,9 +883,11 @@ Array [
             "content": "",
             "href": "Code block notation",
             "pathType": "relative",
+            "raw": "[Code block notation]",
             "type": "link",
           },
         ],
+        "raw": "[[[Code block notation]]]",
         "type": "strong",
       },
     ],
@@ -801,22 +897,27 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Typing ",
         "text": "Typing ",
         "type": "plain",
       },
       Object {
+        "raw": "\`code:filename.extension\`",
         "text": "code:filename.extension",
         "type": "code",
       },
       Object {
+        "raw": "or",
         "text": "or",
         "type": "plain",
       },
       Object {
+        "raw": "\`code:filename\`",
         "text": "code:filename",
         "type": "code",
       },
       Object {
+        "raw": "can be used to create a new code snippet and and display it as a block",
         "text": "can be used to create a new code snippet and and display it as a block",
         "type": "plain",
       },
@@ -827,6 +928,7 @@ Array [
     "indent": 2,
     "nodes": Array [
       Object {
+        "raw": "Language names may be abbreviated",
         "text": "Language names may be abbreviated",
         "type": "plain",
       },
@@ -857,9 +959,11 @@ Array [
             "content": "",
             "href": "Tables",
             "pathType": "relative",
+            "raw": "[Tables]",
             "type": "link",
           },
         ],
+        "raw": "[[[Tables]]]",
         "type": "strong",
       },
     ],
@@ -869,6 +973,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Type table: tablename to create a table",
         "text": "Type table: tablename to create a table",
         "type": "plain",
       },
@@ -879,6 +984,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "Use tab to move to the next column, use enter to move to the next row.",
         "text": "Use tab to move to the next column, use enter to move to the next row.",
         "type": "plain",
       },
@@ -889,6 +995,7 @@ Array [
     "indent": 1,
     "nodes": Array [
       Object {
+        "raw": "An example:",
         "text": "An example:",
         "type": "plain",
       },
@@ -900,18 +1007,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -920,18 +1030,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "3",
             "text": "3",
             "type": "plain",
           },
@@ -940,18 +1053,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "------",
             "text": "------",
             "type": "plain",
           },
@@ -960,18 +1076,21 @@ Array [
       Array [
         Array [
           Object {
+            "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
         Array [
           Object {
+            "raw": "c",
             "text": "c",
             "type": "plain",
           },

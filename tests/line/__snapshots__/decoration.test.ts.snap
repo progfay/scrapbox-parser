@@ -11,10 +11,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "11*",
             "text": "11*",
             "type": "plain",
           },
         ],
+        "raw": "[*********** 11*]",
         "type": "decoration",
       },
     ],
@@ -34,6 +36,7 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "hoge ",
             "text": "hoge ",
             "type": "plain",
           },
@@ -41,9 +44,11 @@ Array [
             "content": "",
             "href": "https://example.com",
             "pathType": "absolute",
+            "raw": "https://example.com",
             "type": "link",
           },
         ],
+        "raw": "[* hoge https://example.com]",
         "type": "decoration",
       },
     ],
@@ -63,10 +68,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[* deco]",
         "type": "decoration",
       },
     ],
@@ -81,10 +88,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[** deco]",
         "type": "decoration",
       },
     ],
@@ -99,10 +108,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[*** deco]",
         "type": "decoration",
       },
     ],
@@ -117,10 +128,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[**** deco]",
         "type": "decoration",
       },
     ],
@@ -135,10 +148,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[***** deco]",
         "type": "decoration",
       },
     ],
@@ -153,10 +168,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[****** deco]",
         "type": "decoration",
       },
     ],
@@ -171,10 +188,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[******* deco]",
         "type": "decoration",
       },
     ],
@@ -189,10 +208,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[******** deco]",
         "type": "decoration",
       },
     ],
@@ -207,10 +228,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[********* deco]",
         "type": "decoration",
       },
     ],
@@ -225,10 +248,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[********** deco]",
         "type": "decoration",
       },
     ],
@@ -243,10 +268,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[! deco]",
         "type": "decoration",
       },
     ],
@@ -261,10 +288,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[\\" deco]",
         "type": "decoration",
       },
     ],
@@ -279,10 +308,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[# deco]",
         "type": "decoration",
       },
     ],
@@ -297,10 +328,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[% deco]",
         "type": "decoration",
       },
     ],
@@ -315,10 +348,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[& deco]",
         "type": "decoration",
       },
     ],
@@ -333,10 +368,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[' deco]",
         "type": "decoration",
       },
     ],
@@ -351,10 +388,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[( deco]",
         "type": "decoration",
       },
     ],
@@ -369,10 +408,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[) deco]",
         "type": "decoration",
       },
     ],
@@ -387,10 +428,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[+ deco]",
         "type": "decoration",
       },
     ],
@@ -405,10 +448,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[, deco]",
         "type": "decoration",
       },
     ],
@@ -423,10 +468,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[- deco]",
         "type": "decoration",
       },
     ],
@@ -441,10 +488,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[. deco]",
         "type": "decoration",
       },
     ],
@@ -459,10 +508,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[/ deco]",
         "type": "decoration",
       },
     ],
@@ -477,10 +528,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[{ deco]",
         "type": "decoration",
       },
     ],
@@ -495,10 +548,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[| deco]",
         "type": "decoration",
       },
     ],
@@ -513,10 +568,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[} deco]",
         "type": "decoration",
       },
     ],
@@ -531,10 +588,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[< deco]",
         "type": "decoration",
       },
     ],
@@ -549,10 +608,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[> deco]",
         "type": "decoration",
       },
     ],
@@ -567,10 +628,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[_ deco]",
         "type": "decoration",
       },
     ],
@@ -585,10 +648,12 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
+        "raw": "[~ deco]",
         "type": "decoration",
       },
     ],

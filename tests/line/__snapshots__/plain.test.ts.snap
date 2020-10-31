@@ -16,6 +16,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "Tail space ->  ",
         "text": "Tail space ->  ",
         "type": "plain",
       },
@@ -31,6 +32,7 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
+        "raw": "Plain text",
         "text": "Plain text",
         "type": "plain",
       },

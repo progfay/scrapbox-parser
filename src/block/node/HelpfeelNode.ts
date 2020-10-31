@@ -5,9 +5,10 @@ import type { NodeCreator } from './creator'
 
 const helpfeelRegExp = /^\? .+$/
 
-const createHelpfeelNode: NodeCreator<HelpfeelNode> = target => ({
+const createHelpfeelNode: NodeCreator<HelpfeelNode> = raw => ({
   type: 'helpfeel',
-  text: target.substring(2)
+  raw,
+  text: raw.substring(2)
 })
 
 export const HelpfeelNodeParser = createNodeParser(createHelpfeelNode, {
