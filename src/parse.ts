@@ -1,5 +1,5 @@
 import { convertToBlock } from './block'
-import { convertToBlockComponents } from './block/BlockComponent'
+import { parseToBlockComponents } from './block/BlockComponent'
 import { packBlockComponents } from './block/PackedBlockComponent'
 
 import type { Block } from './block'
@@ -12,7 +12,7 @@ export interface ParserOption {
 export type Page = Block[]
 
 export const parse = (input: string, { hasTitle = true }: Partial<ParserOption> = {}): Page => {
-  const blockComponents = convertToBlockComponents(input)
+  const blockComponents = parseToBlockComponents(input)
   const packedBlockComponents: PackedBlockComponent[] = packBlockComponents(blockComponents, {
     hasTitle
   })
