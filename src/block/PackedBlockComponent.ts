@@ -13,9 +13,9 @@ export type PackedBlockComponent =
 
 export const packBlockComponents = (
   blockComponents: BlockComponent[],
-  { hasTitle }: ParserOption
+  opts: ParserOption
 ): PackedBlockComponent[] => {
-  if (hasTitle) {
+  if (opts.hasTitle ?? true) {
     const [title, ...body] = blockComponents
     return [
       {

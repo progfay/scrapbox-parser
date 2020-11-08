@@ -6,15 +6,15 @@ import type { Block } from './block'
 import type { PackedBlockComponent } from './block/PackedBlockComponent'
 
 export interface ParserOption {
-  hasTitle: boolean
+  hasTitle?: boolean
 }
 
 export type Page = Block[]
 
-export const parse = (input: string, { hasTitle = true }: Partial<ParserOption> = {}): Page => {
+export const parse = (input: string, opts?: ParserOption): Page => {
   const blockComponents = parseToBlockComponents(input)
   const packedBlockComponents: PackedBlockComponent[] = packBlockComponents(blockComponents, {
-    hasTitle
+    hasTitle: opts?.hasTitle ?? true
   })
   return packedBlockComponents.map(convertToBlock)
 }

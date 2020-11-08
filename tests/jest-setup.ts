@@ -6,21 +6,18 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
     export interface Expect {
-      toMatchSnapshotWhenParsing: (
-        received: string,
-        option?: Partial<ParserOption>
-      ) => CustomMatcherResult
+      toMatchSnapshotWhenParsing: (received: string, opts?: ParserOption) => CustomMatcherResult
     }
 
     export interface Matchers<R> {
-      toMatchSnapshotWhenParsing: (option?: Partial<ParserOption>) => R
+      toMatchSnapshotWhenParsing: (opts?: ParserOption) => R
     }
   }
 }
 
 expect.extend({
-  toMatchSnapshotWhenParsing(this: any, received: string, option?: Partial<ParserOption>) {
-    const blocks = parse(received, option)
+  toMatchSnapshotWhenParsing(this: any, received: string, opts?: ParserOption) {
+    const blocks = parse(received, opts)
     return toMatchSnapshot.call(this, blocks, 'toMatchSnapshotWhenParsing')
   }
 })
