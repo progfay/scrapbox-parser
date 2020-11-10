@@ -7,28 +7,26 @@ import type { LinePack } from './Line'
 
 export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack
 
-const pack = (packing: Pack[], component: BlockComponent): Pack[] => {
-  if (packing.length > 0) {
-    const lastBlock = packing[packing.length - 1]
+const isChildBlockComponentOfPack = (pack: Pack, component: BlockComponent): boolean =>
+  (pack.type === 'codeBlock' || pack.type === 'table') &&
+  component.indent > pack.components[0].indent
 
-    if (
-      (lastBlock.type === 'codeBlock' || lastBlock.type === 'table') &&
-      component.indent > lastBlock.components[0].indent
-    ) {
-      lastBlock.components.push(component)
-      return packing
-    }
+const packing = (packs: Pack[], component: BlockComponent): Pack[] => {
+  if (packs.length > 0 && isChildBlockComponentOfPack(packs[packs.length - 1], component)) {
+    packs[packs.length - 1].components.push(component)
+    return packs
   }
 
-  const isCodeBlock = /^\s*code:(.+)$/.test(component.text)
-  const isTable = /^\s*table:(.+)$/.test(component.text)
-
-  packing.push({
-    type: isCodeBlock ? 'codeBlock' : isTable ? 'table' : 'line',
+  packs.push({
+    type: /^\s*code:(.+)$/.test(component.text)
+      ? 'codeBlock'
+      : /^\s*table:(.+)$/.test(component.text)
+      ? 'table'
+      : 'line',
     components: [component]
   })
 
-  return packing
+  return packs
 }
 
 export const packBlockComponents = (
@@ -46,5 +44,5 @@ export const packBlockComponents = (
     ]
   }
 
-  return blockComponents.reduce(pack, [])
+  return blockComponents.reduce(packing, [])
 }
