@@ -1,7 +1,6 @@
 import type { BlockComponent } from './BlockComponent'
-import type { PackedBlockComponent } from './PackedBlockComponent'
 
-export interface CodeBlockComponent {
+export interface CodeBlockPack {
   type: 'codeBlock'
   components: BlockComponent[]
 }
@@ -13,12 +12,8 @@ export interface CodeBlock {
   content: string
 }
 
-export const isCodeBlockComponent = (
-  packedBlockComponent: PackedBlockComponent
-): packedBlockComponent is CodeBlockComponent => packedBlockComponent.type === 'codeBlock'
-
-export const convertToCodeBlock = (blockComponent: CodeBlockComponent): CodeBlock => {
-  const { components } = blockComponent
+export const convertToCodeBlock = (pack: CodeBlockPack): CodeBlock => {
+  const { components } = pack
   const [head, ...body] = components
   const { indent, text } = head
   const fileName: string = text.replace(/^\s*code:/, '')

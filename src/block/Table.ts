@@ -1,10 +1,9 @@
 import { convertToNodes } from './node'
 
 import type { BlockComponent } from './BlockComponent'
-import type { PackedBlockComponent } from './PackedBlockComponent'
 import type { Node } from './node/type'
 
-export interface TableComponent {
+export interface TablePack {
   type: 'table'
   components: BlockComponent[]
 }
@@ -16,11 +15,8 @@ export interface Table {
   cells: Node[][][]
 }
 
-export const isTableComponent = (component: PackedBlockComponent): component is TableComponent =>
-  component.type === 'table'
-
-export const convertToTable = (tableComponent: TableComponent): Table => {
-  const { components } = tableComponent
+export const convertToTable = (pack: TablePack): Table => {
+  const { components } = pack
   const [head, ...body] = components
   const { indent, text } = head
   const fileName = text.replace(/^\s*table:/, '')
