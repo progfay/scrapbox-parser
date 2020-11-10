@@ -18,9 +18,9 @@ const packing = (packs: Pack[], component: BlockComponent): Pack[] => {
   }
 
   packs.push({
-    type: /^\s*code:(.+)$/.test(component.text)
+    type: /^\s*code:/.test(component.text)
       ? 'codeBlock'
-      : /^\s*table:(.+)$/.test(component.text)
+      : /^\s*table:/.test(component.text)
       ? 'table'
       : 'line',
     components: [component]
