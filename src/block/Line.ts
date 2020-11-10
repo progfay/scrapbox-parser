@@ -3,9 +3,9 @@ import { convertToNodes } from './node'
 import type { BlockComponent } from './BlockComponent'
 import type { Node } from './node/type'
 
-export interface LineComponent {
+export interface LinePack {
   type: 'line'
-  component: BlockComponent
+  components: [BlockComponent]
 }
 
 export interface Line {
@@ -14,8 +14,8 @@ export interface Line {
   nodes: Node[]
 }
 
-export const convertToLine = (lineComponent: LineComponent): Line => {
-  const { indent, text } = lineComponent.component
+export const convertToLine = (pack: LinePack): Line => {
+  const { indent, text } = pack.components[0]
   return {
     indent,
     type: 'line',

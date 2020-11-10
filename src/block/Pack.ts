@@ -1,20 +1,13 @@
 import type { ParserOption } from '../parse'
 import type { BlockComponent } from './BlockComponent'
-import type { TitleComponent } from './Title'
-import type { CodeBlockComponent } from './CodeBlock'
-import type { TableComponent } from './Table'
-import type { LineComponent } from './Line'
+import type { TitlePack } from './Title'
+import type { CodeBlockPack } from './CodeBlock'
+import type { TablePack } from './Table'
+import type { LinePack } from './Line'
 
-export type PackedBlockComponent =
-  | TitleComponent
-  | CodeBlockComponent
-  | TableComponent
-  | LineComponent
+export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack
 
-const pack = (
-  packing: PackedBlockComponent[],
-  component: BlockComponent
-): PackedBlockComponent[] => {
+const pack = (packing: Pack[], component: BlockComponent): Pack[] => {
   if (packing.length > 0) {
     const lastBlock = packing[packing.length - 1]
 
@@ -30,17 +23,10 @@ const pack = (
   const isCodeBlock = /^\s*code:(.+)$/.test(component.text)
   const isTable = /^\s*table:(.+)$/.test(component.text)
 
-  packing.push(
-    isCodeBlock || isTable
-      ? {
-          type: isCodeBlock ? 'codeBlock' : 'table',
-          components: [component]
-        }
-      : {
-          type: 'line',
-          component
-        }
-  )
+  packing.push({
+    type: isCodeBlock ? 'codeBlock' : isTable ? 'table' : 'line',
+    components: [component]
+  })
 
   return packing
 }
@@ -48,17 +34,17 @@ const pack = (
 export const packBlockComponents = (
   blockComponents: BlockComponent[],
   opts: ParserOption
-): PackedBlockComponent[] => {
+): Pack[] => {
   if (opts.hasTitle ?? true) {
     const [title, ...body] = blockComponents
     return [
       {
         type: 'title',
-        text: title.text
+        components: [title]
       },
       ...packBlockComponents(body, { hasTitle: false })
     ]
   }
 
-  return blockComponents.reduce<PackedBlockComponent[]>(pack, [])
+  return blockComponents.reduce(pack, [])
 }

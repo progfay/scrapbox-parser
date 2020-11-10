@@ -1,9 +1,9 @@
-import { isTitleComponent, convertToTitle } from './Title'
-import { isCodeBlockComponent, convertToCodeBlock } from './CodeBlock'
-import { isTableComponent, convertToTable } from './Table'
+import { convertToTitle } from './Title'
+import { convertToCodeBlock } from './CodeBlock'
+import { convertToTable } from './Table'
 import { convertToLine } from './Line'
 
-import type { PackedBlockComponent } from './PackedBlockComponent'
+import type { Pack } from './Pack'
 import type { Title } from './Title'
 import type { CodeBlock } from './CodeBlock'
 import type { Table } from './Table'
@@ -11,15 +11,18 @@ import type { Line } from './Line'
 
 export type Block = Title | CodeBlock | Table | Line
 
-export const convertToBlock = (packedBlockComponent: PackedBlockComponent): Block => {
-  if (isTitleComponent(packedBlockComponent)) {
-    return convertToTitle(packedBlockComponent)
+export const convertToBlock = (pack: Pack): Block => {
+  switch (pack.type) {
+    case 'title':
+      return convertToTitle(pack)
+
+    case 'codeBlock':
+      return convertToCodeBlock(pack)
+
+    case 'table':
+      return convertToTable(pack)
+
+    case 'line':
+      return convertToLine(pack)
   }
-  if (isCodeBlockComponent(packedBlockComponent)) {
-    return convertToCodeBlock(packedBlockComponent)
-  }
-  if (isTableComponent(packedBlockComponent)) {
-    return convertToTable(packedBlockComponent)
-  }
-  return convertToLine(packedBlockComponent)
 }
