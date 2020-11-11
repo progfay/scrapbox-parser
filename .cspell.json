@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": [
+      "decos",
+      "helpfeel",
+      "gyazo",
+      "coord",
+      "progfay",
+      "scrapbox",
+      "backquote",
+      "hoge",
+      "fuga",
+      "piyo",
+      "tsbuildinfo"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "tests/**/__snapshots__/**",
+    "coverage/**",
+    "esm/**",
+    "lib/**",
+    "umd/**",
+    "tests/page/input.txt",
+    "package.json",
+    "package-lock.json"
+  ]
+}
