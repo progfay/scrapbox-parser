@@ -5,8 +5,8 @@ import type { NodeCreator } from './creator'
 
 const srcFirstStrongImageRegExp = /\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i
 const linkFirstStrongImageRegExp = /\[https?:\/\/[^\s\]]+\s+https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?\]/i
-const srcFirststrongGyazoImageRegExp = /\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?(?:\s+https?:\/\/[^\s\]]+)?\]/
-const linkFirststrongGyazoImageRegExp = /\[https?:\/\/[^\s\]]+\s+https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?\]/
+const srcFirstStrongGyazoImageRegExp = /\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?(?:\s+https?:\/\/[^\s\]]+)?\]/
+const linkFirstStrongGyazoImageRegExp = /\[https?:\/\/[^\s\]]+\s+https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?\]/
 
 const isImageUrl = (text: string): boolean =>
   /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) || isGyazoImageUrl(text)
@@ -36,7 +36,7 @@ export const ImageNodeParser = createNodeParser(createImageNode, {
   patterns: [
     srcFirstStrongImageRegExp,
     linkFirstStrongImageRegExp,
-    srcFirststrongGyazoImageRegExp,
-    linkFirststrongGyazoImageRegExp
+    srcFirstStrongGyazoImageRegExp,
+    linkFirstStrongGyazoImageRegExp
   ]
 })
