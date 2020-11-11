@@ -22,6 +22,7 @@
     "lib/**",
     "umd/**",
     "tests/page/input.txt",
+    "cc-test-reporter",
     "package.json",
     "package-lock.json"
   ]
