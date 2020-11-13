@@ -1,5 +1,5 @@
 import type { ParserOption } from '../parse'
-import type { BlockComponent } from './BlockComponent'
+import type { Row } from './Row'
 import type { TitlePack } from './Title'
 import type { CodeBlockPack } from './CodeBlock'
 import type { TablePack } from './Table'
@@ -7,42 +7,34 @@ import type { LinePack } from './Line'
 
 export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack
 
-const isChildBlockComponentOfPack = (pack: Pack, component: BlockComponent): boolean =>
-  (pack.type === 'codeBlock' || pack.type === 'table') &&
-  component.indent > pack.components[0].indent
+const isChildRowOfPack = (pack: Pack, row: Row): boolean =>
+  (pack.type === 'codeBlock' || pack.type === 'table') && row.indent > pack.rows[0].indent
 
-const packing = (packs: Pack[], component: BlockComponent): Pack[] => {
-  if (packs.length > 0 && isChildBlockComponentOfPack(packs[packs.length - 1], component)) {
-    packs[packs.length - 1].components.push(component)
+const packing = (packs: Pack[], row: Row): Pack[] => {
+  if (packs.length > 0 && isChildRowOfPack(packs[packs.length - 1], row)) {
+    packs[packs.length - 1].rows.push(row)
     return packs
   }
 
   packs.push({
-    type: /^\s*code:/.test(component.text)
-      ? 'codeBlock'
-      : /^\s*table:/.test(component.text)
-      ? 'table'
-      : 'line',
-    components: [component]
+    type: /^\s*code:/.test(row.text) ? 'codeBlock' : /^\s*table:/.test(row.text) ? 'table' : 'line',
+    rows: [row]
   })
 
   return packs
 }
 
-export const packBlockComponents = (
-  blockComponents: BlockComponent[],
-  opts: ParserOption
-): Pack[] => {
+export const packRows = (rows: Row[], opts: ParserOption): Pack[] => {
   if (opts.hasTitle ?? true) {
-    const [title, ...body] = blockComponents
+    const [title, ...body] = rows
     return [
       {
         type: 'title',
-        components: [title]
+        rows: [title]
       },
-      ...packBlockComponents(body, { hasTitle: false })
+      ...packRows(body, { hasTitle: false })
     ]
   }
 
-  return blockComponents.reduce(packing, [])
+  return rows.reduce(packing, [])
 }

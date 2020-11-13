@@ -1,11 +1,11 @@
 import { convertToNodes } from './node'
 
-import type { BlockComponent } from './BlockComponent'
+import type { Row } from './Row'
 import type { Node } from './node/type'
 
 export interface LinePack {
   type: 'line'
-  components: [BlockComponent]
+  rows: [Row]
 }
 
 export interface Line {
@@ -15,7 +15,7 @@ export interface Line {
 }
 
 export const convertToLine = (pack: LinePack): Line => {
-  const { indent, text } = pack.components[0]
+  const { indent, text } = pack.rows[0]
   return {
     indent,
     type: 'line',

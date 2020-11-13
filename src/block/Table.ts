@@ -1,11 +1,11 @@
 import { convertToNodes } from './node'
 
-import type { BlockComponent } from './BlockComponent'
+import type { Row } from './Row'
 import type { Node } from './node/type'
 
 export interface TablePack {
   type: 'table'
-  components: BlockComponent[]
+  rows: Row[]
 }
 
 export interface Table {
@@ -16,8 +16,9 @@ export interface Table {
 }
 
 export const convertToTable = (pack: TablePack): Table => {
-  const { components } = pack
-  const [head, ...body] = components
+  const {
+    rows: [head, ...body]
+  } = pack
   const { indent, text } = head
   const fileName = text.replace(/^\s*table:/, '')
 
@@ -26,7 +27,7 @@ export const convertToTable = (pack: TablePack): Table => {
     type: 'table',
     fileName,
     cells: body
-      .map((blockComponent: BlockComponent): string => blockComponent.text.substring(indent + 1))
+      .map((row: Row): string => row.text.substring(indent + 1))
       .map((text: string): Node[][] =>
         text
           .split('\t')
