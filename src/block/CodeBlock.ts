@@ -1,8 +1,8 @@
-import type { BlockComponent } from './BlockComponent'
+import type { Row } from './Row'
 
 export interface CodeBlockPack {
   type: 'codeBlock'
-  components: BlockComponent[]
+  rows: Row[]
 }
 
 export interface CodeBlock {
@@ -13,8 +13,9 @@ export interface CodeBlock {
 }
 
 export const convertToCodeBlock = (pack: CodeBlockPack): CodeBlock => {
-  const { components } = pack
-  const [head, ...body] = components
+  const {
+    rows: [head, ...body]
+  } = pack
   const { indent, text } = head
   const fileName: string = text.replace(/^\s*code:/, '')
 
@@ -22,8 +23,6 @@ export const convertToCodeBlock = (pack: CodeBlockPack): CodeBlock => {
     indent,
     type: 'codeBlock',
     fileName,
-    content: body
-      .map((component: BlockComponent): string => component.text.substring(indent + 1))
-      .join('\n')
+    content: body.map((row: Row): string => row.text.substring(indent + 1)).join('\n')
   }
 }

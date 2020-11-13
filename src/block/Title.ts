@@ -1,8 +1,8 @@
-import { BlockComponent } from './BlockComponent'
+import type { Row } from './Row'
 
 export interface TitlePack {
   type: 'title'
-  components: [BlockComponent]
+  rows: [Row]
 }
 
 export interface Title {
@@ -13,6 +13,6 @@ export interface Title {
 export const convertToTitle = (pack: TitlePack): Title => {
   return {
     type: 'title',
-    text: pack.components[0].text
+    text: pack.rows[0].text
   }
 }
