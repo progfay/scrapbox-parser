@@ -59,6 +59,59 @@ Array [
 ]
 `;
 
+exports[`decoration Decoration with many [ and link: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "raw": "[! ",
+        "text": "[! ",
+        "type": "plain",
+      },
+      Object {
+        "nodes": Array [
+          Object {
+            "raw": "[[[[a",
+            "text": "[[[[a",
+            "type": "plain",
+          },
+        ],
+        "raw": "[[[[[[a]]",
+        "type": "strong",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Decoration with many [: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "!",
+        ],
+        "nodes": Array [
+          Object {
+            "raw": "[[[[[[a",
+            "text": "[[[[[[a",
+            "type": "plain",
+          },
+        ],
+        "raw": "[! [[[[[[a]",
+        "rawDecos": "!",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`decoration Simple decoration: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
