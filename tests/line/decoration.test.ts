@@ -73,4 +73,12 @@ describe('decoration', () => {
       hasTitle: false
     })
   })
+
+  it('Decoration with many [', () => {
+    expect('[! [[[[[[a]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
+
+  it('Decoration with many [ and link', () => {
+    expect('[! [[[[[[a]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
 })
