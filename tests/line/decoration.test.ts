@@ -81,4 +81,16 @@ describe('decoration', () => {
   it('Decoration with many [ and link', () => {
     expect('[! [[[[[[a]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
+
+  it("Decoration with strong notation (it's just link)", () => {
+    expect('[* [[link]]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
+
+  it("Decoration with strong icon notation (it's just icon, not strong)", () => {
+    expect('[* [[progfay.icon]]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
+
+  it("Decoration with strong image notation (it's just image, not strong)", () => {
+    expect('[* [[https://example.com/image.png]]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
 })

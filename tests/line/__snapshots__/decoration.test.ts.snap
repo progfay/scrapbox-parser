@@ -118,6 +118,119 @@ Array [
 ]
 `;
 
+exports[`decoration Decoration with strong icon notation (it's just icon, not strong): toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "progfay.icon",
+            "pathType": "relative",
+            "raw": "[progfay.icon]",
+            "type": "link",
+          },
+        ],
+        "raw": "[* [[progfay.icon]]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+      Object {
+        "raw": "]",
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Decoration with strong image notation (it's just image, not strong): toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "link": "",
+            "raw": "[https://example.com/image.png]",
+            "src": "https://example.com/image.png",
+            "type": "image",
+          },
+        ],
+        "raw": "[* [[https://example.com/image.png]]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+      Object {
+        "raw": "]",
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Decoration with strong notation (it's just link): toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "link",
+            "pathType": "relative",
+            "raw": "[link]",
+            "type": "link",
+          },
+        ],
+        "raw": "[* [[link]]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+      Object {
+        "raw": "]",
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`decoration Simple decoration: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
