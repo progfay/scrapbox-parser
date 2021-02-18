@@ -65,20 +65,26 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
-        "raw": "[! ",
-        "text": "[! ",
-        "type": "plain",
-      },
-      Object {
+        "decos": Array [
+          "!",
+        ],
         "nodes": Array [
           Object {
-            "raw": "[[[[a",
-            "text": "[[[[a",
+            "raw": "[[[[[",
+            "text": "[[[[[",
             "type": "plain",
           },
+          Object {
+            "content": "",
+            "href": "a",
+            "pathType": "relative",
+            "raw": "[a]",
+            "type": "link",
+          },
         ],
-        "raw": "[[[[[[a]]",
-        "type": "strong",
+        "raw": "[! [[[[[[a]]",
+        "rawDecos": "!",
+        "type": "decoration",
       },
     ],
     "type": "line",
