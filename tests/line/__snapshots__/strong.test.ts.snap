@@ -15,6 +15,37 @@ Array [
 ]
 `;
 
+exports[`strong Decoration in Strong notation: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "text": "[[",
+        "type": "plain",
+      },
+      Object {
+        "decos": Array [
+          "!",
+        ],
+        "nodes": Array [
+          Object {
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "type": "decoration",
+      },
+      Object {
+        "text": "]]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`strong Simple strong: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
