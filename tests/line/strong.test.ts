@@ -6,4 +6,8 @@ describe('strong', () => {
   it('[[]] is not strong', () => {
     expect('[[]]').toMatchSnapshotWhenParsing({ hasTitle: false })
   })
+
+  it('Decoration in Strong notation', () => {
+    expect('[[[! deco]]]').toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
 })
