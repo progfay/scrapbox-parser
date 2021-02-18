@@ -3,9 +3,9 @@ import { createNodeParser } from './creator'
 import type { LinkNode } from './type'
 import type { NodeCreator } from './creator'
 
-const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\]/
-const contentFirstUrlRegExp = /\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
-const httpRegExp = /(?<=^| )https?:\/\/[^\s\]]+/
+const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^[\]]*[^\s])?\]/
+const contentFirstUrlRegExp = /\[[^[\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
+const httpRegExp = /(?<=^| )https?:\/\/[^[\s\]]+/
 
 const createExternalLinkNode: NodeCreator<LinkNode> = target => {
   if (target.startsWith('[') && target.endsWith(']')) {
