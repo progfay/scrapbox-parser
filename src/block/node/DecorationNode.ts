@@ -4,7 +4,7 @@ import { convertToNodes } from '.'
 import type { DecorationNode } from './type'
 import type { NodeCreator } from './creator'
 
-const decorationRegExp = /\[[!"#%&'()*+,-./{|}<>_~]+ (?:\[[^[\]]+\]|[^\]])+\]/
+const decorationRegExp = /\[[!"#%&'()*+,\-./{|}<>_~]+ (?:\[[^[\]]+\]|[^\]])+\]/
 
 type DecorationChar =
   | '*'
