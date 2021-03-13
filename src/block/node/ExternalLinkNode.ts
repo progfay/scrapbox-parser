@@ -11,7 +11,7 @@ const createExternalLinkNode: NodeCreator<LinkNode> = raw => {
 
   const isHrefFirst = /^https?:\/\/[^\s\]]/.test(inner)
   const match = (isHrefFirst ? /^https?:\/\/[^\s\]]+/ : /https?:\/\/[^\s\]]+$/).exec(inner)
-  if (match === null || match[0] === undefined) return []
+  if (match?.[0] === undefined) return []
 
   const content = isHrefFirst
     ? inner.substring(match[0].length)
