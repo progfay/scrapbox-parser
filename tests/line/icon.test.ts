@@ -21,11 +21,12 @@ describe('icon', () => {
 
   it('Each multiple icon must be different Object', () => {
     const [block] = parse('[me.icon*2]', { hasTitle: false })
-    if (block.type !== 'line') {
+
+    if (block === undefined || block.type !== 'line') {
       throw new Error('fail')
     }
 
-    const [icon1, icon2] = block.nodes
-    expect(icon1 === icon2).toBe(false)
+    expect(block.nodes.length).toBe(2)
+    expect(block.nodes[0]).not.toBe(block.nodes[1])
   })
 })

@@ -6,7 +6,7 @@ import type { NodeCreator } from './creator'
 const commandLineRegExp = /^[$%] .+$/
 
 const createCommandLineNode: NodeCreator<CommandLineNode> = (raw: string) => {
-  const symbol = raw[0]
+  const symbol = raw[0] ?? ''
   const text = raw.substring(2)
 
   return {
