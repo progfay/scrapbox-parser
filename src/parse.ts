@@ -18,5 +18,5 @@ export const parse = (input: string, opts?: ParserOption): Page => {
 
 export const getTitle = (input: string): string => {
   const match = /^\s*\S.*\s*$/m.exec(input)
-  return match !== null ? match[0].trim() : 'Untitled'
+  return match?.[0]?.trim() ?? 'Untitled'
 }

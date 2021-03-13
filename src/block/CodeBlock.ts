@@ -16,7 +16,7 @@ export const convertToCodeBlock = (pack: CodeBlockPack): CodeBlock => {
   const {
     rows: [head, ...body]
   } = pack
-  const { indent, text } = head
+  const { indent = 0, text = '' } = head ?? {}
   const fileName: string = text.replace(/^\s*code:/, '')
 
   return {

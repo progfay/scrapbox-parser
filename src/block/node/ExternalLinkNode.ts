@@ -1,7 +1,6 @@
-import { createNodeParser } from './creator'
-
-import type { LinkNode } from './type'
 import type { NodeCreator } from './creator'
+import { createNodeParser } from './creator'
+import type { LinkNode } from './type'
 
 const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^[\]]*[^\s])?\]/
 const contentFirstUrlRegExp = /\[[^[\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
@@ -16,13 +15,15 @@ const createExternalLinkNode: NodeCreator<LinkNode> = raw => {
     return []
   }
 
-  const c = isHrefFirst ? inner.substring(match[0].length) : inner.substring(0, match.index - 1)
+  const c = isHrefFirst
+    ? inner.substring(match[0]?.length ?? 0)
+    : inner.substring(0, match.index - 1)
 
   return {
     type: 'link',
     raw,
     pathType: 'absolute',
-    href: match[0],
+    href: match[0] ?? '',
     content: c.trim()
   }
 }

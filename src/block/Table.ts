@@ -19,7 +19,7 @@ export const convertToTable = (pack: TablePack): Table => {
   const {
     rows: [head, ...body]
   } = pack
-  const { indent, text } = head
+  const { indent = 0, text = '' } = head ?? {}
   const fileName = text.replace(/^\s*table:/, '')
 
   return {

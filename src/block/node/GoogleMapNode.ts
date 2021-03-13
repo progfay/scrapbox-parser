@@ -13,7 +13,7 @@ interface Coordinate {
 }
 
 const parseCoordinate: (format: string) => Coordinate = format => {
-  const [lat, lng, z] = format.split(',')
+  const [lat = '', lng = '', z = ''] = format.split(',')
   const latitude = parseFloat(lat.replace(/^N/, '').replace(/^S/, '-'))
   const longitude = parseFloat(lng.replace(/^E/, '').replace(/^W/, '-'))
   const zoom = /^Z\d+$/.test(z) ? parseInt(z.replace(/^Z/, ''), 10) : 14
@@ -25,7 +25,7 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode> = raw => {
   if (match === null) return []
 
   const isCoordFirst = raw.startsWith('[N') || raw.startsWith('[S')
-  const [, coord, place = ''] = isCoordFirst ? match : [match[0], match[2], match[1]]
+  const [, coord = '', place = ''] = isCoordFirst ? match : [match[0], match[2], match[1]]
   const { latitude, longitude, zoom } = parseCoordinate(coord)
 
   const url =
