@@ -48,7 +48,7 @@
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
     "babel-loader": "8.2.2",
-    "cspell": "5.3.8",
+    "cspell": "5.3.9",
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-config-prettier-standard": "4.0.1",
