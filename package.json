@@ -49,7 +49,7 @@
     "@typescript-eslint/parser": "4.21.0",
     "babel-loader": "8.2.2",
     "cspell": "5.3.12",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-config-prettier-standard": "4.0.1",
     "eslint-config-standard": "16.0.2",
