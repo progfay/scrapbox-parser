@@ -4,13 +4,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'standard',
-    'standard-with-typescript',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react'
-  ],
+  extends: ['prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
