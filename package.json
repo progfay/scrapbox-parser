@@ -20,7 +20,8 @@
     "clean": "rimraf lib esm umd .cjs.tsbuildinfo .esm.tsbuildinfo",
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot --no-cache",
-    "lint": "npm run lint:eslint && npm run lint:cspell",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:cspell",
+		"lint:prettier": "prettier --check .",
     "lint:eslint": "eslint -c ./.eslintrc.js .",
     "lint:cspell": "cspell --no-summary '**/*'",
     "format": "prettier --write . && eslint --fix -c ./.eslintrc.js ."
