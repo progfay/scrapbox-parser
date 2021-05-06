@@ -1,6 +1,6 @@
 {
   "name": "@progfay/scrapbox-parser",
-  "version": "7.0.2",
+  "version": "7.1.0",
   "description": "parse Scrapbox notation to JavaScript Object",
   "files": [
     "lib",
@@ -21,7 +21,7 @@
     "test": "jest --coverage",
     "test:update": "jest --updateSnapshot --no-cache",
     "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:cspell",
-		"lint:prettier": "prettier --check .",
+    "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint -c ./.eslintrc.js .",
     "lint:cspell": "cspell --no-summary '**/*'",
     "format": "prettier --write . && eslint --fix -c ./.eslintrc.js ."
