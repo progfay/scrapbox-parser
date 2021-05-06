@@ -2,9 +2,10 @@ import type { NodeCreator } from './creator'
 import { createNodeParser } from './creator'
 import type { LinkNode } from './type'
 
-const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+(?:\s+[^[\]]*[^\s])?\]/
+const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+\s+[^\]]*[^\s]\]/
 const contentFirstUrlRegExp = /\[[^[\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/
-const httpRegExp = /(?<=^| )https?:\/\/[^[\s\]]+/
+const bracketedUrlRegExp = /\[https?:\/\/[^\s\]]+\]/
+const httpRegExp = /https?:\/\/[^\s]+/
 
 const createExternalLinkNode: NodeCreator<LinkNode> = raw => {
   const inner = raw.startsWith('[') && raw.endsWith(']') ? raw.substring(1, raw.length - 1) : raw
@@ -29,5 +30,5 @@ const createExternalLinkNode: NodeCreator<LinkNode> = raw => {
 export const ExternalLinkNodeParser = createNodeParser(createExternalLinkNode, {
   parseOnNested: true,
   parseOnQuoted: true,
-  patterns: [hrefFirstUrlRegExp, contentFirstUrlRegExp, httpRegExp]
+  patterns: [hrefFirstUrlRegExp, contentFirstUrlRegExp, bracketedUrlRegExp, httpRegExp]
 })

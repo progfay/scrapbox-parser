@@ -117,9 +117,16 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
-        "raw": "ahttps://example.com/",
-        "text": "ahttps://example.com/",
+        "raw": "a",
+        "text": "a",
         "type": "plain",
+      },
+      Object {
+        "content": "",
+        "href": "https://example.com/",
+        "pathType": "absolute",
+        "raw": "https://example.com/",
+        "type": "link",
       },
     ],
     "type": "line",
