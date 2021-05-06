@@ -5,6 +5,12 @@ describe('link', () => {
     })
   })
 
+  it('Simple absolute link with ahead non-space character', () => {
+    expect('ahttps://example.com/').toMatchSnapshotWhenParsing({
+      hasTitle: false
+    })
+  })
+
   it('Simple absolute link with bracket', () => {
     expect('[https://example.com/]').toMatchSnapshotWhenParsing({
       hasTitle: false

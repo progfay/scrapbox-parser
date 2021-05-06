@@ -111,6 +111,22 @@ Array [
 ]
 `;
 
+exports[`link Simple absolute link with ahead non-space character: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "raw": "ahttps://example.com/",
+        "text": "ahttps://example.com/",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`link Simple absolute link with bracket: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
