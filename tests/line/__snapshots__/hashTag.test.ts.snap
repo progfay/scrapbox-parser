@@ -6,8 +6,13 @@ Array [
     "indent": 0,
     "nodes": Array [
       Object {
-        "raw": "This is a ",
-        "text": "This is a ",
+        "raw": "This is a",
+        "text": "This is a",
+        "type": "plain",
+      },
+      Object {
+        "raw": " ",
+        "text": " ",
         "type": "plain",
       },
       Object {
