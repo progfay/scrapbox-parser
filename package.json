@@ -11,6 +11,12 @@
   "module": "./esm/index.js",
   "types": "./lib/index.d.ts",
   "unpkg": "./umd/scrapbox-parser.js",
+  "exports": {
+    "import": "./esm/index.js",
+    "require": "./lib/index.js",
+    "node": "./esm/index.js",
+    "default": "./lib/index.js"
+  },
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
