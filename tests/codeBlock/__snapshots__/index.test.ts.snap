@@ -10,6 +10,7 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 1,
+    "lang": "js",
     "type": "codeBlock",
   },
 ]
@@ -36,6 +37,7 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 1,
+    "lang": "js",
     "type": "codeBlock",
   },
   Object {
@@ -62,6 +64,7 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 0,
+    "lang": "js",
     "type": "codeBlock",
   },
   Object {
@@ -72,6 +75,7 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 0,
+    "lang": "js",
     "type": "codeBlock",
   },
 ]
@@ -87,6 +91,23 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 0,
+    "lang": "js",
+    "type": "codeBlock",
+  },
+]
+`;
+
+exports[`Code Block Code block with parentheses: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "content": "export default function () {
+  alert(document.location.href)
+  console.log(\\"hello\\")
+  // You can also write comments!
+}",
+    "fileName": "hello.mjs",
+    "indent": 0,
+    "lang": "js",
     "type": "codeBlock",
   },
 ]

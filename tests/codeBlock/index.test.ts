@@ -42,4 +42,13 @@ code:hello.js
    // You can also write comments!
  }`).toMatchSnapshotWhenParsing({ hasTitle: false })
   })
+
+  it('Code block with parentheses', () => {
+    expect(`code:hello.mjs(js)
+ export default function () {
+   alert(document.location.href)
+   console.log("hello")
+   // You can also write comments!
+ }`).toMatchSnapshotWhenParsing({ hasTitle: false })
+  })
 })

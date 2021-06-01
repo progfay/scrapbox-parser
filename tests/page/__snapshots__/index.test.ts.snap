@@ -946,6 +946,7 @@ Array [
 }",
     "fileName": "hello.js",
     "indent": 1,
+    "lang": "js",
     "type": "codeBlock",
   },
   Object {
