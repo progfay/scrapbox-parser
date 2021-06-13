@@ -1,11 +1,12 @@
 module.exports = {
-  mode: 'production',
-  entry: './src/index.ts',
+  mode: "production",
+  entry: "./src/index.ts",
   output: {
-    path: require('path').resolve(__dirname, 'umd'),
-    filename: 'scrapbox-parser.js',
-    library: 'ScrapboxParser',
-    libraryTarget: 'umd'
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    path: require("path").resolve(__dirname, "umd"),
+    filename: "scrapbox-parser.js",
+    library: "ScrapboxParser",
+    libraryTarget: "umd",
   },
   module: {
     rules: [
@@ -14,22 +15,22 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env']
-            }
+              presets: ["@babel/preset-env"],
+            },
           },
           {
-            loader: 'ts-loader',
+            loader: "ts-loader",
             options: {
-              configFile: 'tsconfig.umd.json'
-            }
-          }
-        ]
-      }
-    ]
+              configFile: "tsconfig.umd.json",
+            },
+          },
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts']
-  }
-}
+    extensions: [".ts"],
+  },
+};

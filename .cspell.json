@@ -21,6 +21,7 @@
     "esm/**",
     "lib/**",
     "umd/**",
+    "*.tsbuildinfo",
     "tests/page/input.txt",
     "cc-test-reporter",
     "package.json",
