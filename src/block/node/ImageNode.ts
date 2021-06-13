@@ -1,34 +1,41 @@
-import { createNodeParser } from './creator'
+import { createNodeParser } from "./creator";
 
-import type { ImageNode } from './type'
-import type { NodeCreator } from './creator'
+import type { ImageNode } from "./type";
+import type { NodeCreator } from "./creator";
 
-const srcFirstStrongImageRegExp = /\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i
-const linkFirstStrongImageRegExp = /\[https?:\/\/[^\s\]]+\s+https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?\]/i
-const srcFirstStrongGyazoImageRegExp = /\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?(?:\s+https?:\/\/[^\s\]]+)?\]/
-const linkFirstStrongGyazoImageRegExp = /\[https?:\/\/[^\s\]]+\s+https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?\]/
+const srcFirstStrongImageRegExp =
+  /\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i;
+const linkFirstStrongImageRegExp =
+  /\[https?:\/\/[^\s\]]+\s+https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?\]/i;
+const srcFirstStrongGyazoImageRegExp =
+  /\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?(?:\s+https?:\/\/[^\s\]]+)?\]/;
+const linkFirstStrongGyazoImageRegExp =
+  /\[https?:\/\/[^\s\]]+\s+https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?\]/;
 
 const isImageUrl = (text: string): boolean =>
-  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) || isGyazoImageUrl(text)
+  /^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) ||
+  isGyazoImageUrl(text);
 
 const isGyazoImageUrl = (text: string): boolean =>
-  /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text)
+  /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text);
 
-const createImageNode: NodeCreator<ImageNode> = raw => {
-  const index = raw.search(/\s/)
-  const first = index !== -1 ? raw.substring(1, index) : raw.substring(1, raw.length - 1)
-  const second = index !== -1 ? raw.substring(index, raw.length - 1).trimLeft() : ''
-  const [src, link] = isImageUrl(second) ? [second, first] : [first, second]
+const createImageNode: NodeCreator<ImageNode> = (raw) => {
+  const index = raw.search(/\s/);
+  const first =
+    index !== -1 ? raw.substring(1, index) : raw.substring(1, raw.length - 1);
+  const second =
+    index !== -1 ? raw.substring(index, raw.length - 1).trimLeft() : "";
+  const [src, link] = isImageUrl(second) ? [second, first] : [first, second];
 
   return {
-    type: 'image',
+    type: "image",
     raw,
     src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
       ? `${src}/thumb/1000`
       : src,
-    link
-  }
-}
+    link,
+  };
+};
 
 export const ImageNodeParser = createNodeParser(createImageNode, {
   parseOnNested: true,
@@ -37,6 +44,6 @@ export const ImageNodeParser = createNodeParser(createImageNode, {
     srcFirstStrongImageRegExp,
     linkFirstStrongImageRegExp,
     srcFirstStrongGyazoImageRegExp,
-    linkFirstStrongGyazoImageRegExp
-  ]
-})
+    linkFirstStrongGyazoImageRegExp,
+  ],
+});
