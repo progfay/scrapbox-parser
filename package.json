@@ -30,6 +30,7 @@
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint -c ./.eslintrc.js .",
     "lint:cspell": "cspell --no-summary '**/*'",
+    "lint:typescript": "tsc -p ./tsconfig.eslint.json",
     "format": "run-s format:prettier format:eslint",
     "format:prettier": "prettier --write .",
     "format:eslint": "eslint --fix -c ./.eslintrc.js ."

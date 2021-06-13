@@ -1,5 +1,5 @@
-import { parse, ParserOption } from "../src";
 import { toMatchSnapshot } from "jest-snapshot";
+import { parse, ParserOption } from "../src";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare global {
@@ -20,7 +20,8 @@ declare global {
 
 expect.extend({
   toMatchSnapshotWhenParsing(
-    this: unknown,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    this: any,
     received: string,
     opts?: ParserOption
   ) {
