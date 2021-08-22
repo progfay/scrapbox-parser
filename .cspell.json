@@ -11,8 +11,13 @@
       "backquote",
       "hoge",
       "fuga",
+      "hogehoge",
+      "hogefuga",
+      "fugafuga",
       "piyo",
-      "tsbuildinfo"
+      "tsbuildinfo",
+      "youtube",
+      "youtu"
   ],
   "ignorePaths": [
     "node_modules/**",
