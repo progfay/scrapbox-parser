@@ -15,6 +15,7 @@ import { InternalLinkNodeParser } from "./InternalLinkNode";
 import { IconNodeParser } from "./IconNode";
 import { HashTagNodeParser } from "./HashTagNode";
 import { PlainNodeParser } from "./PlainNode";
+import { YoutubeNodeParser } from "./YoutubeNode";
 
 import type { Node } from "./type";
 
@@ -59,6 +60,7 @@ export const convertToNodes = combineNodeParsers(
   StrongImageNodeParser,
   StrongIconNodeParser,
   StrongNodeParser,
+  YoutubeNodeParser,
   ImageNodeParser,
   ExternalLinkNodeParser,
   IconNodeParser,

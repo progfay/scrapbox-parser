@@ -64,6 +64,14 @@ export interface ImageNode extends BaseNode {
   link: string;
 }
 
+export interface YoutubeNode extends BaseNode {
+  type: "youtube";
+  src: string;
+  videoId?: string;
+  listId?: string;
+  params: Record<string, string>;
+}
+
 export interface LinkNode extends BaseNode {
   type: "link";
   pathType: "absolute" | "root" | "relative";
@@ -108,6 +116,7 @@ export type Node =
   | CommandLineNode
   | BlankNode
   | ImageNode
+  | YoutubeNode
   | LinkNode
   | GoogleMapNode
   | IconNode

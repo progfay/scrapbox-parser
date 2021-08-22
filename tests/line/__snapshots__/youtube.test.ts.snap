@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`youtube Youtube URL: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "params": Object {
+          "v": "Sv3xVOs7_No",
+        },
+        "raw": "[https://youtube.com/watch?v=Sv3xVOs7_No]",
+        "src": "https://youtube.com/watch?v=Sv3xVOs7_No",
+        "type": "youtube",
+        "videoId": "Sv3xVOs7_No",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`youtube Youtube short URL: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "params": Object {},
+        "raw": "[https://youtu.be/Sv3xVOs7_No]",
+        "src": "https://youtu.be/Sv3xVOs7_No",
+        "type": "youtube",
+        "videoId": "Sv3xVOs7_No",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`youtube Youtube watch list URL: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "listId": "PLmoRDY8IgE2OTDG7rVwVLd-szijCAZyZC",
+        "params": Object {
+          "list": "PLmoRDY8IgE2OTDG7rVwVLd-szijCAZyZC",
+        },
+        "raw": "[https://www.youtube.com/playlist?list=PLmoRDY8IgE2OTDG7rVwVLd-szijCAZyZC]",
+        "src": "https://www.youtube.com/playlist?list=PLmoRDY8IgE2OTDG7rVwVLd-szijCAZyZC",
+        "type": "youtube",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
