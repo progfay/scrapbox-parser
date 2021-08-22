@@ -1,8 +1,8 @@
-import { createNodeParser } from "./creator";
-import { parseParams } from "../../utils/parseParams";
+import {createNodeParser} from "./creator";
+import {parseParams} from "../../utils/parseParams";
 
-import type { YoutubeNode } from "./type";
-import type { NodeCreator } from "./creator";
+import type {YoutubeNode} from "./type";
+import type {NodeCreator} from "./creator";
 
 const youtubeUrlRegExp =
   /\[(https?:\/\/(?:www\.|)youtube\.com\/watch\?((?:[^\s]+&|)v=([a-zA-Z\d_-]+)(?:&[^\s]+|)))\]/;
@@ -12,43 +12,33 @@ const youtubeListUrlRegExp =
   /\[(https?:\/\/(?:www\.|)youtube\.com\/playlist\?((?:[^\s]+&|)list=([a-zA-Z\d_-]+)(?:&[^\s]+|)))\]/;
 
 const createYoutubeNode: NodeCreator<YoutubeNode> = (raw) => {
+  let src = "", params = "", videoId: string | undefined = undefined, listId: string | undefined = undefined;
   let match = raw.match(youtubeUrlRegExp);
   if (match !== null) {
-    const [, src, params, videoId] = match;
+    [, src = "", params = "", videoId] = match;
+  } else {
 
-    return {
-      type: "youtube",
-      raw,
-      src: src ?? "",
-      videoId,
-      params: parseParams(params ?? ""),
-    };
-  }
-  match = raw.match(youtubeShortUrlRegExp);
-  if (match !== null) {
-    const [, src, videoId, params] = match;
+    match = raw.match(youtubeShortUrlRegExp);
+    if (match !== null) {
+      [, src = "", videoId, params = ""] = match;
+    } else {
 
-    return {
-      type: "youtube",
-      raw,
-      src: src ?? "",
-      videoId,
-      params: parseParams(params ?? ""),
-    };
+      match = raw.match(youtubeListUrlRegExp) as RegExpMatchArray;
+      [, src = "", params = "", listId] = match;
+    }
   }
-  match = raw.match(youtubeListUrlRegExp) as RegExpMatchArray;
-  const [, src, params, listId] = match;
 
   return {
     type: "youtube",
     raw,
-    src: src ?? "",
+    src,
+    videoId,
     listId,
     params: parseParams(params ?? ""),
   };
-};
+}
 
-export const YoutubeNodeParser = createNodeParser(createYoutubeNode, {
+export const YoutubeNodeNodeParser = createNodeParser(createYoutubeNode, {
   parseOnNested: true,
   parseOnQuoted: true,
   patterns: [youtubeUrlRegExp, youtubeShortUrlRegExp, youtubeListUrlRegExp],
