@@ -45,6 +45,13 @@ ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c`).toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 
+  it("Table with hashTag", () => {
+    expect(`table:table with hashTag
+${"\t"}#tag${"\t"}This is #tag`).toMatchSnapshotWhenParsing({
+      hasTitle: false,
+    });
+  });
+
   it("Table with link", () => {
     expect(`table:table with link
 ${"\t"}[Link]${"\t"}This is [Link]`).toMatchSnapshotWhenParsing({
