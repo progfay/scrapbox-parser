@@ -70,9 +70,9 @@ Array [
         ],
         "nodes": Array [
           Object {
+            "href": "tag",
             "raw": "#tag",
-            "text": "#tag",
-            "type": "plain",
+            "type": "hashTag",
           },
         ],
         "raw": "[* #tag]",

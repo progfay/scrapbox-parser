@@ -32,7 +32,7 @@ const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw) => {
 };
 
 export const HashTagNodeParser = createNodeParser(createHashTagNode, {
-  parseOnNested: false,
+  parseOnNested: true,
   parseOnQuoted: true,
   patterns: [hashTagRegExp],
 });
