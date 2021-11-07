@@ -1,7 +1,6 @@
+import type { NodeCreator } from "./creator";
 import { createNodeParser } from "./creator";
-
 import type { LinkNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
 
 const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+\s+[^\]]*[^\s]\]/;
 const contentFirstUrlRegExp = /\[[^[\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/;
@@ -33,7 +32,7 @@ const createExternalLinkNode: NodeCreator<LinkNode> = (raw) => {
   };
 };
 
-export const externalLinkNodeParserCreatorOption: NodeParserCreatorOption = {
+export const ExternalLinkNodeParser = createNodeParser(createExternalLinkNode, {
   parseOnNested: true,
   parseOnQuoted: true,
   patterns: [
@@ -42,9 +41,4 @@ export const externalLinkNodeParserCreatorOption: NodeParserCreatorOption = {
     bracketedUrlRegExp,
     httpRegExp,
   ],
-};
-
-export const ExternalLinkNodeParser = createNodeParser(
-  createExternalLinkNode,
-  externalLinkNodeParserCreatorOption
-);
+});

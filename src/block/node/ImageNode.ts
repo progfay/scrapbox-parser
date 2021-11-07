@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { ImageNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const srcFirstStrongImageRegExp =
   /\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i;
@@ -37,7 +37,7 @@ const createImageNode: NodeCreator<ImageNode> = (raw) => {
   };
 };
 
-export const imageNodeParserCreatorOption: NodeParserCreatorOption = {
+export const ImageNodeParser = createNodeParser(createImageNode, {
   parseOnNested: true,
   parseOnQuoted: true,
   patterns: [
@@ -46,9 +46,4 @@ export const imageNodeParserCreatorOption: NodeParserCreatorOption = {
     srcFirstStrongGyazoImageRegExp,
     linkFirstStrongGyazoImageRegExp,
   ],
-};
-
-export const ImageNodeParser = createNodeParser(
-  createImageNode,
-  imageNodeParserCreatorOption
-);
+});

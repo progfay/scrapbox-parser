@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { LinkNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const internalLinkRegExp = /\[\/?[^[\]]+\]/;
 
@@ -16,13 +16,8 @@ const createInternalLinkNode: NodeCreator<LinkNode> = (raw) => {
   };
 };
 
-export const internalLinkNodeParserCreatorOption: NodeParserCreatorOption = {
+export const InternalLinkNodeParser = createNodeParser(createInternalLinkNode, {
   parseOnNested: true,
   parseOnQuoted: true,
   patterns: [internalLinkRegExp],
-};
-
-export const InternalLinkNodeParser = createNodeParser(
-  createInternalLinkNode,
-  internalLinkNodeParserCreatorOption
-);
+});

@@ -2,7 +2,7 @@ import { convertToNodes } from ".";
 import { createNodeParser } from "./creator";
 
 import type { QuoteNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const quoteRegExp = /^>.*$/;
 
@@ -12,13 +12,8 @@ const createQuoteNode: NodeCreator<QuoteNode> = (raw, opts) => ({
   nodes: convertToNodes(raw.substring(1), { ...opts, quoted: true }),
 });
 
-export const quoteNodeParserCreatorOption: NodeParserCreatorOption = {
+export const QuoteNodeParser = createNodeParser(createQuoteNode, {
   parseOnNested: false,
   parseOnQuoted: false,
   patterns: [quoteRegExp],
-};
-
-export const QuoteNodeParser = createNodeParser(
-  createQuoteNode,
-  quoteNodeParserCreatorOption
-);
+});

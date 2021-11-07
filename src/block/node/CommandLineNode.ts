@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { CommandLineNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const commandLineRegExp = /^[$%] .+$/;
 
@@ -17,13 +17,8 @@ const createCommandLineNode: NodeCreator<CommandLineNode> = (raw: string) => {
   };
 };
 
-export const commandLineNodeParserCreatorOption: NodeParserCreatorOption = {
+export const CommandLineNodeParser = createNodeParser(createCommandLineNode, {
   parseOnNested: false,
   parseOnQuoted: false,
   patterns: [commandLineRegExp],
-};
-
-export const CommandLineNodeParser = createNodeParser(
-  createCommandLineNode,
-  commandLineNodeParserCreatorOption
-);
+});

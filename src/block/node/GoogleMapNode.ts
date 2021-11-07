@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { GoogleMapNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const placeFirstGoogleMapRegExp =
   /\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]/;
@@ -52,13 +52,8 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode> = (raw) => {
   };
 };
 
-export const googleMapNodeParserCreatorOption: NodeParserCreatorOption = {
+export const GoogleMapNodeParser = createNodeParser(createGoogleMapNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [placeFirstGoogleMapRegExp, coordFirstGoogleMapRegExp],
-};
-
-export const GoogleMapNodeParser = createNodeParser(
-  createGoogleMapNode,
-  googleMapNodeParserCreatorOption
-);
+});

@@ -2,7 +2,7 @@ import { createNodeParser } from "./creator";
 
 import { convertToNodes } from ".";
 import type { DecorationNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const decorationRegExp = /\[[!"#%&'()*+,\-./{|}<>_~]+ (?:\[[^[\]]+\]|[^\]])+\]/;
 
@@ -64,13 +64,8 @@ const createDecorationNode: NodeCreator<DecorationNode> = (raw, opts) => {
   };
 };
 
-export const commandLineNodeParserCreatorOption: NodeParserCreatorOption = {
+export const DecorationNodeParser = createNodeParser(createDecorationNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [decorationRegExp],
-};
-
-export const DecorationNodeParser = createNodeParser(
-  createDecorationNode,
-  commandLineNodeParserCreatorOption
-);
+});

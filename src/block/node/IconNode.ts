@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { IconNode, StrongIconNode } from "./type";
-import type { NodeCreator, NodeParserCreatorOption } from "./creator";
+import type { NodeCreator } from "./creator";
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/;
 
@@ -30,13 +30,8 @@ export function generateIconNodeCreator(
 
 const createIconNode = generateIconNodeCreator("icon");
 
-export const iconNodeParserCreatorOption: NodeParserCreatorOption = {
+export const IconNodeParser = createNodeParser(createIconNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [iconRegExp],
-};
-
-export const IconNodeParser = createNodeParser(
-  createIconNode,
-  iconNodeParserCreatorOption
-);
+});
