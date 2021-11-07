@@ -2,7 +2,7 @@ import { createNodeParser } from "./creator";
 
 import { convertToNodes } from ".";
 import type { StrongNode } from "./type";
-import type { NodeCreator } from "./creator";
+import type { NodeCreator, NodeParserCreatorOption } from "./creator";
 
 const strongRegExp = /\[\[(?:[^[]|\[[^[]).*?\]*\]\]/;
 
@@ -15,8 +15,13 @@ const createStrongNode: NodeCreator<StrongNode> = (raw, opts) => ({
   }),
 });
 
-export const StrongNodeParser = createNodeParser(createStrongNode, {
+export const strongNodeParserCreatorOption: NodeParserCreatorOption = {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [strongRegExp],
-});
+};
+
+export const StrongNodeParser = createNodeParser(
+  createStrongNode,
+  strongNodeParserCreatorOption
+);
