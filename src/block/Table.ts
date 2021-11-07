@@ -29,11 +29,13 @@ export const convertToTable = (pack: TablePack): Table => {
     cells: body
       .map((row: Row): string => row.text.substring(indent + 1))
       .map((text: string): Node[][] =>
-        text
-          .split("\t")
-          .map((block: string): Node[] =>
-            convertToNodes(block, { nested: true, quoted: false })
-          )
+        text.split("\t").map((block: string): Node[] =>
+          convertToNodes(block, {
+            nested: false,
+            quoted: false,
+            context: "table",
+          })
+        )
       ),
   };
 };

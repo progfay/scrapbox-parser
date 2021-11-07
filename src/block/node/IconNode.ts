@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode";
 
-import type { IconNode, StrongIconNode } from "./type";
+import type { IconNode, PlainNode, StrongIconNode } from "./type";
 import type { NodeCreator } from "./creator";
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/;
@@ -10,11 +11,15 @@ export function generateIconNodeCreator(
 ): NodeCreator<IconNode>;
 export function generateIconNodeCreator(
   type: StrongIconNode["type"]
-): NodeCreator<StrongIconNode>;
+): NodeCreator<StrongIconNode | PlainNode>;
 export function generateIconNodeCreator(
   type: (IconNode | StrongIconNode)["type"]
-): NodeCreator<IconNode | StrongIconNode> {
-  return (raw) => {
+): NodeCreator<IconNode | StrongIconNode | PlainNode> {
+  return (raw, opts) => {
+    if (type === "strongIcon" && opts.context === "table") {
+      return createPlainNode(raw, opts);
+    }
+
     const target =
       type === "icon"
         ? raw.substring(1, raw.length - 1)

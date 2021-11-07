@@ -21,6 +21,7 @@ import type { Node } from "./type";
 export interface NodeParserOption {
   nested: boolean;
   quoted: boolean;
+  context: "line" | "table";
 }
 export type NextNodeParser = () => Node[];
 export type NodeParser = (
@@ -36,10 +37,7 @@ const FalsyEliminator: NodeParser = (text, _, next) => {
 
 const combineNodeParsers =
   (...parsers: NodeParser[]) =>
-  (
-    text = "",
-    opts: NodeParserOption = { nested: false, quoted: false }
-  ): Node[] =>
+  (text: string, opts: NodeParserOption): Node[] =>
     parsers.reduceRight(
       (acc: NextNodeParser, parser: NodeParser): NextNodeParser =>
         () =>

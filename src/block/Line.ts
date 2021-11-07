@@ -19,6 +19,10 @@ export const convertToLine = (pack: LinePack): Line => {
   return {
     indent,
     type: "line",
-    nodes: convertToNodes(text.substring(indent)),
+    nodes: convertToNodes(text.substring(indent), {
+      nested: false,
+      quoted: false,
+      context: "line",
+    }),
   };
 };

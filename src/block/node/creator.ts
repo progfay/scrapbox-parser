@@ -6,7 +6,7 @@ import type { Node } from "./type";
 export type NodeCreator<T extends Node> = (
   target: string,
   opts: NodeParserOption
-) => T | T[];
+) => T[];
 
 type NodeParserCreator<T extends Node> = (
   nodeCreator: NodeCreator<T>,
@@ -31,7 +31,7 @@ export const createNodeParser: NodeParserCreator<Node> = (
       const node = nodeCreator(match[0] ?? "", opts);
       return [
         ...convertToNodes(left, opts),
-        ...(Array.isArray(node) ? node : [node]),
+        ...node,
         ...convertToNodes(right, opts),
       ];
     }

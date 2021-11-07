@@ -45,16 +45,29 @@ ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c`).toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 
-  it("Table with hashTag", () => {
-    expect(`table:table with hashTag
-${"\t"}#tag${"\t"}This is #tag`).toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
-  });
-
-  it("Table with link", () => {
-    expect(`table:table with link
-${"\t"}[Link]${"\t"}This is [Link]`).toMatchSnapshotWhenParsing({
+  it("Node in table cells", () => {
+    expect(`table:node in table cells
+${"\t"}#hashtag
+${"\t"}[* deco]
+${"\t"}[ ]
+${"\t"}\`code\`
+${"\t"}https://external.com
+${"\t"}[https://external.com]
+${"\t"}[left https://external.com]
+${"\t"}[https://external.com right]
+${"\t"}[$ x]
+${"\t"}[N35.6812362,E139.7649361]
+${"\t"}#hashTag
+${"\t"}? helpfeel
+${"\t"}$ commandLine
+${"\t"}[progfay.icon]
+${"\t"}[https://image.com/image.png]
+${"\t"}[link]
+${"\t"}plain
+${"\t"}> quote
+${"\t"}[[progfay.icon]]
+${"\t"}[[https://image.com/image.png]]
+${"\t"}[[strong]]`).toMatchSnapshotWhenParsing({
       hasTitle: false,
     });
   });

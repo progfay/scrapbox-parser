@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode";
 
-import type { ImageNode } from "./type";
+import type { ImageNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
 const srcFirstStrongImageRegExp =
@@ -19,7 +20,11 @@ const isImageUrl = (text: string): boolean =>
 const isGyazoImageUrl = (text: string): boolean =>
   /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text);
 
-const createImageNode: NodeCreator<ImageNode> = (raw) => {
+const createImageNode: NodeCreator<ImageNode | PlainNode> = (raw, opts) => {
+  if (opts.context === "table") {
+    return createPlainNode(raw, opts);
+  }
+
   const index = raw.search(/\s/);
   const first =
     index !== -1 ? raw.substring(1, index) : raw.substring(1, raw.length - 1);
@@ -27,14 +32,16 @@ const createImageNode: NodeCreator<ImageNode> = (raw) => {
     index !== -1 ? raw.substring(index, raw.length - 1).trimLeft() : "";
   const [src, link] = isImageUrl(second) ? [second, first] : [first, second];
 
-  return {
-    type: "image",
-    raw,
-    src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
-      ? `${src}/thumb/1000`
-      : src,
-    link,
-  };
+  return [
+    {
+      type: "image",
+      raw,
+      src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
+        ? `${src}/thumb/1000`
+        : src,
+      link,
+    },
+  ];
 };
 
 export const ImageNodeParser = createNodeParser(createImageNode, {

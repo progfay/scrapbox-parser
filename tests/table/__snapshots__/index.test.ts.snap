@@ -307,6 +307,210 @@ Array [
 ]
 `;
 
+exports[`Table Node in table cells: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "raw": "#hashtag",
+            "text": "#hashtag",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[* deco]",
+            "text": "[* deco]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[ ]",
+            "text": "[ ]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "\`code\`",
+            "text": "\`code\`",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "https://external.com",
+            "text": "https://external.com",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[https://external.com]",
+            "text": "[https://external.com]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[left https://external.com]",
+            "text": "[left https://external.com]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[https://external.com right]",
+            "text": "[https://external.com right]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[$ x]",
+            "text": "[$ x]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[N35.6812362,E139.7649361]",
+            "text": "[N35.6812362,E139.7649361]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "#hashTag",
+            "text": "#hashTag",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "? helpfeel",
+            "text": "? helpfeel",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "$ commandLine",
+            "text": "$ commandLine",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "path": "progfay",
+            "pathType": "relative",
+            "raw": "[progfay.icon]",
+            "type": "icon",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[https://image.com/image.png]",
+            "text": "[https://image.com/image.png]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "link",
+            "pathType": "relative",
+            "raw": "[link]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "plain",
+            "text": "plain",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "> quote",
+            "text": "> quote",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[[progfay.icon]]",
+            "text": "[[progfay.icon]]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[[https://image.com/image.png]]",
+            "text": "[[https://image.com/image.png]]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[[strong]]",
+            "text": "[[strong]]",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "node in table cells",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
 exports[`Table Simple table: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
@@ -538,81 +742,6 @@ Array [
       ],
     ],
     "fileName": " ",
-    "indent": 0,
-    "type": "table",
-  },
-]
-`;
-
-exports[`Table Table with hashTag: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
-            "href": "tag",
-            "raw": "#tag",
-            "type": "hashTag",
-          },
-        ],
-        Array [
-          Object {
-            "raw": "This is",
-            "text": "This is",
-            "type": "plain",
-          },
-          Object {
-            "raw": " ",
-            "text": " ",
-            "type": "plain",
-          },
-          Object {
-            "href": "tag",
-            "raw": "#tag",
-            "type": "hashTag",
-          },
-        ],
-      ],
-    ],
-    "fileName": "table with hashTag",
-    "indent": 0,
-    "type": "table",
-  },
-]
-`;
-
-exports[`Table Table with link: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
-            "content": "",
-            "href": "Link",
-            "pathType": "relative",
-            "raw": "[Link]",
-            "type": "link",
-          },
-        ],
-        Array [
-          Object {
-            "raw": "This is ",
-            "text": "This is ",
-            "type": "plain",
-          },
-          Object {
-            "content": "",
-            "href": "Link",
-            "pathType": "relative",
-            "raw": "[Link]",
-            "type": "link",
-          },
-        ],
-      ],
-    ],
-    "fileName": "table with link",
     "indent": 0,
     "type": "table",
   },
