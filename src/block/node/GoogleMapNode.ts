@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode";
 
-import type { GoogleMapNode } from "./type";
+import type { GoogleMapNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
 const placeFirstGoogleMapRegExp =
@@ -22,7 +23,14 @@ const parseCoordinate: (format: string) => Coordinate = (format) => {
   return { latitude, longitude, zoom };
 };
 
-const createGoogleMapNode: NodeCreator<GoogleMapNode> = (raw) => {
+const createGoogleMapNode: NodeCreator<GoogleMapNode | PlainNode> = (
+  raw,
+  opts
+) => {
+  if (opts.context === "table") {
+    return createPlainNode(raw, opts);
+  }
+
   const match =
     raw.match(placeFirstGoogleMapRegExp) ??
     raw.match(coordFirstGoogleMapRegExp);

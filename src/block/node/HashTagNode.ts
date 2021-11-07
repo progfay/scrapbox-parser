@@ -1,12 +1,16 @@
 import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode";
 
 import type { HashTagNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
-import { createPlainNode } from "./PlainNode";
 
 const hashTagRegExp = /(?:^|\s)#\S+/;
 
 const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw, opts) => {
+  if (opts.context === "table") {
+    return createPlainNode(raw, opts);
+  }
+
   if (raw.startsWith("#")) {
     return [
       {

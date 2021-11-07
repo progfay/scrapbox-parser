@@ -1,13 +1,22 @@
-import type { NodeCreator } from "./creator";
 import { createNodeParser } from "./creator";
-import type { LinkNode } from "./type";
+import { createPlainNode } from "./PlainNode";
+
+import type { NodeCreator } from "./creator";
+import type { LinkNode, PlainNode } from "./type";
 
 const hrefFirstUrlRegExp = /\[https?:\/\/[^\s\]]+\s+[^\]]*[^\s]\]/;
 const contentFirstUrlRegExp = /\[[^[\]]*[^\s]\s+https?:\/\/[^\s\]]+\]/;
 const bracketedUrlRegExp = /\[https?:\/\/[^\s\]]+\]/;
 const httpRegExp = /https?:\/\/[^\s]+/;
 
-const createExternalLinkNode: NodeCreator<LinkNode> = (raw) => {
+const createExternalLinkNode: NodeCreator<LinkNode | PlainNode> = (
+  raw,
+  opts
+) => {
+  if (opts.context === "table") {
+    return createPlainNode(raw, opts);
+  }
+
   const inner =
     raw.startsWith("[") && raw.endsWith("]")
       ? raw.substring(1, raw.length - 1)
