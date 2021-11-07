@@ -307,6 +307,263 @@ Array [
 ]
 `;
 
+exports[`Table Node in table cells: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "href": "hashtag",
+            "raw": "#hashtag",
+            "type": "hashTag",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "* deco",
+            "pathType": "relative",
+            "raw": "[* deco]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": " ",
+            "pathType": "relative",
+            "raw": "[ ]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "\`code\`",
+            "text": "\`code\`",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "https://external.com",
+            "pathType": "absolute",
+            "raw": "https://external.com",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "https://external.com",
+            "pathType": "absolute",
+            "raw": "[https://external.com]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "left",
+            "href": "https://external.com",
+            "pathType": "absolute",
+            "raw": "[left https://external.com]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "right",
+            "href": "https://external.com",
+            "pathType": "absolute",
+            "raw": "[https://external.com right]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "$ x",
+            "pathType": "relative",
+            "raw": "[$ x]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "N35.6812362,E139.7649361",
+            "pathType": "relative",
+            "raw": "[N35.6812362,E139.7649361]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "href": "hashTag",
+            "raw": "#hashTag",
+            "type": "hashTag",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "? helpfeel",
+            "text": "? helpfeel",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "$ commandLine",
+            "text": "$ commandLine",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "progfay.icon",
+            "pathType": "relative",
+            "raw": "[progfay.icon]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "link": "",
+            "raw": "[https://image.com/image.png]",
+            "src": "https://image.com/image.png",
+            "type": "image",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "content": "",
+            "href": "link",
+            "pathType": "relative",
+            "raw": "[link]",
+            "type": "link",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "plain",
+            "text": "plain",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "> quote",
+            "text": "> quote",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "progfay.icon",
+            "pathType": "relative",
+            "raw": "[progfay.icon]",
+            "type": "link",
+          },
+          Object {
+            "raw": "]",
+            "text": "]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "link": "",
+            "raw": "[https://image.com/image.png]",
+            "src": "https://image.com/image.png",
+            "type": "image",
+          },
+          Object {
+            "raw": "]",
+            "text": "]",
+            "type": "plain",
+          },
+        ],
+      ],
+      Array [
+        Array [
+          Object {
+            "raw": "[",
+            "text": "[",
+            "type": "plain",
+          },
+          Object {
+            "content": "",
+            "href": "strong",
+            "pathType": "relative",
+            "raw": "[strong]",
+            "type": "link",
+          },
+          Object {
+            "raw": "]",
+            "text": "]",
+            "type": "plain",
+          },
+        ],
+      ],
+    ],
+    "fileName": "node in table cells",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
 exports[`Table Simple table: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
@@ -538,81 +795,6 @@ Array [
       ],
     ],
     "fileName": " ",
-    "indent": 0,
-    "type": "table",
-  },
-]
-`;
-
-exports[`Table Table with hashTag: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
-            "href": "tag",
-            "raw": "#tag",
-            "type": "hashTag",
-          },
-        ],
-        Array [
-          Object {
-            "raw": "This is",
-            "text": "This is",
-            "type": "plain",
-          },
-          Object {
-            "raw": " ",
-            "text": " ",
-            "type": "plain",
-          },
-          Object {
-            "href": "tag",
-            "raw": "#tag",
-            "type": "hashTag",
-          },
-        ],
-      ],
-    ],
-    "fileName": "table with hashTag",
-    "indent": 0,
-    "type": "table",
-  },
-]
-`;
-
-exports[`Table Table with link: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
-            "content": "",
-            "href": "Link",
-            "pathType": "relative",
-            "raw": "[Link]",
-            "type": "link",
-          },
-        ],
-        Array [
-          Object {
-            "raw": "This is ",
-            "text": "This is ",
-            "type": "plain",
-          },
-          Object {
-            "content": "",
-            "href": "Link",
-            "pathType": "relative",
-            "raw": "[Link]",
-            "type": "link",
-          },
-        ],
-      ],
-    ],
-    "fileName": "table with link",
     "indent": 0,
     "type": "table",
   },
