@@ -2,27 +2,26 @@ import { createNodeParser } from "./creator";
 
 import type { HashTagNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
+import { createPlainNode } from "./PlainNode";
 
 const hashTagRegExp = /(?:^|\s)#\S+/;
 
-const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw) => {
+const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw, opts) => {
   if (raw.startsWith("#")) {
-    return {
-      type: "hashTag",
-      raw,
-      href: raw.substring(1),
-    };
+    return [
+      {
+        type: "hashTag",
+        raw,
+        href: raw.substring(1),
+      },
+    ];
   }
 
   const space = raw.substring(0, 1);
   const tag = raw.substring(1);
 
   return [
-    {
-      type: "plain",
-      raw: space,
-      text: space,
-    },
+    ...createPlainNode(space, opts),
     {
       type: "hashTag",
       raw: tag,

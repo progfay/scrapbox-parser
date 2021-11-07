@@ -55,13 +55,15 @@ const createDecorationNode: NodeCreator<DecorationNode> = (raw, opts) => {
     decoSet.add(`*-${Math.min(asteriskCount, 10)}` as AsteriskDecorationChar);
   }
 
-  return {
-    type: "decoration",
-    raw,
-    rawDecos,
-    decos: Array.from(decoSet) as Decoration[],
-    nodes: convertToNodes(text, { ...opts, nested: true }),
-  };
+  return [
+    {
+      type: "decoration",
+      raw,
+      rawDecos,
+      decos: Array.from(decoSet) as Decoration[],
+      nodes: convertToNodes(text, { ...opts, nested: true }),
+    },
+  ];
 };
 
 export const DecorationNodeParser = createNodeParser(createDecorationNode, {

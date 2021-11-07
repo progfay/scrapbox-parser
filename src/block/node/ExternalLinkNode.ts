@@ -23,13 +23,15 @@ const createExternalLinkNode: NodeCreator<LinkNode> = (raw) => {
     ? inner.substring(match[0].length)
     : inner.substring(0, match.index - 1);
 
-  return {
-    type: "link",
-    raw,
-    pathType: "absolute",
-    href: match[0],
-    content: content.trim(),
-  };
+  return [
+    {
+      type: "link",
+      raw,
+      pathType: "absolute",
+      href: match[0],
+      content: content.trim(),
+    },
+  ];
 };
 
 export const ExternalLinkNodeParser = createNodeParser(createExternalLinkNode, {

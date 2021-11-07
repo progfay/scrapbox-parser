@@ -41,15 +41,17 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode> = (raw) => {
         )}/@${latitude},${longitude},${zoom}z`
       : `https://www.google.com/maps/@${latitude},${longitude},${zoom}z`;
 
-  return {
-    type: "googleMap",
-    raw,
-    latitude,
-    longitude,
-    zoom,
-    place,
-    url,
-  };
+  return [
+    {
+      type: "googleMap",
+      raw,
+      latitude,
+      longitude,
+      zoom,
+      place,
+      url,
+    },
+  ];
 };
 
 export const GoogleMapNodeParser = createNodeParser(createGoogleMapNode, {

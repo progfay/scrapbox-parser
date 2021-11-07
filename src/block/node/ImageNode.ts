@@ -27,14 +27,16 @@ const createImageNode: NodeCreator<ImageNode> = (raw) => {
     index !== -1 ? raw.substring(index, raw.length - 1).trimLeft() : "";
   const [src, link] = isImageUrl(second) ? [second, first] : [first, second];
 
-  return {
-    type: "image",
-    raw,
-    src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
-      ? `${src}/thumb/1000`
-      : src,
-    link,
-  };
+  return [
+    {
+      type: "image",
+      raw,
+      src: /^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}$/.test(src)
+        ? `${src}/thumb/1000`
+        : src,
+      link,
+    },
+  ];
 };
 
 export const ImageNodeParser = createNodeParser(createImageNode, {
