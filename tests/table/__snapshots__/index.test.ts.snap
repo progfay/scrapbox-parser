@@ -314,31 +314,27 @@ Array [
       Array [
         Array [
           Object {
-            "href": "hashtag",
             "raw": "#hashtag",
-            "type": "hashTag",
+            "text": "#hashtag",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "* deco",
-            "pathType": "relative",
             "raw": "[* deco]",
-            "type": "link",
+            "text": "[* deco]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "",
-            "href": " ",
-            "pathType": "relative",
             "raw": "[ ]",
-            "type": "link",
+            "text": "[ ]",
+            "type": "plain",
           },
         ],
       ],
@@ -354,75 +350,63 @@ Array [
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "https://external.com",
-            "pathType": "absolute",
             "raw": "https://external.com",
-            "type": "link",
+            "text": "https://external.com",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "https://external.com",
-            "pathType": "absolute",
             "raw": "[https://external.com]",
-            "type": "link",
+            "text": "[https://external.com]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "left",
-            "href": "https://external.com",
-            "pathType": "absolute",
             "raw": "[left https://external.com]",
-            "type": "link",
+            "text": "[left https://external.com]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "right",
-            "href": "https://external.com",
-            "pathType": "absolute",
             "raw": "[https://external.com right]",
-            "type": "link",
+            "text": "[https://external.com right]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "$ x",
-            "pathType": "relative",
             "raw": "[$ x]",
-            "type": "link",
+            "text": "[$ x]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "N35.6812362,E139.7649361",
-            "pathType": "relative",
             "raw": "[N35.6812362,E139.7649361]",
-            "type": "link",
+            "text": "[N35.6812362,E139.7649361]",
+            "type": "plain",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "href": "hashTag",
             "raw": "#hashTag",
-            "type": "hashTag",
+            "text": "#hashTag",
+            "type": "plain",
           },
         ],
       ],
@@ -447,21 +431,19 @@ Array [
       Array [
         Array [
           Object {
-            "content": "",
-            "href": "progfay.icon",
+            "path": "progfay",
             "pathType": "relative",
             "raw": "[progfay.icon]",
-            "type": "link",
+            "type": "icon",
           },
         ],
       ],
       Array [
         Array [
           Object {
-            "link": "",
             "raw": "[https://image.com/image.png]",
-            "src": "https://image.com/image.png",
-            "type": "image",
+            "text": "[https://image.com/image.png]",
+            "type": "plain",
           },
         ],
       ],
@@ -497,20 +479,8 @@ Array [
       Array [
         Array [
           Object {
-            "raw": "[",
-            "text": "[",
-            "type": "plain",
-          },
-          Object {
-            "content": "",
-            "href": "progfay.icon",
-            "pathType": "relative",
-            "raw": "[progfay.icon]",
-            "type": "link",
-          },
-          Object {
-            "raw": "]",
-            "text": "]",
+            "raw": "[[progfay.icon]]",
+            "text": "[[progfay.icon]]",
             "type": "plain",
           },
         ],
@@ -518,19 +488,8 @@ Array [
       Array [
         Array [
           Object {
-            "raw": "[",
-            "text": "[",
-            "type": "plain",
-          },
-          Object {
-            "link": "",
-            "raw": "[https://image.com/image.png]",
-            "src": "https://image.com/image.png",
-            "type": "image",
-          },
-          Object {
-            "raw": "]",
-            "text": "]",
+            "raw": "[[https://image.com/image.png]]",
+            "text": "[[https://image.com/image.png]]",
             "type": "plain",
           },
         ],
@@ -538,20 +497,8 @@ Array [
       Array [
         Array [
           Object {
-            "raw": "[",
-            "text": "[",
-            "type": "plain",
-          },
-          Object {
-            "content": "",
-            "href": "strong",
-            "pathType": "relative",
-            "raw": "[strong]",
-            "type": "link",
-          },
-          Object {
-            "raw": "]",
-            "text": "]",
+            "raw": "[[strong]]",
+            "text": "[[strong]]",
             "type": "plain",
           },
         ],
