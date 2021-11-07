@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { HashTagNode, PlainNode } from "./type";
-import type { NodeCreator } from "./creator";
+import type { NodeCreator, NodeParserCreatorOption } from "./creator";
 
 const hashTagRegExp = /(?:^|\s)#\S+/;
 
@@ -31,8 +31,13 @@ const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw) => {
   ];
 };
 
-export const HashTagNodeParser = createNodeParser(createHashTagNode, {
+export const hashTagNodeParserCreatorOption: NodeParserCreatorOption = {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [hashTagRegExp],
-});
+};
+
+export const HashTagNodeParser = createNodeParser(
+  createHashTagNode,
+  hashTagNodeParserCreatorOption
+);

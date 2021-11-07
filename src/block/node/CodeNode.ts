@@ -1,7 +1,7 @@
 import { createNodeParser } from "./creator";
 
 import type { CodeNode } from "./type";
-import type { NodeCreator } from "./creator";
+import type { NodeCreator, NodeParserCreatorOption } from "./creator";
 
 const codeRegExp = /`.*?`/;
 
@@ -11,8 +11,13 @@ const createCodeNode: NodeCreator<CodeNode> = (raw) => ({
   text: raw.substring(1, raw.length - 1),
 });
 
-export const CodeNodeParser = createNodeParser(createCodeNode, {
+export const codeNodeParserCreatorOption: NodeParserCreatorOption = {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [codeRegExp],
-});
+};
+
+export const CodeNodeParser = createNodeParser(
+  createCodeNode,
+  codeNodeParserCreatorOption
+);
