@@ -74,6 +74,12 @@ describe("decoration", () => {
     });
   });
 
+  it("Decoration with hashTag", () => {
+    expect("[* #tag]").toMatchSnapshotWhenParsing({
+      hasTitle: false,
+    });
+  });
+
   it("Decoration with many [", () => {
     expect("[! [[[[[[a]").toMatchSnapshotWhenParsing({ hasTitle: false });
   });

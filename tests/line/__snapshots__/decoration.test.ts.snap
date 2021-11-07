@@ -59,6 +59,32 @@ Array [
 ]
 `;
 
+exports[`decoration Decoration with hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "href": "tag",
+            "raw": "#tag",
+            "type": "hashTag",
+          },
+        ],
+        "raw": "[* #tag]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`decoration Decoration with many [ and link: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {

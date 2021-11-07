@@ -544,6 +544,44 @@ Array [
 ]
 `;
 
+exports[`Table Table with hashTag: toMatchSnapshotWhenParsing 1`] = `
+Array [
+  Object {
+    "cells": Array [
+      Array [
+        Array [
+          Object {
+            "href": "tag",
+            "raw": "#tag",
+            "type": "hashTag",
+          },
+        ],
+        Array [
+          Object {
+            "raw": "This is",
+            "text": "This is",
+            "type": "plain",
+          },
+          Object {
+            "raw": " ",
+            "text": " ",
+            "type": "plain",
+          },
+          Object {
+            "href": "tag",
+            "raw": "#tag",
+            "type": "hashTag",
+          },
+        ],
+      ],
+    ],
+    "fileName": "table with hashTag",
+    "indent": 0,
+    "type": "table",
+  },
+]
+`;
+
 exports[`Table Table with link: toMatchSnapshotWhenParsing 1`] = `
 Array [
   Object {
