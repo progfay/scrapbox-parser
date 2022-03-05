@@ -1,20 +1,20 @@
 import { toMatchSnapshot } from "jest-snapshot";
 import { parse, ParserOption } from "../src";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// ref. https://jestjs.io/docs/expect#expectextendmatchers
+
+interface CustomMatchers<R = unknown> {
+  toMatchSnapshotWhenParsing(opts?: ParserOption): R;
+}
+
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
-    export interface Expect {
-      toMatchSnapshotWhenParsing: (
-        received: string,
-        opts?: ParserOption
-      ) => CustomMatcherResult;
-    }
-
-    export interface Matchers<R> {
-      toMatchSnapshotWhenParsing: (opts?: ParserOption) => R;
-    }
+    /* eslint-disable @typescript-eslint/no-empty-interface */
+    interface Expect extends CustomMatchers {}
+    interface Matchers<R> extends CustomMatchers<R> {}
+    interface InverseAsymmetricMatchers extends CustomMatchers {}
+    /* eslint-enable @typescript-eslint/no-empty-interface */
   }
 }
 
