@@ -91,6 +91,13 @@ export interface HashTagNode extends BaseNode {
   href: string;
 }
 
+export interface NumberListNode extends BaseNode {
+  type: "numberList";
+  rawNumber: string;
+  number: number;
+  nodes: Node[];
+}
+
 export interface PlainNode extends BaseNode {
   type: "plain";
   text: string;
@@ -112,4 +119,5 @@ export type Node =
   | GoogleMapNode
   | IconNode
   | HashTagNode
+  | NumberListNode
   | PlainNode;

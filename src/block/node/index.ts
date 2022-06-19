@@ -14,6 +14,7 @@ import { GoogleMapNodeParser } from "./GoogleMapNode";
 import { InternalLinkNodeParser } from "./InternalLinkNode";
 import { IconNodeParser } from "./IconNode";
 import { HashTagNodeParser } from "./HashTagNode";
+import { NumberListNodeParser } from "./NumberListNode";
 import { PlainNodeParser } from "./PlainNode";
 
 import type { Node } from "./type";
@@ -62,5 +63,6 @@ export const convertToNodes = combineNodeParsers(
   IconNodeParser,
   GoogleMapNodeParser,
   InternalLinkNodeParser,
-  HashTagNodeParser
+  HashTagNodeParser,
+  NumberListNodeParser
 );
