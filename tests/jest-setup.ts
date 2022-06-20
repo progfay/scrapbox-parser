@@ -26,6 +26,6 @@ expect.extend({
     opts?: ParserOption
   ) {
     const blocks = parse(received, opts);
-    return toMatchSnapshot.call(this, blocks, "toMatchSnapshotWhenParsing");
+    return toMatchSnapshot.call(this, blocks);
   },
 });
