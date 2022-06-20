@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Code Block Bulleted code block: toMatchSnapshotWhenParsing 1`] = `
+exports[`Code Block Bulleted code block 1`] = `
 Array [
   Object {
     "content": "function () {
@@ -15,7 +15,7 @@ Array [
 ]
 `;
 
-exports[`Code Block Code block with bullet: toMatchSnapshotWhenParsing 1`] = `
+exports[`Code Block Code block with bullet 1`] = `
 Array [
   Object {
     "indent": 1,
@@ -52,7 +52,7 @@ Array [
 ]
 `;
 
-exports[`Code Block Consecutive code blocks: toMatchSnapshotWhenParsing 1`] = `
+exports[`Code Block Consecutive code blocks 1`] = `
 Array [
   Object {
     "content": "function () {
@@ -77,7 +77,7 @@ Array [
 ]
 `;
 
-exports[`Code Block Simple code block: toMatchSnapshotWhenParsing 1`] = `
+exports[`Code Block Simple code block 1`] = `
 Array [
   Object {
     "content": "function () {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`plain Blank line: toMatchSnapshotWhenParsing 1`] = `
+exports[`plain Blank line 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -10,7 +10,7 @@ Array [
 ]
 `;
 
-exports[`plain Keep tail space: toMatchSnapshotWhenParsing 1`] = `
+exports[`plain Keep tail space 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -26,7 +26,7 @@ Array [
 ]
 `;
 
-exports[`plain Simple plain text: toMatchSnapshotWhenParsing 1`] = `
+exports[`plain Simple plain text 1`] = `
 Array [
   Object {
     "indent": 0,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table Bulleted table: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Bulleted table 1`] = `
 Array [
   Object {
     "cells": Array [
@@ -104,7 +104,7 @@ Array [
 ]
 `;
 
-exports[`Table Consecutive table: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Consecutive table 1`] = `
 Array [
   Object {
     "cells": Array [
@@ -307,7 +307,7 @@ Array [
 ]
 `;
 
-exports[`Table Node in table cells: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Node in table cells 1`] = `
 Array [
   Object {
     "cells": Array [
@@ -511,7 +511,7 @@ Array [
 ]
 `;
 
-exports[`Table Simple table: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Simple table 1`] = `
 Array [
   Object {
     "cells": Array [
@@ -615,7 +615,7 @@ Array [
 ]
 `;
 
-exports[`Table Staggered table: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Staggered table 1`] = `
 Array [
   Object {
     "cells": Array [
@@ -708,7 +708,7 @@ Array [
 ]
 `;
 
-exports[`Table Table with empty cells: toMatchSnapshotWhenParsing 1`] = `
+exports[`Table Table with empty cells 1`] = `
 Array [
   Object {
     "cells": Array [

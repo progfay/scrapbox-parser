@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`page Empty page: toMatchSnapshotWhenParsing 1`] = `
+exports[`page Empty page 1`] = `
 Array [
   Object {
     "text": "",
@@ -9,7 +9,7 @@ Array [
 ]
 `;
 
-exports[`page Title Block without \`hasTitle\` option: toMatchSnapshotWhenParsing 1`] = `
+exports[`page Title Block without \`hasTitle\` option 1`] = `
 Array [
   Object {
     "text": "Title",
@@ -18,7 +18,7 @@ Array [
 ]
 `;
 
-exports[`page https://scrapbox.io/help/Syntax: toMatchSnapshotWhenParsing 1`] = `
+exports[`page https://scrapbox.io/help/Syntax 1`] = `
 Array [
   Object {
     "text": "Syntax",

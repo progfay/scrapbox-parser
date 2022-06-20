@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`strongIcon Multiple icons: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongIcon Multiple icons 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -29,7 +29,7 @@ Array [
 ]
 `;
 
-exports[`strongIcon Simple relative strong icon: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongIcon Simple relative strong icon 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -46,7 +46,7 @@ Array [
 ]
 `;
 
-exports[`strongIcon Simple root strong icon: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongIcon Simple root strong icon 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -63,7 +63,7 @@ Array [
 ]
 `;
 
-exports[`strongIcon Strong icon and internal link on same line: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongIcon Strong icon and internal link on same line 1`] = `
 Array [
   Object {
     "indent": 0,

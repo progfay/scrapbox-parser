@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`image Direct Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Direct Gyazo image 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -17,48 +17,7 @@ Array [
 ]
 `;
 
-exports[`image Gyazo image with link: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "indent": 0,
-    "nodes": Array [
-      Object {
-        "link": "https://example.com",
-        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]",
-        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
-  Object {
-    "indent": 0,
-    "nodes": Array [
-      Object {
-        "link": "https://example.com",
-        "raw": "[https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
-        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
-  Object {
-    "indent": 0,
-    "nodes": Array [
-      Object {
-        "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3",
-        "raw": "[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
-        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
-]
-`;
-
-exports[`image Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Gyazo image 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -99,7 +58,48 @@ Array [
 ]
 `;
 
-exports[`image HTTP jpeg image with special and japanese chars: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Gyazo image with link 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://example.com",
+        "raw": "[https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3",
+        "raw": "[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`image HTTP jpeg image with special and japanese chars 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -116,7 +116,7 @@ Array [
 ]
 `;
 
-exports[`image HTTPS svg and GIF image with link: toMatchSnapshotWhenParsing 1`] = `
+exports[`image HTTPS svg and GIF image with link 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -145,7 +145,7 @@ Array [
 ]
 `;
 
-exports[`image Image with GET parameters: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Image with GET parameters 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -162,7 +162,7 @@ Array [
 ]
 `;
 
-exports[`image Image with double image link: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Image with double image link 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -179,7 +179,7 @@ Array [
 ]
 `;
 
-exports[`image Simple image: toMatchSnapshotWhenParsing 1`] = `
+exports[`image Simple image 1`] = `
 Array [
   Object {
     "indent": 0,

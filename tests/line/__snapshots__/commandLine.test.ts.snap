@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`commandLine \`$ \` is not command: toMatchSnapshotWhenParsing 1`] = `
+exports[`commandLine \`$ \` is not command 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`commandLine \`$\` is not command: toMatchSnapshotWhenParsing 1`] = `
+exports[`commandLine \`$\` is not command 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -32,7 +32,7 @@ Array [
 ]
 `;
 
-exports[`commandLine \`$s\` is not command: toMatchSnapshotWhenParsing 1`] = `
+exports[`commandLine \`$s\` is not command 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -48,7 +48,7 @@ Array [
 ]
 `;
 
-exports[`commandLine Simple command with $: toMatchSnapshotWhenParsing 1`] = `
+exports[`commandLine Simple command with $ 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -65,7 +65,7 @@ Array [
 ]
 `;
 
-exports[`commandLine Simple command with %: toMatchSnapshotWhenParsing 1`] = `
+exports[`commandLine Simple command with % 1`] = `
 Array [
   Object {
     "indent": 0,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`bullet Double-byte space indent: toMatchSnapshotWhenParsing 1`] = `
+exports[`bullet Double-byte space indent 1`] = `
 Array [
   Object {
     "indent": 1,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`bullet Multi lines bullet: toMatchSnapshotWhenParsing 1`] = `
+exports[`bullet Multi lines bullet 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -65,7 +65,7 @@ Array [
 ]
 `;
 
-exports[`bullet Single-byte space indent: toMatchSnapshotWhenParsing 1`] = `
+exports[`bullet Single-byte space indent 1`] = `
 Array [
   Object {
     "indent": 1,
@@ -81,7 +81,7 @@ Array [
 ]
 `;
 
-exports[`bullet Tab indent: toMatchSnapshotWhenParsing 1`] = `
+exports[`bullet Tab indent 1`] = `
 Array [
   Object {
     "indent": 1,
