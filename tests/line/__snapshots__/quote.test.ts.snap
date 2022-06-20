@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`quote Empty quote: toMatchSnapshotWhenParsing 1`] = `
+exports[`quote Empty quote 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`quote Simple quote: toMatchSnapshotWhenParsing 1`] = `
+exports[`quote Simple quote 1`] = `
 Array [
   Object {
     "indent": 0,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`googleMap Simple google map with NE: toMatchSnapshotWhenParsing 1`] = `
+exports[`googleMap Simple google map with NE 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -20,7 +20,7 @@ Array [
 ]
 `;
 
-exports[`googleMap Simple google map with SW: toMatchSnapshotWhenParsing 1`] = `
+exports[`googleMap Simple google map with SW 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -40,7 +40,7 @@ Array [
 ]
 `;
 
-exports[`googleMap Simple google map with place on left: toMatchSnapshotWhenParsing 1`] = `
+exports[`googleMap Simple google map with place on left 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -60,7 +60,7 @@ Array [
 ]
 `;
 
-exports[`googleMap Simple google map with place on right: toMatchSnapshotWhenParsing 1`] = `
+exports[`googleMap Simple google map with place on right 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -80,7 +80,7 @@ Array [
 ]
 `;
 
-exports[`googleMap Simple google map with zoom: toMatchSnapshotWhenParsing 1`] = `
+exports[`googleMap Simple google map with zoom 1`] = `
 Array [
   Object {
     "indent": 0,

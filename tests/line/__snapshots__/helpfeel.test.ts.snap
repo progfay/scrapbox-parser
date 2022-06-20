@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`helpfeel No head \`?\` is not helpfeel: toMatchSnapshotWhenParsing 1`] = `
+exports[`helpfeel No head \`?\` is not helpfeel 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`helpfeel Quoted ? is not helpfeel: toMatchSnapshotWhenParsing 1`] = `
+exports[`helpfeel Quoted ? is not helpfeel 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -38,7 +38,7 @@ Array [
 ]
 `;
 
-exports[`helpfeel Simple helpfeel: toMatchSnapshotWhenParsing 1`] = `
+exports[`helpfeel Simple helpfeel 1`] = `
 Array [
   Object {
     "indent": 0,

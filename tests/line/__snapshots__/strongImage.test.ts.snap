@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`strongImage Direct Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongImage Direct Gyazo image 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`strongImage Gyazo image: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongImage Gyazo image 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -32,7 +32,7 @@ Array [
 ]
 `;
 
-exports[`strongImage HTTP jpeg strong image with special and japanese chars: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongImage HTTP jpeg strong image with special and japanese chars 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -48,7 +48,7 @@ Array [
 ]
 `;
 
-exports[`strongImage Simple strong image: toMatchSnapshotWhenParsing 1`] = `
+exports[`strongImage Simple strong image 1`] = `
 Array [
   Object {
     "indent": 0,

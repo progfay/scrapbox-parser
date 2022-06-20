@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`code Empty code with backquote: toMatchSnapshotWhenParsing 1`] = `
+exports[`code Empty code with backquote 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`code Simple code with backquote: toMatchSnapshotWhenParsing 1`] = `
+exports[`code Simple code with backquote 1`] = `
 Array [
   Object {
     "indent": 0,

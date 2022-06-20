@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`decoration Decoration * overflow: toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration * overflow 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -26,7 +26,7 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration similar with externalLink: toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration similar with externalLink 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -59,7 +59,7 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration with hashTag: toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration with hashTag 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -85,7 +85,33 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration with many [ and link: toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration with many [ 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "!",
+        ],
+        "nodes": Array [
+          Object {
+            "raw": "[[[[[[a",
+            "text": "[[[[[[a",
+            "type": "plain",
+          },
+        ],
+        "raw": "[! [[[[[[a]",
+        "rawDecos": "!",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`decoration Decoration with many [ and link 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -118,33 +144,7 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration with many [: toMatchSnapshotWhenParsing 1`] = `
-Array [
-  Object {
-    "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
-          "!",
-        ],
-        "nodes": Array [
-          Object {
-            "raw": "[[[[[[a",
-            "text": "[[[[[[a",
-            "type": "plain",
-          },
-        ],
-        "raw": "[! [[[[[[a]",
-        "rawDecos": "!",
-        "type": "decoration",
-      },
-    ],
-    "type": "line",
-  },
-]
-`;
-
-exports[`decoration Decoration with strong icon notation (it's just icon, not strong): toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration with strong icon notation (it's just icon, not strong) 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -182,7 +182,7 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration with strong image notation (it's just image, not strong): toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration with strong image notation (it's just image, not strong) 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -219,7 +219,7 @@ Array [
 ]
 `;
 
-exports[`decoration Decoration with strong notation (it's just link): toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Decoration with strong notation (it's just link) 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -257,7 +257,7 @@ Array [
 ]
 `;
 
-exports[`decoration Simple decoration: toMatchSnapshotWhenParsing 1`] = `
+exports[`decoration Simple decoration 1`] = `
 Array [
   Object {
     "indent": 0,

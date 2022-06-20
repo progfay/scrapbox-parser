@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hashTag HashTag in sentence with spaces: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag HashTag in sentence with spaces 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -31,7 +31,7 @@ Array [
 ]
 `;
 
-exports[`hashTag HashTag in sentence without spaces is not hashTag: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag HashTag in sentence without spaces is not hashTag 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -47,7 +47,7 @@ Array [
 ]
 `;
 
-exports[`hashTag HashTag includes \`#\`: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag HashTag includes \`#\` 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -63,7 +63,7 @@ Array [
 ]
 `;
 
-exports[`hashTag Multiple hashTag: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag Multiple hashTag 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -99,7 +99,7 @@ Array [
 ]
 `;
 
-exports[`hashTag Only \`#\` is not hashTag: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag Only \`#\` is not hashTag 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -115,7 +115,7 @@ Array [
 ]
 `;
 
-exports[`hashTag Simple hashTag: toMatchSnapshotWhenParsing 1`] = `
+exports[`hashTag Simple hashTag 1`] = `
 Array [
   Object {
     "indent": 0,

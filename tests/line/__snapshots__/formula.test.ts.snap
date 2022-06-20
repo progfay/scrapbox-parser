@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`formula Formula includes [] with tail half-space: toMatchSnapshotWhenParsing 1`] = `
+exports[`formula Formula includes [] with tail half-space 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`formula Formula includes [] without tail half-space: toMatchSnapshotWhenParsing 1`] = `
+exports[`formula Formula includes [] without tail half-space 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -37,7 +37,7 @@ Array [
 ]
 `;
 
-exports[`formula Simple formula: toMatchSnapshotWhenParsing 1`] = `
+exports[`formula Simple formula 1`] = `
 Array [
   Object {
     "indent": 0,

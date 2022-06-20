@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`strong [[]] is not strong: toMatchSnapshotWhenParsing 1`] = `
+exports[`strong [[]] is not strong 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -16,7 +16,7 @@ Array [
 ]
 `;
 
-exports[`strong Decoration in Strong notation: toMatchSnapshotWhenParsing 1`] = `
+exports[`strong Decoration in Strong notation 1`] = `
 Array [
   Object {
     "indent": 0,
@@ -52,7 +52,7 @@ Array [
 ]
 `;
 
-exports[`strong Simple strong: toMatchSnapshotWhenParsing 1`] = `
+exports[`strong Simple strong 1`] = `
 Array [
   Object {
     "indent": 0,
