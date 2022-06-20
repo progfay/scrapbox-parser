@@ -32,6 +32,24 @@ Array [
 ]
 `;
 
+exports[`numberList Minimum numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [],
+        "number": 1,
+        "raw": "1. ",
+        "rawNumber": "1",
+        "type": "numberList",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`numberList No head 1. is not numberList 1`] = `
 Array [
   Object {

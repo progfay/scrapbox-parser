@@ -1,4 +1,10 @@
 describe("numberList", () => {
+  it("Minimum numberList", () => {
+    expect("1. ").toMatchSnapshotWhenParsing({
+      hasTitle: false,
+    });
+  });
+
   it("Simple numberList", () => {
     expect("1. Simple numberList").toMatchSnapshotWhenParsing({
       hasTitle: false,
