@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`numberList 1. with no space is not numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "raw": "1.",
+        "text": "1.",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList 1. with no space is not numberList 2`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "raw": "1.not numberList",
+        "text": "1.not numberList",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList Minimum numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [],
+        "number": 1,
+        "raw": "1. ",
+        "rawNumber": "1",
+        "type": "numberList",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList No head 1. is not numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "raw": "a 1. not numberList",
+        "text": "a 1. not numberList",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList Quoted 1. is not numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [
+          Object {
+            "raw": " 1. Quoted",
+            "text": " 1. Quoted",
+            "type": "plain",
+          },
+        ],
+        "raw": "> 1. Quoted",
+        "type": "quote",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList Simple numberList 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "nodes": Array [
+          Object {
+            "raw": "Simple numberList",
+            "text": "Simple numberList",
+            "type": "plain",
+          },
+        ],
+        "number": 1,
+        "raw": "1. Simple numberList",
+        "rawNumber": "1",
+        "type": "numberList",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
