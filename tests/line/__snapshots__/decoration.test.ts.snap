@@ -85,6 +85,33 @@ Array [
 ]
 `;
 
+exports[`decoration Decoration with icon notation 1`] = `
+Array [
+  Object {
+    "indent": 0,
+    "nodes": Array [
+      Object {
+        "decos": Array [
+          "*-1",
+        ],
+        "nodes": Array [
+          Object {
+            "path": "progfay",
+            "pathType": "relative",
+            "raw": "[progfay.icon]",
+            "type": "icon",
+          },
+        ],
+        "raw": "[* [progfay.icon]]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`decoration Decoration with many [ 1`] = `
 Array [
   Object {
@@ -160,11 +187,10 @@ Array [
             "type": "plain",
           },
           Object {
-            "content": "",
-            "href": "progfay.icon",
+            "path": "progfay",
             "pathType": "relative",
             "raw": "[progfay.icon]",
-            "type": "link",
+            "type": "icon",
           },
         ],
         "raw": "[* [[progfay.icon]]",

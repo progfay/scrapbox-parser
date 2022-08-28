@@ -92,6 +92,12 @@ describe("decoration", () => {
     expect("[* [[link]]]").toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 
+  it("Decoration with icon notation", () => {
+    expect("[* [progfay.icon]]").toMatchSnapshotWhenParsing({
+      hasTitle: false,
+    });
+  });
+
   it("Decoration with strong icon notation (it's just icon, not strong)", () => {
     expect("[* [[progfay.icon]]]").toMatchSnapshotWhenParsing({
       hasTitle: false,
