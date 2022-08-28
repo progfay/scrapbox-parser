@@ -36,7 +36,7 @@ export function generateIconNodeCreator(
 const createIconNode = generateIconNodeCreator("icon");
 
 export const IconNodeParser = createNodeParser(createIconNode, {
-  parseOnNested: false,
+  parseOnNested: true,
   parseOnQuoted: true,
   patterns: [iconRegExp],
 });
