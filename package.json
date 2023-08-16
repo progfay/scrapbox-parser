@@ -54,7 +54,7 @@
     "@babel/preset-env": "7.22.10",
     "@types/core-js": "2.5.5",
     "@types/jest": "29.5.3",
-    "@types/node": "18.17.4",
+    "@types/node": "18.17.5",
     "@typescript-eslint/eslint-plugin": "6.2.1",
     "@typescript-eslint/parser": "6.2.1",
     "babel-loader": "9.1.3",
