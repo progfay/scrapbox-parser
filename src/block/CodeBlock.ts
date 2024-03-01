@@ -5,6 +5,9 @@ export interface CodeBlockPack {
   rows: Row[];
 }
 
+/**
+ * Scrapbox {@link https://scrapbox.io/help/Syntax#58348ae2651ee500008d67df | code block} type
+ */
 export interface CodeBlock {
   indent: number;
   type: "codeBlock";

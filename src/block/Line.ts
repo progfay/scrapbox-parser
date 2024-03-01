@@ -8,6 +8,9 @@ export interface LinePack {
   rows: [Row];
 }
 
+/**
+ * Scrapbox line type
+ */
 export interface Line {
   indent: number;
   type: "line";

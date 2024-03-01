@@ -8,6 +8,9 @@ export interface TablePack {
   rows: Row[];
 }
 
+/**
+ * Scrapbox {@link https://scrapbox.io/help/Syntax#58795996651ee5000012d4c7 | table} type
+ */
 export interface Table {
   indent: number;
   type: "table";
