@@ -9,6 +9,9 @@ import type { CodeBlock } from "./CodeBlock";
 import type { Table } from "./Table";
 import type { Line } from "./Line";
 
+/**
+ * Scrapbox block type
+ */
 export type Block = Title | CodeBlock | Table | Line;
 
 export const convertToBlock = (pack: Pack): Block => {

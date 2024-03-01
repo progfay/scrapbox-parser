@@ -43,6 +43,9 @@ type AsteriskDecorationChar =
   | "*-9"
   | "*-10";
 
+/**
+ * character type of decoration
+ */
 export type Decoration = Exclude<DecorationChar, "*"> | AsteriskDecorationChar;
 
 const createDecorationNode: NodeCreator<DecorationNode | PlainNode> = (

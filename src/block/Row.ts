@@ -1,3 +1,6 @@
+/**
+ * Scrapbox row type
+ */
 export interface Row {
   indent: number;
   text: string;

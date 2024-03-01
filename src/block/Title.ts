@@ -5,6 +5,9 @@ export interface TitlePack {
   rows: [Row];
 }
 
+/**
+ * Scrapbox title type
+ */
 export interface Title {
   type: "title";
   text: string;
