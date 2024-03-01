@@ -14,6 +14,8 @@ parse Scrapbox notation to JavaScript Object
 $ npm i @progfay/scrapbox-parser
 ```
 
+Also, you can install `@progfay/scrapbox-parser` via [JSR](https://jsr.io/@progfay/scrapbox-parser).
+
 ## Usage
 
 ```js
