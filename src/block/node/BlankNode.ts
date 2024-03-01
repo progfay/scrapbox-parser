@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { BlankNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
@@ -17,7 +18,7 @@ const createBlankNode: NodeCreator<BlankNode | PlainNode> = (raw, opts) =>
         },
       ];
 
-export const BlankNodeParser = createNodeParser(createBlankNode, {
+export const BlankNodeParser: NodeParser = createNodeParser(createBlankNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [blankRegExp],

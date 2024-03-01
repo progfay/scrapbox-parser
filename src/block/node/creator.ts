@@ -1,6 +1,6 @@
-import { convertToNodes } from ".";
+import { convertToNodes } from "./index";
 
-import type { NodeParser, NodeParserOption } from ".";
+import type { NodeParser, NodeParserOption } from "./index";
 import type { Node } from "./type";
 
 export type NodeCreator<T extends Node> = (

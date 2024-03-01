@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { CommandLineNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
@@ -27,8 +28,11 @@ const createCommandLineNode: NodeCreator<CommandLineNode | PlainNode> = (
   ];
 };
 
-export const CommandLineNodeParser = createNodeParser(createCommandLineNode, {
-  parseOnNested: false,
-  parseOnQuoted: false,
-  patterns: [commandLineRegExp],
-});
+export const CommandLineNodeParser: NodeParser = createNodeParser(
+  createCommandLineNode,
+  {
+    parseOnNested: false,
+    parseOnQuoted: false,
+    patterns: [commandLineRegExp],
+  }
+);

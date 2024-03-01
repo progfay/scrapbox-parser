@@ -1,7 +1,8 @@
-import { convertToNodes } from ".";
+import { convertToNodes } from "./index";
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { PlainNode, StrongNode } from "./type";
 import type { NodeCreator } from "./creator";
 
@@ -21,7 +22,7 @@ const createStrongNode: NodeCreator<StrongNode | PlainNode> = (raw, opts) =>
         },
       ];
 
-export const StrongNodeParser = createNodeParser(createStrongNode, {
+export const StrongNodeParser: NodeParser = createNodeParser(createStrongNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [strongRegExp],

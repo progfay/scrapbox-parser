@@ -1,7 +1,8 @@
-import { convertToNodes } from ".";
+import { convertToNodes } from "./index";
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { DecorationNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
@@ -74,8 +75,11 @@ const createDecorationNode: NodeCreator<DecorationNode | PlainNode> = (
   ];
 };
 
-export const DecorationNodeParser = createNodeParser(createDecorationNode, {
-  parseOnNested: false,
-  parseOnQuoted: true,
-  patterns: [decorationRegExp],
-});
+export const DecorationNodeParser: NodeParser = createNodeParser(
+  createDecorationNode,
+  {
+    parseOnNested: false,
+    parseOnQuoted: true,
+    patterns: [decorationRegExp],
+  }
+);
