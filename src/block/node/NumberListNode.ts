@@ -1,4 +1,4 @@
-import { convertToNodes } from ".";
+import { convertToNodes } from "./index";
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
