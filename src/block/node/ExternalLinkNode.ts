@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { NodeCreator } from "./creator";
 import type { LinkNode, PlainNode } from "./type";
 
@@ -43,13 +44,16 @@ const createExternalLinkNode: NodeCreator<LinkNode | PlainNode> = (
   ];
 };
 
-export const ExternalLinkNodeParser = createNodeParser(createExternalLinkNode, {
-  parseOnNested: true,
-  parseOnQuoted: true,
-  patterns: [
-    hrefFirstUrlRegExp,
-    contentFirstUrlRegExp,
-    bracketedUrlRegExp,
-    httpRegExp,
-  ],
-});
+export const ExternalLinkNodeParser: NodeParser = createNodeParser(
+  createExternalLinkNode,
+  {
+    parseOnNested: true,
+    parseOnQuoted: true,
+    patterns: [
+      hrefFirstUrlRegExp,
+      contentFirstUrlRegExp,
+      bracketedUrlRegExp,
+      httpRegExp,
+    ],
+  }
+);

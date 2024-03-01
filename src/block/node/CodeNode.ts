@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator";
 import { createPlainNode } from "./PlainNode";
 
+import type { NodeParser } from "./index";
 import type { CodeNode, PlainNode } from "./type";
 import type { NodeCreator } from "./creator";
 
@@ -17,7 +18,7 @@ const createCodeNode: NodeCreator<CodeNode | PlainNode> = (raw, opts) =>
         },
       ];
 
-export const CodeNodeParser = createNodeParser(createCodeNode, {
+export const CodeNodeParser: NodeParser = createNodeParser(createCodeNode, {
   parseOnNested: false,
   parseOnQuoted: true,
   patterns: [codeRegExp],

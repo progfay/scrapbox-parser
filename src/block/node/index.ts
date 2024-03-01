@@ -46,23 +46,24 @@ const combineNodeParsers =
       () => PlainNodeParser(text, opts)
     )();
 
-export const convertToNodes = combineNodeParsers(
-  FalsyEliminator,
-  QuoteNodeParser,
-  HelpfeelNodeParser,
-  CodeNodeParser,
-  CommandLineNodeParser,
-  FormulaNodeParser,
-  BlankNodeParser,
-  DecorationNodeParser,
-  StrongImageNodeParser,
-  StrongIconNodeParser,
-  StrongNodeParser,
-  ImageNodeParser,
-  ExternalLinkNodeParser,
-  IconNodeParser,
-  GoogleMapNodeParser,
-  InternalLinkNodeParser,
-  HashTagNodeParser,
-  NumberListNodeParser
-);
+export const convertToNodes: ReturnType<typeof combineNodeParsers> =
+  combineNodeParsers(
+    FalsyEliminator,
+    QuoteNodeParser,
+    HelpfeelNodeParser,
+    CodeNodeParser,
+    CommandLineNodeParser,
+    FormulaNodeParser,
+    BlankNodeParser,
+    DecorationNodeParser,
+    StrongImageNodeParser,
+    StrongIconNodeParser,
+    StrongNodeParser,
+    ImageNodeParser,
+    ExternalLinkNodeParser,
+    IconNodeParser,
+    GoogleMapNodeParser,
+    InternalLinkNodeParser,
+    HashTagNodeParser,
+    NumberListNodeParser
+  );
