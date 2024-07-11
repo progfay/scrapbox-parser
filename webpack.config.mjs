@@ -1,9 +1,11 @@
-module.exports = {
+import path from "node:path";
+
+export default {
   mode: "production",
   entry: "./src/index.ts",
   output: {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    path: require("path").resolve(__dirname, "umd"),
+    path: path.resolve(import.meta.dirname, "umd"),
     filename: "scrapbox-parser.js",
     library: "ScrapboxParser",
     libraryTarget: "umd",

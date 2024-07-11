@@ -7,13 +7,13 @@ import type { NodeCreator } from "./creator";
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/;
 
 export function generateIconNodeCreator(
-  type: IconNode["type"]
+  type: IconNode["type"],
 ): NodeCreator<IconNode>;
 export function generateIconNodeCreator(
-  type: StrongIconNode["type"]
+  type: StrongIconNode["type"],
 ): NodeCreator<StrongIconNode | PlainNode>;
 export function generateIconNodeCreator(
-  type: (IconNode | StrongIconNode)["type"]
+  type: (IconNode | StrongIconNode)["type"],
 ): NodeCreator<IconNode | StrongIconNode | PlainNode> {
   return (raw, opts) => {
     if (type === "strongIcon" && opts.context === "table") {

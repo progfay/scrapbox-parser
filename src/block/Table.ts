@@ -37,8 +37,8 @@ export const convertToTable = (pack: TablePack): Table => {
             nested: false,
             quoted: false,
             context: "table",
-          })
-        )
+          }),
+        ),
       ),
   };
 };

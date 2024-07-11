@@ -50,7 +50,7 @@ export type Decoration = Exclude<DecorationChar, "*"> | AsteriskDecorationChar;
 
 const createDecorationNode: NodeCreator<DecorationNode | PlainNode> = (
   raw,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);
@@ -84,5 +84,5 @@ export const DecorationNodeParser: NodeParser = createNodeParser(
     parseOnNested: false,
     parseOnQuoted: true,
     patterns: [decorationRegExp],
-  }
+  },
 );

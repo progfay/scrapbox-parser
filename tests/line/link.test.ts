@@ -40,7 +40,7 @@ describe("link", () => {
 
   it("Link with link", () => {
     expect(
-      "[https://example.com https://example.com]"
+      "[https://example.com https://example.com]",
     ).toMatchSnapshotWhenParsing({
       hasTitle: false,
     });
@@ -48,7 +48,7 @@ describe("link", () => {
 
   it("Link with GET parameters", () => {
     expect(
-      "[http://example.com?key1=value1&key2=value2]"
+      "[http://example.com?key1=value1&key2=value2]",
     ).toMatchSnapshotWhenParsing({
       hasTitle: false,
     });

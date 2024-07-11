@@ -9,7 +9,7 @@ const commandLineRegExp = /^[$%] .+$/;
 
 const createCommandLineNode: NodeCreator<CommandLineNode | PlainNode> = (
   raw: string,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);
@@ -34,5 +34,5 @@ export const CommandLineNodeParser: NodeParser = createNodeParser(
     parseOnNested: false,
     parseOnQuoted: false,
     patterns: [commandLineRegExp],
-  }
+  },
 );

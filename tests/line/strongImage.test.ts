@@ -10,13 +10,13 @@ describe("strongImage", () => {
 
   it("HTTP jpeg strong image with special and japanese chars", () => {
     expect(
-      "[[http://example.com/~!@#$%^&*()_+`-={}\\'\"?,.<>|/画像.jpeg]]"
+      "[[http://example.com/~!@#$%^&*()_+`-={}\\'\"?,.<>|/画像.jpeg]]",
     ).toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 
   it("Gyazo image", () => {
     expect(
-      "[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]"
+      "[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]",
     ).toMatchSnapshotWhenParsing({
       hasTitle: false,
     });
@@ -24,7 +24,7 @@ describe("strongImage", () => {
 
   it("Direct Gyazo image", () => {
     expect(
-      "[[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]]"
+      "[[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]]",
     ).toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 });

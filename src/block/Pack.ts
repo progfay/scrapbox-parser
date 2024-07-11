@@ -22,8 +22,8 @@ const packing = (packs: Pack[], row: Row): Pack[] => {
     type: /^\s*code:/.test(row.text)
       ? "codeBlock"
       : /^\s*table:/.test(row.text)
-      ? "table"
-      : "line",
+        ? "table"
+        : "line",
     rows: [row],
   });
 

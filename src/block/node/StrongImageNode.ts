@@ -10,7 +10,7 @@ const strongGyazoImageRegExp =
 
 const createStrongImageNode: NodeCreator<StrongImageNode | PlainNode> = (
   raw,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);
