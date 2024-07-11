@@ -7,7 +7,7 @@ describe("line", () => {
     expect("[* [Link]]").toMatchSnapshotWhenParsing({ hasTitle: false });
   });
 
-  it("Decoration line includes internal link", () => {
+  it("Decoration line includes external link", () => {
     expect("[* [https://example.com example]]").toMatchSnapshotWhenParsing({
       hasTitle: false,
     });

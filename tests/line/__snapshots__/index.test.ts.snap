@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`line Decoration line includes external link 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "decos": [
+          "*-1",
+        ],
+        "nodes": [
+          {
+            "content": "example",
+            "href": "https://example.com",
+            "pathType": "absolute",
+            "raw": "[https://example.com example]",
+            "type": "link",
+          },
+        ],
+        "raw": "[* [https://example.com example]]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`line Decoration line includes internal link 1`] = `
 [
   {
