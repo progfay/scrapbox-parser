@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`helpfeel No head \`?\` is not helpfeel 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "a ? not helpfeel",
         "text": "a ? not helpfeel",
         "type": "plain",
@@ -17,13 +17,13 @@ Array [
 `;
 
 exports[`helpfeel Quoted ? is not helpfeel 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": " ? Quoted",
             "text": " ? Quoted",
             "type": "plain",
@@ -39,11 +39,11 @@ Array [
 `;
 
 exports[`helpfeel Simple helpfeel 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "? Simple helpfeel",
         "text": "Simple helpfeel",
         "type": "helpfeel",

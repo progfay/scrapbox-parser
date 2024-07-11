@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`link Link with GET parameters 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "http://example.com?key1=value1&key2=value2",
         "pathType": "absolute",
@@ -19,11 +19,11 @@ Array [
 `;
 
 exports[`link Link with content 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "Example",
         "href": "https://example.com/",
         "pathType": "absolute",
@@ -33,10 +33,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "Example",
         "href": "https://example.com/",
         "pathType": "absolute",
@@ -46,10 +46,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "center https://right.com/",
         "href": "https://left.com/",
         "pathType": "absolute",
@@ -63,11 +63,11 @@ Array [
 `;
 
 exports[`link Link with link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "https://example.com",
         "href": "https://example.com",
         "pathType": "absolute",
@@ -81,11 +81,11 @@ Array [
 `;
 
 exports[`link Root and relative link path can include space 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "page name",
         "pathType": "relative",
@@ -95,10 +95,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "/project/page name",
         "pathType": "root",
@@ -112,11 +112,11 @@ Array [
 `;
 
 exports[`link Simple absolute link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "https://example.com/",
         "pathType": "absolute",
@@ -130,16 +130,16 @@ Array [
 `;
 
 exports[`link Simple absolute link with ahead non-space character 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "a",
         "text": "a",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "https://example.com/",
         "pathType": "absolute",
@@ -153,11 +153,11 @@ Array [
 `;
 
 exports[`link Simple absolute link with bracket 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "https://example.com/",
         "pathType": "absolute",
@@ -171,11 +171,11 @@ Array [
 `;
 
 exports[`link Simple relative link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "page",
         "pathType": "relative",
@@ -189,11 +189,11 @@ Array [
 `;
 
 exports[`link Simple root link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "/project/page",
         "pathType": "root",

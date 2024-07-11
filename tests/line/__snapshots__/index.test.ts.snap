@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`line Decoration line includes internal link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "content": "",
             "href": "Link",
             "pathType": "relative",
@@ -29,16 +29,16 @@ Array [
 `;
 
 exports[`line Decoration line includes internal link 2`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "content": "example",
             "href": "https://example.com",
             "pathType": "absolute",
@@ -57,18 +57,18 @@ Array [
 `;
 
 exports[`line Line that have multi node 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "Link",
         "pathType": "relative",
         "raw": "[Link]",
         "type": "link",
       },
-      Object {
+      {
         "content": "",
         "href": "Link",
         "pathType": "relative",
@@ -82,16 +82,16 @@ Array [
 `;
 
 exports[`line Multi \`]\` 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[Link",
             "text": "[Link",
             "type": "plain",
@@ -101,19 +101,19 @@ Array [
         "rawDecos": "*",
         "type": "decoration",
       },
-      Object {
+      {
         "raw": "\`code\`",
         "text": "code",
         "type": "code",
       },
-      Object {
+      {
         "content": "",
         "href": "Link",
         "pathType": "relative",
         "raw": "[Link]",
         "type": "link",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",

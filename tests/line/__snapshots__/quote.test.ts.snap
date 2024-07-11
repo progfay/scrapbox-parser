@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`quote Empty quote 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [],
+    "nodes": [
+      {
+        "nodes": [],
         "raw": ">",
         "type": "quote",
       },
@@ -17,13 +17,13 @@ Array [
 `;
 
 exports[`quote Simple quote 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": " Simple quote",
             "text": " Simple quote",
             "type": "plain",

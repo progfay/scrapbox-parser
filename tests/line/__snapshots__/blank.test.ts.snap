@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`blank [] is not blank 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[]",
         "text": "[]",
         "type": "plain",
@@ -17,21 +17,21 @@ Array [
 `;
 
 exports[`blank Blank in the [*** ] 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[*** ",
         "text": "[*** ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "[ ]",
         "text": " ",
         "type": "blank",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",
@@ -43,21 +43,21 @@ Array [
 `;
 
 exports[`blank Blank in the sentence 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "sentence",
         "text": "sentence",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "[ ]",
         "text": " ",
         "type": "blank",
       },
-      Object {
+      {
         "raw": "sentence",
         "text": "sentence",
         "type": "plain",
@@ -69,11 +69,11 @@ Array [
 `;
 
 exports[`blank Multi char blank 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[ 　 	　	 ]",
         "text": " 　 	　	 ",
         "type": "blank",
@@ -85,11 +85,11 @@ Array [
 `;
 
 exports[`blank Simple double-byte space blank 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[　]",
         "text": "　",
         "type": "blank",
@@ -101,11 +101,11 @@ Array [
 `;
 
 exports[`blank Simple half-space blank 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[ ]",
         "text": " ",
         "type": "blank",
@@ -117,11 +117,11 @@ Array [
 `;
 
 exports[`blank Simple tab blank 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[	]",
         "text": "	",
         "type": "blank",

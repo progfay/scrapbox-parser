@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`commandLine \`$ \` is not command 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "$ ",
         "text": "$ ",
         "type": "plain",
@@ -17,11 +17,11 @@ Array [
 `;
 
 exports[`commandLine \`$\` is not command 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "$",
         "text": "$",
         "type": "plain",
@@ -33,11 +33,11 @@ Array [
 `;
 
 exports[`commandLine \`$s\` is not command 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "$not command",
         "text": "$not command",
         "type": "plain",
@@ -49,11 +49,11 @@ Array [
 `;
 
 exports[`commandLine Simple command with $ 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "$ command",
         "symbol": "$",
         "text": "command",
@@ -66,11 +66,11 @@ Array [
 `;
 
 exports[`commandLine Simple command with % 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "% command",
         "symbol": "%",
         "text": "command",

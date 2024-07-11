@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`code Empty code with backquote 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`\`",
         "text": "",
         "type": "code",
@@ -17,11 +17,11 @@ Array [
 `;
 
 exports[`code Simple code with backquote 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`Simple code\`",
         "text": "Simple code",
         "type": "code",

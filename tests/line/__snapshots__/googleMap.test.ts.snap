@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`googleMap Simple google map with NE 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "latitude": 35.6812362,
         "longitude": 139.7649361,
         "place": "",
@@ -21,11 +21,11 @@ Array [
 `;
 
 exports[`googleMap Simple google map with SW 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "latitude": -13.70533,
         "longitude": -69.6533372,
         "place": "",
@@ -41,11 +41,11 @@ Array [
 `;
 
 exports[`googleMap Simple google map with place on left 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "latitude": 35.6812362,
         "longitude": 139.7649361,
         "place": "東京駅",
@@ -61,11 +61,11 @@ Array [
 `;
 
 exports[`googleMap Simple google map with place on right 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "latitude": 35.6812362,
         "longitude": 139.7649361,
         "place": "東京駅",
@@ -81,11 +81,11 @@ Array [
 `;
 
 exports[`googleMap Simple google map with zoom 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "latitude": 35.6812362,
         "longitude": 139.7649361,
         "place": "",

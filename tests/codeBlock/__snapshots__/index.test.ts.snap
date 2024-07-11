@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Code Block Bulleted code block 1`] = `
-Array [
-  Object {
+[
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",
@@ -16,11 +16,11 @@ Array [
 `;
 
 exports[`Code Block Code block with bullet 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Bullet",
         "text": "Bullet",
         "type": "plain",
@@ -28,20 +28,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",
     "indent": 1,
     "type": "codeBlock",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Bullet",
         "text": "Bullet",
         "type": "plain",
@@ -53,21 +53,21 @@ Array [
 `;
 
 exports[`Code Block Consecutive code blocks 1`] = `
-Array [
-  Object {
+[
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",
     "indent": 0,
     "type": "codeBlock",
   },
-  Object {
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",
@@ -78,11 +78,11 @@ Array [
 `;
 
 exports[`Code Block Simple code block 1`] = `
-Array [
-  Object {
+[
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",

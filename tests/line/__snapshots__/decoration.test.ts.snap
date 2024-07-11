@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`decoration Decoration * overflow 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-10",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "11*",
             "text": "11*",
             "type": "plain",
@@ -27,21 +27,21 @@ Array [
 `;
 
 exports[`decoration Decoration similar with externalLink 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "hoge ",
             "text": "hoge ",
             "type": "plain",
           },
-          Object {
+          {
             "content": "",
             "href": "https://example.com",
             "pathType": "absolute",
@@ -60,16 +60,16 @@ Array [
 `;
 
 exports[`decoration Decoration with hashTag 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "href": "tag",
             "raw": "#tag",
             "type": "hashTag",
@@ -86,16 +86,16 @@ Array [
 `;
 
 exports[`decoration Decoration with icon notation 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "path": "progfay",
             "pathType": "relative",
             "raw": "[progfay.icon]",
@@ -113,16 +113,16 @@ Array [
 `;
 
 exports[`decoration Decoration with many [ 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "!",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[[[[[[a",
             "text": "[[[[[[a",
             "type": "plain",
@@ -139,21 +139,21 @@ Array [
 `;
 
 exports[`decoration Decoration with many [ and link 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "!",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[[[[[",
             "text": "[[[[[",
             "type": "plain",
           },
-          Object {
+          {
             "content": "",
             "href": "a",
             "pathType": "relative",
@@ -172,21 +172,21 @@ Array [
 `;
 
 exports[`decoration Decoration with strong icon notation (it's just icon, not strong) 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[",
             "text": "[",
             "type": "plain",
           },
-          Object {
+          {
             "path": "progfay",
             "pathType": "relative",
             "raw": "[progfay.icon]",
@@ -197,7 +197,7 @@ Array [
         "rawDecos": "*",
         "type": "decoration",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",
@@ -209,21 +209,21 @@ Array [
 `;
 
 exports[`decoration Decoration with strong image notation (it's just image, not strong) 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[",
             "text": "[",
             "type": "plain",
           },
-          Object {
+          {
             "link": "",
             "raw": "[https://example.com/image.png]",
             "src": "https://example.com/image.png",
@@ -234,7 +234,7 @@ Array [
         "rawDecos": "*",
         "type": "decoration",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",
@@ -246,21 +246,21 @@ Array [
 `;
 
 exports[`decoration Decoration with strong notation (it's just link) 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "[",
             "text": "[",
             "type": "plain",
           },
-          Object {
+          {
             "content": "",
             "href": "link",
             "pathType": "relative",
@@ -272,7 +272,7 @@ Array [
         "rawDecos": "*",
         "type": "decoration",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",
@@ -284,16 +284,16 @@ Array [
 `;
 
 exports[`decoration Simple decoration 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -306,15 +306,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-2",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -327,15 +327,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-3",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -348,15 +348,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-4",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -369,15 +369,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-5",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -390,15 +390,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-6",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -411,15 +411,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-7",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -432,15 +432,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-8",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -453,15 +453,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-9",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -474,15 +474,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-10",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -495,15 +495,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "!",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -516,36 +516,36 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
-          "\\"",
+    "nodes": [
+      {
+        "decos": [
+          """,
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
           },
         ],
-        "raw": "[\\" deco]",
-        "rawDecos": "\\"",
+        "raw": "[" deco]",
+        "rawDecos": """,
         "type": "decoration",
       },
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "#",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -558,15 +558,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "%",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -579,15 +579,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "&",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -600,15 +600,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "'",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -621,15 +621,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "(",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -642,15 +642,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           ")",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -663,15 +663,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "+",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -684,15 +684,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           ",",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -705,15 +705,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "-",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -726,15 +726,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           ".",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -747,15 +747,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "/",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -768,15 +768,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "{",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -789,15 +789,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "|",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -810,15 +810,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "}",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -831,15 +831,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "<",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -852,15 +852,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           ">",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -873,15 +873,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "_",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -894,15 +894,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "~",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
