@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`bullet Double-byte space indent 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Double-byte space",
         "text": "Double-byte space",
         "type": "plain",
@@ -17,11 +17,11 @@ Array [
 `;
 
 exports[`bullet Multi lines bullet 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "no bullet (indent: 0)",
         "text": "no bullet (indent: 0)",
         "type": "plain",
@@ -29,10 +29,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "first bullet (indent: 1)",
         "text": "first bullet (indent: 1)",
         "type": "plain",
@@ -40,10 +40,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "second bullet (indent: 2)",
         "text": "second bullet (indent: 2)",
         "type": "plain",
@@ -51,10 +51,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 3,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "third bullet (indent: 3)",
         "text": "third bullet (indent: 3)",
         "type": "plain",
@@ -66,11 +66,11 @@ Array [
 `;
 
 exports[`bullet Single-byte space indent 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Single-byte space",
         "text": "Single-byte space",
         "type": "plain",
@@ -82,11 +82,11 @@ Array [
 `;
 
 exports[`bullet Tab indent 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Tab",
         "text": "Tab",
         "type": "plain",

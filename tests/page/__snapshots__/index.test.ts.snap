@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`page Empty page 1`] = `
-Array [
-  Object {
+[
+  {
     "text": "",
     "type": "title",
   },
@@ -10,8 +10,8 @@ Array [
 `;
 
 exports[`page Title Block without \`hasTitle\` option 1`] = `
-Array [
-  Object {
+[
+  {
     "text": "Title",
     "type": "title",
   },
@@ -19,15 +19,15 @@ Array [
 `;
 
 exports[`page https://scrapbox.io/help/Syntax 1`] = `
-Array [
-  Object {
+[
+  {
     "text": "Syntax",
     "type": "title",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "link": "",
         "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
@@ -36,22 +36,22 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Internal Links",
             "text": "Internal Links",
             "type": "plain",
@@ -60,7 +60,7 @@ Array [
         "raw": "[[Internal Links]]",
         "type": "strong",
       },
-      Object {
+      {
         "raw": " (linking to another page on scrapbox)",
         "text": " (linking to another page on scrapbox)",
         "type": "plain",
@@ -68,20 +68,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[link]\`",
         "text": "[link]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "Link",
         "pathType": "relative",
@@ -91,17 +91,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "External  Links",
             "text": "External  Links",
             "type": "plain",
@@ -110,7 +110,7 @@ Array [
         "raw": "[[External  Links]]",
         "type": "strong",
       },
-      Object {
+      {
         "raw": " (linking to another web page)",
         "text": " (linking to another web page)",
         "type": "plain",
@@ -118,20 +118,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`http://google.com\`",
         "text": "http://google.com",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "http://google.com",
         "pathType": "absolute",
@@ -141,20 +141,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[http://google.com Google]\`",
         "text": "[http://google.com Google]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "Google",
         "href": "http://google.com",
         "pathType": "absolute",
@@ -164,10 +164,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "or",
         "text": "or",
         "type": "plain",
@@ -175,20 +175,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[Google http://google.com]\`",
         "text": "[Google http://google.com]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇒ ",
         "text": " ⇒ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "Google",
         "href": "http://google.com",
         "pathType": "absolute",
@@ -198,17 +198,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Images",
             "text": "Images",
             "type": "plain",
@@ -220,15 +220,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Direct image link ↓",
         "text": "Direct image link ↓",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
         "text": "[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "type": "code",
@@ -236,10 +236,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "link": "",
         "raw": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
@@ -248,17 +248,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Clickable Thumbnail Links",
             "text": "Clickable Thumbnail Links",
             "type": "plain",
@@ -270,20 +270,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "↓ ",
         "text": "↓ ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
         "text": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ",
         "text": " ",
         "type": "plain",
@@ -291,10 +291,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "link": "http://cutedog.com",
         "raw": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
         "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
@@ -303,10 +303,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Adding the link at the end also works, as before:",
         "text": "Adding the link at the end also works, as before:",
         "type": "plain",
@@ -314,10 +314,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]\`",
         "text": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]",
         "type": "code",
@@ -325,17 +325,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Linking to other scrapbox projects",
             "text": "Linking to other scrapbox projects",
             "type": "plain",
@@ -347,20 +347,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[/projectname/pagename]\`",
         "text": "[/projectname/pagename]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "/icons/check",
         "pathType": "root",
@@ -370,20 +370,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[/projectname]\`",
         "text": "[/projectname]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "/icons",
         "pathType": "root",
@@ -393,17 +393,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Icons",
             "text": "Icons",
             "type": "plain",
@@ -415,20 +415,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[ben.icon]\`",
         "text": "[ben.icon]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇛  ",
         "text": " ⇛  ",
         "type": "plain",
       },
-      Object {
+      {
         "path": "ben",
         "pathType": "relative",
         "raw": "[ben.icon]",
@@ -437,20 +437,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[/icons/todo.icon]\`",
         "text": "[/icons/todo.icon]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " ⇛ ",
         "text": " ⇛ ",
         "type": "plain",
       },
-      Object {
+      {
         "path": "/icons/todo",
         "pathType": "root",
         "raw": "[/icons/todo.icon]",
@@ -459,17 +459,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Bold text",
             "text": "Bold text",
             "type": "plain",
@@ -481,32 +481,32 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[[Bold]]\`",
         "text": "[[Bold]]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " or ",
         "text": " or ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`[* Bold]\`",
         "text": "[* Bold]",
         "type": "code",
       },
-      Object {
+      {
         "raw": "⇒ ",
         "text": "⇒ ",
         "type": "plain",
       },
-      Object {
-        "nodes": Array [
-          Object {
+      {
+        "nodes": [
+          {
             "raw": "Bold",
             "text": "Bold",
             "type": "plain",
@@ -518,17 +518,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Italic text",
             "text": "Italic text",
             "type": "plain",
@@ -540,25 +540,25 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[/ italic]\`",
         "text": "[/ italic]",
         "type": "code",
       },
-      Object {
+      {
         "raw": "⇛ ",
         "text": "⇛ ",
         "type": "plain",
       },
-      Object {
-        "decos": Array [
+      {
+        "decos": [
           "/",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "italic",
             "text": "italic",
             "type": "plain",
@@ -571,17 +571,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": " Strikethrough text",
             "text": " Strikethrough text",
             "type": "plain",
@@ -593,25 +593,25 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[- strikethrough]\`",
         "text": "[- strikethrough]",
         "type": "code",
       },
-      Object {
+      {
         "raw": "⇛ ",
         "text": "⇛ ",
         "type": "plain",
       },
-      Object {
-        "decos": Array [
+      {
+        "decos": [
           "-",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "strikethrough",
             "text": "strikethrough",
             "type": "plain",
@@ -624,10 +624,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "link": "",
         "raw": "[https://gyazo.com/00ab07461d502db91c8ae170276d1396]",
         "src": "https://gyazo.com/00ab07461d502db91c8ae170276d1396/thumb/1000",
@@ -636,17 +636,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Bullet points",
             "text": "Bullet points",
             "type": "plain",
@@ -658,10 +658,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Press space or tab on a new line to indent and create a bullet point",
         "text": "Press space or tab on a new line to indent and create a bullet point",
         "type": "plain",
@@ -669,10 +669,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Press backspace to remove the indent  / bullet point",
         "text": "Press backspace to remove the indent  / bullet point",
         "type": "plain",
@@ -680,17 +680,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Internal links serve triple duty",
             "text": "Internal links serve triple duty",
             "type": "plain",
@@ -702,25 +702,25 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "\`[Links]\`",
         "text": "[Links]",
         "type": "code",
       },
-      Object {
+      {
         "raw": " or ",
         "text": " or ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`#links\`",
         "text": "#links",
         "type": "code",
       },
-      Object {
+      {
         "raw": " are two ways to make links. They do three things",
         "text": " are two ways to make links. They do three things",
         "type": "plain",
@@ -728,10 +728,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "An internal link to a page",
         "text": "An internal link to a page",
         "type": "plain",
@@ -739,22 +739,22 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "A ",
         "text": "A ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "Bi-directional link",
         "pathType": "relative",
         "raw": "[Bi-directional link]",
         "type": "link",
       },
-      Object {
+      {
         "raw": " back to the source",
         "text": " back to the source",
         "type": "plain",
@@ -762,22 +762,22 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "A ",
         "text": "A ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "",
         "href": "2-hop link",
         "pathType": "relative",
         "raw": "[2-hop link]",
         "type": "link",
       },
-      Object {
+      {
         "raw": " so you can find more related pages",
         "text": " so you can find more related pages",
         "type": "plain",
@@ -785,17 +785,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Block quote",
             "text": "Block quote",
             "type": "plain",
@@ -807,22 +807,22 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": " use the right caret ",
             "text": " use the right caret ",
             "type": "plain",
           },
-          Object {
+          {
             "raw": "\`>\`",
             "text": ">",
             "type": "code",
           },
-          Object {
+          {
             "raw": " at the beginning of a line to get a block quote ",
             "text": " at the beginning of a line to get a block quote ",
             "type": "plain",
@@ -834,20 +834,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "Mouse based styling",
             "text": "Mouse based styling",
             "type": "plain",
@@ -860,10 +860,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "link": "",
         "raw": "[https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc]",
         "src": "https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc/thumb/1000",
@@ -872,12 +872,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "content": "",
             "href": "Code notation",
             "pathType": "relative",
@@ -891,10 +891,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Use backquotes or backticks, \`,  to highlight code  ",
         "text": "Use backquotes or backticks, \`,  to highlight code  ",
         "type": "plain",
@@ -902,15 +902,15 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "e.g. ",
         "text": "e.g. ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`function() {  return true }\`",
         "text": "function() {  return true }",
         "type": "code",
@@ -918,17 +918,17 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "content": "",
             "href": "Code blocks",
             "pathType": "relative",
@@ -942,30 +942,30 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Typing ",
         "text": "Typing ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`code:filename.extension\`",
         "text": "code:filename.extension",
         "type": "code",
       },
-      Object {
+      {
         "raw": "or",
         "text": "or",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`code:filename\`",
         "text": "code:filename",
         "type": "code",
       },
-      Object {
+      {
         "raw": "can be used to create a new code snippet and and display it as a block",
         "text": "can be used to create a new code snippet and and display it as a block",
         "type": "plain",
@@ -973,10 +973,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 2,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Language names may be abbreviated",
         "text": "Language names may be abbreviated",
         "type": "plain",
@@ -984,27 +984,27 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "content": "function () {
   alert(document.location.href)
-  console.log(\\"hello\\")
+  console.log("hello")
   // You can also write comments!
 }",
     "fileName": "hello.js",
     "indent": 1,
     "type": "codeBlock",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "content": "",
             "href": "Tables",
             "pathType": "relative",
@@ -1018,10 +1018,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Type table: tablename to create a table",
         "text": "Type table: tablename to create a table",
         "type": "plain",
@@ -1029,10 +1029,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Use tab to move to the next column, use enter to move to the next row.",
         "text": "Use tab to move to the next column, use enter to move to the next row.",
         "type": "plain",
@@ -1040,10 +1040,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "An example:",
         "text": "An example:",
         "type": "plain",
@@ -1051,94 +1051,94 @@ Array [
     ],
     "type": "line",
   },
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "c",
             "text": "c",
             "type": "plain",
@@ -1150,25 +1150,25 @@ Array [
     "indent": 0,
     "type": "table",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "content": "",
             "href": "Mathematical notation",
             "pathType": "relative",
@@ -1183,37 +1183,37 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "Using ",
         "text": "Using ",
         "type": "plain",
       },
-      Object {
+      {
         "content": "TeX",
         "href": "https://en.wikipedia.org/wiki/TeX",
         "pathType": "absolute",
         "raw": "[TeX https://en.wikipedia.org/wiki/TeX]",
         "type": "link",
       },
-      Object {
+      {
         "raw": " inside of brackets with a dollar sign ",
         "text": " inside of brackets with a dollar sign ",
         "type": "plain",
       },
-      Object {
+      {
         "raw": "\`[$ TeX here ]\`",
         "text": "[$ TeX here ]",
         "type": "code",
       },
-      Object {
+      {
         "raw": ", you can format math or science formulas, like so: ",
         "text": ", you can format math or science formulas, like so: ",
         "type": "plain",
       },
-      Object {
+      {
         "formula": "E = mc^2",
         "raw": "[$ E = mc^2]",
         "type": "formula",
@@ -1221,20 +1221,20 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "decos": Array [
+    "nodes": [
+      {
+        "decos": [
           "*-1",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "content": "",
             "href": "Userscript",
             "pathType": "relative",
@@ -1249,10 +1249,10 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 1,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "You can even add javascript to customize Scrapbox to your liking.",
         "text": "You can even add javascript to customize Scrapbox to your liking.",
         "type": "plain",
@@ -1260,9 +1260,9 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "indent": 0,
-    "nodes": Array [],
+    "nodes": [],
     "type": "line",
   },
 ]

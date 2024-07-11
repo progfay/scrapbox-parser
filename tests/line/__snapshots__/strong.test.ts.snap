@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`strong [[]] is not strong 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[[]]",
         "text": "[[]]",
         "type": "plain",
@@ -17,21 +17,21 @@ Array [
 `;
 
 exports[`strong Decoration in Strong notation 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "[[",
         "text": "[[",
         "type": "plain",
       },
-      Object {
-        "decos": Array [
+      {
+        "decos": [
           "!",
         ],
-        "nodes": Array [
-          Object {
+        "nodes": [
+          {
             "raw": "deco",
             "text": "deco",
             "type": "plain",
@@ -41,7 +41,7 @@ Array [
         "rawDecos": "!",
         "type": "decoration",
       },
-      Object {
+      {
         "raw": "]]",
         "text": "]]",
         "type": "plain",
@@ -53,13 +53,13 @@ Array [
 `;
 
 exports[`strong Simple strong 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Simple strong",
             "text": "Simple strong",
             "type": "plain",

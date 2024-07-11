@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`numberList 1. with no space is not numberList 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "1.",
         "text": "1.",
         "type": "plain",
@@ -17,11 +17,11 @@ Array [
 `;
 
 exports[`numberList 1. with no space is not numberList 2`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "1.not numberList",
         "text": "1.not numberList",
         "type": "plain",
@@ -33,12 +33,12 @@ Array [
 `;
 
 exports[`numberList Minimum numberList 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [],
+    "nodes": [
+      {
+        "nodes": [],
         "number": 1,
         "raw": "1. ",
         "rawNumber": "1",
@@ -51,11 +51,11 @@ Array [
 `;
 
 exports[`numberList No head 1. is not numberList 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "raw": "a 1. not numberList",
         "text": "a 1. not numberList",
         "type": "plain",
@@ -67,13 +67,13 @@ Array [
 `;
 
 exports[`numberList Quoted 1. is not numberList 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": " 1. Quoted",
             "text": " 1. Quoted",
             "type": "plain",
@@ -89,13 +89,13 @@ Array [
 `;
 
 exports[`numberList Simple numberList 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "nodes": Array [
-          Object {
+    "nodes": [
+      {
+        "nodes": [
+          {
             "raw": "Simple numberList",
             "text": "Simple numberList",
             "type": "plain",

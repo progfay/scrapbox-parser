@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`formula Formula includes [] with tail half-space 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "formula": "[x]",
         "raw": "[$ [x] ]",
         "type": "formula",
@@ -17,16 +17,16 @@ Array [
 `;
 
 exports[`formula Formula includes [] without tail half-space 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "formula": "[x",
         "raw": "[$ [x]",
         "type": "formula",
       },
-      Object {
+      {
         "raw": "]",
         "text": "]",
         "type": "plain",
@@ -38,13 +38,13 @@ Array [
 `;
 
 exports[`formula Simple formula 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
-        "formula": "\\\\frac{3}{2}^N",
-        "raw": "[$ \\\\frac{3}{2}^N]",
+    "nodes": [
+      {
+        "formula": "\\frac{3}{2}^N",
+        "raw": "[$ \\frac{3}{2}^N]",
         "type": "formula",
       },
     ],

@@ -1,95 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table Bulleted table 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "c",
             "text": "c",
             "type": "plain",
@@ -105,95 +105,95 @@ Array [
 `;
 
 exports[`Table Consecutive table 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "c",
             "text": "c",
             "type": "plain",
@@ -205,94 +205,94 @@ Array [
     "indent": 0,
     "type": "table",
   },
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "c",
             "text": "c",
             "type": "plain",
@@ -308,129 +308,129 @@ Array [
 `;
 
 exports[`Table Node in table cells 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "#hashtag",
             "text": "#hashtag",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[* deco]",
             "text": "[* deco]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[ ]",
             "text": "[ ]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "\`code\`",
             "text": "\`code\`",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "https://external.com",
             "text": "https://external.com",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[https://external.com]",
             "text": "[https://external.com]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[left https://external.com]",
             "text": "[left https://external.com]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[https://external.com right]",
             "text": "[https://external.com right]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[$ x]",
             "text": "[$ x]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[N35.6812362,E139.7649361]",
             "text": "[N35.6812362,E139.7649361]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "#hashTag",
             "text": "#hashTag",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "? helpfeel",
             "text": "? helpfeel",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "$ commandLine",
             "text": "$ commandLine",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "path": "progfay",
             "pathType": "relative",
             "raw": "[progfay.icon]",
@@ -438,18 +438,18 @@ Array [
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[https://image.com/image.png]",
             "text": "[https://image.com/image.png]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "content": "",
             "href": "link",
             "pathType": "relative",
@@ -458,45 +458,45 @@ Array [
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "plain",
             "text": "plain",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "> quote",
             "text": "> quote",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[[progfay.icon]]",
             "text": "[[progfay.icon]]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[[https://image.com/image.png]]",
             "text": "[[https://image.com/image.png]]",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "[[strong]]",
             "text": "[[strong]]",
             "type": "plain",
@@ -512,95 +512,95 @@ Array [
 `;
 
 exports[`Table Simple table 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1 ",
             "text": "1 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2 ",
             "text": "2 ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "------",
             "text": "------",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "a",
             "text": "a",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "b",
             "text": "b",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "c",
             "text": "c",
             "type": "plain",
@@ -616,89 +616,89 @@ Array [
 `;
 
 exports[`Table Staggered table 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "4",
             "text": "4",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "3",
             "text": "3",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "raw": "1",
             "text": "1",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "2",
             "text": "2",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [],
+      [
+        [],
       ],
     ],
     "fileName": "Staggered",
@@ -709,36 +709,36 @@ Array [
 `;
 
 exports[`Table Table with empty cells 1`] = `
-Array [
-  Object {
-    "cells": Array [
-      Array [
-        Array [
-          Object {
+[
+  {
+    "cells": [
+      [
+        [
+          {
             "raw": " ",
             "text": " ",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "　",
             "text": "　",
             "type": "plain",
           },
         ],
-        Array [
-          Object {
+        [
+          {
             "raw": "  ",
             "text": "  ",
             "type": "plain",
           },
         ],
       ],
-      Array [
-        Array [],
-        Array [],
-        Array [],
+      [
+        [],
+        [],
+        [],
       ],
     ],
     "fileName": " ",

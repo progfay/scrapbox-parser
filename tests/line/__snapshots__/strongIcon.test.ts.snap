@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`strongIcon Multiple icons 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "path": "me",
         "pathType": "relative",
         "raw": "[[me.icon*3]]",
         "type": "strongIcon",
       },
-      Object {
+      {
         "path": "me",
         "pathType": "relative",
         "raw": "[[me.icon*3]]",
         "type": "strongIcon",
       },
-      Object {
+      {
         "path": "me",
         "pathType": "relative",
         "raw": "[[me.icon*3]]",
@@ -30,11 +30,11 @@ Array [
 `;
 
 exports[`strongIcon Simple relative strong icon 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "path": "me",
         "pathType": "relative",
         "raw": "[[me.icon]]",
@@ -47,11 +47,11 @@ Array [
 `;
 
 exports[`strongIcon Simple root strong icon 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "path": "/icons/+1",
         "pathType": "root",
         "raw": "[[/icons/+1.icon]]",
@@ -64,18 +64,18 @@ Array [
 `;
 
 exports[`strongIcon Strong icon and internal link on same line 1`] = `
-Array [
-  Object {
+[
+  {
     "indent": 0,
-    "nodes": Array [
-      Object {
+    "nodes": [
+      {
         "content": "",
         "href": "Internal link",
         "pathType": "relative",
         "raw": "[Internal link]",
         "type": "link",
       },
-      Object {
+      {
         "path": "me",
         "pathType": "relative",
         "raw": "[[me.icon]]",

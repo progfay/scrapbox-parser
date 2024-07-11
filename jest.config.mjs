@@ -1,14 +1,14 @@
-export default {
+import { createDefaultPreset } from "ts-jest";
+
+/** @type {import("ts-jest").JestConfigWithTsJest} */
+const config = {
   moduleFileExtensions: ["ts", "js"],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
-  globals: {
-    "ts-jest": {
-      tsconfig: "tsconfig.json",
-    },
+    ...createDefaultPreset().transform,
   },
   collectCoverageFrom: ["src/**/*.ts"],
   setupFilesAfterEnv: ["./tests/jest-setup.ts"],
   testMatch: ["**/tests/**/*.test.ts"],
 };
+
+export default config;
