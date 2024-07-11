@@ -1,6 +1,7 @@
 {
   "name": "@progfay/scrapbox-parser",
   "version": "9.0.0",
+  "type": "module",
   "description": "parse Scrapbox notation to JavaScript Object",
   "files": [
     "lib",
@@ -28,12 +29,12 @@
     "test:update": "jest --updateSnapshot --no-cache",
     "lint": "run-p lint:*",
     "lint:prettier": "prettier --check .",
-    "lint:eslint": "eslint -c ./.eslintrc.js .",
+    "lint:eslint": "eslint .",
     "lint:cspell": "cspell --no-summary '**/*'",
     "lint:typescript": "tsc -p ./tsconfig.eslint.json",
     "format": "run-s format:prettier format:eslint",
     "format:prettier": "prettier --write .",
-    "format:eslint": "eslint --fix -c ./.eslintrc.js ."
+    "format:eslint": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -53,10 +54,9 @@
     "@babel/core": "7.24.7",
     "@babel/preset-env": "7.24.7",
     "@types/core-js": "2.5.8",
+    "@types/eslint": "8.56.10",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.10",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "7.16.0",
     "babel-loader": "9.1.3",
     "cspell": "8.10.4",
     "eslint": "8.57.0",
@@ -69,6 +69,7 @@
     "ts-jest": "29.2.2",
     "ts-loader": "9.5.1",
     "typescript": "5.5.3",
+    "typescript-eslint": "7.16.0",
     "webpack": "5.92.1",
     "webpack-cli": "5.1.4"
   },

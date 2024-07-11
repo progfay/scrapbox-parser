@@ -1,4 +1,4 @@
 lib
 esm
 umd
-.eslintrc.js
+eslint.config.js
