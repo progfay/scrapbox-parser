@@ -28,7 +28,7 @@ export type NextNodeParser = () => Node[];
 export type NodeParser = (
   text: string,
   opts: NodeParserOption,
-  next?: NextNodeParser
+  next?: NextNodeParser,
 ) => Node[];
 
 const FalsyEliminator: NodeParser = (text, _, next) => {
@@ -43,7 +43,7 @@ const combineNodeParsers =
       (acc: NextNodeParser, parser: NodeParser): NextNodeParser =>
         () =>
           parser(text, opts, acc),
-      () => PlainNodeParser(text, opts)
+      () => PlainNodeParser(text, opts),
     )();
 
 export const convertToNodes: ReturnType<typeof combineNodeParsers> =
@@ -65,5 +65,5 @@ export const convertToNodes: ReturnType<typeof combineNodeParsers> =
     GoogleMapNodeParser,
     InternalLinkNodeParser,
     HashTagNodeParser,
-    NumberListNodeParser
+    NumberListNodeParser,
   );

@@ -6,7 +6,10 @@ import type { NodeCreator } from "./creator";
 
 const helpfeelRegExp = /^\? .+$/;
 
-const createHelpfeelNode: NodeCreator<HelpfeelNode | PlainNode> = (raw, opts) =>
+const createHelpfeelNode: NodeCreator<HelpfeelNode | PlainNode> = (
+  raw,
+  opts,
+) =>
   opts.context === "table"
     ? createPlainNode(raw, opts)
     : [

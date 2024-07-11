@@ -23,7 +23,7 @@ expect.extend({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     this: any,
     received: string,
-    opts?: ParserOption
+    opts?: ParserOption,
   ) {
     const blocks = parse(received, opts);
     return toMatchSnapshot.call(this, blocks);

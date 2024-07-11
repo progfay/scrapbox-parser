@@ -12,7 +12,7 @@ const httpRegExp = /https?:\/\/[^\s]+/;
 
 const createExternalLinkNode: NodeCreator<LinkNode | PlainNode> = (
   raw,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);
@@ -55,5 +55,5 @@ export const ExternalLinkNodeParser: NodeParser = createNodeParser(
       bracketedUrlRegExp,
       httpRegExp,
     ],
-  }
+  },
 );

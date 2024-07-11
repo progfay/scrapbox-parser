@@ -9,7 +9,7 @@ const numberListRegExp = /^[0-9]+\. .*$/;
 
 const createNumberListNode: NodeCreator<NumberListNode | PlainNode> = (
   raw,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);

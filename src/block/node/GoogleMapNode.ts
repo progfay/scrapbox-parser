@@ -25,7 +25,7 @@ const parseCoordinate: (format: string) => Coordinate = (format) => {
 
 const createGoogleMapNode: NodeCreator<GoogleMapNode | PlainNode> = (
   raw,
-  opts
+  opts,
 ) => {
   if (opts.context === "table") {
     return createPlainNode(raw, opts);
@@ -45,7 +45,7 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode | PlainNode> = (
   const url =
     place !== ""
       ? `https://www.google.com/maps/place/${encodeURIComponent(
-          place
+          place,
         )}/@${latitude},${longitude},${zoom}z`
       : `https://www.google.com/maps/@${latitude},${longitude},${zoom}z`;
 
