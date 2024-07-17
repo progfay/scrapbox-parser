@@ -1,31 +1,44 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("googleMap", () => {
   it("Simple google map with NE", () => {
-    expect("[N35.6812362,E139.7649361]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[N35.6812362,E139.7649361]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple google map with SW", () => {
-    expect("[S13.70533,W69.6533372]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[S13.70533,W69.6533372]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple google map with zoom", () => {
-    expect("[N35.6812362,E139.7649361,Z14]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[N35.6812362,E139.7649361,Z14]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple google map with place on left", () => {
-    expect("[東京駅 N35.6812362,E139.7649361,Z14]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[東京駅 N35.6812362,E139.7649361,Z14]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple google map with place on right", () => {
-    expect("[N35.6812362,E139.7649361,Z14 東京駅]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[N35.6812362,E139.7649361,Z14 東京駅]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 });

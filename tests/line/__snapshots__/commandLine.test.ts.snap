@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`commandLine \`$ \` is not command 1`] = `
+exports[`commandLine > \`$ \` is not command 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`commandLine \`$ \` is not command 1`] = `
 ]
 `;
 
-exports[`commandLine \`$\` is not command 1`] = `
+exports[`commandLine > \`$\` is not command 1`] = `
 [
   {
     "indent": 0,
@@ -32,7 +32,7 @@ exports[`commandLine \`$\` is not command 1`] = `
 ]
 `;
 
-exports[`commandLine \`$s\` is not command 1`] = `
+exports[`commandLine > \`$s\` is not command 1`] = `
 [
   {
     "indent": 0,
@@ -48,7 +48,7 @@ exports[`commandLine \`$s\` is not command 1`] = `
 ]
 `;
 
-exports[`commandLine Simple command with $ 1`] = `
+exports[`commandLine > Simple command with $ 1`] = `
 [
   {
     "indent": 0,
@@ -65,7 +65,7 @@ exports[`commandLine Simple command with $ 1`] = `
 ]
 `;
 
-exports[`commandLine Simple command with % 1`] = `
+exports[`commandLine > Simple command with % 1`] = `
 [
   {
     "indent": 0,

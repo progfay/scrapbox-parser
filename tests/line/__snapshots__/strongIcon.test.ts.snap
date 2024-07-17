@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`strongIcon Multiple icons 1`] = `
+exports[`strongIcon > Multiple icons 1`] = `
 [
   {
     "indent": 0,
@@ -29,7 +29,7 @@ exports[`strongIcon Multiple icons 1`] = `
 ]
 `;
 
-exports[`strongIcon Simple relative strong icon 1`] = `
+exports[`strongIcon > Simple relative strong icon 1`] = `
 [
   {
     "indent": 0,
@@ -46,7 +46,7 @@ exports[`strongIcon Simple relative strong icon 1`] = `
 ]
 `;
 
-exports[`strongIcon Simple root strong icon 1`] = `
+exports[`strongIcon > Simple root strong icon 1`] = `
 [
   {
     "indent": 0,
@@ -63,7 +63,7 @@ exports[`strongIcon Simple root strong icon 1`] = `
 ]
 `;
 
-exports[`strongIcon Strong icon and internal link on same line 1`] = `
+exports[`strongIcon > Strong icon and internal link on same line 1`] = `
 [
   {
     "indent": 0,

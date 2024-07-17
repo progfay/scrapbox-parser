@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`code Empty code with backquote 1`] = `
+exports[`code > Empty code with backquote 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`code Empty code with backquote 1`] = `
 ]
 `;
 
-exports[`code Simple code with backquote 1`] = `
+exports[`code > Simple code with backquote 1`] = `
 [
   {
     "indent": 0,

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`strong [[]] is not strong 1`] = `
+exports[`strong > [[]] is not strong 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`strong [[]] is not strong 1`] = `
 ]
 `;
 
-exports[`strong Decoration in Strong notation 1`] = `
+exports[`strong > Decoration in Strong notation 1`] = `
 [
   {
     "indent": 0,
@@ -52,7 +52,7 @@ exports[`strong Decoration in Strong notation 1`] = `
 ]
 `;
 
-exports[`strong Simple strong 1`] = `
+exports[`strong > Simple strong 1`] = `
 [
   {
     "indent": 0,

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`googleMap Simple google map with NE 1`] = `
+exports[`googleMap > Simple google map with NE 1`] = `
 [
   {
     "indent": 0,
@@ -20,7 +20,7 @@ exports[`googleMap Simple google map with NE 1`] = `
 ]
 `;
 
-exports[`googleMap Simple google map with SW 1`] = `
+exports[`googleMap > Simple google map with SW 1`] = `
 [
   {
     "indent": 0,
@@ -40,7 +40,7 @@ exports[`googleMap Simple google map with SW 1`] = `
 ]
 `;
 
-exports[`googleMap Simple google map with place on left 1`] = `
+exports[`googleMap > Simple google map with place on left 1`] = `
 [
   {
     "indent": 0,
@@ -60,7 +60,7 @@ exports[`googleMap Simple google map with place on left 1`] = `
 ]
 `;
 
-exports[`googleMap Simple google map with place on right 1`] = `
+exports[`googleMap > Simple google map with place on right 1`] = `
 [
   {
     "indent": 0,
@@ -80,7 +80,7 @@ exports[`googleMap Simple google map with place on right 1`] = `
 ]
 `;
 
-exports[`googleMap Simple google map with zoom 1`] = `
+exports[`googleMap > Simple google map with zoom 1`] = `
 [
   {
     "indent": 0,

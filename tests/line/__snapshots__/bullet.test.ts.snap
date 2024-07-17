@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`bullet Double-byte space indent 1`] = `
+exports[`bullet > Double-byte space indent 1`] = `
 [
   {
     "indent": 1,
@@ -16,7 +16,7 @@ exports[`bullet Double-byte space indent 1`] = `
 ]
 `;
 
-exports[`bullet Multi lines bullet 1`] = `
+exports[`bullet > Multi lines bullet 1`] = `
 [
   {
     "indent": 0,
@@ -65,7 +65,7 @@ exports[`bullet Multi lines bullet 1`] = `
 ]
 `;
 
-exports[`bullet Single-byte space indent 1`] = `
+exports[`bullet > Single-byte space indent 1`] = `
 [
   {
     "indent": 1,
@@ -81,7 +81,7 @@ exports[`bullet Single-byte space indent 1`] = `
 ]
 `;
 
-exports[`bullet Tab indent 1`] = `
+exports[`bullet > Tab indent 1`] = `
 [
   {
     "indent": 1,

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`blank [] is not blank 1`] = `
+exports[`blank > [] is not blank 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`blank [] is not blank 1`] = `
 ]
 `;
 
-exports[`blank Blank in the [*** ] 1`] = `
+exports[`blank > Blank in the [*** ] 1`] = `
 [
   {
     "indent": 0,
@@ -42,7 +42,7 @@ exports[`blank Blank in the [*** ] 1`] = `
 ]
 `;
 
-exports[`blank Blank in the sentence 1`] = `
+exports[`blank > Blank in the sentence 1`] = `
 [
   {
     "indent": 0,
@@ -68,7 +68,7 @@ exports[`blank Blank in the sentence 1`] = `
 ]
 `;
 
-exports[`blank Multi char blank 1`] = `
+exports[`blank > Multi char blank 1`] = `
 [
   {
     "indent": 0,
@@ -84,7 +84,7 @@ exports[`blank Multi char blank 1`] = `
 ]
 `;
 
-exports[`blank Simple double-byte space blank 1`] = `
+exports[`blank > Simple double-byte space blank 1`] = `
 [
   {
     "indent": 0,
@@ -100,7 +100,7 @@ exports[`blank Simple double-byte space blank 1`] = `
 ]
 `;
 
-exports[`blank Simple half-space blank 1`] = `
+exports[`blank > Simple half-space blank 1`] = `
 [
   {
     "indent": 0,
@@ -116,7 +116,7 @@ exports[`blank Simple half-space blank 1`] = `
 ]
 `;
 
-exports[`blank Simple tab blank 1`] = `
+exports[`blank > Simple tab blank 1`] = `
 [
   {
     "indent": 0,

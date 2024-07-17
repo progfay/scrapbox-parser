@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`decoration Decoration * overflow 1`] = `
+exports[`decoration > Decoration * overflow 1`] = `
 [
   {
     "indent": 0,
@@ -26,7 +26,7 @@ exports[`decoration Decoration * overflow 1`] = `
 ]
 `;
 
-exports[`decoration Decoration similar with externalLink 1`] = `
+exports[`decoration > Decoration similar with externalLink 1`] = `
 [
   {
     "indent": 0,
@@ -59,7 +59,7 @@ exports[`decoration Decoration similar with externalLink 1`] = `
 ]
 `;
 
-exports[`decoration Decoration with hashTag 1`] = `
+exports[`decoration > Decoration with hashTag 1`] = `
 [
   {
     "indent": 0,
@@ -85,7 +85,7 @@ exports[`decoration Decoration with hashTag 1`] = `
 ]
 `;
 
-exports[`decoration Decoration with icon notation 1`] = `
+exports[`decoration > Decoration with icon notation 1`] = `
 [
   {
     "indent": 0,
@@ -112,7 +112,7 @@ exports[`decoration Decoration with icon notation 1`] = `
 ]
 `;
 
-exports[`decoration Decoration with many [ 1`] = `
+exports[`decoration > Decoration with many [ 1`] = `
 [
   {
     "indent": 0,
@@ -138,7 +138,7 @@ exports[`decoration Decoration with many [ 1`] = `
 ]
 `;
 
-exports[`decoration Decoration with many [ and link 1`] = `
+exports[`decoration > Decoration with many [ and link 1`] = `
 [
   {
     "indent": 0,
@@ -171,7 +171,7 @@ exports[`decoration Decoration with many [ and link 1`] = `
 ]
 `;
 
-exports[`decoration Decoration with strong icon notation (it's just icon, not strong) 1`] = `
+exports[`decoration > Decoration with strong icon notation (it's just icon, not strong) 1`] = `
 [
   {
     "indent": 0,
@@ -208,7 +208,7 @@ exports[`decoration Decoration with strong icon notation (it's just icon, not st
 ]
 `;
 
-exports[`decoration Decoration with strong image notation (it's just image, not strong) 1`] = `
+exports[`decoration > Decoration with strong image notation (it's just image, not strong) 1`] = `
 [
   {
     "indent": 0,
@@ -245,7 +245,7 @@ exports[`decoration Decoration with strong image notation (it's just image, not 
 ]
 `;
 
-exports[`decoration Decoration with strong notation (it's just link) 1`] = `
+exports[`decoration > Decoration with strong notation (it's just link) 1`] = `
 [
   {
     "indent": 0,
@@ -283,7 +283,7 @@ exports[`decoration Decoration with strong notation (it's just link) 1`] = `
 ]
 `;
 
-exports[`decoration Simple decoration 1`] = `
+exports[`decoration > Simple decoration 1`] = `
 [
   {
     "indent": 0,

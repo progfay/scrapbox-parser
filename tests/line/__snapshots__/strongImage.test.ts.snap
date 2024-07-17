@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`strongImage Direct Gyazo image 1`] = `
+exports[`strongImage > Direct Gyazo image 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`strongImage Direct Gyazo image 1`] = `
 ]
 `;
 
-exports[`strongImage Gyazo image 1`] = `
+exports[`strongImage > Gyazo image 1`] = `
 [
   {
     "indent": 0,
@@ -32,7 +32,7 @@ exports[`strongImage Gyazo image 1`] = `
 ]
 `;
 
-exports[`strongImage HTTP jpeg strong image with special and japanese chars 1`] = `
+exports[`strongImage > HTTP jpeg strong image with special and japanese chars 1`] = `
 [
   {
     "indent": 0,
@@ -48,7 +48,7 @@ exports[`strongImage HTTP jpeg strong image with special and japanese chars 1`] 
 ]
 `;
 
-exports[`strongImage Simple strong image 1`] = `
+exports[`strongImage > Simple strong image 1`] = `
 [
   {
     "indent": 0,

@@ -1,35 +1,58 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("Code Block", () => {
   it("Simple code block", () => {
-    expect(`code:hello.js
+    expect(
+      parse(
+        `
+code:hello.js
  function () {
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`).toMatchSnapshotWhenParsing({ hasTitle: false });
+ }
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Bulleted code block", () => {
-    expect(` code:hello.js
+    expect(
+      parse(
+        ` code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
-  }`).toMatchSnapshotWhenParsing({ hasTitle: false });
+  }`,
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Code block with bullet", () => {
-    expect(` Bullet
+    expect(
+      parse(
+        ` Bullet
  code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
   }
- Bullet`).toMatchSnapshotWhenParsing({ hasTitle: false });
+ Bullet`,
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Consecutive code blocks", () => {
-    expect(`code:hello.js
+    expect(
+      parse(
+        `
+code:hello.js
  function () {
    alert(document.location.href)
    console.log("hello")
@@ -40,6 +63,10 @@ code:hello.js
    alert(document.location.href)
    console.log("hello")
    // You can also write comments!
- }`).toMatchSnapshotWhenParsing({ hasTitle: false });
+ }
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 });

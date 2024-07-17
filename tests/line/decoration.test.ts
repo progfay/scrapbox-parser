@@ -1,8 +1,12 @@
+import { describe, it, expect } from "vitest";
 import { parse, Line, Decoration, DecorationNode } from "../../src";
 
 describe("decoration", () => {
   it("Simple decoration", () => {
-    expect(`[* deco]
+    expect(
+      parse(
+        `
+[* deco]
 [** deco]
 [*** deco]
 [**** deco]
@@ -31,7 +35,11 @@ describe("decoration", () => {
 [< deco]
 [> deco]
 [_ deco]
-[~ deco]`).toMatchSnapshotWhenParsing({ hasTitle: false });
+[~ deco]
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("All decoration", () => {
@@ -65,48 +73,56 @@ describe("decoration", () => {
   });
 
   it("Decoration * overflow", () => {
-    expect("[*********** 11*]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[*********** 11*]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Decoration similar with externalLink", () => {
-    expect("[* hoge https://example.com]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[* hoge https://example.com]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Decoration with hashTag", () => {
-    expect("[* #tag]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[* #tag]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Decoration with many [", () => {
-    expect("[! [[[[[[a]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[! [[[[[[a]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Decoration with many [ and link", () => {
-    expect("[! [[[[[[a]]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[! [[[[[[a]]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Decoration with strong notation (it's just link)", () => {
-    expect("[* [[link]]]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[* [[link]]]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Decoration with icon notation", () => {
-    expect("[* [progfay.icon]]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[* [progfay.icon]]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Decoration with strong icon notation (it's just icon, not strong)", () => {
-    expect("[* [[progfay.icon]]]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[* [[progfay.icon]]]", { hasTitle: false }),
+    ).toMatchSnapshot();
   });
 
   it("Decoration with strong image notation (it's just image, not strong)", () => {
-    expect("[* [[https://example.com/image.png]]]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[* [[https://example.com/image.png]]]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 });

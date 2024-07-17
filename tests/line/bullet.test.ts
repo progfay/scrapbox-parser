@@ -1,25 +1,39 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("bullet", () => {
   it("Single-byte space indent", () => {
-    expect(" Single-byte space").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse(" Single-byte space", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Double-byte space indent", () => {
-    expect("　Double-byte space").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("　Double-byte space", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Tab indent", () => {
     // eslint-disable-next-line no-tabs
-    expect("	Tab").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("	Tab", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Multi lines bullet", () => {
-    expect(`no bullet (indent: 0)
+    expect(
+      parse(
+        `
+no bullet (indent: 0)
  first bullet (indent: 1)
   second bullet (indent: 2)
-   third bullet (indent: 3)`).toMatchSnapshotWhenParsing({ hasTitle: false });
+   third bullet (indent: 3)
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 });

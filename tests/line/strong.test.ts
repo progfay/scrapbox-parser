@@ -1,13 +1,16 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("strong", () => {
   it("Simple strong", () => {
-    expect("[[Simple strong]]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[[Simple strong]]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("[[]] is not strong", () => {
-    expect("[[]]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[[]]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Decoration in Strong notation", () => {
-    expect("[[[! deco]]]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[[[! deco]]]", { hasTitle: false })).toMatchSnapshot();
   });
 });

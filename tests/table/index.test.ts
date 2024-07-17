@@ -1,39 +1,66 @@
 /* eslint-disable no-tabs, no-irregular-whitespace */
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
 
 describe("Table", () => {
   it("Simple table", () => {
-    expect(`table:hello
+    expect(
+      parse(
+        `
+table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
-${"\t"}a${"\t"}b${"\t"}c`).toMatchSnapshotWhenParsing({ hasTitle: false });
+${"\t"}a${"\t"}b${"\t"}c
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Bulleted table", () => {
-    expect(` table:bulleted
+    expect(
+      parse(
+        ` table:bulleted
  ${"\t"}1${"\t"}2${"\t"}3
  ${"\t"}1 ${"\t"}2 ${"\t"}3
  ${"\t"}------${"\t"}------${"\t"}------
- ${"\t"}a${"\t"}b${"\t"}c`).toMatchSnapshotWhenParsing({ hasTitle: false });
+ ${"\t"}a${"\t"}b${"\t"}c`,
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Table with empty cells", () => {
-    expect(`table:${" "}
+    expect(
+      parse(
+        `table:${" "}
 ${"\t"} ${"\t"}　${"\t"}${"  "}
-${"\t"}${"\t"}${"\t"}`).toMatchSnapshotWhenParsing({ hasTitle: false });
+${"\t"}${"\t"}${"\t"}`,
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Staggered table", () => {
-    expect(`table:Staggered
+    expect(
+      parse(
+        `table:Staggered
 ${"\t"}1${"\t"}2${"\t"}3${"\t"}4
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1
 ${"\t"}1${"\t"}2
-${"\t"}`).toMatchSnapshotWhenParsing({ hasTitle: false });
+${"\t"}`,
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Consecutive table", () => {
-    expect(`table:hello
+    expect(
+      parse(
+        `
+table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
@@ -42,11 +69,18 @@ table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
-${"\t"}a${"\t"}b${"\t"}c`).toMatchSnapshotWhenParsing({ hasTitle: false });
+${"\t"}a${"\t"}b${"\t"}c
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Node in table cells", () => {
-    expect(`table:node in table cells
+    expect(
+      parse(
+        `
+table:node in table cells
 ${"\t"}#hashtag
 ${"\t"}[* deco]
 ${"\t"}[ ]
@@ -67,8 +101,10 @@ ${"\t"}plain
 ${"\t"}> quote
 ${"\t"}[[progfay.icon]]
 ${"\t"}[[https://image.com/image.png]]
-${"\t"}[[strong]]`).toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+${"\t"}[[strong]]
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 });
