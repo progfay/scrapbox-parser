@@ -1,13 +1,16 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("plain", () => {
   it("Simple plain text", () => {
-    expect("Plain text").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("Plain text", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Blank line", () => {
-    expect("").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Keep tail space", () => {
-    expect("Tail space ->  ").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("Tail space ->  ", { hasTitle: false })).toMatchSnapshot();
   });
 });

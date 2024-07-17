@@ -1,8 +1,7 @@
-import globals from "globals";
 import eslint from "@eslint/js";
 import tsEslint from "typescript-eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
-import eslintPluginJest from "eslint-plugin-jest";
+import eslintPluginVitest from "eslint-plugin-vitest";
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default tsEslint.config(
@@ -14,9 +13,6 @@ export default tsEslint.config(
       eslintConfigPrettier,
     ],
     languageOptions: {
-      globals: {
-        ...globals.jest,
-      },
       parser: tsEslint.parser,
       parserOptions: {
         sourceType: "module",
@@ -28,7 +24,7 @@ export default tsEslint.config(
     },
   },
   {
-    files: ["**/tests/**/*.test.ts"],
-    ...eslintPluginJest.configs["flat/recommended"],
+    files: ["tests/**"],
+    ...eslintPluginVitest.configs.recommended,
   },
 );

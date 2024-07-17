@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`hashTag HashTag in sentence with spaces 1`] = `
+exports[`hashTag > HashTag in sentence with spaces 1`] = `
 [
   {
     "indent": 0,
@@ -31,7 +31,7 @@ exports[`hashTag HashTag in sentence with spaces 1`] = `
 ]
 `;
 
-exports[`hashTag HashTag in sentence without spaces is not hashTag 1`] = `
+exports[`hashTag > HashTag in sentence without spaces is not hashTag 1`] = `
 [
   {
     "indent": 0,
@@ -47,7 +47,7 @@ exports[`hashTag HashTag in sentence without spaces is not hashTag 1`] = `
 ]
 `;
 
-exports[`hashTag HashTag includes \`#\` 1`] = `
+exports[`hashTag > HashTag includes \`#\` 1`] = `
 [
   {
     "indent": 0,
@@ -63,7 +63,7 @@ exports[`hashTag HashTag includes \`#\` 1`] = `
 ]
 `;
 
-exports[`hashTag Multiple hashTag 1`] = `
+exports[`hashTag > Multiple hashTag 1`] = `
 [
   {
     "indent": 0,
@@ -99,7 +99,7 @@ exports[`hashTag Multiple hashTag 1`] = `
 ]
 `;
 
-exports[`hashTag Only \`#\` is not hashTag 1`] = `
+exports[`hashTag > Only \`#\` is not hashTag 1`] = `
 [
   {
     "indent": 0,
@@ -115,7 +115,7 @@ exports[`hashTag Only \`#\` is not hashTag 1`] = `
 ]
 `;
 
-exports[`hashTag Simple hashTag 1`] = `
+exports[`hashTag > Simple hashTag 1`] = `
 [
   {
     "indent": 0,

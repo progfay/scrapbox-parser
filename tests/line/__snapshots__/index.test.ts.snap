@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`line Decoration line includes external link 1`] = `
+exports[`line > Decoration line includes external link 1`] = `
 [
   {
     "indent": 0,
@@ -28,7 +28,7 @@ exports[`line Decoration line includes external link 1`] = `
 ]
 `;
 
-exports[`line Decoration line includes internal link 1`] = `
+exports[`line > Decoration line includes internal link 1`] = `
 [
   {
     "indent": 0,
@@ -56,35 +56,7 @@ exports[`line Decoration line includes internal link 1`] = `
 ]
 `;
 
-exports[`line Decoration line includes internal link 2`] = `
-[
-  {
-    "indent": 0,
-    "nodes": [
-      {
-        "decos": [
-          "*-1",
-        ],
-        "nodes": [
-          {
-            "content": "example",
-            "href": "https://example.com",
-            "pathType": "absolute",
-            "raw": "[https://example.com example]",
-            "type": "link",
-          },
-        ],
-        "raw": "[* [https://example.com example]]",
-        "rawDecos": "*",
-        "type": "decoration",
-      },
-    ],
-    "type": "line",
-  },
-]
-`;
-
-exports[`line Line that have multi node 1`] = `
+exports[`line > Line that have multi node 1`] = `
 [
   {
     "indent": 0,
@@ -109,7 +81,7 @@ exports[`line Line that have multi node 1`] = `
 ]
 `;
 
-exports[`line Multi \`]\` 1`] = `
+exports[`line > Multi \`]\` 1`] = `
 [
   {
     "indent": 0,

@@ -1,9 +1,12 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("code", () => {
   it("Simple code with backquote", () => {
-    expect("`Simple code`").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("`Simple code`", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Empty code with backquote", () => {
-    expect("``").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("``", { hasTitle: false })).toMatchSnapshot();
   });
 });

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`formula Formula includes [] with tail half-space 1`] = `
+exports[`formula > Formula includes [] with tail half-space 1`] = `
 [
   {
     "indent": 0,
@@ -16,7 +16,7 @@ exports[`formula Formula includes [] with tail half-space 1`] = `
 ]
 `;
 
-exports[`formula Formula includes [] without tail half-space 1`] = `
+exports[`formula > Formula includes [] without tail half-space 1`] = `
 [
   {
     "indent": 0,
@@ -37,7 +37,7 @@ exports[`formula Formula includes [] without tail half-space 1`] = `
 ]
 `;
 
-exports[`formula Simple formula 1`] = `
+exports[`formula > Simple formula 1`] = `
 [
   {
     "indent": 0,

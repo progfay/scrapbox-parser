@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Table Bulleted table 1`] = `
+exports[`Table > Bulleted table 1`] = `
 [
   {
     "cells": [
@@ -104,7 +104,7 @@ exports[`Table Bulleted table 1`] = `
 ]
 `;
 
-exports[`Table Consecutive table 1`] = `
+exports[`Table > Consecutive table 1`] = `
 [
   {
     "cells": [
@@ -307,7 +307,7 @@ exports[`Table Consecutive table 1`] = `
 ]
 `;
 
-exports[`Table Node in table cells 1`] = `
+exports[`Table > Node in table cells 1`] = `
 [
   {
     "cells": [
@@ -511,7 +511,7 @@ exports[`Table Node in table cells 1`] = `
 ]
 `;
 
-exports[`Table Simple table 1`] = `
+exports[`Table > Simple table 1`] = `
 [
   {
     "cells": [
@@ -615,7 +615,7 @@ exports[`Table Simple table 1`] = `
 ]
 `;
 
-exports[`Table Staggered table 1`] = `
+exports[`Table > Staggered table 1`] = `
 [
   {
     "cells": [
@@ -708,7 +708,7 @@ exports[`Table Staggered table 1`] = `
 ]
 `;
 
-exports[`Table Table with empty cells 1`] = `
+exports[`Table > Table with empty cells 1`] = `
 [
   {
     "cells": [

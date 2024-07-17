@@ -1,22 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`numberList 1. with no space is not numberList 1`] = `
-[
-  {
-    "indent": 0,
-    "nodes": [
-      {
-        "raw": "1.",
-        "text": "1.",
-        "type": "plain",
-      },
-    ],
-    "type": "line",
-  },
-]
-`;
-
-exports[`numberList 1. with no space is not numberList 2`] = `
+exports[`numberList > 1. with no space is not numberList 1`] = `
 [
   {
     "indent": 0,
@@ -32,7 +16,7 @@ exports[`numberList 1. with no space is not numberList 2`] = `
 ]
 `;
 
-exports[`numberList Minimum numberList 1`] = `
+exports[`numberList > Minimum numberList 1`] = `
 [
   {
     "indent": 0,
@@ -50,7 +34,7 @@ exports[`numberList Minimum numberList 1`] = `
 ]
 `;
 
-exports[`numberList No head 1. is not numberList 1`] = `
+exports[`numberList > No head 1. is not numberList 1`] = `
 [
   {
     "indent": 0,
@@ -66,7 +50,7 @@ exports[`numberList No head 1. is not numberList 1`] = `
 ]
 `;
 
-exports[`numberList Quoted 1. is not numberList 1`] = `
+exports[`numberList > Quoted 1. is not numberList 1`] = `
 [
   {
     "indent": 0,
@@ -88,7 +72,7 @@ exports[`numberList Quoted 1. is not numberList 1`] = `
 ]
 `;
 
-exports[`numberList Simple numberList 1`] = `
+exports[`numberList > Simple numberList 1`] = `
 [
   {
     "indent": 0,

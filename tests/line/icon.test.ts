@@ -1,22 +1,25 @@
+import { describe, it, expect } from "vitest";
 import { parse } from "../../src";
 
 describe("icon", () => {
   it("Simple root icon", () => {
-    expect("[/icons/+1.icon]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[/icons/+1.icon]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Simple relative icon", () => {
-    expect("[me.icon]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[me.icon]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Multiple icons", () => {
-    expect("[me.icon*3]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[me.icon*3]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Icon and internal link on same line", () => {
-    expect("[Internal link][me.icon]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[Internal link][me.icon]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Each multiple icon must be different Object", () => {

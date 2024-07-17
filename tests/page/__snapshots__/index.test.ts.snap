@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`page Empty page 1`] = `
+exports[`page > Empty page 1`] = `
 [
   {
     "text": "",
@@ -9,7 +9,7 @@ exports[`page Empty page 1`] = `
 ]
 `;
 
-exports[`page Title Block without \`hasTitle\` option 1`] = `
+exports[`page > Title Block without \`hasTitle\` option 1`] = `
 [
   {
     "text": "Title",
@@ -18,7 +18,7 @@ exports[`page Title Block without \`hasTitle\` option 1`] = `
 ]
 `;
 
-exports[`page https://scrapbox.io/help/Syntax 1`] = `
+exports[`page > https://scrapbox.io/help/Syntax 1`] = `
 [
   {
     "text": "Syntax",

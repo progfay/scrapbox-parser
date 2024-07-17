@@ -1,13 +1,16 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("helpfeel", () => {
   it("Simple helpfeel", () => {
-    expect("? Simple helpfeel").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("? Simple helpfeel", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("No head `?` is not helpfeel", () => {
-    expect("a ? not helpfeel").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("a ? not helpfeel", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Quoted ? is not helpfeel", () => {
-    expect("> ? Quoted").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("> ? Quoted", { hasTitle: false })).toMatchSnapshot();
   });
 });

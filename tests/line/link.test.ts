@@ -1,56 +1,77 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("link", () => {
   it("Simple absolute link", () => {
-    expect("https://example.com/").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("https://example.com/", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple absolute link with ahead non-space character", () => {
-    expect("ahttps://example.com/").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("ahttps://example.com/", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple absolute link with bracket", () => {
-    expect("[https://example.com/]").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("[https://example.com/]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple root link", () => {
-    expect("[/project/page]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[/project/page]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Simple relative link", () => {
-    expect("[page]").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("[page]", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Link with content", () => {
-    expect(`[https://example.com/   Example]
+    expect(
+      parse(
+        `
+[https://example.com/   Example]
 [Example   https://example.com/]
-[https://left.com/ center https://right.com/]`).toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+[https://left.com/ center https://right.com/]
+`.trim(),
+        {
+          hasTitle: false,
+        },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Root and relative link path can include space", () => {
-    expect(`[page name]
-[/project/page name]`).toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(
+      parse(
+        `
+[page name]
+[/project/page name]
+`.trim(),
+        { hasTitle: false },
+      ),
+    ).toMatchSnapshot();
   });
 
   it("Link with link", () => {
     expect(
-      "[https://example.com https://example.com]",
-    ).toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+      parse("[https://example.com https://example.com]", { hasTitle: false }),
+    ).toMatchSnapshot();
   });
 
   it("Link with GET parameters", () => {
     expect(
-      "[http://example.com?key1=value1&key2=value2]",
-    ).toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+      parse("[http://example.com?key1=value1&key2=value2]", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 });

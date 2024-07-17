@@ -1,21 +1,24 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("commandLine", () => {
   it("Simple command with $", () => {
-    expect("$ command").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("$ command", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Simple command with %", () => {
-    expect("% command").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("% command", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("`$` is not command", () => {
-    expect("$").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("$", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("`$ ` is not command", () => {
-    expect("$ ").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("$ ", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("`$s` is not command", () => {
-    expect("$not command").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("$not command", { hasTitle: false })).toMatchSnapshot();
   });
 });

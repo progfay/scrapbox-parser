@@ -1,32 +1,40 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("numberList", () => {
   it("Minimum numberList", () => {
-    expect("1. ").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("1. ", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Simple numberList", () => {
-    expect("1. Simple numberList").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("1. Simple numberList", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("1. with no space is not numberList", () => {
-    expect("1.").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
-    expect("1.not numberList").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("1.not numberList", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("No head 1. is not numberList", () => {
-    expect("a 1. not numberList").toMatchSnapshotWhenParsing({
-      hasTitle: false,
-    });
+    expect(
+      parse("a 1. not numberList", {
+        hasTitle: false,
+      }),
+    ).toMatchSnapshot();
   });
 
   it("Quoted 1. is not numberList", () => {
-    expect("> 1. Quoted").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("> 1. Quoted", { hasTitle: false })).toMatchSnapshot();
   });
 });

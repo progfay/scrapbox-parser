@@ -1,25 +1,28 @@
+import { describe, it, expect } from "vitest";
+import { parse } from "../../src";
+
 describe("hashTag", () => {
   it("Simple hashTag", () => {
-    expect("#tag").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("#tag", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Only `#` is not hashTag", () => {
-    expect("#").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("#", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("HashTag includes `#`", () => {
-    expect("#hash#Tag").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("#hash#Tag", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("HashTag in sentence with spaces", () => {
-    expect("This is a #tag .").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("This is a #tag .", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("HashTag in sentence without spaces is not hashTag", () => {
-    expect("→#notTag←").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("→#notTag←", { hasTitle: false })).toMatchSnapshot();
   });
 
   it("Multiple hashTag", () => {
-    expect("#hoge #fuga #piyo").toMatchSnapshotWhenParsing({ hasTitle: false });
+    expect(parse("#hoge #fuga #piyo", { hasTitle: false })).toMatchSnapshot();
   });
 });

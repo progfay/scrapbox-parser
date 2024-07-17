@@ -5,6 +5,5 @@
     "rootDir": "./src",
     "outDir": "./lib",
     "tsBuildInfoFile": "./.cjs.tsbuildinfo"
-  },
-  "exclude": ["tests/jest-setup.ts"]
+  }
 }

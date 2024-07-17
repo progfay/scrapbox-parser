@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Code Block Bulleted code block 1`] = `
+exports[`Code Block > Bulleted code block 1`] = `
 [
   {
     "content": "function () {
@@ -15,7 +15,7 @@ exports[`Code Block Bulleted code block 1`] = `
 ]
 `;
 
-exports[`Code Block Code block with bullet 1`] = `
+exports[`Code Block > Code block with bullet 1`] = `
 [
   {
     "indent": 1,
@@ -52,7 +52,7 @@ exports[`Code Block Code block with bullet 1`] = `
 ]
 `;
 
-exports[`Code Block Consecutive code blocks 1`] = `
+exports[`Code Block > Consecutive code blocks 1`] = `
 [
   {
     "content": "function () {
@@ -77,7 +77,7 @@ exports[`Code Block Consecutive code blocks 1`] = `
 ]
 `;
 
-exports[`Code Block Simple code block 1`] = `
+exports[`Code Block > Simple code block 1`] = `
 [
   {
     "content": "function () {

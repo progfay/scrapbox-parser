@@ -5,6 +5,5 @@
     "rootDir": "./src",
     "outDir": "./esm",
     "tsBuildInfoFile": "./.esm.tsbuildinfo"
-  },
-  "exclude": ["tests/jest-setup.ts"]
+  }
 }

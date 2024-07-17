@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`image Direct Gyazo image 1`] = `
+exports[`image > Direct Gyazo image 1`] = `
 [
   {
     "indent": 0,
@@ -17,7 +17,7 @@ exports[`image Direct Gyazo image 1`] = `
 ]
 `;
 
-exports[`image Gyazo image 1`] = `
+exports[`image > Gyazo image 1`] = `
 [
   {
     "indent": 0,
@@ -58,7 +58,7 @@ exports[`image Gyazo image 1`] = `
 ]
 `;
 
-exports[`image Gyazo image with link 1`] = `
+exports[`image > Gyazo image with link 1`] = `
 [
   {
     "indent": 0,
@@ -99,7 +99,7 @@ exports[`image Gyazo image with link 1`] = `
 ]
 `;
 
-exports[`image HTTP jpeg image with special and japanese chars 1`] = `
+exports[`image > HTTP jpeg image with special and japanese chars 1`] = `
 [
   {
     "indent": 0,
@@ -116,7 +116,7 @@ exports[`image HTTP jpeg image with special and japanese chars 1`] = `
 ]
 `;
 
-exports[`image HTTPS svg and GIF image with link 1`] = `
+exports[`image > HTTPS svg and GIF image with link 1`] = `
 [
   {
     "indent": 0,
@@ -145,7 +145,7 @@ exports[`image HTTPS svg and GIF image with link 1`] = `
 ]
 `;
 
-exports[`image Image with GET parameters 1`] = `
+exports[`image > Image with GET parameters 1`] = `
 [
   {
     "indent": 0,
@@ -162,7 +162,7 @@ exports[`image Image with GET parameters 1`] = `
 ]
 `;
 
-exports[`image Image with double image link 1`] = `
+exports[`image > Image with double image link 1`] = `
 [
   {
     "indent": 0,
@@ -179,7 +179,7 @@ exports[`image Image with double image link 1`] = `
 ]
 `;
 
-exports[`image Simple image 1`] = `
+exports[`image > Simple image 1`] = `
 [
   {
     "indent": 0,
