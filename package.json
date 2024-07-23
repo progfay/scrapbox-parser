@@ -51,7 +51,7 @@
   },
   "homepage": "https://github.com/progfay/scrapbox-parser#readme",
   "devDependencies": {
-    "@types/eslint": "8.56.10",
+    "@types/eslint": "8.56.11",
     "@vitest/coverage-v8": "2.0.3",
     "cspell": "8.12.1",
     "eslint": "8.57.0",
