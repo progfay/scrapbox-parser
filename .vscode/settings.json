@@ -10,7 +10,8 @@
 		"hoge",
 		"fuga",
 		"piyo",
-		"tsbuildinfo"
+		"tsbuildinfo",
+		"biomejs"
 	],
 	"editor.defaultFormatter": "biomejs.biome",
 	"editor.formatOnSave": true
