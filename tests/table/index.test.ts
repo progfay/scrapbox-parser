@@ -1,65 +1,65 @@
 /* eslint-disable no-tabs, no-irregular-whitespace */
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src";
 
 describe("Table", () => {
-  it("Simple table", () => {
-    expect(
-      parse(
-        `
+	it("Simple table", () => {
+		expect(
+			parse(
+				`
 table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Bulleted table", () => {
-    expect(
-      parse(
-        ` table:bulleted
+	it("Bulleted table", () => {
+		expect(
+			parse(
+				` table:bulleted
  ${"\t"}1${"\t"}2${"\t"}3
  ${"\t"}1 ${"\t"}2 ${"\t"}3
  ${"\t"}------${"\t"}------${"\t"}------
  ${"\t"}a${"\t"}b${"\t"}c`,
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Table with empty cells", () => {
-    expect(
-      parse(
-        `table:${" "}
+	it("Table with empty cells", () => {
+		expect(
+			parse(
+				`table:${" "}
 ${"\t"} ${"\t"}　${"\t"}${"  "}
 ${"\t"}${"\t"}${"\t"}`,
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Staggered table", () => {
-    expect(
-      parse(
-        `table:Staggered
+	it("Staggered table", () => {
+		expect(
+			parse(
+				`table:Staggered
 ${"\t"}1${"\t"}2${"\t"}3${"\t"}4
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1
 ${"\t"}1${"\t"}2
 ${"\t"}`,
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Consecutive table", () => {
-    expect(
-      parse(
-        `
+	it("Consecutive table", () => {
+		expect(
+			parse(
+				`
 table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
@@ -71,15 +71,15 @@ ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Node in table cells", () => {
-    expect(
-      parse(
-        `
+	it("Node in table cells", () => {
+		expect(
+			parse(
+				`
 table:node in table cells
 ${"\t"}#hashtag
 ${"\t"}[* deco]
@@ -103,8 +103,8 @@ ${"\t"}[[progfay.icon]]
 ${"\t"}[[https://image.com/image.png]]
 ${"\t"}[[strong]]
 `.trim(),
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 });

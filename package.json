@@ -1,70 +1,54 @@
 {
-  "name": "@progfay/scrapbox-parser",
-  "version": "9.0.0",
-  "type": "module",
-  "description": "parse Scrapbox notation to JavaScript Object",
-  "files": [
-    "lib",
-    "esm",
-    "umd"
-  ],
-  "main": "./lib/index.js",
-  "module": "./esm/index.js",
-  "types": "./lib/index.d.ts",
-  "unpkg": "./umd/scrapbox-parser.umd.cjs",
-  "exports": {
-    "import": "./esm/index.js",
-    "require": "./lib/index.js",
-    "node": "./esm/index.js",
-    "default": "./lib/index.js"
-  },
-  "scripts": {
-    "build": "run-p build:*",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
-    "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build:umd": "vite build",
-    "prepare": "npm run clean && npm run build",
-    "clean": "node -e '[`lib`, `esm`, `umd`, `.cjs.tsbuildinfo`, `.esm.tsbuildinfo`].forEach(path => { fs.rmSync(path, {recursive:true, force:true}) })'",
-    "test": "vitest run --coverage",
-    "test:update": "vitest run --updateSnapshot --no-cache",
-    "lint": "run-p lint:*",
-    "lint:prettier": "prettier --check .",
-    "lint:eslint": "eslint .",
-    "lint:cspell": "cspell --no-summary '**/*'",
-    "lint:typescript": "tsc -p ./tsconfig.eslint.json",
-    "format": "run-s format:prettier format:eslint",
-    "format:prettier": "prettier --write .",
-    "format:eslint": "eslint --fix ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/progfay/scrapbox-parser.git"
-  },
-  "keywords": [
-    "scrapbox",
-    "parser"
-  ],
-  "author": "progfay",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/progfay/scrapbox-parser/issues"
-  },
-  "homepage": "https://github.com/progfay/scrapbox-parser#readme",
-  "devDependencies": {
-    "@types/eslint": "9.6.0",
-    "@vitest/coverage-v8": "2.0.5",
-    "cspell": "8.13.1",
-    "eslint": "9.8.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-vitest": "0.5.4",
-    "npm-run-all2": "6.2.2",
-    "prettier": "3.3.3",
-    "typescript": "5.5.4",
-    "typescript-eslint": "8.0.1",
-    "vite": "5.3.5",
-    "vitest": "2.0.5"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@progfay/scrapbox-parser",
+	"version": "9.0.0",
+	"type": "module",
+	"description": "parse Scrapbox notation to JavaScript Object",
+	"files": ["lib", "esm", "umd"],
+	"main": "./lib/index.js",
+	"module": "./esm/index.js",
+	"types": "./lib/index.d.ts",
+	"unpkg": "./umd/scrapbox-parser.umd.cjs",
+	"exports": {
+		"import": "./esm/index.js",
+		"require": "./lib/index.js",
+		"node": "./esm/index.js",
+		"default": "./lib/index.js"
+	},
+	"scripts": {
+		"build": "run-p build:*",
+		"build:cjs": "tsc -p ./tsconfig.cjs.json",
+		"build:esm": "tsc -p ./tsconfig.esm.json",
+		"build:umd": "vite build",
+		"prepare": "npm run clean && npm run build",
+		"clean": "node -e '[`lib`, `esm`, `umd`, `.cjs.tsbuildinfo`, `.esm.tsbuildinfo`].forEach(path => { fs.rmSync(path, {recursive:true, force:true}) })'",
+		"test": "vitest run --coverage",
+		"test:update": "vitest run --updateSnapshot --no-cache",
+		"lint": "npm run lint:biome && npm run lint:cspell && npm run lint:tsc",
+		"lint:biome": "biome lint .",
+		"lint:cspell": "cspell --no-summary '**/*'",
+		"lint:tsc": "tsc -p ./tsconfig.eslint.json",
+		"format": "biome format ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/progfay/scrapbox-parser.git"
+	},
+	"keywords": ["scrapbox", "parser"],
+	"author": "progfay",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/progfay/scrapbox-parser/issues"
+	},
+	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@vitest/coverage-v8": "2.0.5",
+		"cspell": "8.13.1",
+		"typescript": "5.5.4",
+		"vite": "5.3.5",
+		"vitest": "2.0.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
