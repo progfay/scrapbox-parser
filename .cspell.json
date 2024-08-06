@@ -1,20 +1,7 @@
 {
 	"version": "0.2",
 	"language": "en",
-	"words": [
-		"backquote",
-		"biomejs",
-		"coord",
-		"decos",
-		"fuga",
-		"gyazo",
-		"helpfeel",
-		"hoge",
-		"piyo",
-		"progfay",
-		"scrapbox",
-		"tsbuildinfo"
-	],
+	"words": [],
 	"ignorePaths": [
 		"node_modules/**",
 		"tests/**/__snapshots__/**",
