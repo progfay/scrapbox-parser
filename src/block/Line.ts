@@ -4,28 +4,28 @@ import type { Row } from "./Row";
 import type { Node } from "./node/type";
 
 export interface LinePack {
-  type: "line";
-  rows: [Row];
+	type: "line";
+	rows: [Row];
 }
 
 /**
  * Scrapbox line type
  */
 export interface Line {
-  indent: number;
-  type: "line";
-  nodes: Node[];
+	indent: number;
+	type: "line";
+	nodes: Node[];
 }
 
 export const convertToLine = (pack: LinePack): Line => {
-  const { indent, text } = pack.rows[0];
-  return {
-    indent,
-    type: "line",
-    nodes: convertToNodes(text.substring(indent), {
-      nested: false,
-      quoted: false,
-      context: "line",
-    }),
-  };
+	const { indent, text } = pack.rows[0];
+	return {
+		indent,
+		type: "line",
+		nodes: convertToNodes(text.substring(indent), {
+			nested: false,
+			quoted: false,
+			context: "line",
+		}),
+	};
 };

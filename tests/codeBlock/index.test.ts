@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src";
 
 describe("Code Block", () => {
-  it("Simple code block", () => {
-    expect(
-      parse(
-        `
+	it("Simple code block", () => {
+		expect(
+			parse(
+				`
 code:hello.js
  function () {
    alert(document.location.href)
@@ -13,29 +13,29 @@ code:hello.js
    // You can also write comments!
  }
 `.trim(),
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Bulleted code block", () => {
-    expect(
-      parse(
-        ` code:hello.js
+	it("Bulleted code block", () => {
+		expect(
+			parse(
+				` code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
   }`,
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Code block with bullet", () => {
-    expect(
-      parse(
-        ` Bullet
+	it("Code block with bullet", () => {
+		expect(
+			parse(
+				` Bullet
  code:hello.js
   function () {
     alert(document.location.href)
@@ -43,15 +43,15 @@ code:hello.js
     // You can also write comments!
   }
  Bullet`,
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 
-  it("Consecutive code blocks", () => {
-    expect(
-      parse(
-        `
+	it("Consecutive code blocks", () => {
+		expect(
+			parse(
+				`
 code:hello.js
  function () {
    alert(document.location.href)
@@ -65,8 +65,8 @@ code:hello.js
    // You can also write comments!
  }
 `.trim(),
-        { hasTitle: false },
-      ),
-    ).toMatchSnapshot();
-  });
+				{ hasTitle: false },
+			),
+		).toMatchSnapshot();
+	});
 });
