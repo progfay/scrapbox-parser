@@ -49,16 +49,9 @@
   "homepage": "https://github.com/progfay/scrapbox-parser#readme",
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@types/eslint": "9.6.0",
     "@vitest/coverage-v8": "2.0.5",
     "cspell": "8.13.1",
-    "eslint": "9.8.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-vitest": "0.5.4",
-    "npm-run-all2": "6.2.2",
-    "prettier": "3.3.3",
     "typescript": "5.5.4",
-    "typescript-eslint": "8.0.1",
     "vite": "5.3.5",
     "vitest": "2.0.5"
   },
