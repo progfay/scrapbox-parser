@@ -27,14 +27,11 @@
     "clean": "node -e '[`lib`, `esm`, `umd`, `.cjs.tsbuildinfo`, `.esm.tsbuildinfo`].forEach(path => { fs.rmSync(path, {recursive:true, force:true}) })'",
     "test": "vitest run --coverage",
     "test:update": "vitest run --updateSnapshot --no-cache",
-    "lint": "run-p lint:*",
-    "lint:prettier": "prettier --check .",
-    "lint:eslint": "eslint .",
+    "lint": "npm run lint:biome && npm run lint:cspell && npm run lint:tsc",
+    "lint:biome": "biome lint .",
     "lint:cspell": "cspell --no-summary '**/*'",
-    "lint:typescript": "tsc -p ./tsconfig.eslint.json",
-    "format": "run-s format:prettier format:eslint",
-    "format:prettier": "prettier --write .",
-    "format:eslint": "eslint --fix ."
+    "lint:tsc": "tsc -p ./tsconfig.eslint.json",
+    "format": "biome format ."
   },
   "repository": {
     "type": "git",
@@ -51,6 +48,7 @@
   },
   "homepage": "https://github.com/progfay/scrapbox-parser#readme",
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/eslint": "9.6.0",
     "@vitest/coverage-v8": "2.0.5",
     "cspell": "8.13.1",
