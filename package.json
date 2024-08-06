@@ -19,11 +19,11 @@
 		"build:cjs": "tsc -p ./tsconfig.cjs.json",
 		"build:esm": "tsc -p ./tsconfig.esm.json",
 		"build:umd": "vite build",
-		"prepare": "npm run clean && npm run build",
+		"prepare": "run-s clean build",
 		"clean": "node -e '[`lib`, `esm`, `umd`, `.cjs.tsbuildinfo`, `.esm.tsbuildinfo`].forEach(path => { fs.rmSync(path, {recursive:true, force:true}) })'",
 		"test": "vitest run --coverage",
 		"test:update": "vitest run --updateSnapshot --no-cache",
-		"lint": "npm run lint:biome && npm run lint:tsc",
+		"lint": "run-p lint:*",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.eslint.json",
 		"format": "biome check --write ."
@@ -42,6 +42,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@vitest/coverage-v8": "2.0.5",
+		"npm-run-all2": "6.2.2",
 		"typescript": "5.5.4",
 		"vite": "5.3.5",
 		"vitest": "2.0.5"
