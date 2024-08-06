@@ -1,15 +1,17 @@
 {
-  "cSpell.words": [
-    "decos",
-    "helpfeel",
-    "gyazo",
-    "coord",
-    "progfay",
-    "scrapbox",
-    "backquote",
-    "hoge",
-    "fuga",
-    "piyo",
-    "tsbuildinfo"
-  ]
+	"cSpell.words": [
+		"decos",
+		"helpfeel",
+		"gyazo",
+		"coord",
+		"progfay",
+		"scrapbox",
+		"backquote",
+		"hoge",
+		"fuga",
+		"piyo",
+		"tsbuildinfo"
+	],
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true
 }
