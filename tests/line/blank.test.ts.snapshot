@@ -1,0 +1,131 @@
+exports[`blank > Blank in the [*** ] 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "[*** ",
+        "text": "[*** "
+      },
+      {
+        "type": "blank",
+        "raw": "[ ]",
+        "text": " "
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > Blank in the sentence 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "sentence",
+        "text": "sentence"
+      },
+      {
+        "type": "blank",
+        "raw": "[ ]",
+        "text": " "
+      },
+      {
+        "type": "plain",
+        "raw": "sentence",
+        "text": "sentence"
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > Multi char blank 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "blank",
+        "raw": "[ 　 \\t　\\t ]",
+        "text": " 　 \\t　\\t "
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > Simple double-byte space blank 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "blank",
+        "raw": "[　]",
+        "text": "　"
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > Simple half-space blank 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "blank",
+        "raw": "[ ]",
+        "text": " "
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > Simple tab blank 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "blank",
+        "raw": "[\\t]",
+        "text": "\\t"
+      }
+    ]
+  }
+]
+`;
+
+exports[`blank > [] is not blank 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "[]",
+        "text": "[]"
+      }
+    ]
+  }
+]
+`;
