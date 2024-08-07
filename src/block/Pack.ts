@@ -1,9 +1,9 @@
-import type { ParserOption } from "../parse";
-import type { CodeBlockPack } from "./CodeBlock";
-import type { LinePack } from "./Line";
-import type { Row } from "./Row";
-import type { TablePack } from "./Table";
-import type { TitlePack } from "./Title";
+import type { ParserOption } from "../parse.ts";
+import type { CodeBlockPack } from "./CodeBlock.ts";
+import type { LinePack } from "./Line.ts";
+import type { Row } from "./Row.ts";
+import type { TablePack } from "./Table.ts";
+import type { TitlePack } from "./Title.ts";
 
 export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack;
 

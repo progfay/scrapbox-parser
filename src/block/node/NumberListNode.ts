@@ -1,9 +1,9 @@
-import { createPlainNode } from "./PlainNode";
-import { createNodeParser } from "./creator";
-import { convertToNodes } from "./index";
+import { createPlainNode } from "./PlainNode.ts";
+import { createNodeParser } from "./creator.ts";
+import { convertToNodes } from "./index.ts";
 
-import type { NodeCreator } from "./creator";
-import type { NumberListNode, PlainNode } from "./type";
+import type { NodeCreator } from "./creator.ts";
+import type { NumberListNode, PlainNode } from "./type.ts";
 
 const numberListRegExp = /^[0-9]+\. .*$/;
 

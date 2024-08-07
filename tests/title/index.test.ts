@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getTitle } from "../../src";
+import { getTitle } from "../../src/index.ts";
 
 describe("title", () => {
 	it("Get title from simple page", () => {

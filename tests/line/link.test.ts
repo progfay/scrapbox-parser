@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parse } from "../../src";
+import { parse } from "../../src/index.ts";
 
 describe("link", () => {
 	it("Simple absolute link", () => {

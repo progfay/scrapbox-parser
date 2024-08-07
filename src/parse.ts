@@ -1,8 +1,8 @@
-import { convertToBlock } from "./block";
-import { packRows } from "./block/Pack";
-import { parseToRows } from "./block/Row";
+import { packRows } from "./block/Pack.ts";
+import { parseToRows } from "./block/Row.ts";
+import { convertToBlock } from "./block/index.ts";
 
-import type { Block } from "./block";
+import type { Block } from "./block/index.ts";
 
 /**
  * parser option type

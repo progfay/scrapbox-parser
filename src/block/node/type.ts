@@ -1,4 +1,4 @@
-import type { Decoration } from "./DecorationNode";
+import type { Decoration } from "./DecorationNode.ts";
 
 interface BaseNode {
 	raw: string;

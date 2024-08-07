@@ -1,8 +1,8 @@
-import { createPlainNode } from "./PlainNode";
-import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode.ts";
+import { createNodeParser } from "./creator.ts";
 
-import type { NodeCreator } from "./creator";
-import type { GoogleMapNode, PlainNode } from "./type";
+import type { NodeCreator } from "./creator.ts";
+import type { GoogleMapNode, PlainNode } from "./type.ts";
 
 const placeFirstGoogleMapRegExp =
 	/\[([^\]]*[^\s])\s+([NS]\d+(?:\.\d+)?,[EW]\d+(?:\.\d+)?(?:,Z\d+)?)\]/;

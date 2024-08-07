@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { parse } from "../../src";
+import { parse } from "../../src/index.ts";
 
 describe("page", () => {
 	it("Empty page", () => {
@@ -14,7 +15,9 @@ describe("page", () => {
 	});
 
 	it("https://scrapbox.io/help/Syntax", () => {
-		const input = fs.readFileSync("./tests/page/input.txt").toString();
+		const input = fs
+			.readFileSync(path.resolve("tests/page/input.txt"))
+			.toString();
 		expect(parse(input, { hasTitle: true })).toMatchSnapshot();
 	});
 });

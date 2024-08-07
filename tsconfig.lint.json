@@ -1,6 +1,7 @@
 {
 	"extends": "./tsconfig",
 	"compilerOptions": {
+		"emitDeclarationOnly": false,
 		"noEmit": true
 	},
 	"include": ["**/*"]
