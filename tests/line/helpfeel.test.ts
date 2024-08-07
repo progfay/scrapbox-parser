@@ -1,16 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("helpfeel", () => {
-	it("Simple helpfeel", () => {
-		expect(parse("? Simple helpfeel", { hasTitle: false })).toMatchSnapshot();
+	it("Simple helpfeel", ({ assert }) => {
+		assert.snapshot(parse("? Simple helpfeel", { hasTitle: false }));
 	});
 
-	it("No head `?` is not helpfeel", () => {
-		expect(parse("a ? not helpfeel", { hasTitle: false })).toMatchSnapshot();
+	it("No head `?` is not helpfeel", ({ assert }) => {
+		assert.snapshot(parse("a ? not helpfeel", { hasTitle: false }));
 	});
 
-	it("Quoted ? is not helpfeel", () => {
-		expect(parse("> ? Quoted", { hasTitle: false })).toMatchSnapshot();
+	it("Quoted ? is not helpfeel", ({ assert }) => {
+		assert.snapshot(parse("> ? Quoted", { hasTitle: false }));
 	});
 });

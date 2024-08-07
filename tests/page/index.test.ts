@@ -1,23 +1,23 @@
 import * as fs from "node:fs";
 import path from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("page", () => {
-	it("Empty page", () => {
+	it("Empty page", ({ assert }) => {
 		const input = "";
-		expect(parse(input, { hasTitle: true })).toMatchSnapshot();
+		assert.snapshot(parse(input, { hasTitle: true }));
 	});
 
-	it("Title Block without `hasTitle` option", () => {
+	it("Title Block without `hasTitle` option", ({ assert }) => {
 		const input = "Title";
-		expect(parse(input)).toMatchSnapshot();
+		assert.snapshot(parse(input));
 	});
 
-	it("https://scrapbox.io/help/Syntax", () => {
+	it("https://scrapbox.io/help/Syntax", ({ assert }) => {
 		const input = fs
 			.readFileSync(path.resolve("tests/page/input.txt"))
 			.toString();
-		expect(parse(input, { hasTitle: true })).toMatchSnapshot();
+		assert.snapshot(parse(input, { hasTitle: true }));
 	});
 });

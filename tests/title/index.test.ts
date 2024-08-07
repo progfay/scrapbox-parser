@@ -1,26 +1,26 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { getTitle } from "../../src/index.ts";
 
 describe("title", () => {
-	it("Get title from simple page", () => {
+	it("Get title from simple page", ({ assert }) => {
 		const title = getTitle("title\nline\nline\n");
-		expect(title).toEqual("title");
+		assert.strictEqual(title, "title");
 	});
 
-	it("Get title from empty page", () => {
-		expect(getTitle("")).toEqual("Untitled");
-		expect(getTitle(" 　\t")).toEqual("Untitled");
-		expect(getTitle("\n")).toEqual("Untitled");
-		expect(getTitle("\n 　\t")).toEqual("Untitled");
+	it("Get title from empty page", ({ assert }) => {
+		assert.strictEqual(getTitle(""), "Untitled");
+		assert.strictEqual(getTitle(" 　\t"), "Untitled");
+		assert.strictEqual(getTitle("\n"), "Untitled");
+		assert.strictEqual(getTitle("\n 　\t"), "Untitled");
 	});
 
-	it("Get title from title only page", () => {
+	it("Get title from title only page", ({ assert }) => {
 		const title = getTitle("title");
-		expect(title).toEqual("title");
+		assert.strictEqual(title, "title");
 	});
 
-	it("Get title from huge page", () => {
+	it("Get title from huge page", ({ assert }) => {
 		const title = getTitle(`${"  \n".repeat(10 ** 8)}title`);
-		expect(title).toEqual("title");
+		assert.strictEqual(title, "title");
 	});
 });

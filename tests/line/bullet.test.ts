@@ -1,30 +1,30 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("bullet", () => {
-	it("Single-byte space indent", () => {
-		expect(
+	it("Single-byte space indent", ({ assert }) => {
+		assert.snapshot(
 			parse(" Single-byte space", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Double-byte space indent", () => {
-		expect(
+	it("Double-byte space indent", ({ assert }) => {
+		assert.snapshot(
 			parse("　Double-byte space", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Tab indent", () => {
+	it("Tab indent", ({ assert }) => {
 		// eslint-disable-next-line no-tabs
-		expect(parse("	Tab", { hasTitle: false })).toMatchSnapshot();
+		assert.snapshot(parse("	Tab", { hasTitle: false }));
 	});
 
-	it("Multi lines bullet", () => {
-		expect(
+	it("Multi lines bullet", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 no bullet (indent: 0)
@@ -34,6 +34,6 @@ no bullet (indent: 0)
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 });
