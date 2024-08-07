@@ -1,10 +1,10 @@
-export { parse, getTitle } from "./parse";
-export type { ParserOption, Page } from "./parse";
-export type { Block } from "./block";
-export type { Title } from "./block/Title";
-export type { CodeBlock } from "./block/CodeBlock";
-export type { Table } from "./block/Table";
-export type { Line } from "./block/Line";
+export { parse, getTitle } from "./parse.ts";
+export type { ParserOption, Page } from "./parse.ts";
+export type { Block } from "./block/index.ts";
+export type { Title } from "./block/Title.ts";
+export type { CodeBlock } from "./block/CodeBlock.ts";
+export type { Table } from "./block/Table.ts";
+export type { Line } from "./block/Line.ts";
 export type {
 	Node,
 	QuoteNode,
@@ -23,5 +23,5 @@ export type {
 	IconNode,
 	HashTagNode,
 	PlainNode,
-} from "./block/node/type";
-export type { Decoration } from "./block/node/DecorationNode";
+} from "./block/node/type.ts";
+export type { Decoration } from "./block/node/DecorationNode.ts";

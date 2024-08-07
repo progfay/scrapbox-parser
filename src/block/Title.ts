@@ -1,4 +1,4 @@
-import type { Row } from "./Row";
+import type { Row } from "./Row.ts";
 
 export interface TitlePack {
 	type: "title";

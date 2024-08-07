@@ -1,6 +1,6 @@
 /* eslint-disable no-tabs, no-irregular-whitespace */
 import { describe, expect, it } from "vitest";
-import { parse } from "../../src";
+import { parse } from "../../src/index.ts";
 
 describe("Table", () => {
 	it("Simple table", () => {

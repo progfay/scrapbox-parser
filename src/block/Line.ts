@@ -1,7 +1,7 @@
-import { convertToNodes } from "./node";
+import { convertToNodes } from "./node/index.ts";
 
-import type { Row } from "./Row";
-import type { Node } from "./node/type";
+import type { Row } from "./Row.ts";
+import type { Node } from "./node/type.ts";
 
 export interface LinePack {
 	type: "line";

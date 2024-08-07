@@ -4,7 +4,7 @@ import {
 	type DecorationNode,
 	type Line,
 	parse,
-} from "../../src";
+} from "../../src/index.ts";
 
 describe("decoration", () => {
 	it("Simple decoration", () => {

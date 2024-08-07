@@ -1,7 +1,7 @@
-import { createNodeParser } from "./creator";
+import { createNodeParser } from "./creator.ts";
 
-import type { NodeCreator } from "./creator";
-import type { LinkNode } from "./type";
+import type { NodeCreator } from "./creator.ts";
+import type { LinkNode } from "./type.ts";
 
 const internalLinkRegExp = /\[\/?[^[\]]+\]/;
 

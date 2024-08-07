@@ -1,5 +1,5 @@
-import { generateIconNodeCreator } from "./IconNode";
-import { createNodeParser } from "./creator";
+import { generateIconNodeCreator } from "./IconNode.ts";
+import { createNodeParser } from "./creator.ts";
 
 const strongIconRegExp = /\[\[[^[\]]*\.icon(?:\*\d+)?\]\]/;
 

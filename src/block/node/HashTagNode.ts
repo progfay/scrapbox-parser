@@ -1,8 +1,8 @@
-import { createPlainNode } from "./PlainNode";
-import { createNodeParser } from "./creator";
+import { createPlainNode } from "./PlainNode.ts";
+import { createNodeParser } from "./creator.ts";
 
-import type { NodeCreator } from "./creator";
-import type { HashTagNode, PlainNode } from "./type";
+import type { NodeCreator } from "./creator.ts";
+import type { HashTagNode, PlainNode } from "./type.ts";
 
 const hashTagRegExp = /(?:^|\s)#\S+/;
 

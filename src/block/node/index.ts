@@ -1,23 +1,23 @@
-import { BlankNodeParser } from "./BlankNode";
-import { CodeNodeParser } from "./CodeNode";
-import { CommandLineNodeParser } from "./CommandLineNode";
-import { DecorationNodeParser } from "./DecorationNode";
-import { ExternalLinkNodeParser } from "./ExternalLinkNode";
-import { FormulaNodeParser } from "./FormulaNode";
-import { GoogleMapNodeParser } from "./GoogleMapNode";
-import { HashTagNodeParser } from "./HashTagNode";
-import { HelpfeelNodeParser } from "./HelpfeelNode";
-import { IconNodeParser } from "./IconNode";
-import { ImageNodeParser } from "./ImageNode";
-import { InternalLinkNodeParser } from "./InternalLinkNode";
-import { NumberListNodeParser } from "./NumberListNode";
-import { PlainNodeParser } from "./PlainNode";
-import { QuoteNodeParser } from "./QuoteNode";
-import { StrongIconNodeParser } from "./StrongIconNode";
-import { StrongImageNodeParser } from "./StrongImageNode";
-import { StrongNodeParser } from "./StrongNode";
+import { BlankNodeParser } from "./BlankNode.ts";
+import { CodeNodeParser } from "./CodeNode.ts";
+import { CommandLineNodeParser } from "./CommandLineNode.ts";
+import { DecorationNodeParser } from "./DecorationNode.ts";
+import { ExternalLinkNodeParser } from "./ExternalLinkNode.ts";
+import { FormulaNodeParser } from "./FormulaNode.ts";
+import { GoogleMapNodeParser } from "./GoogleMapNode.ts";
+import { HashTagNodeParser } from "./HashTagNode.ts";
+import { HelpfeelNodeParser } from "./HelpfeelNode.ts";
+import { IconNodeParser } from "./IconNode.ts";
+import { ImageNodeParser } from "./ImageNode.ts";
+import { InternalLinkNodeParser } from "./InternalLinkNode.ts";
+import { NumberListNodeParser } from "./NumberListNode.ts";
+import { PlainNodeParser } from "./PlainNode.ts";
+import { QuoteNodeParser } from "./QuoteNode.ts";
+import { StrongIconNodeParser } from "./StrongIconNode.ts";
+import { StrongImageNodeParser } from "./StrongImageNode.ts";
+import { StrongNodeParser } from "./StrongNode.ts";
 
-import type { Node } from "./type";
+import type { Node } from "./type.ts";
 
 export interface NodeParserOption {
 	nested: boolean;
