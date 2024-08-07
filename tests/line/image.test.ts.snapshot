@@ -1,19 +1,17 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
 exports[`image > Direct Gyazo image 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]",
         "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": ""
+      }
+    ]
+  }
 ]
 `;
 
@@ -21,40 +19,40 @@ exports[`image > Gyazo image 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": ""
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": ""
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/raw",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": ""
+      }
+    ]
+  }
 ]
 `;
 
@@ -62,40 +60,40 @@ exports[`image > Gyazo image with link 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com",
+        "type": "image",
         "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": "https://example.com"
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com",
+        "type": "image",
         "raw": "[https://example.com https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": "https://example.com"
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3",
+        "type": "image",
         "raw": "[https://gyazo.com/7057219f5b20ca8afd122945b72453d3 https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
         "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": "https://gyazo.com/7057219f5b20ca8afd122945b72453d3"
+      }
+    ]
+  }
 ]
 `;
 
@@ -103,16 +101,16 @@ exports[`image > HTTP jpeg image with special and japanese chars 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
-        "raw": "[http://example.com/~!@#$%^&*()_+\`-={}\\'"?,.<>|/画像.jpeg]",
-        "src": "http://example.com/~!@#$%^&*()_+\`-={}\\'"?,.<>|/画像.jpeg",
         "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg]",
+        "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg",
+        "link": ""
+      }
+    ]
+  }
 ]
 `;
 
@@ -120,40 +118,40 @@ exports[`image > HTTPS svg, GIF and WebP image with link 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com/",
+        "type": "image",
         "raw": "[https://example.com/image.svg https://example.com/]",
         "src": "https://example.com/image.svg",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": "https://example.com/"
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com/",
+        "type": "image",
         "raw": "[https://example.com/ https://example.com/image.GIF]",
         "src": "https://example.com/image.GIF",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": "https://example.com/"
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com",
+        "type": "image",
         "raw": "[https://example.com/image.webp https://example.com]",
         "src": "https://example.com/image.webp",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": "https://example.com"
+      }
+    ]
+  }
 ]
 `;
 
@@ -161,16 +159,16 @@ exports[`image > Image with GET parameters 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[http://example.com/image.png?key1=value1&key2=value2]",
         "src": "http://example.com/image.png?key1=value1&key2=value2",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": ""
+      }
+    ]
+  }
 ]
 `;
 
@@ -178,16 +176,16 @@ exports[`image > Image with double image link 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "https://example.com/forward.png",
+        "type": "image",
         "raw": "[https://example.com/forward.png https://example.com/backward.png]",
         "src": "https://example.com/backward.png",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": "https://example.com/forward.png"
+      }
+    ]
+  }
 ]
 `;
 
@@ -195,27 +193,27 @@ exports[`image > Simple image 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[http://example.com/image.png]",
         "src": "http://example.com/image.png",
-        "type": "image",
-      },
-    ],
-    "type": "line",
+        "link": ""
+      }
+    ]
   },
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "link": "",
+        "type": "image",
         "raw": "[https://example.com/image.JPG]",
         "src": "https://example.com/image.JPG",
-        "type": "image",
-      },
-    ],
-    "type": "line",
-  },
+        "link": ""
+      }
+    ]
+  }
 ]
 `;

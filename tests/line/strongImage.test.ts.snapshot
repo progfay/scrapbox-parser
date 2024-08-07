@@ -1,0 +1,107 @@
+exports[`strongImage > Direct Gyazo image 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]]",
+        "src": "https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png"
+      }
+    ]
+  }
+]
+`;
+
+exports[`strongImage > Gyazo image 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]]",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000"
+      }
+    ]
+  }
+]
+`;
+
+exports[`strongImage > HTTP jpeg strong image with special and japanese chars 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg]]",
+        "src": "http://example.com/~!@#$%^&*()_+\`-={}\\\\'\\"?,.<>|/画像.jpeg"
+      }
+    ]
+  }
+]
+`;
+
+exports[`strongImage > Simple strong image 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[http://example.com/image.png]]",
+        "src": "http://example.com/image.png"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://example.com/image.JPG]]",
+        "src": "https://example.com/image.JPG"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://example.com/image.svg]]",
+        "src": "https://example.com/image.svg"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://example.com/image.GIF]]",
+        "src": "https://example.com/image.GIF"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strongImage",
+        "raw": "[[https://example.com/image.webp]]",
+        "src": "https://example.com/image.webp"
+      }
+    ]
+  }
+]
+`;

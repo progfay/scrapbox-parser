@@ -1,0 +1,81 @@
+exports[`commandLine > Simple command with $ 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "commandLine",
+        "raw": "$ command",
+        "symbol": "$",
+        "text": "command"
+      }
+    ]
+  }
+]
+`;
+
+exports[`commandLine > Simple command with % 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "commandLine",
+        "raw": "% command",
+        "symbol": "%",
+        "text": "command"
+      }
+    ]
+  }
+]
+`;
+
+exports[`commandLine > \`$ \` is not command 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "$ ",
+        "text": "$ "
+      }
+    ]
+  }
+]
+`;
+
+exports[`commandLine > \`$\` is not command 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "$",
+        "text": "$"
+      }
+    ]
+  }
+]
+`;
+
+exports[`commandLine > \`$s\` is not command 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "$not command",
+        "text": "$not command"
+      }
+    ]
+  }
+]
+`;

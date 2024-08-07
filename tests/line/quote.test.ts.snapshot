@@ -1,0 +1,37 @@
+exports[`quote > Empty quote 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "quote",
+        "raw": ">",
+        "nodes": []
+      }
+    ]
+  }
+]
+`;
+
+exports[`quote > Simple quote 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "quote",
+        "raw": "> Simple quote",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": " Simple quote",
+            "text": " Simple quote"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;

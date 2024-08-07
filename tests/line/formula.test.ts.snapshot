@@ -1,18 +1,16 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
 exports[`formula > Formula includes [] with tail half-space 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "formula": "[x]",
-        "raw": "[$ [x] ]",
         "type": "formula",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[$ [x] ]",
+        "formula": "[x]"
+      }
+    ]
+  }
 ]
 `;
 
@@ -20,20 +18,20 @@ exports[`formula > Formula includes [] without tail half-space 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "formula": "[x",
-        "raw": "[$ [x]",
         "type": "formula",
+        "raw": "[$ [x]",
+        "formula": "[x"
       },
       {
-        "raw": "]",
-        "text": "]",
         "type": "plain",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
 ]
 `;
 
@@ -41,14 +39,14 @@ exports[`formula > Simple formula 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "formula": "\\frac{3}{2}^N",
-        "raw": "[$ \\frac{3}{2}^N]",
         "type": "formula",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[$ \\\\frac{3}{2}^N]",
+        "formula": "\\\\frac{3}{2}^N"
+      }
+    ]
+  }
 ]
 `;
