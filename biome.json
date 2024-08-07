@@ -5,7 +5,12 @@
 		"ignore": ["./out", "./coverage"]
 	},
 	"linter": {
-		"enabled": true
+		"enabled": true,
+		"rules": {
+			"nursery": {
+				"useImportExtensions": "error"
+			}
+		}
 	},
 	"formatter": {
 		"enabled": true
