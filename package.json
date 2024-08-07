@@ -20,8 +20,8 @@
 		"build:types": "tsc -p ./tsconfig.json",
 		"build:vite": "vite build",
 		"prepare": "npm run build",
-		"test": "vitest run --coverage",
-		"test:update": "vitest run --updateSnapshot --no-cache",
+		"test": "NODE_OPTIONS=--disable-warning=ExperimentalWarning node --test --experimental-strip-types --experimental-test-snapshots --experimental-test-coverage **/tests/**/*.test.ts",
+		"test:update": "NODE_OPTIONS=--disable-warning=ExperimentalWarning node --test --experimental-strip-types --experimental-test-snapshots --test-update-snapshots --experimental-test-coverage **/tests/**/*.test.ts",
 		"lint": "run-p lint:*",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",
@@ -40,11 +40,9 @@
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
-		"@vitest/coverage-v8": "2.0.5",
 		"npm-run-all2": "6.2.2",
 		"typescript": "5.5.4",
-		"vite": "5.3.5",
-		"vitest": "2.0.5"
+		"vite": "5.3.5"
 	},
 	"publishConfig": {
 		"access": "public"

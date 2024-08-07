@@ -1,0 +1,123 @@
+exports[`line > Decoration line includes external link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [https://example.com example]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[https://example.com example]",
+            "pathType": "absolute",
+            "href": "https://example.com",
+            "content": "example"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`line > Decoration line includes internal link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [Link]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Link]",
+            "pathType": "relative",
+            "href": "Link",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`line > Line that have multi node 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[Link]",
+        "pathType": "relative",
+        "href": "Link",
+        "content": ""
+      },
+      {
+        "type": "link",
+        "raw": "[Link]",
+        "pathType": "relative",
+        "href": "Link",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`line > Multi \`]\` 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [Link]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[Link",
+            "text": "[Link"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "raw": "\`code\`",
+        "text": "code"
+      },
+      {
+        "type": "link",
+        "raw": "[Link]",
+        "pathType": "relative",
+        "href": "Link",
+        "content": ""
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;

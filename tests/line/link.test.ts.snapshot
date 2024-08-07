@@ -1,0 +1,205 @@
+exports[`link > Link with GET parameters 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[http://example.com?key1=value1&key2=value2]",
+        "pathType": "absolute",
+        "href": "http://example.com?key1=value1&key2=value2",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Link with content 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[https://example.com/   Example]",
+        "pathType": "absolute",
+        "href": "https://example.com/",
+        "content": "Example"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[Example   https://example.com/]",
+        "pathType": "absolute",
+        "href": "https://example.com/",
+        "content": "Example"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[https://left.com/ center https://right.com/]",
+        "pathType": "absolute",
+        "href": "https://left.com/",
+        "content": "center https://right.com/"
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Link with link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[https://example.com https://example.com]",
+        "pathType": "absolute",
+        "href": "https://example.com",
+        "content": "https://example.com"
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Root and relative link path can include space 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[page name]",
+        "pathType": "relative",
+        "href": "page name",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[/project/page name]",
+        "pathType": "root",
+        "href": "/project/page name",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Simple absolute link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "https://example.com/",
+        "pathType": "absolute",
+        "href": "https://example.com/",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Simple absolute link with ahead non-space character 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "a",
+        "text": "a"
+      },
+      {
+        "type": "link",
+        "raw": "https://example.com/",
+        "pathType": "absolute",
+        "href": "https://example.com/",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Simple absolute link with bracket 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[https://example.com/]",
+        "pathType": "absolute",
+        "href": "https://example.com/",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Simple relative link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[page]",
+        "pathType": "relative",
+        "href": "page",
+        "content": ""
+      }
+    ]
+  }
+]
+`;
+
+exports[`link > Simple root link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[/project/page]",
+        "pathType": "root",
+        "href": "/project/page",
+        "content": ""
+      }
+    ]
+  }
+]
+`;

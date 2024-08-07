@@ -1,0 +1,73 @@
+exports[`strong > Decoration in Strong notation 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "[[",
+        "text": "[["
+      },
+      {
+        "type": "decoration",
+        "raw": "[! deco]",
+        "rawDecos": "!",
+        "decos": [
+          "!"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": "]]",
+        "text": "]]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`strong > Simple strong 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Simple strong]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Simple strong",
+            "text": "Simple strong"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`strong > [[]] is not strong 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "[[]]",
+        "text": "[[]]"
+      }
+    ]
+  }
+]
+`;

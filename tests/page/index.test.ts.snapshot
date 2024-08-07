@@ -1,0 +1,1263 @@
+exports[`page > Empty page 1`] = `
+[
+  {
+    "type": "title",
+    "text": ""
+  }
+]
+`;
+
+exports[`page > Title Block without \`hasTitle\` option 1`] = `
+[
+  {
+    "type": "title",
+    "text": "Title"
+  }
+]
+`;
+
+exports[`page > https://scrapbox.io/help/Syntax 1`] = `
+[
+  {
+    "type": "title",
+    "text": "Syntax"
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "image",
+        "raw": "[https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]",
+        "src": "https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815/thumb/1000",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Internal Links]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Internal Links",
+            "text": "Internal Links"
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": " (linking to another page on scrapbox)",
+        "text": " (linking to another page on scrapbox)"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[link]\`",
+        "text": "[link]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇒ ",
+        "text": " ⇒ "
+      },
+      {
+        "type": "link",
+        "raw": "[Link]",
+        "pathType": "relative",
+        "href": "Link",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[External  Links]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "External  Links",
+            "text": "External  Links"
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": " (linking to another web page)",
+        "text": " (linking to another web page)"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`http://google.com\`",
+        "text": "http://google.com"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇒ ",
+        "text": " ⇒ "
+      },
+      {
+        "type": "link",
+        "raw": "http://google.com",
+        "pathType": "absolute",
+        "href": "http://google.com",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[http://google.com Google]\`",
+        "text": "[http://google.com Google]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇒ ",
+        "text": " ⇒ "
+      },
+      {
+        "type": "link",
+        "raw": "[http://google.com Google]",
+        "pathType": "absolute",
+        "href": "http://google.com",
+        "content": "Google"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "or",
+        "text": "or"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[Google http://google.com]\`",
+        "text": "[Google http://google.com]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇒ ",
+        "text": " ⇒ "
+      },
+      {
+        "type": "link",
+        "raw": "[Google http://google.com]",
+        "pathType": "absolute",
+        "href": "http://google.com",
+        "content": "Google"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Images]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Images",
+            "text": "Images"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Direct image link ↓",
+        "text": "Direct image link ↓"
+      },
+      {
+        "type": "code",
+        "raw": "\`[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
+        "text": "[https://gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "image",
+        "raw": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
+        "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Clickable Thumbnail Links]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Clickable Thumbnail Links",
+            "text": "Clickable Thumbnail Links"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "↓ ",
+        "text": "↓ "
+      },
+      {
+        "type": "code",
+        "raw": "\`[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]\`",
+        "text": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]"
+      },
+      {
+        "type": "plain",
+        "raw": " ",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "image",
+        "raw": "[http://cutedog.com https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png]",
+        "src": "https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png",
+        "link": "http://cutedog.com"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Adding the link at the end also works, as before:",
+        "text": "Adding the link at the end also works, as before:"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]\`",
+        "text": "[https://i.gyazo.com/da78df293f9e83a74b5402411e2f2e01.png http://cutedog.com]"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Linking to other scrapbox projects]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Linking to other scrapbox projects",
+            "text": "Linking to other scrapbox projects"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[/projectname/pagename]\`",
+        "text": "[/projectname/pagename]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇛ ",
+        "text": " ⇛ "
+      },
+      {
+        "type": "link",
+        "raw": "[/icons/check]",
+        "pathType": "root",
+        "href": "/icons/check",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[/projectname]\`",
+        "text": "[/projectname]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇛ ",
+        "text": " ⇛ "
+      },
+      {
+        "type": "link",
+        "raw": "[/icons]",
+        "pathType": "root",
+        "href": "/icons",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Icons]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Icons",
+            "text": "Icons"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[ben.icon]\`",
+        "text": "[ben.icon]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇛  ",
+        "text": " ⇛  "
+      },
+      {
+        "path": "ben",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[ben.icon]"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[/icons/todo.icon]\`",
+        "text": "[/icons/todo.icon]"
+      },
+      {
+        "type": "plain",
+        "raw": " ⇛ ",
+        "text": " ⇛ "
+      },
+      {
+        "path": "/icons/todo",
+        "pathType": "root",
+        "type": "icon",
+        "raw": "[/icons/todo.icon]"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Bold text]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Bold text",
+            "text": "Bold text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[[Bold]]\`",
+        "text": "[[Bold]]"
+      },
+      {
+        "type": "plain",
+        "raw": " or ",
+        "text": " or "
+      },
+      {
+        "type": "code",
+        "raw": "\`[* Bold]\`",
+        "text": "[* Bold]"
+      },
+      {
+        "type": "plain",
+        "raw": "⇒ ",
+        "text": "⇒ "
+      },
+      {
+        "type": "strong",
+        "raw": "[[Bold]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Bold",
+            "text": "Bold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Italic text]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Italic text",
+            "text": "Italic text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[/ italic]\`",
+        "text": "[/ italic]"
+      },
+      {
+        "type": "plain",
+        "raw": "⇛ ",
+        "text": "⇛ "
+      },
+      {
+        "type": "decoration",
+        "raw": "[/ italic]",
+        "rawDecos": "/",
+        "decos": [
+          "/"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "italic",
+            "text": "italic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[ Strikethrough text]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": " Strikethrough text",
+            "text": " Strikethrough text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[- strikethrough]\`",
+        "text": "[- strikethrough]"
+      },
+      {
+        "type": "plain",
+        "raw": "⇛ ",
+        "text": "⇛ "
+      },
+      {
+        "type": "decoration",
+        "raw": "[- strikethrough]",
+        "rawDecos": "-",
+        "decos": [
+          "-"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "strikethrough",
+            "text": "strikethrough"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "image",
+        "raw": "[https://gyazo.com/00ab07461d502db91c8ae170276d1396]",
+        "src": "https://gyazo.com/00ab07461d502db91c8ae170276d1396/thumb/1000",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Bullet points]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Bullet points",
+            "text": "Bullet points"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Press space or tab on a new line to indent and create a bullet point",
+        "text": "Press space or tab on a new line to indent and create a bullet point"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Press backspace to remove the indent  / bullet point",
+        "text": "Press backspace to remove the indent  / bullet point"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Internal links serve triple duty]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Internal links serve triple duty",
+            "text": "Internal links serve triple duty"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "code",
+        "raw": "\`[Links]\`",
+        "text": "[Links]"
+      },
+      {
+        "type": "plain",
+        "raw": " or ",
+        "text": " or "
+      },
+      {
+        "type": "code",
+        "raw": "\`#links\`",
+        "text": "#links"
+      },
+      {
+        "type": "plain",
+        "raw": " are two ways to make links. They do three things",
+        "text": " are two ways to make links. They do three things"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "An internal link to a page",
+        "text": "An internal link to a page"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "A ",
+        "text": "A "
+      },
+      {
+        "type": "link",
+        "raw": "[Bi-directional link]",
+        "pathType": "relative",
+        "href": "Bi-directional link",
+        "content": ""
+      },
+      {
+        "type": "plain",
+        "raw": " back to the source",
+        "text": " back to the source"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "A ",
+        "text": "A "
+      },
+      {
+        "type": "link",
+        "raw": "[2-hop link]",
+        "pathType": "relative",
+        "href": "2-hop link",
+        "content": ""
+      },
+      {
+        "type": "plain",
+        "raw": " so you can find more related pages",
+        "text": " so you can find more related pages"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[Block quote]]",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Block quote",
+            "text": "Block quote"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "quote",
+        "raw": "> use the right caret \`>\` at the beginning of a line to get a block quote ",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": " use the right caret ",
+            "text": " use the right caret "
+          },
+          {
+            "type": "code",
+            "raw": "\`>\`",
+            "text": ">"
+          },
+          {
+            "type": "plain",
+            "raw": " at the beginning of a line to get a block quote ",
+            "text": " at the beginning of a line to get a block quote "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* Mouse based styling]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Mouse based styling",
+            "text": "Mouse based styling"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "image",
+        "raw": "[https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc]",
+        "src": "https://gyazo.com/a515ab169b1e371641f7e04bfa92adbc/thumb/1000",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[[Code notation]]]",
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Code notation]",
+            "pathType": "relative",
+            "href": "Code notation",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Use backquotes or backticks, \`,  to highlight code  ",
+        "text": "Use backquotes or backticks, \`,  to highlight code  "
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "e.g. ",
+        "text": "e.g. "
+      },
+      {
+        "type": "code",
+        "raw": "\`function() {  return true }\`",
+        "text": "function() {  return true }"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[[Code blocks]]]",
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Code blocks]",
+            "pathType": "relative",
+            "href": "Code blocks",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Typing ",
+        "text": "Typing "
+      },
+      {
+        "type": "code",
+        "raw": "\`code:filename.extension\`",
+        "text": "code:filename.extension"
+      },
+      {
+        "type": "plain",
+        "raw": "or",
+        "text": "or"
+      },
+      {
+        "type": "code",
+        "raw": "\`code:filename\`",
+        "text": "code:filename"
+      },
+      {
+        "type": "plain",
+        "raw": "can be used to create a new code snippet and and display it as a block",
+        "text": "can be used to create a new code snippet and and display it as a block"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Language names may be abbreviated",
+        "text": "Language names may be abbreviated"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "codeBlock",
+    "fileName": "hello.js",
+    "content": "function () {\\n  alert(document.location.href)\\n  console.log(\\"hello\\")\\n  // You can also write comments!\\n}"
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "strong",
+        "raw": "[[[Tables]]]",
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Tables]",
+            "pathType": "relative",
+            "href": "Tables",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Type table: tablename to create a table",
+        "text": "Type table: tablename to create a table"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Use tab to move to the next column, use enter to move to the next row.",
+        "text": "Use tab to move to the next column, use enter to move to the next row."
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "An example:",
+        "text": "An example:"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "hello",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1 ",
+            "text": "1 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2 ",
+            "text": "2 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "a",
+            "text": "a"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "b",
+            "text": "b"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "c",
+            "text": "c"
+          }
+        ]
+      ]
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [Mathematical notation]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Mathematical notation]",
+            "pathType": "relative",
+            "href": "Mathematical notation",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Using ",
+        "text": "Using "
+      },
+      {
+        "type": "link",
+        "raw": "[TeX https://en.wikipedia.org/wiki/TeX]",
+        "pathType": "absolute",
+        "href": "https://en.wikipedia.org/wiki/TeX",
+        "content": "TeX"
+      },
+      {
+        "type": "plain",
+        "raw": " inside of brackets with a dollar sign ",
+        "text": " inside of brackets with a dollar sign "
+      },
+      {
+        "type": "code",
+        "raw": "\`[$ TeX here ]\`",
+        "text": "[$ TeX here ]"
+      },
+      {
+        "type": "plain",
+        "raw": ", you can format math or science formulas, like so: ",
+        "text": ", you can format math or science formulas, like so: "
+      },
+      {
+        "type": "formula",
+        "raw": "[$ E = mc^2]",
+        "formula": "E = mc^2"
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [Userscript]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "link",
+            "raw": "[Userscript]",
+            "pathType": "relative",
+            "href": "Userscript",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "You can even add javascript to customize Scrapbox to your liking.",
+        "text": "You can even add javascript to customize Scrapbox to your liking."
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  }
+]
+`;

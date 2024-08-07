@@ -1,31 +1,29 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
 exports[`strongIcon > Multiple icons 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
         "path": "me",
         "pathType": "relative",
-        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
+        "raw": "[[me.icon*3]]"
       },
       {
         "path": "me",
         "pathType": "relative",
-        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
+        "raw": "[[me.icon*3]]"
       },
       {
         "path": "me",
         "pathType": "relative",
-        "raw": "[[me.icon*3]]",
         "type": "strongIcon",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[[me.icon*3]]"
+      }
+    ]
+  }
 ]
 `;
 
@@ -33,16 +31,16 @@ exports[`strongIcon > Simple relative strong icon 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
         "path": "me",
         "pathType": "relative",
-        "raw": "[[me.icon]]",
         "type": "strongIcon",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[[me.icon]]"
+      }
+    ]
+  }
 ]
 `;
 
@@ -50,16 +48,16 @@ exports[`strongIcon > Simple root strong icon 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
         "path": "/icons/+1",
         "pathType": "root",
-        "raw": "[[/icons/+1.icon]]",
         "type": "strongIcon",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[[/icons/+1.icon]]"
+      }
+    ]
+  }
 ]
 `;
 
@@ -67,22 +65,22 @@ exports[`strongIcon > Strong icon and internal link on same line 1`] = `
 [
   {
     "indent": 0,
+    "type": "line",
     "nodes": [
       {
-        "content": "",
-        "href": "Internal link",
-        "pathType": "relative",
-        "raw": "[Internal link]",
         "type": "link",
+        "raw": "[Internal link]",
+        "pathType": "relative",
+        "href": "Internal link",
+        "content": ""
       },
       {
         "path": "me",
         "pathType": "relative",
-        "raw": "[[me.icon]]",
         "type": "strongIcon",
-      },
-    ],
-    "type": "line",
-  },
+        "raw": "[[me.icon]]"
+      }
+    ]
+  }
 ]
 `;

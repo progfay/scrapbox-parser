@@ -1,0 +1,53 @@
+exports[`helpfeel > No head \`?\` is not helpfeel 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "a ? not helpfeel",
+        "text": "a ? not helpfeel"
+      }
+    ]
+  }
+]
+`;
+
+exports[`helpfeel > Quoted ? is not helpfeel 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "quote",
+        "raw": "> ? Quoted",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": " ? Quoted",
+            "text": " ? Quoted"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`helpfeel > Simple helpfeel 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "helpfeel",
+        "raw": "? Simple helpfeel",
+        "text": "Simple helpfeel"
+      }
+    ]
+  }
+]
+`;

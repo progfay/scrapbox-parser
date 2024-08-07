@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { resolve } from "node:path";
 import { type LibraryFormats, defineConfig } from "vite";
 
@@ -24,12 +23,6 @@ export default defineConfig({
 						throw new Error(`unknown format: ${format}`);
 				}
 			},
-		},
-	},
-	test: {
-		include: ["**/tests/**/*.test.ts"],
-		coverage: {
-			include: ["src/**/*.ts"],
 		},
 	},
 });

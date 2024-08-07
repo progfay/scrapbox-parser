@@ -1,0 +1,917 @@
+exports[`decoration > Decoration * overflow 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[*********** 11*]",
+        "rawDecos": "***********",
+        "decos": [
+          "*-10"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "11*",
+            "text": "11*"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration similar with externalLink 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* hoge https://example.com]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "hoge ",
+            "text": "hoge "
+          },
+          {
+            "type": "link",
+            "raw": "https://example.com",
+            "pathType": "absolute",
+            "href": "https://example.com",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with hashTag 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* #tag]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "hashTag",
+            "raw": "#tag",
+            "href": "tag"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with icon notation 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [progfay.icon]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "path": "progfay",
+            "pathType": "relative",
+            "type": "icon",
+            "raw": "[progfay.icon]"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with many [ 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[! [[[[[[a]",
+        "rawDecos": "!",
+        "decos": [
+          "!"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[[[[[[a",
+            "text": "[[[[[[a"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with many [ and link 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[! [[[[[[a]]",
+        "rawDecos": "!",
+        "decos": [
+          "!"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[[[[[",
+            "text": "[[[[["
+          },
+          {
+            "type": "link",
+            "raw": "[a]",
+            "pathType": "relative",
+            "href": "a",
+            "content": ""
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with strong icon notation (it's just icon, not strong) 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [[progfay.icon]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[",
+            "text": "["
+          },
+          {
+            "path": "progfay",
+            "pathType": "relative",
+            "type": "icon",
+            "raw": "[progfay.icon]"
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with strong image notation (it's just image, not strong) 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [[https://example.com/image.png]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[",
+            "text": "["
+          },
+          {
+            "type": "image",
+            "raw": "[https://example.com/image.png]",
+            "src": "https://example.com/image.png",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Decoration with strong notation (it's just link) 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* [[link]]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "[",
+            "text": "["
+          },
+          {
+            "type": "link",
+            "raw": "[link]",
+            "pathType": "relative",
+            "href": "link",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`decoration > Simple decoration 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[* deco]",
+        "rawDecos": "*",
+        "decos": [
+          "*-1"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[** deco]",
+        "rawDecos": "**",
+        "decos": [
+          "*-2"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[*** deco]",
+        "rawDecos": "***",
+        "decos": [
+          "*-3"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[**** deco]",
+        "rawDecos": "****",
+        "decos": [
+          "*-4"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[***** deco]",
+        "rawDecos": "*****",
+        "decos": [
+          "*-5"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[****** deco]",
+        "rawDecos": "******",
+        "decos": [
+          "*-6"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[******* deco]",
+        "rawDecos": "*******",
+        "decos": [
+          "*-7"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[******** deco]",
+        "rawDecos": "********",
+        "decos": [
+          "*-8"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[********* deco]",
+        "rawDecos": "*********",
+        "decos": [
+          "*-9"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[********** deco]",
+        "rawDecos": "**********",
+        "decos": [
+          "*-10"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[! deco]",
+        "rawDecos": "!",
+        "decos": [
+          "!"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[\\" deco]",
+        "rawDecos": "\\"",
+        "decos": [
+          "\\""
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[# deco]",
+        "rawDecos": "#",
+        "decos": [
+          "#"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[% deco]",
+        "rawDecos": "%",
+        "decos": [
+          "%"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[& deco]",
+        "rawDecos": "&",
+        "decos": [
+          "&"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[' deco]",
+        "rawDecos": "'",
+        "decos": [
+          "'"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[( deco]",
+        "rawDecos": "(",
+        "decos": [
+          "("
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[) deco]",
+        "rawDecos": ")",
+        "decos": [
+          ")"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[+ deco]",
+        "rawDecos": "+",
+        "decos": [
+          "+"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[, deco]",
+        "rawDecos": ",",
+        "decos": [
+          ","
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[- deco]",
+        "rawDecos": "-",
+        "decos": [
+          "-"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[. deco]",
+        "rawDecos": ".",
+        "decos": [
+          "."
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[/ deco]",
+        "rawDecos": "/",
+        "decos": [
+          "/"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[{ deco]",
+        "rawDecos": "{",
+        "decos": [
+          "{"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[| deco]",
+        "rawDecos": "|",
+        "decos": [
+          "|"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[} deco]",
+        "rawDecos": "}",
+        "decos": [
+          "}"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[< deco]",
+        "rawDecos": "<",
+        "decos": [
+          "<"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[> deco]",
+        "rawDecos": ">",
+        "decos": [
+          ">"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[_ deco]",
+        "rawDecos": "_",
+        "decos": [
+          "_"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "decoration",
+        "raw": "[~ deco]",
+        "rawDecos": "~",
+        "decos": [
+          "~"
+        ],
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "deco",
+            "text": "deco"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
