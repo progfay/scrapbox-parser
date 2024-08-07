@@ -1,37 +1,37 @@
 /* eslint-disable no-irregular-whitespace */
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("blank", () => {
-	it("Simple half-space blank", () => {
-		expect(parse("[ ]", { hasTitle: false })).toMatchSnapshot();
+	it("Simple half-space blank", ({ assert }) => {
+		assert.snapshot(parse("[ ]", { hasTitle: false }));
 	});
 
-	it("Simple double-byte space blank", () => {
-		expect(parse("[　]", { hasTitle: false })).toMatchSnapshot();
+	it("Simple double-byte space blank", ({ assert }) => {
+		assert.snapshot(parse("[　]", { hasTitle: false }));
 	});
 
-	it("Simple tab blank", () => {
-		expect(parse("[\t]", { hasTitle: false })).toMatchSnapshot();
+	it("Simple tab blank", ({ assert }) => {
+		assert.snapshot(parse("[\t]", { hasTitle: false }));
 	});
 
-	it("Multi char blank", () => {
-		expect(parse("[ 　 \t　\t ]", { hasTitle: false })).toMatchSnapshot();
+	it("Multi char blank", ({ assert }) => {
+		assert.snapshot(parse("[ 　 \t　\t ]", { hasTitle: false }));
 	});
 
-	it("Blank in the sentence", () => {
-		expect(
+	it("Blank in the sentence", ({ assert }) => {
+		assert.snapshot(
 			parse("sentence[ ]sentence", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("[] is not blank", () => {
-		expect(parse("[]", { hasTitle: false })).toMatchSnapshot();
+	it("[] is not blank", ({ assert }) => {
+		assert.snapshot(parse("[]", { hasTitle: false }));
 	});
 
-	it("Blank in the [*** ]", () => {
-		expect(parse("[*** [ ]]", { hasTitle: false })).toMatchSnapshot();
+	it("Blank in the [*** ]", ({ assert }) => {
+		assert.snapshot(parse("[*** [ ]]", { hasTitle: false }));
 	});
 });

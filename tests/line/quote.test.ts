@@ -1,12 +1,12 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("quote", () => {
-	it("Simple quote", () => {
-		expect(parse("> Simple quote", { hasTitle: false })).toMatchSnapshot();
+	it("Simple quote", ({ assert }) => {
+		assert.snapshot(parse("> Simple quote", { hasTitle: false }));
 	});
 
-	it("Empty quote", () => {
-		expect(parse(">", { hasTitle: false })).toMatchSnapshot();
+	it("Empty quote", ({ assert }) => {
+		assert.snapshot(parse(">", { hasTitle: false }));
 	});
 });

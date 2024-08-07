@@ -1,16 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("plain", () => {
-	it("Simple plain text", () => {
-		expect(parse("Plain text", { hasTitle: false })).toMatchSnapshot();
+	it("Simple plain text", ({ assert }) => {
+		assert.snapshot(parse("Plain text", { hasTitle: false }));
 	});
 
-	it("Blank line", () => {
-		expect(parse("", { hasTitle: false })).toMatchSnapshot();
+	it("Blank line", ({ assert }) => {
+		assert.snapshot(parse("", { hasTitle: false }));
 	});
 
-	it("Keep tail space", () => {
-		expect(parse("Tail space ->  ", { hasTitle: false })).toMatchSnapshot();
+	it("Keep tail space", ({ assert }) => {
+		assert.snapshot(parse("Tail space ->  ", { hasTitle: false }));
 	});
 });

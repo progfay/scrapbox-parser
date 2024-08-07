@@ -1,10 +1,10 @@
 /* eslint-disable no-tabs, no-irregular-whitespace */
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("Table", () => {
-	it("Simple table", () => {
-		expect(
+	it("Simple table", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 table:hello
@@ -15,11 +15,11 @@ ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Bulleted table", () => {
-		expect(
+	it("Bulleted table", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				` table:bulleted
  ${"\t"}1${"\t"}2${"\t"}3
@@ -28,22 +28,22 @@ ${"\t"}a${"\t"}b${"\t"}c
  ${"\t"}a${"\t"}b${"\t"}c`,
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Table with empty cells", () => {
-		expect(
+	it("Table with empty cells", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`table:${" "}
 ${"\t"} ${"\t"}　${"\t"}${"  "}
 ${"\t"}${"\t"}${"\t"}`,
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Staggered table", () => {
-		expect(
+	it("Staggered table", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`table:Staggered
 ${"\t"}1${"\t"}2${"\t"}3${"\t"}4
@@ -53,11 +53,11 @@ ${"\t"}1${"\t"}2
 ${"\t"}`,
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Consecutive table", () => {
-		expect(
+	it("Consecutive table", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 table:hello
@@ -73,11 +73,11 @@ ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Node in table cells", () => {
-		expect(
+	it("Node in table cells", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 table:node in table cells
@@ -105,6 +105,6 @@ ${"\t"}[[strong]]
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 });

@@ -1,9 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("image", () => {
-	it("Simple image", () => {
-		expect(
+	it("Simple image", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 [http://example.com/image.png]
@@ -13,19 +13,19 @@ describe("image", () => {
 					hasTitle: false,
 				},
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("HTTP jpeg image with special and japanese chars", () => {
-		expect(
+	it("HTTP jpeg image with special and japanese chars", ({ assert }) => {
+		assert.snapshot(
 			parse("[http://example.com/~!@#$%^&*()_+`-={}\\'\"?,.<>|/画像.jpeg]", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("HTTPS svg, GIF and WebP image with link", () => {
-		expect(
+	it("HTTPS svg, GIF and WebP image with link", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 [https://example.com/image.svg https://example.com/]
@@ -36,20 +36,20 @@ describe("image", () => {
 					hasTitle: false,
 				},
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Image with double image link", () => {
-		expect(
+	it("Image with double image link", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				"[https://example.com/forward.png https://example.com/backward.png]",
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Gyazo image", () => {
-		expect(
+	it("Gyazo image", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 [https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815]
@@ -58,11 +58,11 @@ describe("image", () => {
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Gyazo image with link", () => {
-		expect(
+	it("Gyazo image with link", ({ assert }) => {
+		assert.snapshot(
 			parse(
 				`
 [https://gyazo.com/0f82099330f378fe4917a1b4a5fe8815 https://example.com]
@@ -71,22 +71,22 @@ describe("image", () => {
 `.trim(),
 				{ hasTitle: false },
 			),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Image with GET parameters", () => {
-		expect(
+	it("Image with GET parameters", ({ assert }) => {
+		assert.snapshot(
 			parse("[http://example.com/image.png?key1=value1&key2=value2]", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 
-	it("Direct Gyazo image", () => {
-		expect(
+	it("Direct Gyazo image", ({ assert }) => {
+		assert.snapshot(
 			parse("[https://i.gyazo.com/0f82099330f378fe4917a1b4a5fe8815.png]", {
 				hasTitle: false,
 			}),
-		).toMatchSnapshot();
+		);
 	});
 });
