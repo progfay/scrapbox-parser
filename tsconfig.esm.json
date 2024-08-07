@@ -1,9 +1,0 @@
-{
-	"extends": "./tsconfig",
-	"compilerOptions": {
-		"module": "es2015",
-		"rootDir": "./src",
-		"outDir": "./esm",
-		"tsBuildInfoFile": "./.esm.tsbuildinfo"
-	}
-}

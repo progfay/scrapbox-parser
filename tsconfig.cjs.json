@@ -1,9 +1,0 @@
-{
-	"extends": "./tsconfig",
-	"compilerOptions": {
-		"module": "commonjs",
-		"rootDir": "./src",
-		"outDir": "./lib",
-		"tsBuildInfoFile": "./.cjs.tsbuildinfo"
-	}
-}
