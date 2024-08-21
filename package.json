@@ -8,9 +8,10 @@
 	],
 	"main": "./out/index.cjs",
 	"module": "./out/index.mjs",
-	"types": "./out/types/index.d.ts",
+	"types": "./out/index.d.ts",
 	"unpkg": "./out/scrapbox-parser.umd.js",
 	"exports": {
+		"types": "./out/index.d.ts",
 		"import": "./out/index.mjs",
 		"require": "./out/index.cjs",
 		"node": "./out/index.mjs",
