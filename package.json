@@ -11,6 +11,7 @@
 	"types": "./out/types/index.d.ts",
 	"unpkg": "./out/scrapbox-parser.umd.js",
 	"exports": {
+		"types": "./out/types/index.d.ts",
 		"import": "./out/index.mjs",
 		"require": "./out/index.cjs",
 		"node": "./out/index.mjs",
