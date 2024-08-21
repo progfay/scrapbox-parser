@@ -25,7 +25,7 @@ const createNumberListNode: NodeCreator<NumberListNode | PlainNode> = (
 			raw,
 			rawNumber,
 			number,
-			nodes: convertToNodes(text, { ...opts, nested: true }),
+			nodes: convertToNodes(text, { ...opts, nested: false }),
 		},
 	];
 };

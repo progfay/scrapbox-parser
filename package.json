@@ -21,7 +21,7 @@
 		"build:vite": "vite build",
 		"prepare": "npm run build",
 		"test": "vitest run --coverage",
-		"test:update": "vitest run --updateSnapshot --no-cache",
+		"test:update": "vitest run -u",
 		"lint": "run-p lint:*",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",

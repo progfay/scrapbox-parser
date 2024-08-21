@@ -51,6 +51,7 @@ export const convertToNodes: ReturnType<typeof combineNodeParsers> =
 		FalsyEliminator,
 		QuoteNodeParser,
 		HelpfeelNodeParser,
+		NumberListNodeParser,
 		CodeNodeParser,
 		CommandLineNodeParser,
 		FormulaNodeParser,
@@ -65,5 +66,4 @@ export const convertToNodes: ReturnType<typeof combineNodeParsers> =
 		GoogleMapNodeParser,
 		InternalLinkNodeParser,
 		HashTagNodeParser,
-		NumberListNodeParser,
 	);
