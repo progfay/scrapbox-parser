@@ -1,5 +1,61 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`numberList > 1. with code 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "nodes": [],
+        "number": 1,
+        "raw": "1. ",
+        "rawNumber": "1",
+        "type": "numberList",
+      },
+      {
+        "raw": "\`code\`",
+        "text": "code",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`numberList > 1. with decoration 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "nodes": [],
+        "number": 1,
+        "raw": "1. ",
+        "rawNumber": "1",
+        "type": "numberList",
+      },
+      {
+        "decos": [
+          "*-1",
+        ],
+        "nodes": [
+          {
+            "raw": "deco",
+            "text": "deco",
+            "type": "plain",
+          },
+        ],
+        "raw": "[* deco]",
+        "rawDecos": "*",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`numberList > 1. with no space is not numberList 1`] = `
 [
   {

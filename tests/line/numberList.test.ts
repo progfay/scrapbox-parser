@@ -18,6 +18,14 @@ describe("numberList", () => {
 		).toMatchSnapshot();
 	});
 
+	it("1. with decoration", () => {
+		expect(parse("1. [* deco]", { hasTitle: false })).toMatchSnapshot();
+	});
+
+	it("1. with code", () => {
+		expect(parse("1. `code`", { hasTitle: false })).toMatchSnapshot();
+	});
+
 	it("1. with no space is not numberList", () => {
 		expect(
 			parse("1.not numberList", {
