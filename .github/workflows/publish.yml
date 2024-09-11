@@ -38,7 +38,7 @@ jobs:
 
           # Publish
           npm publish --provenance --access public
-          npm exec --yes -- jsr publish --provenance
+          npm exec --yes -- jsr publish
 
           # Push version up commit
           git push
