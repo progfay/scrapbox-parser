@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_version:
+        description: ref. https://docs.npmjs.com/cli/commands/npm-version
+        required: true
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # The OIDC ID token is used for authentication with JSR.
+    steps:
+      - name: Publish package
+        uses: actions/setup-node@v4.0.3
+        with:
+          registry-url: 'https://registry.npmjs.org'
+        run: |
+          # Setup Git user
+          git config user.name "actions-user"
+          git config user.email "action@github.com"
+
+          # Set package version
+          npm version $NEW_VERSION
+          node -p 'JSON.stringify({ ...require("./jsr.json"), version: require("./package.json").version }, undefined, "\t")' > _jsr.json && mv _jsr.json jsr.json
+
+          # Publish
+          npm publish --provenance --access public
+          npx jsr publish --provenance
+
+          # Push version up commit
+          git push
+        env:
+          NEW_VERSION: ${{ inputs.new_version }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
