@@ -19,7 +19,7 @@ jobs:
       contents: read
       id-token: write # The OIDC ID token is used for authentication with JSR.
     steps:
-      - uses: actions/checkout@4.1.7
+      - uses: actions/checkout@v4.1.7
       - uses: actions/setup-node@v4.0.3
         with:
           registry-url: 'https://registry.npmjs.org'
