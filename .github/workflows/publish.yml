@@ -33,9 +33,12 @@ jobs:
           npm version $NEW_VERSION
           node -p 'JSON.stringify({ ...require("./jsr.json"), version: require("./package.json").version }, undefined, "\t")' > _jsr.json && mv _jsr.json jsr.json
 
+          # Install dependencies
+          npm ci
+
           # Publish
           npm publish --provenance --access public
-          npx jsr publish --provenance
+          npm exec --yes -- jsr publish --provenance
 
           # Push version up commit
           git push
