@@ -32,6 +32,8 @@ jobs:
           # Set package version
           npm version $NEW_VERSION
           node -p 'JSON.stringify({ ...require("./jsr.json"), version: require("./package.json").version }, undefined, "\t")' > _jsr.json && mv _jsr.json jsr.json
+          git add jsr.json
+          git commit --amend --no-edit
 
           # Install dependencies
           npm ci
