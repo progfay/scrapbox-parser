@@ -46,11 +46,11 @@
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@vitest/coverage-v8": "2.1.5",
+		"@vitest/coverage-v8": "2.1.6",
 		"npm-run-all2": "7.0.1",
 		"typescript": "5.7.2",
 		"vite": "6.0.0",
-		"vitest": "2.1.5"
+		"vitest": "2.1.6"
 	},
 	"publishConfig": {
 		"access": "public"
