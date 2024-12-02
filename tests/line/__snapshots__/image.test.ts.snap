@@ -116,7 +116,7 @@ exports[`image > HTTP jpeg image with special and japanese chars 1`] = `
 ]
 `;
 
-exports[`image > HTTPS svg and GIF image with link 1`] = `
+exports[`image > HTTPS svg, GIF and WebP image with link 1`] = `
 [
   {
     "indent": 0,
@@ -137,6 +137,18 @@ exports[`image > HTTPS svg and GIF image with link 1`] = `
         "link": "https://example.com/",
         "raw": "[https://example.com/ https://example.com/image.GIF]",
         "src": "https://example.com/image.GIF",
+        "type": "image",
+      },
+    ],
+    "type": "line",
+  },
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "link": "https://example.com",
+        "raw": "[https://example.com/image.webp https://example.com]",
+        "src": "https://example.com/image.webp",
         "type": "image",
       },
     ],
