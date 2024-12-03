@@ -5,16 +5,16 @@ import type { NodeCreator } from "./creator.ts";
 import type { ImageNode, PlainNode } from "./type.ts";
 
 const srcFirstStrongImageRegExp =
-	/\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i;
+	/\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg|webp)(?:\?[^\]\s]+)?(?:\s+https?:\/\/[^\s\]]+)?\]/i;
 const linkFirstStrongImageRegExp =
-	/\[https?:\/\/[^\s\]]+\s+https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg)(?:\?[^\]\s]+)?\]/i;
+	/\[https?:\/\/[^\s\]]+\s+https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg|webp)(?:\?[^\]\s]+)?\]/i;
 const srcFirstStrongGyazoImageRegExp =
 	/\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?(?:\s+https?:\/\/[^\s\]]+)?\]/;
 const linkFirstStrongGyazoImageRegExp =
 	/\[https?:\/\/[^\s\]]+\s+https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}(?:\/raw)?\]/;
 
 const isImageUrl = (text: string): boolean =>
-	/^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg)(\?[^\]\s]+)?$/i.test(text) ||
+	/^https?:\/\/[^\s\]]+\.(png|jpe?g|gif|svg|webp)(\?[^\]\s]+)?$/i.test(text) ||
 	isGyazoImageUrl(text);
 
 const isGyazoImageUrl = (text: string): boolean =>

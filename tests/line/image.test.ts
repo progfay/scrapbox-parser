@@ -24,12 +24,13 @@ describe("image", () => {
 		).toMatchSnapshot();
 	});
 
-	it("HTTPS svg and GIF image with link", () => {
+	it("HTTPS svg, GIF and WebP image with link", () => {
 		expect(
 			parse(
 				`
 [https://example.com/image.svg https://example.com/]
 [https://example.com/ https://example.com/image.GIF]
+[https://example.com/image.webp https://example.com]
 `.trim(),
 				{
 					hasTitle: false,

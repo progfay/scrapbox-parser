@@ -94,5 +94,16 @@ exports[`strongImage > Simple strong image 1`] = `
     ],
     "type": "line",
   },
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "raw": "[[https://example.com/image.webp]]",
+        "src": "https://example.com/image.webp",
+        "type": "strongImage",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;

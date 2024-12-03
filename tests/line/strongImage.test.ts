@@ -10,6 +10,7 @@ describe("strongImage", () => {
 [[https://example.com/image.JPG]]
 [[https://example.com/image.svg]]
 [[https://example.com/image.GIF]]
+[[https://example.com/image.webp]]
 `.trim(),
 				{
 					hasTitle: false,
