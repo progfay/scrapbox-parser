@@ -13,9 +13,7 @@
 	"exports": {
 		"types": "./out/index.d.ts",
 		"import": "./out/index.mjs",
-		"require": "./out/index.cjs",
-		"node": "./out/index.mjs",
-		"default": "./out/index.cjs"
+		"require": "./out/index.cjs"
 	},
 	"scripts": {
 		"prebuild": "node -e 'fs.rmSync(`out`, {recursive:true, force:true})'",
