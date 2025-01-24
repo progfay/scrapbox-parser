@@ -1,6 +1,7 @@
 import { createNodeParser } from "./creator.ts";
 
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { LinkNode } from "./type.ts";
 
 const internalLinkRegExp = /\[\/?[^[\]]+\]/;
@@ -18,8 +19,11 @@ const createInternalLinkNode: NodeCreator<LinkNode> = (raw) => {
 	];
 };
 
-export const InternalLinkNodeParser = createNodeParser(createInternalLinkNode, {
-	parseOnNested: true,
-	parseOnQuoted: true,
-	patterns: [internalLinkRegExp],
-});
+export const InternalLinkNodeParser: NodeParser = createNodeParser(
+	createInternalLinkNode,
+	{
+		parseOnNested: true,
+		parseOnQuoted: true,
+		patterns: [internalLinkRegExp],
+	},
+);

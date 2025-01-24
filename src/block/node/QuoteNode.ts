@@ -1,6 +1,6 @@
 import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
-import { convertToNodes } from "./index.ts";
+import { type NodeParser, convertToNodes } from "./index.ts";
 
 import type { NodeCreator } from "./creator.ts";
 import type { PlainNode, QuoteNode } from "./type.ts";
@@ -18,7 +18,7 @@ const createQuoteNode: NodeCreator<QuoteNode | PlainNode> = (raw, opts) =>
 				},
 			];
 
-export const QuoteNodeParser = createNodeParser(createQuoteNode, {
+export const QuoteNodeParser: NodeParser = createNodeParser(createQuoteNode, {
 	parseOnNested: false,
 	parseOnQuoted: false,
 	patterns: [quoteRegExp],

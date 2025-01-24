@@ -2,6 +2,7 @@ import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
 
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { GoogleMapNode, PlainNode } from "./type.ts";
 
 const placeFirstGoogleMapRegExp =
@@ -62,8 +63,11 @@ const createGoogleMapNode: NodeCreator<GoogleMapNode | PlainNode> = (
 	];
 };
 
-export const GoogleMapNodeParser = createNodeParser(createGoogleMapNode, {
-	parseOnNested: false,
-	parseOnQuoted: true,
-	patterns: [placeFirstGoogleMapRegExp, coordFirstGoogleMapRegExp],
-});
+export const GoogleMapNodeParser: NodeParser = createNodeParser(
+	createGoogleMapNode,
+	{
+		parseOnNested: false,
+		parseOnQuoted: true,
+		patterns: [placeFirstGoogleMapRegExp, coordFirstGoogleMapRegExp],
+	},
+);

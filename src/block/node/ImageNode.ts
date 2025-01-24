@@ -2,6 +2,7 @@ import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
 
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { ImageNode, PlainNode } from "./type.ts";
 
 const srcFirstStrongImageRegExp =
@@ -46,7 +47,7 @@ const createImageNode: NodeCreator<ImageNode | PlainNode> = (raw, opts) => {
 	];
 };
 
-export const ImageNodeParser = createNodeParser(createImageNode, {
+export const ImageNodeParser: NodeParser = createNodeParser(createImageNode, {
 	parseOnNested: true,
 	parseOnQuoted: true,
 	patterns: [

@@ -1,6 +1,6 @@
 import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
-import { convertToNodes } from "./index.ts";
+import { type NodeParser, convertToNodes } from "./index.ts";
 
 import type { NodeCreator } from "./creator.ts";
 import type { NumberListNode, PlainNode } from "./type.ts";
@@ -30,8 +30,11 @@ const createNumberListNode: NodeCreator<NumberListNode | PlainNode> = (
 	];
 };
 
-export const NumberListNodeParser = createNodeParser(createNumberListNode, {
-	parseOnNested: false,
-	parseOnQuoted: false,
-	patterns: [numberListRegExp],
-});
+export const NumberListNodeParser: NodeParser = createNodeParser(
+	createNumberListNode,
+	{
+		parseOnNested: false,
+		parseOnQuoted: false,
+		patterns: [numberListRegExp],
+	},
+);

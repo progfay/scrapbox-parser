@@ -2,6 +2,7 @@ import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
 
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { PlainNode, StrongImageNode } from "./type.ts";
 
 const strongImageRegExp =
@@ -29,8 +30,11 @@ const createStrongImageNode: NodeCreator<StrongImageNode | PlainNode> = (
 	];
 };
 
-export const StrongImageNodeParser = createNodeParser(createStrongImageNode, {
-	parseOnNested: false,
-	parseOnQuoted: true,
-	patterns: [strongImageRegExp, strongGyazoImageRegExp],
-});
+export const StrongImageNodeParser: NodeParser = createNodeParser(
+	createStrongImageNode,
+	{
+		parseOnNested: false,
+		parseOnQuoted: true,
+		patterns: [strongImageRegExp, strongGyazoImageRegExp],
+	},
+);

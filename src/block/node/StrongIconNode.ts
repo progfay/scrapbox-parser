@@ -1,5 +1,6 @@
 import { createPlainNode } from "./PlainNode.ts";
 import { type NodeCreator, createNodeParser } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { PlainNode, StrongIconNode } from "./type.ts";
 
 const strongIconRegExp = /\[\[[^[\]]*\.icon(?:\*\d+)?\]\]/;
@@ -23,8 +24,11 @@ const createStrongIconNode: NodeCreator<StrongIconNode | PlainNode> = (
 		.map(() => ({ path, pathType, type: "strongIcon", raw }));
 };
 
-export const StrongIconNodeParser = createNodeParser(createStrongIconNode, {
-	parseOnNested: false,
-	parseOnQuoted: true,
-	patterns: [strongIconRegExp],
-});
+export const StrongIconNodeParser: NodeParser = createNodeParser(
+	createStrongIconNode,
+	{
+		parseOnNested: false,
+		parseOnQuoted: true,
+		patterns: [strongIconRegExp],
+	},
+);

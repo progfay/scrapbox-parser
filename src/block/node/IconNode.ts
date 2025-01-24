@@ -1,5 +1,6 @@
 import { createNodeParser } from "./creator.ts";
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { IconNode } from "./type.ts";
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/;
@@ -18,7 +19,7 @@ const createIconNode: NodeCreator<IconNode> = (raw) => {
 		.map(() => ({ path, pathType, type: "icon", raw }));
 };
 
-export const IconNodeParser = createNodeParser(createIconNode, {
+export const IconNodeParser: NodeParser = createNodeParser(createIconNode, {
 	parseOnNested: true,
 	parseOnQuoted: true,
 	patterns: [iconRegExp],

@@ -2,6 +2,7 @@ import { createPlainNode } from "./PlainNode.ts";
 import { createNodeParser } from "./creator.ts";
 
 import type { NodeCreator } from "./creator.ts";
+import type { NodeParser } from "./index.ts";
 import type { FormulaNode, PlainNode } from "./type.ts";
 
 const formulaWithTailHalfSpaceRegExp = /\[\$ .+? \]/;
@@ -18,8 +19,11 @@ const createFormulaNode: NodeCreator<FormulaNode | PlainNode> = (raw, opts) =>
 				},
 			];
 
-export const FormulaNodeParser = createNodeParser(createFormulaNode, {
-	parseOnNested: false,
-	parseOnQuoted: true,
-	patterns: [formulaWithTailHalfSpaceRegExp, formulaRegExp],
-});
+export const FormulaNodeParser: NodeParser = createNodeParser(
+	createFormulaNode,
+	{
+		parseOnNested: false,
+		parseOnQuoted: true,
+		patterns: [formulaWithTailHalfSpaceRegExp, formulaRegExp],
+	},
+);
