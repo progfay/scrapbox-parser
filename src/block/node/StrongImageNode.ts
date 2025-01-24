@@ -4,7 +4,8 @@ import { createNodeParser } from "./creator.ts";
 import type { NodeCreator } from "./creator.ts";
 import type { PlainNode, StrongImageNode } from "./type.ts";
 
-const strongImageRegExp = /\[\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg|webp)\]\]/i;
+const strongImageRegExp =
+	/\[\[https?:\/\/[^\s\]]+\.(?:png|jpe?g|gif|svg|webp)\]\]/i;
 const strongGyazoImageRegExp =
 	/\[\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}\]\]/;
 
