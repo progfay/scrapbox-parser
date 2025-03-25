@@ -13,6 +13,13 @@
 		"import": "./out/index.mjs",
 		"require": "./out/index.cjs"
 	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": ">=23.10.0",
+			"onFail": "error"
+		}
+	},
 	"scripts": {
 		"prebuild": "node -e 'fs.rmSync(`out`, {recursive:true, force:true})'",
 		"build": "run-p build:*",
