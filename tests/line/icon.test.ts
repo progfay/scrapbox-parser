@@ -1,3 +1,4 @@
+import { deepStrictEqual, strictEqual } from "node:assert/strict";
 import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
@@ -22,14 +23,14 @@ describe("icon", () => {
 		);
 	});
 
-	it("Each multiple icon must be different Object", ({ assert }) => {
+	it("Each multiple icon must be different Object", () => {
 		const [block] = parse("[me.icon*2]", { hasTitle: false });
 
 		if (block === undefined || block.type !== "line") {
 			throw new Error("fail");
 		}
 
-		assert.strictEqual(block.nodes.length, 2);
-		assert.deepStrictEqual(block.nodes[0], block.nodes[1]);
+		strictEqual(block.nodes.length, 2);
+		deepStrictEqual(block.nodes[0], block.nodes[1]);
 	});
 });

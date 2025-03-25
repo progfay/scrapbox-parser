@@ -1,3 +1,4 @@
+import { deepStrictEqual } from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
 	type Decoration,
@@ -47,7 +48,7 @@ describe("decoration", () => {
 		);
 	});
 
-	it("All decoration", ({ assert }) => {
+	it("All decoration", () => {
 		const input = "[**********!\"#%&'()*+,-./{|}<>_~ decos]";
 		const blocks = parse(input, { hasTitle: false });
 		const received = ((blocks[0] as Line).nodes[0] as DecorationNode).decos;
@@ -74,7 +75,7 @@ describe("decoration", () => {
 			"_",
 			"~",
 		];
-		assert.deepStrictEqual(received.sort(), decos.sort());
+		deepStrictEqual(received.sort(), decos.sort());
 	});
 
 	it("Decoration * overflow", ({ assert }) => {

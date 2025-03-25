@@ -1,3 +1,4 @@
+import { deepStrictEqual } from "node:assert/strict";
 import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
@@ -33,6 +34,6 @@ describe("strongIcon", () => {
 		}
 
 		assert.equal(block.nodes.length, 2);
-		assert.deepStrictEqual(block.nodes[0], block.nodes[1]);
+		deepStrictEqual(block.nodes[0], block.nodes[1]);
 	});
 });
