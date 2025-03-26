@@ -1,13 +1,12 @@
-import { convertToCodeBlock } from "./CodeBlock.ts";
-import { convertToLine } from "./Line.ts";
-import { convertToTable } from "./Table.ts";
-import { convertToTitle } from "./Title.ts";
-
 import type { CodeBlock } from "./CodeBlock.ts";
+import { convertToCodeBlock } from "./CodeBlock.ts";
 import type { Line } from "./Line.ts";
+import { convertToLine } from "./Line.ts";
 import type { Pack } from "./Pack.ts";
 import type { Table } from "./Table.ts";
+import { convertToTable } from "./Table.ts";
 import type { Title } from "./Title.ts";
+import { convertToTitle } from "./Title.ts";
 
 /**
  * Scrapbox block type

@@ -1,6 +1,5 @@
-import { convertToNodes } from "./index.ts";
-
 import type { NodeParser, NodeParserOption } from "./index.ts";
+import { convertToNodes } from "./index.ts";
 import type { Node } from "./type.ts";
 
 export type NodeCreator<T extends Node> = (

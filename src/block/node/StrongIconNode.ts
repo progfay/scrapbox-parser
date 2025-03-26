@@ -1,6 +1,6 @@
-import { createPlainNode } from "./PlainNode.ts";
-import { type NodeCreator, createNodeParser } from "./creator.ts";
+import { createNodeParser, type NodeCreator } from "./creator.ts";
 import type { NodeParser } from "./index.ts";
+import { createPlainNode } from "./PlainNode.ts";
 import type { PlainNode, StrongIconNode } from "./type.ts";
 
 const strongIconRegExp = /\[\[[^[\]]*\.icon(?:\*\d+)?\]\]/;
