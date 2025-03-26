@@ -1,0 +1,747 @@
+exports[`Table > Bulleted table 1`] = `
+[
+  {
+    "indent": 1,
+    "type": "table",
+    "fileName": "bulleted",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1 ",
+            "text": "1 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2 ",
+            "text": "2 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "a",
+            "text": "a"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "b",
+            "text": "b"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "c",
+            "text": "c"
+          }
+        ]
+      ]
+    ]
+  }
+]
+`;
+
+exports[`Table > Consecutive table 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "hello",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1 ",
+            "text": "1 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2 ",
+            "text": "2 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "a",
+            "text": "a"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "b",
+            "text": "b"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "c",
+            "text": "c"
+          }
+        ]
+      ]
+    ]
+  },
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "hello",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1 ",
+            "text": "1 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2 ",
+            "text": "2 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "a",
+            "text": "a"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "b",
+            "text": "b"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "c",
+            "text": "c"
+          }
+        ]
+      ]
+    ]
+  }
+]
+`;
+
+exports[`Table > Node in table cells 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "node in table cells",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "#hashtag",
+            "text": "#hashtag"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[* deco]",
+            "text": "[* deco]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[ ]",
+            "text": "[ ]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "\`code\`",
+            "text": "\`code\`"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "https://external.com",
+            "text": "https://external.com"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[https://external.com]",
+            "text": "[https://external.com]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[left https://external.com]",
+            "text": "[left https://external.com]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[https://external.com right]",
+            "text": "[https://external.com right]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[$ x]",
+            "text": "[$ x]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[N35.6812362,E139.7649361]",
+            "text": "[N35.6812362,E139.7649361]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "#hashTag",
+            "text": "#hashTag"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "? helpfeel",
+            "text": "? helpfeel"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "$ commandLine",
+            "text": "$ commandLine"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "path": "progfay",
+            "pathType": "relative",
+            "type": "icon",
+            "raw": "[progfay.icon]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[https://image.com/image.png]",
+            "text": "[https://image.com/image.png]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "link",
+            "raw": "[link]",
+            "pathType": "relative",
+            "href": "link",
+            "content": ""
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "plain",
+            "text": "plain"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "> quote",
+            "text": "> quote"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[[progfay.icon]]",
+            "text": "[[progfay.icon]]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[[https://image.com/image.png]]",
+            "text": "[[https://image.com/image.png]]"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "[[strong]]",
+            "text": "[[strong]]"
+          }
+        ]
+      ]
+    ]
+  }
+]
+`;
+
+exports[`Table > Simple table 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "hello",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1 ",
+            "text": "1 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2 ",
+            "text": "2 "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "------",
+            "text": "------"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "a",
+            "text": "a"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "b",
+            "text": "b"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "c",
+            "text": "c"
+          }
+        ]
+      ]
+    ]
+  }
+]
+`;
+
+exports[`Table > Staggered table 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": "Staggered",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "4",
+            "text": "4"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "3",
+            "text": "3"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "plain",
+            "raw": "1",
+            "text": "1"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "2",
+            "text": "2"
+          }
+        ]
+      ],
+      [
+        []
+      ]
+    ]
+  }
+]
+`;
+
+exports[`Table > Table with empty cells 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "table",
+    "fileName": " ",
+    "cells": [
+      [
+        [
+          {
+            "type": "plain",
+            "raw": " ",
+            "text": " "
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "　",
+            "text": "　"
+          }
+        ],
+        [
+          {
+            "type": "plain",
+            "raw": "  ",
+            "text": "  "
+          }
+        ]
+      ],
+      [
+        [],
+        [],
+        []
+      ]
+    ]
+  }
+]
+`;

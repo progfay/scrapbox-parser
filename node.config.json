@@ -1,0 +1,6 @@
+{
+	"$schema": "https://nodejs.org/dist/latest/docs/node-config-schema.json",
+	"nodeOptions": {
+		"disable-warning": "ExperimentalWarning"
+	}
+}

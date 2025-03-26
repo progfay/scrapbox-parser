@@ -1,0 +1,52 @@
+exports[`formula > Formula includes [] with tail half-space 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "formula",
+        "raw": "[$ [x] ]",
+        "formula": "[x]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`formula > Formula includes [] without tail half-space 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "formula",
+        "raw": "[$ [x]",
+        "formula": "[x"
+      },
+      {
+        "type": "plain",
+        "raw": "]",
+        "text": "]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`formula > Simple formula 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "formula",
+        "raw": "[$ \\\\frac{3}{2}^N]",
+        "formula": "\\\\frac{3}{2}^N"
+      }
+    ]
+  }
+]
+`;

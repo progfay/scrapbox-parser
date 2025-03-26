@@ -1,0 +1,130 @@
+exports[`hashTag > HashTag in sentence with spaces 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "This is a",
+        "text": "This is a"
+      },
+      {
+        "type": "plain",
+        "raw": " ",
+        "text": " "
+      },
+      {
+        "type": "hashTag",
+        "raw": "#tag",
+        "href": "tag"
+      },
+      {
+        "type": "plain",
+        "raw": " .",
+        "text": " ."
+      }
+    ]
+  }
+]
+`;
+
+exports[`hashTag > HashTag in sentence without spaces is not hashTag 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "→#notTag←",
+        "text": "→#notTag←"
+      }
+    ]
+  }
+]
+`;
+
+exports[`hashTag > HashTag includes \`#\` 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "hashTag",
+        "raw": "#hash#Tag",
+        "href": "hash#Tag"
+      }
+    ]
+  }
+]
+`;
+
+exports[`hashTag > Multiple hashTag 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "hashTag",
+        "raw": "#hoge",
+        "href": "hoge"
+      },
+      {
+        "type": "plain",
+        "raw": " ",
+        "text": " "
+      },
+      {
+        "type": "hashTag",
+        "raw": "#fuga",
+        "href": "fuga"
+      },
+      {
+        "type": "plain",
+        "raw": " ",
+        "text": " "
+      },
+      {
+        "type": "hashTag",
+        "raw": "#piyo",
+        "href": "piyo"
+      }
+    ]
+  }
+]
+`;
+
+exports[`hashTag > Only \`#\` is not hashTag 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "#",
+        "text": "#"
+      }
+    ]
+  }
+]
+`;
+
+exports[`hashTag > Simple hashTag 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "hashTag",
+        "raw": "#tag",
+        "href": "tag"
+      }
+    ]
+  }
+]
+`;

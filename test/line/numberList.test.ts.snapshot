@@ -1,0 +1,153 @@
+exports[`numberList > 1. with code 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "numberList",
+        "raw": "1. \`code\`",
+        "rawNumber": "1",
+        "number": 1,
+        "nodes": [
+          {
+            "type": "code",
+            "raw": "\`code\`",
+            "text": "code"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > 1. with decoration 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "numberList",
+        "raw": "1. [* deco]",
+        "rawNumber": "1",
+        "number": 1,
+        "nodes": [
+          {
+            "type": "decoration",
+            "raw": "[* deco]",
+            "rawDecos": "*",
+            "decos": [
+              "*-1"
+            ],
+            "nodes": [
+              {
+                "type": "plain",
+                "raw": "deco",
+                "text": "deco"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > 1. with no space is not numberList 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "1.not numberList",
+        "text": "1.not numberList"
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > Minimum numberList 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "numberList",
+        "raw": "1. ",
+        "rawNumber": "1",
+        "number": 1,
+        "nodes": []
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > No head 1. is not numberList 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "a 1. not numberList",
+        "text": "a 1. not numberList"
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > Quoted 1. is not numberList 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "quote",
+        "raw": "> 1. Quoted",
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": " 1. Quoted",
+            "text": " 1. Quoted"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;
+
+exports[`numberList > Simple numberList 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "numberList",
+        "raw": "1. Simple numberList",
+        "rawNumber": "1",
+        "number": 1,
+        "nodes": [
+          {
+            "type": "plain",
+            "raw": "Simple numberList",
+            "text": "Simple numberList"
+          }
+        ]
+      }
+    ]
+  }
+]
+`;

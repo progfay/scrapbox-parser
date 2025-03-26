@@ -1,0 +1,41 @@
+exports[`plain > Blank line 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": []
+  }
+]
+`;
+
+exports[`plain > Keep tail space 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Tail space ->  ",
+        "text": "Tail space ->  "
+      }
+    ]
+  }
+]
+`;
+
+exports[`plain > Simple plain text 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Plain text",
+        "text": "Plain text"
+      }
+    ]
+  }
+]
+`;

@@ -1,0 +1,96 @@
+exports[`bullet > Double-byte space indent 1`] = `
+[
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Double-byte space",
+        "text": "Double-byte space"
+      }
+    ]
+  }
+]
+`;
+
+exports[`bullet > Multi lines bullet 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "no bullet (indent: 0)",
+        "text": "no bullet (indent: 0)"
+      }
+    ]
+  },
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "first bullet (indent: 1)",
+        "text": "first bullet (indent: 1)"
+      }
+    ]
+  },
+  {
+    "indent": 2,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "second bullet (indent: 2)",
+        "text": "second bullet (indent: 2)"
+      }
+    ]
+  },
+  {
+    "indent": 3,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "third bullet (indent: 3)",
+        "text": "third bullet (indent: 3)"
+      }
+    ]
+  }
+]
+`;
+
+exports[`bullet > Single-byte space indent 1`] = `
+[
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Single-byte space",
+        "text": "Single-byte space"
+      }
+    ]
+  }
+]
+`;
+
+exports[`bullet > Tab indent 1`] = `
+[
+  {
+    "indent": 1,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "plain",
+        "raw": "Tab",
+        "text": "Tab"
+      }
+    ]
+  }
+]
+`;

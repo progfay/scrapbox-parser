@@ -13,14 +13,21 @@
 		"import": "./out/index.mjs",
 		"require": "./out/index.cjs"
 	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": ">=23.10.0",
+			"onFail": "error"
+		}
+	},
 	"scripts": {
 		"prebuild": "node -e 'fs.rmSync(`out`, {recursive:true, force:true})'",
 		"build": "run-p build:*",
 		"build:types": "tsc -p ./tsconfig.json",
 		"build:vite": "vite build",
 		"prepare": "npm run build",
-		"test": "vitest run --coverage",
-		"test:update": "vitest run -u",
+		"test": "node --experimental-default-config-file --test --experimental-test-coverage",
+		"test:update": "npm test -- --experimental-test-snapshots",
 		"lint": "run-p lint:*",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",
@@ -39,11 +46,9 @@
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@vitest/coverage-v8": "3.0.9",
 		"npm-run-all2": "7.0.2",
 		"typescript": "5.8.2",
-		"vite": "6.2.3",
-		"vitest": "3.0.9"
+		"vite": "6.2.3"
 	},
 	"publishConfig": {
 		"access": "public"

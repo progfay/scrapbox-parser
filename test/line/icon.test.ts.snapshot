@@ -1,0 +1,86 @@
+exports[`icon > Icon and internal link on same line 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "link",
+        "raw": "[Internal link]",
+        "pathType": "relative",
+        "href": "Internal link",
+        "content": ""
+      },
+      {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[me.icon]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`icon > Multiple icons 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[me.icon*3]"
+      },
+      {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[me.icon*3]"
+      },
+      {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[me.icon*3]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`icon > Simple relative icon 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "path": "me",
+        "pathType": "relative",
+        "type": "icon",
+        "raw": "[me.icon]"
+      }
+    ]
+  }
+]
+`;
+
+exports[`icon > Simple root icon 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "path": "/icons/+1",
+        "pathType": "root",
+        "type": "icon",
+        "raw": "[/icons/+1.icon]"
+      }
+    ]
+  }
+]
+`;
