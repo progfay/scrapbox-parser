@@ -16,7 +16,7 @@ describe("page", () => {
 
 	it("https://scrapbox.io/help/Syntax", ({ assert }) => {
 		const input = fs
-			.readFileSync(path.resolve("tests/page/input.txt"))
+			.readFileSync(path.resolve(import.meta.dirname, "input.txt"))
 			.toString();
 		assert.snapshot(parse(input, { hasTitle: true }));
 	});
