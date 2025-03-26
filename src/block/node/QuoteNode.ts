@@ -1,8 +1,7 @@
-import { createPlainNode } from "./PlainNode.ts";
-import { createNodeParser } from "./creator.ts";
-import { type NodeParser, convertToNodes } from "./index.ts";
-
 import type { NodeCreator } from "./creator.ts";
+import { createNodeParser } from "./creator.ts";
+import { convertToNodes, type NodeParser } from "./index.ts";
+import { createPlainNode } from "./PlainNode.ts";
 import type { PlainNode, QuoteNode } from "./type.ts";
 
 const quoteRegExp = /^>.*$/;

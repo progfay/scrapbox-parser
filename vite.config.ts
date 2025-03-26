@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { type LibraryFormats, defineConfig } from "vite";
+import { defineConfig, type LibraryFormats } from "vite";
 
 const formats = ["es", "cjs", "umd"] satisfies LibraryFormats[];
 
