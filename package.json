@@ -26,7 +26,7 @@
 		"build:types": "tsc -p ./tsconfig.json",
 		"build:vite": "vite build",
 		"prepare": "npm run build",
-		"test": "node --experimental-default-config-file --test --experimental-test-coverage **/test/**/*.test.ts",
+		"test": "node --experimental-default-config-file --test --experimental-test-coverage",
 		"test:update": "npm test -- --experimental-test-snapshots",
 		"lint": "run-p lint:*",
 		"lint:biome": "biome check .",
