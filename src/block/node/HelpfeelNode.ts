@@ -1,8 +1,7 @@
-import { createPlainNode } from "./PlainNode.ts";
-import { createNodeParser } from "./creator.ts";
-
 import type { NodeCreator } from "./creator.ts";
+import { createNodeParser } from "./creator.ts";
 import type { NodeParser } from "./index.ts";
+import { createPlainNode } from "./PlainNode.ts";
 import type { HelpfeelNode, PlainNode } from "./type.ts";
 
 const helpfeelRegExp = /^\? .+$/;
