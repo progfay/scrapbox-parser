@@ -48,7 +48,7 @@
 		"@biomejs/biome": "1.9.4",
 		"npm-run-all2": "7.0.2",
 		"typescript": "5.8.3",
-		"vite": "6.3.1"
+		"vite": "6.3.2"
 	},
 	"publishConfig": {
 		"access": "public"
