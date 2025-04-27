@@ -1,17 +1,5 @@
 import { resolve } from "node:path";
-import { type Options, defineConfig } from "tsdown";
-
-type ModuleFormat = Extract<Options["format"], string>;
-
-const FORMAT_ENTRY_FILE_NAMES_MAP = {
-	es: "[name].mjs",
-	esm: "[name].mjs",
-	module: "[name].mjs",
-	cjs: "[name].cjs",
-	commonjs: "[name].cjs",
-	umd: "scrapbox-parser.umd.js",
-	iife: undefined,
-} as const satisfies Record<ModuleFormat, string | undefined>;
+import { defineConfig } from "tsdown";
 
 export default defineConfig([
 	{
@@ -23,12 +11,17 @@ export default defineConfig([
 		platform: "neutral",
 		outDir: "out",
 		clean: true,
-		outputOptions: ({ format, entryFileNames, ...options }) => ({
+		globalName: "ScrapboxParser",
+		outputOptions: ({ entryFileNames, ...options }, format) => ({
 			...options,
-			format,
-			name: "ScrapboxParser",
 			entryFileNames:
-				(format && FORMAT_ENTRY_FILE_NAMES_MAP[format]) || entryFileNames,
+				(
+					{
+						es: "[name].mjs",
+						cjs: "[name].cjs",
+						umd: "scrapbox-parser.umd.js",
+					} satisfies { [K in typeof format]?: string }
+				)[format] ?? entryFileNames,
 		}),
 	},
 ]);
