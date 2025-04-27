@@ -3,7 +3,9 @@
 	"version": "9.2.0",
 	"type": "module",
 	"description": "parse Scrapbox notation to JavaScript Object",
-	"files": ["out"],
+	"files": [
+		"out"
+	],
 	"main": "./out/index.cjs",
 	"module": "./out/index.mjs",
 	"types": "./out/index.d.ts",
@@ -37,7 +39,10 @@
 		"type": "git",
 		"url": "git+https://github.com/progfay/scrapbox-parser.git"
 	},
-	"keywords": ["scrapbox", "parser"],
+	"keywords": [
+		"scrapbox",
+		"parser"
+	],
 	"author": "progfay",
 	"license": "MIT",
 	"bugs": {
@@ -47,6 +52,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"npm-run-all2": "7.0.2",
+		"tsdown": "0.9.8",
 		"typescript": "5.8.3",
 		"vite": "6.3.3"
 	},
