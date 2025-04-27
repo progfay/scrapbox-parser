@@ -28,7 +28,7 @@ export default defineConfig([
 			format,
 			name: "ScrapboxParser",
 			entryFileNames:
-				(format && FORMAT_ENTRY_FILE_NAMES_MAP[format]) ?? entryFileNames,
+				(format && FORMAT_ENTRY_FILE_NAMES_MAP[format]) || entryFileNames,
 		}),
 	},
 ]);
