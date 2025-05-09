@@ -22,7 +22,7 @@
 		"prepare": "npm run build",
 		"test": "node --experimental-default-config-file --test --experimental-test-coverage",
 		"test:update": "npm test -- --experimental-test-snapshots",
-		"lint": "run-p lint:*",
+		"lint": "npm run lint:biome && npm run lint:tsc",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",
 		"format": "biome check --write ."
@@ -41,7 +41,6 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/node": "22.15.17",
-		"npm-run-all2": "8.0.1",
 		"tsdown": "0.11.1",
 		"typescript": "5.8.3"
 	},
