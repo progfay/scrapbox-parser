@@ -40,7 +40,7 @@
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@types/node": "22.15.23",
+		"@types/node": "22.15.24",
 		"tsdown": "0.12.4",
 		"typescript": "5.8.3"
 	},
