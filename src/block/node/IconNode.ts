@@ -1,5 +1,5 @@
-import { createNodeParser } from "./creator.ts";
 import type { NodeCreator } from "./creator.ts";
+import { createNodeParser } from "./creator.ts";
 import type { NodeParser } from "./index.ts";
 import type { IconNode } from "./type.ts";
 
