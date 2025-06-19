@@ -3,7 +3,9 @@
 	"version": "10.0.0",
 	"type": "module",
 	"description": "parse Scrapbox notation to JavaScript Object",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": "./dist/index.js",
@@ -31,7 +33,10 @@
 		"type": "git",
 		"url": "git+https://github.com/progfay/scrapbox-parser.git"
 	},
-	"keywords": ["scrapbox", "parser"],
+	"keywords": [
+		"scrapbox",
+		"parser"
+	],
 	"author": "progfay",
 	"license": "MIT",
 	"bugs": {
@@ -39,7 +44,7 @@
 	},
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.0.0",
 		"@types/node": "22.15.32",
 		"tsdown": "0.12.8",
 		"typescript": "5.8.3"

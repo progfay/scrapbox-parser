@@ -1,27 +1,27 @@
-export { parse, getTitle } from "./parse.ts";
-export type { ParserOption, Page } from "./parse.ts";
-export type { Block } from "./block/index.ts";
-export type { Title } from "./block/Title.ts";
 export type { CodeBlock } from "./block/CodeBlock.ts";
-export type { Table } from "./block/Table.ts";
+export type { Block } from "./block/index.ts";
 export type { Line } from "./block/Line.ts";
+export type { Decoration } from "./block/node/DecorationNode.ts";
 export type {
-	Node,
-	QuoteNode,
-	HelpfeelNode,
-	StrongImageNode,
-	StrongIconNode,
-	StrongNode,
-	FormulaNode,
-	DecorationNode,
+	BlankNode,
 	CodeNode,
 	CommandLineNode,
-	BlankNode,
+	DecorationNode,
+	FormulaNode,
+	GoogleMapNode,
+	HashTagNode,
+	HelpfeelNode,
+	IconNode,
 	ImageNode,
 	LinkNode,
-	GoogleMapNode,
-	IconNode,
-	HashTagNode,
+	Node,
 	PlainNode,
+	QuoteNode,
+	StrongIconNode,
+	StrongImageNode,
+	StrongNode,
 } from "./block/node/type.ts";
-export type { Decoration } from "./block/node/DecorationNode.ts";
+export type { Table } from "./block/Table.ts";
+export type { Title } from "./block/Title.ts";
+export type { Page, ParserOption } from "./parse.ts";
+export { getTitle, parse } from "./parse.ts";

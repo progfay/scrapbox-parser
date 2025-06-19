@@ -1,9 +1,8 @@
-import { createPlainNode } from "./PlainNode.ts";
-import { createNodeParser } from "./creator.ts";
-import { convertToNodes } from "./index.ts";
-
 import type { NodeCreator } from "./creator.ts";
+import { createNodeParser } from "./creator.ts";
 import type { NodeParser } from "./index.ts";
+import { convertToNodes } from "./index.ts";
+import { createPlainNode } from "./PlainNode.ts";
 import type { DecorationNode, PlainNode } from "./type.ts";
 
 const decorationRegExp = /\[[!"#%&'()*+,\-./{|}<>_~]+ (?:\[[^[\]]+\]|[^\]])+\]/;
