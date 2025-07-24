@@ -19,7 +19,6 @@ describe("bullet", () => {
 	});
 
 	it("Tab indent", ({ assert }) => {
-		// eslint-disable-next-line no-tabs
 		assert.snapshot(parse("	Tab", { hasTitle: false }));
 	});
 

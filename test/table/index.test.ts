@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs, no-irregular-whitespace */
 import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
