@@ -23,7 +23,7 @@
 		"build": "tsdown",
 		"prepare": "npm run build",
 		"test": "node --experimental-default-config-file --test --experimental-test-coverage",
-		"test:update": "npm test -- --experimental-test-snapshots",
+		"test:update": "npm test -- --test-update-snapshots",
 		"lint": "npm run lint:biome && npm run lint:tsc",
 		"lint:biome": "biome check .",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",

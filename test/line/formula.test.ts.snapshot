@@ -1,3 +1,19 @@
+exports[`formula > Formula followed immediately by a decoration notation with trailing spaces 1`] = `
+[
+  {
+    "indent": 0,
+    "type": "line",
+    "nodes": [
+      {
+        "type": "formula",
+        "raw": "[$ 1+1=2][. [link] ]",
+        "formula": "1+1=2][. [link]"
+      }
+    ]
+  }
+]
+`;
+
 exports[`formula > Formula includes [] with tail half-space 1`] = `
 [
   {
