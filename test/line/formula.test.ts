@@ -17,4 +17,11 @@ describe("formula", () => {
 	it("Formula includes [] without tail half-space", ({ assert }) => {
 		assert.snapshot(parse("[$ [x]]", { hasTitle: false }));
 	});
+
+	// ref. https://github.com/progfay/scrapbox-parser/issues/1892
+	it("Formula followed immediately by a decoration notation with trailing spaces", ({
+		assert,
+	}) => {
+		assert.snapshot(parse("[$ 1+1=2][. [link] ]", { hasTitle: false }));
+	});
 });
