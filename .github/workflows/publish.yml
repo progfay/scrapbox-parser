@@ -20,7 +20,7 @@ jobs:
       id-token: write # The OIDC ID token is used for authentication with npm / JSR.
     steps:
       - uses: actions/checkout@v5.0.0
-      - uses: actions/setup-node@v4.4.0
+      - uses: actions/setup-node@v5.0.0
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
