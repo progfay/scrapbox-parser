@@ -73,14 +73,8 @@ jobs:
               -f "previous_tag_name=$LAST_TAG" \
               --jq '.body')
           else
-            echo "Generating notes from all commits"
-            RELEASE_NOTES=$(gh api \
-              --method POST \
-              -H "Accept: application/vnd.github+json" \
-              "/repos/$GITHUB_REPOSITORY/releases/generate-notes" \
-              -f "tag_name=v$VERSION" \
-              -f "target_commitish=$DEFAULT_BRANCH" \
-              --jq '.body')
+            echo "Generating notes from all commits (avoid too large notes)"
+            RELEASE_NOTES="See https://github.com/progfay/scrapbox-parser/compare/a48b8366c1ec3b3e45d7e61ebc99d6a56ec3e2cf...3edb840d7220cc3246f0c01986e9decc8e316490"
           fi
 
           # Set release notes as environment variable
