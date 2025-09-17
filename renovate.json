@@ -1,5 +1,5 @@
 {
-	"enabledManagers": ["npm", "node", "ci"],
+	"enabledManagers": ["npm", "nodenv", "github-actions"],
 	"extends": ["config:base", "helpers:pinGitHubActionDigests"],
 	"minimumReleaseAge": "7 days"
 }
