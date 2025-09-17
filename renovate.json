@@ -1,4 +1,5 @@
 {
-	"extends": ["config:base"],
+	"enabledManagers": ["npm", "node", "ci"],
+	"extends": ["config:base", "helpers:pinGitHubActionDigests"],
 	"minimumReleaseAge": "7 days"
 }
