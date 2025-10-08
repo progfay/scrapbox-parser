@@ -47,7 +47,7 @@
 		"@biomejs/biome": "2.2.4",
 		"@types/node": "22.18.7",
 		"tsdown": "0.15.6",
-		"typescript": "5.9.2"
+		"typescript": "5.9.3"
 	},
 	"publishConfig": {
 		"access": "public"
