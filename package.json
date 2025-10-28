@@ -14,7 +14,7 @@
 	"devEngines": {
 		"runtime": {
 			"name": "node",
-			"version": ">=23.10.0",
+			"version": ">=24.10.0",
 			"onFail": "error"
 		}
 	},
@@ -22,7 +22,7 @@
 		"prebuild": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
 		"build": "tsdown",
 		"prepare": "npm run build",
-		"test": "node --experimental-default-config-file --test --experimental-test-coverage",
+		"test": "node --test --experimental-test-coverage",
 		"test:update": "npm test -- --test-update-snapshots",
 		"lint": "npm run lint:biome && npm run lint:tsc",
 		"lint:biome": "biome check .",
