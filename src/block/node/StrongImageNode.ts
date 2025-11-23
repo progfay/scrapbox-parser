@@ -10,11 +10,11 @@ const strongGyazoImageRegExp =
 	/\[\[https?:\/\/(?:[0-9a-z-]+\.)?gyazo\.com\/[0-9a-f]{32}\]\]/;
 
 const createStrongImageNode: NodeCreator<StrongImageNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const src = raw.substring(2, raw.length - 2);

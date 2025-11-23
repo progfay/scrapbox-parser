@@ -48,11 +48,11 @@ type AsteriskDecorationChar =
 export type Decoration = Exclude<DecorationChar, "*"> | AsteriskDecorationChar;
 
 const createDecorationNode: NodeCreator<DecorationNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const separatorIndex = raw.indexOf(" ");

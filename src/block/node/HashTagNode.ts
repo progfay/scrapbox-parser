@@ -6,9 +6,12 @@ import type { HashTagNode, PlainNode } from "./type.ts";
 
 const hashTagRegExp = /(?:^|\s)#\S+/;
 
-const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw, opts) => {
+const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (
+	[raw],
+	opts,
+) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	if (raw.startsWith("#")) {
@@ -25,7 +28,7 @@ const createHashTagNode: NodeCreator<HashTagNode | PlainNode> = (raw, opts) => {
 	const tag = raw.substring(1);
 
 	return [
-		...createPlainNode(space, opts),
+		...createPlainNode(space),
 		{
 			type: "hashTag",
 			raw: tag,

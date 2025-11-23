@@ -3,7 +3,7 @@ import { convertToNodes } from "./index.ts";
 import type { Node } from "./type.ts";
 
 export type NodeCreator<T extends Node> = (
-	target: string,
+	match: RegExpExecArray,
 	opts: NodeParserOption,
 ) => T[];
 
@@ -33,7 +33,7 @@ export const createNodeParser: NodeParserCreator<Node> = (
 			const left = text.substring(0, match.index);
 			const right = text.substring(match.index + match[0].length);
 
-			const node = nodeCreator(match[0], opts);
+			const node = nodeCreator(match, opts);
 			return [
 				...convertToNodes(left, opts),
 				...node,

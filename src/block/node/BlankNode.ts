@@ -6,9 +6,9 @@ import type { BlankNode, PlainNode } from "./type.ts";
 
 const blankRegExp = /\[\s+\]/;
 
-const createBlankNode: NodeCreator<BlankNode | PlainNode> = (raw, opts) =>
+const createBlankNode: NodeCreator<BlankNode | PlainNode> = ([raw], opts) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "blank",

@@ -1,8 +1,7 @@
-import type { NodeCreator } from "./creator.ts";
 import type { TerminateNodeParser } from "./index.ts";
 import type { PlainNode } from "./type.ts";
 
-export const createPlainNode: NodeCreator<PlainNode> = (raw) => [
+export const createPlainNode = (raw: string): [PlainNode] => [
 	{
 		type: "plain",
 		raw,

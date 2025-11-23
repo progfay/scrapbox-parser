@@ -7,11 +7,11 @@ import type { CommandLineNode, PlainNode } from "./type.ts";
 const commandLineRegExp = /^[$%] .+$/;
 
 const createCommandLineNode: NodeCreator<CommandLineNode | PlainNode> = (
-	raw: string,
+	[raw],
 	opts,
 ) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const symbol = raw[0] ?? "";

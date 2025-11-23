@@ -10,11 +10,11 @@ const bracketedUrlRegExp = /\[https?:\/\/[^\s\]]+\]/;
 const httpRegExp = /https?:\/\/[^\s]+/;
 
 const createExternalLinkNode: NodeCreator<LinkNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const inner =

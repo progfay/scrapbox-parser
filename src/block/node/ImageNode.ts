@@ -20,9 +20,9 @@ const isImageUrl = (text: string): boolean =>
 const isGyazoImageUrl = (text: string): boolean =>
 	/^https?:\/\/([0-9a-z-]\.)?gyazo\.com\/[0-9a-f]{32}(\/raw)?$/.test(text);
 
-const createImageNode: NodeCreator<ImageNode | PlainNode> = (raw, opts) => {
+const createImageNode: NodeCreator<ImageNode | PlainNode> = ([raw], opts) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const index = raw.search(/\s/);

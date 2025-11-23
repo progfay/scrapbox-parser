@@ -24,18 +24,13 @@ const parseCoordinate: (format: string) => Coordinate = (format) => {
 };
 
 const createGoogleMapNode: NodeCreator<GoogleMapNode | PlainNode> = (
-	raw,
+	match,
 	opts,
 ) => {
+	const raw = match[0];
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
-
-	const match =
-		raw.match(placeFirstGoogleMapRegExp) ??
-		raw.match(coordFirstGoogleMapRegExp);
-	if (match === null) return [];
-
 	const isCoordFirst = raw.startsWith("[N") || raw.startsWith("[S");
 	const [, coord = "", place = ""] = isCoordFirst
 		? match

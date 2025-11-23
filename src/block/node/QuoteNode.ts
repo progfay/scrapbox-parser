@@ -6,9 +6,9 @@ import type { PlainNode, QuoteNode } from "./type.ts";
 
 const quoteRegExp = /^>.*$/;
 
-const createQuoteNode: NodeCreator<QuoteNode | PlainNode> = (raw, opts) =>
+const createQuoteNode: NodeCreator<QuoteNode | PlainNode> = ([raw], opts) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "quote",

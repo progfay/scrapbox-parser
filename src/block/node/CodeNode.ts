@@ -6,9 +6,9 @@ import type { CodeNode, PlainNode } from "./type.ts";
 
 const codeRegExp = /`.*?`/;
 
-const createCodeNode: NodeCreator<CodeNode | PlainNode> = (raw, opts) =>
+const createCodeNode: NodeCreator<CodeNode | PlainNode> = ([raw], opts) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "code",
