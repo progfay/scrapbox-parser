@@ -14,7 +14,7 @@ const createCommandLineNode: NodeCreator<CommandLineNode | PlainNode> = (
 		return createPlainNode(raw);
 	}
 
-	const symbol = raw[0] ?? "";
+	const symbol = raw.charAt(0);
 	const text = raw.substring(2);
 
 	return [
