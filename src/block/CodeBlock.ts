@@ -2,7 +2,7 @@ import type { Row } from "./Row.ts";
 
 export interface CodeBlockPack {
 	type: "codeBlock";
-	rows: Row[];
+	rows: [Row, ...Row[]];
 }
 
 /**
@@ -17,9 +17,8 @@ export interface CodeBlock {
 
 export const convertToCodeBlock = (pack: CodeBlockPack): CodeBlock => {
 	const {
-		rows: [head, ...body],
+		rows: [{ indent, text }, ...body],
 	} = pack;
-	const { indent = 0, text = "" } = head ?? {};
 	const fileName: string = text.replace(/^\s*code:/, "");
 
 	return {

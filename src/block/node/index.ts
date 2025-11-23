@@ -28,13 +28,15 @@ export type NextNodeParser = () => Node[];
 export type NodeParser = (
 	text: string,
 	opts: NodeParserOption,
-	next?: NextNodeParser,
+	next: NextNodeParser,
+) => Node[];
+export type TerminateNodeParser = (
+	text: string,
+	opts: NodeParserOption,
 ) => Node[];
 
-const FalsyEliminator: NodeParser = (text, _, next) => {
-	if (text === "") return [];
-	return next?.() ?? [];
-};
+const FalsyEliminator: NodeParser = (text, _, next) =>
+	text !== "" ? next() : [];
 
 const combineNodeParsers =
 	(...parsers: NodeParser[]) =>

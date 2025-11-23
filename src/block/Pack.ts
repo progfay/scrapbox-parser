@@ -7,31 +7,35 @@ import type { TitlePack } from "./Title.ts";
 
 export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack;
 
-const isChildRowOfPack = (pack: Pack, row: Row): boolean =>
-	(pack.type === "codeBlock" || pack.type === "table") &&
-	row.indent > (pack.rows[0]?.indent ?? 0);
+const isChildRowOfPack = (
+	{ type, rows: [firstRow] }: Pack,
+	row: Row,
+): boolean =>
+	(type === "codeBlock" || type === "table") && row.indent > firstRow.indent;
 
 const packing = (packs: Pack[], row: Row): Pack[] => {
 	const lastPack = packs[packs.length - 1];
 	if (lastPack !== undefined && isChildRowOfPack(lastPack, row)) {
 		lastPack.rows.push(row);
-		return packs;
+	} else {
+		packs.push({
+			type: /^\s*code:/.test(row.text)
+				? "codeBlock"
+				: /^\s*table:/.test(row.text)
+					? "table"
+					: "line",
+			rows: [row],
+		});
 	}
-
-	packs.push({
-		type: /^\s*code:/.test(row.text)
-			? "codeBlock"
-			: /^\s*table:/.test(row.text)
-				? "table"
-				: "line",
-		rows: [row],
-	});
 
 	return packs;
 };
 
-export const packRows = (rows: Row[], opts: ParserOption): Pack[] => {
-	if (opts.hasTitle ?? true) {
+export const packRows = (
+	rows: Row[],
+	{ hasTitle = true }: ParserOption,
+): Pack[] => {
+	if (hasTitle) {
 		const [title, ...body] = rows;
 		if (title === undefined) return [];
 		return [
