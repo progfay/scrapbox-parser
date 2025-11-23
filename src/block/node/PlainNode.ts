@@ -1,6 +1,5 @@
 import type { NodeCreator } from "./creator.ts";
-import { createNodeParser } from "./creator.ts";
-import type { NodeParser } from "./index.ts";
+import type { TerminateNodeParser } from "./index.ts";
 import type { PlainNode } from "./type.ts";
 
 export const createPlainNode: NodeCreator<PlainNode> = (raw) => [
@@ -11,8 +10,4 @@ export const createPlainNode: NodeCreator<PlainNode> = (raw) => [
 	},
 ];
 
-export const PlainNodeParser: NodeParser = createNodeParser(createPlainNode, {
-	parseOnNested: true,
-	parseOnQuoted: true,
-	patterns: [/^()(.*)()$/],
-});
+export const PlainNodeParser: TerminateNodeParser = createPlainNode;

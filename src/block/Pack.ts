@@ -30,8 +30,11 @@ const packing = (packs: Pack[], row: Row): Pack[] => {
 	return packs;
 };
 
-export const packRows = (rows: Row[], opts: ParserOption): Pack[] => {
-	if (opts.hasTitle ?? true) {
+export const packRows = (
+	rows: Row[],
+	{ hasTitle = true }: ParserOption,
+): Pack[] => {
+	if (hasTitle) {
 		const [title, ...body] = rows;
 		if (title === undefined) return [];
 		return [

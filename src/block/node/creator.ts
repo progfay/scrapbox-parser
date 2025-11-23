@@ -17,8 +17,8 @@ export const createNodeParser: NodeParserCreator<Node> = (
 	{ parseOnNested, parseOnQuoted, patterns },
 ) => {
 	return (text, opts, next) => {
-		if (!parseOnNested && opts.nested) return next?.() ?? [];
-		if (!parseOnQuoted && opts.quoted) return next?.() ?? [];
+		if (!parseOnNested && opts.nested) return next();
+		if (!parseOnQuoted && opts.quoted) return next();
 
 		for (const pattern of patterns) {
 			const match = pattern.exec(text);
@@ -35,6 +35,6 @@ export const createNodeParser: NodeParserCreator<Node> = (
 			];
 		}
 
-		return next?.() ?? [];
+		return next();
 	};
 };
