@@ -406,8 +406,8 @@ exports[`Table > Node in table cells 1`] = `
         [
           {
             "type": "plain",
-            "raw": "#hashTag",
-            "text": "#hashTag"
+            "raw": "? helpfeel",
+            "text": "? helpfeel"
           }
         ]
       ],
@@ -415,8 +415,8 @@ exports[`Table > Node in table cells 1`] = `
         [
           {
             "type": "plain",
-            "raw": "? helpfeel",
-            "text": "? helpfeel"
+            "raw": "1. numbered list",
+            "text": "1. numbered list"
           }
         ]
       ],
