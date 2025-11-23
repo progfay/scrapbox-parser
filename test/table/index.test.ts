@@ -90,8 +90,8 @@ ${"\t"}[left https://external.com]
 ${"\t"}[https://external.com right]
 ${"\t"}[$ x]
 ${"\t"}[N35.6812362,E139.7649361]
-${"\t"}#hashTag
 ${"\t"}? helpfeel
+${"\t"}1. numbered list
 ${"\t"}$ commandLine
 ${"\t"}[progfay.icon]
 ${"\t"}[https://image.com/image.png]
