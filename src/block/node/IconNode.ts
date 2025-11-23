@@ -5,7 +5,7 @@ import type { IconNode } from "./type.ts";
 
 const iconRegExp = /\[[^[\]]*\.icon(?:\*[1-9]\d*)?\]/;
 
-const createIconNode: NodeCreator<IconNode> = (raw) => {
+const createIconNode: NodeCreator<IconNode> = ([raw]) => {
 	const target = raw.substring(1, raw.length - 1);
 	const index = target.lastIndexOf(".icon");
 	const path = target.substring(0, index);

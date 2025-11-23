@@ -7,11 +7,11 @@ import type { HelpfeelNode, PlainNode } from "./type.ts";
 const helpfeelRegExp = /^\? .+$/;
 
 const createHelpfeelNode: NodeCreator<HelpfeelNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "helpfeel",

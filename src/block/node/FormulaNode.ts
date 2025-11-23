@@ -7,9 +7,12 @@ import type { FormulaNode, PlainNode } from "./type.ts";
 const formulaWithTailHalfSpaceRegExp = /\[\$ .+? \]/;
 const formulaRegExp = /\[\$ [^\]]+\]/;
 
-const createFormulaNode: NodeCreator<FormulaNode | PlainNode> = (raw, opts) =>
+const createFormulaNode: NodeCreator<FormulaNode | PlainNode> = (
+	[raw],
+	opts,
+) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "formula",

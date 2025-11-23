@@ -7,11 +7,11 @@ import type { NumberListNode, PlainNode } from "./type.ts";
 const numberListRegExp = /^[0-9]+\. .*$/;
 
 const createNumberListNode: NodeCreator<NumberListNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) => {
 	if (opts.context === "table") {
-		return createPlainNode(raw, opts);
+		return createPlainNode(raw);
 	}
 
 	const separatorIndex = raw.indexOf(" ");

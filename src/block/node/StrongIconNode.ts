@@ -6,10 +6,10 @@ import type { PlainNode, StrongIconNode } from "./type.ts";
 const strongIconRegExp = /\[\[[^[\]]*\.icon(?:\*\d+)?\]\]/;
 
 const createStrongIconNode: NodeCreator<StrongIconNode | PlainNode> = (
-	raw,
+	[raw],
 	opts,
 ) => {
-	if (opts.context === "table") return createPlainNode(raw, opts);
+	if (opts.context === "table") return createPlainNode(raw);
 
 	const target = raw.substring(2, raw.length - 2);
 	const index = target.lastIndexOf(".icon");

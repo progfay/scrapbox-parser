@@ -7,9 +7,9 @@ import type { PlainNode, StrongNode } from "./type.ts";
 
 const strongRegExp = /\[\[(?:[^[]|\[[^[]).*?\]*\]\]/;
 
-const createStrongNode: NodeCreator<StrongNode | PlainNode> = (raw, opts) =>
+const createStrongNode: NodeCreator<StrongNode | PlainNode> = ([raw], opts) =>
 	opts.context === "table"
-		? createPlainNode(raw, opts)
+		? createPlainNode(raw)
 		: [
 				{
 					type: "strong",
