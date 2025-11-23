@@ -24,9 +24,12 @@ export type Page = Block[];
  * @param opts parser options
  * @returns syntax tree of parsed input
  */
-export const parse = (input: string, opts?: ParserOption): Page => {
+export const parse = (
+	input: string,
+	{ hasTitle = true }: ParserOption = {},
+): Page => {
 	const rows = parseToRows(input);
-	const packs = packRows(rows, { hasTitle: opts?.hasTitle ?? true });
+	const packs = packRows(rows, { hasTitle });
 	return packs.map(convertToBlock);
 };
 
@@ -37,5 +40,5 @@ export const parse = (input: string, opts?: ParserOption): Page => {
  */
 export const getTitle = (input: string): string => {
 	const match = /^\s*\S.*$/m.exec(input);
-	return match?.[0]?.trim() ?? "Untitled";
+	return match?.[0].trim() ?? "Untitled";
 };
