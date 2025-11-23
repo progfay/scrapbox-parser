@@ -7,9 +7,15 @@ export type NodeCreator<T extends Node> = (
 	opts: NodeParserOption,
 ) => T[];
 
+type NodeParserCreatorOptions = {
+	parseOnNested: boolean;
+	parseOnQuoted: boolean;
+	patterns: RegExp[];
+};
+
 type NodeParserCreator<T extends Node> = (
 	nodeCreator: NodeCreator<T>,
-	opts: { parseOnNested: boolean; parseOnQuoted: boolean; patterns: RegExp[] },
+	opts: NodeParserCreatorOptions,
 ) => NodeParser;
 
 export const createNodeParser: NodeParserCreator<Node> = (
