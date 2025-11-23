@@ -4,7 +4,7 @@ import type { Row } from "./Row.ts";
 
 export interface TablePack {
 	type: "table";
-	rows: Row[];
+	rows: [Row, ...Row[]];
 }
 
 /**
@@ -19,9 +19,8 @@ export interface Table {
 
 export const convertToTable = (pack: TablePack): Table => {
 	const {
-		rows: [head, ...body],
+		rows: [{ indent, text }, ...body],
 	} = pack;
-	const { indent = 0, text = "" } = head ?? {};
 	const fileName = text.replace(/^\s*table:/, "");
 
 	return {
