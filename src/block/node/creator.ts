@@ -31,9 +31,9 @@ export const createNodeParser: NodeParserCreator<Node> = (
 			if (match === null) continue;
 
 			const left = text.substring(0, match.index);
-			const right = text.substring(match.index + (match[0]?.length ?? 0));
+			const right = text.substring(match.index + match[0].length);
 
-			const node = nodeCreator(match[0] ?? "", opts);
+			const node = nodeCreator(match[0], opts);
 			return [
 				...convertToNodes(left, opts),
 				...node,
