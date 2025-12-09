@@ -15,6 +15,7 @@ export type {
 	ImageNode,
 	LinkNode,
 	Node,
+	NumberListNode,
 	PlainNode,
 	QuoteNode,
 	StrongIconNode,
