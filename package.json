@@ -46,7 +46,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
 		"@types/node": "24.10.1",
-		"tsdown": "0.16.8",
+		"tsdown": "0.17.2",
 		"typescript": "5.9.3"
 	},
 	"publishConfig": {
