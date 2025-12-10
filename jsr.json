@@ -1,5 +1,5 @@
 {
 	"name": "@progfay/scrapbox-parser",
-	"version": "10.1.0",
+	"version": "10.1.1",
 	"exports": "./src/index.ts"
 }
