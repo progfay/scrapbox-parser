@@ -2,7 +2,6 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
-	// tsdown (vp pack) configuration
 	pack: {
 		entry: resolve(import.meta.dirname, "src/index.ts"),
 		dts: true,
@@ -11,15 +10,11 @@ export default defineConfig({
 		platform: "neutral",
 		clean: true,
 	},
-
-	// Oxlint configuration
 	lint: {
 		ignorePatterns: ["dist/**", "coverage/**"],
 		plugins: ["import", "typescript"],
 		rules: {
-			// correctness
 			"import/extensions": "error",
-			// style
 			"no-param-reassign": "error",
 			"default-param-last": "error",
 			"one-var": ["error", "never"],
@@ -30,7 +25,5 @@ export default defineConfig({
 			"@typescript-eslint/no-inferrable-types": "error",
 		},
 	},
-
-	// Oxfmt configuration (defaults match Biome formatter defaults)
 	fmt: {},
 });

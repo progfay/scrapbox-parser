@@ -44,7 +44,6 @@
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
 		"@types/node": "24.12.0",
-		"@voidzero-dev/vite-plus-core": "0.1.11",
 		"typescript": "5.9.3",
 		"vite-plus": "0.1.11"
 	},
