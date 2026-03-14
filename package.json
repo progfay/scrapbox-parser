@@ -19,8 +19,7 @@
 		}
 	},
 	"scripts": {
-		"prebuild": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
-		"build": "tsdown",
+		"build": "vp pack",
 		"prepare": "npm run build",
 		"test": "node --test --experimental-test-coverage",
 		"test:update": "npm test -- --test-update-snapshots",
@@ -46,7 +45,6 @@
 	"devDependencies": {
 		"@types/node": "24.12.0",
 		"@voidzero-dev/vite-plus-core": "latest",
-		"tsdown": "0.21.0",
 		"typescript": "5.9.3",
 		"vite-plus": "latest"
 	},
