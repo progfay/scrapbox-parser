@@ -1,7 +1,6 @@
 {
 	"cSpell.words": [
 		"backquote",
-		"biomejs",
 		"commitish",
 		"coord",
 		"decos",
@@ -9,11 +8,15 @@
 		"gyazo",
 		"helpfeel",
 		"hoge",
+		"oxfmt",
+		"oxlint",
 		"piyo",
 		"progfay",
 		"scrapbox",
-		"tsbuildinfo"
+		"tsbuildinfo",
+		"viteplus",
+		"voidzero"
 	],
-	"editor.defaultFormatter": "biomejs.biome",
+	"editor.defaultFormatter": "voidzero.oxfmt",
 	"editor.formatOnSave": true
 }

@@ -19,15 +19,14 @@
 		}
 	},
 	"scripts": {
-		"prebuild": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
-		"build": "tsdown",
+		"build": "vp pack",
 		"prepare": "npm run build",
 		"test": "node --test --experimental-test-coverage",
 		"test:update": "npm test -- --test-update-snapshots",
-		"lint": "npm run lint:biome && npm run lint:tsc",
-		"lint:biome": "biome check .",
+		"lint": "npm run lint:vp && npm run lint:tsc",
+		"lint:vp": "vp lint",
 		"lint:tsc": "tsc -p ./tsconfig.lint.json",
-		"format": "biome check --write ."
+		"format": "vp fmt"
 	},
 	"repository": {
 		"type": "git",
@@ -44,10 +43,9 @@
 	},
 	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
 	"devDependencies": {
-		"@biomejs/biome": "2.4.6",
 		"@types/node": "24.12.0",
-		"tsdown": "0.21.0",
-		"typescript": "5.9.3"
+		"typescript": "5.9.3",
+		"vite-plus": "0.1.11"
 	},
 	"publishConfig": {
 		"access": "public"
