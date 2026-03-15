@@ -1,22 +1,22 @@
 {
-	"cSpell.words": [
-		"backquote",
-		"commitish",
-		"coord",
-		"decos",
-		"fuga",
-		"gyazo",
-		"helpfeel",
-		"hoge",
-		"oxfmt",
-		"oxlint",
-		"piyo",
-		"progfay",
-		"scrapbox",
-		"tsbuildinfo",
-		"viteplus",
-		"voidzero"
-	],
-	"editor.defaultFormatter": "voidzero.oxfmt",
-	"editor.formatOnSave": true
+  "cSpell.words": [
+    "backquote",
+    "commitish",
+    "coord",
+    "decos",
+    "fuga",
+    "gyazo",
+    "helpfeel",
+    "hoge",
+    "oxfmt",
+    "oxlint",
+    "piyo",
+    "progfay",
+    "scrapbox",
+    "tsbuildinfo",
+    "viteplus",
+    "voidzero"
+  ],
+  "editor.defaultFormatter": "voidzero.oxfmt",
+  "editor.formatOnSave": true
 }

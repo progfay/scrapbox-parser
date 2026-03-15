@@ -7,10 +7,10 @@ import { parseToRows } from "./block/Row.ts";
  * parser option type
  */
 export interface ParserOption {
-	/**
-	 * is Scrapbox notation text including title
-	 */
-	hasTitle?: boolean;
+  /**
+   * is Scrapbox notation text including title
+   */
+  hasTitle?: boolean;
 }
 
 /**
@@ -24,13 +24,10 @@ export type Page = Block[];
  * @param opts parser options
  * @returns syntax tree of parsed input
  */
-export const parse = (
-	input: string,
-	{ hasTitle = true }: ParserOption = {},
-): Page => {
-	const rows = parseToRows(input);
-	const packs = packRows(rows, { hasTitle });
-	return packs.map(convertToBlock);
+export const parse = (input: string, { hasTitle = true }: ParserOption = {}): Page => {
+  const rows = parseToRows(input);
+  const packs = packRows(rows, { hasTitle });
+  return packs.map(convertToBlock);
 };
 
 /**
@@ -39,6 +36,6 @@ export const parse = (
  * @returns title of input Scrapbox page
  */
 export const getTitle = (input: string): string => {
-	const match = /^\s*\S.*$/m.exec(input);
-	return match?.[0].trim() ?? "Untitled";
+  const match = /^\s*\S.*$/m.exec(input);
+  return match?.[0].trim() ?? "Untitled";
 };

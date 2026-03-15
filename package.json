@@ -1,53 +1,53 @@
 {
-	"name": "@progfay/scrapbox-parser",
-	"version": "10.1.1",
-	"type": "module",
-	"description": "parse Scrapbox notation to JavaScript Object",
-	"files": [
-		"dist"
-	],
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": "./dist/index.js",
-		"./package.json": "./package.json"
-	},
-	"devEngines": {
-		"runtime": {
-			"name": "node",
-			"version": ">=24.10.0",
-			"onFail": "error"
-		}
-	},
-	"scripts": {
-		"build": "vp pack",
-		"prepare": "npm run build",
-		"test": "node --test --experimental-test-coverage",
-		"test:update": "npm test -- --test-update-snapshots",
-		"lint": "npm run lint:vp && npm run lint:tsc",
-		"lint:vp": "vp lint",
-		"lint:tsc": "tsc -p ./tsconfig.lint.json",
-		"format": "vp fmt"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/progfay/scrapbox-parser.git"
-	},
-	"keywords": [
-		"scrapbox",
-		"parser"
-	],
-	"author": "progfay",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/progfay/scrapbox-parser/issues"
-	},
-	"homepage": "https://github.com/progfay/scrapbox-parser#readme",
-	"devDependencies": {
-		"@types/node": "24.12.0",
-		"typescript": "5.9.3",
-		"vite-plus": "0.1.11"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@progfay/scrapbox-parser",
+  "version": "10.1.1",
+  "description": "parse Scrapbox notation to JavaScript Object",
+  "keywords": [
+    "parser",
+    "scrapbox"
+  ],
+  "homepage": "https://github.com/progfay/scrapbox-parser#readme",
+  "bugs": {
+    "url": "https://github.com/progfay/scrapbox-parser/issues"
+  },
+  "license": "MIT",
+  "author": "progfay",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progfay/scrapbox-parser.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "prepare": "npm run build",
+    "test": "node --test --experimental-test-coverage",
+    "test:update": "npm test -- --test-update-snapshots",
+    "lint": "npm run lint:vp && npm run lint:tsc",
+    "lint:vp": "vp lint",
+    "lint:tsc": "tsc -p ./tsconfig.lint.json",
+    "format": "vp fmt"
+  },
+  "devDependencies": {
+    "@types/node": "24.12.0",
+    "typescript": "5.9.3",
+    "vite-plus": "0.1.11"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=24.10.0",
+      "onFail": "error"
+    }
+  }
 }

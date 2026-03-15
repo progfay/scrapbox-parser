@@ -1,9 +1,9 @@
 {
-	"extends": "./tsconfig",
-	"compilerOptions": {
-		"emitDeclarationOnly": false,
-		"noEmit": true,
-		"isolatedDeclarations": false
-	},
-	"include": ["**/*"]
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+    "isolatedDeclarations": false
+  },
+  "include": ["**/*"]
 }

@@ -6,25 +6,19 @@ import type { HelpfeelNode, PlainNode } from "./type.ts";
 
 const helpfeelRegExp = /^\? .+$/;
 
-const createHelpfeelNode: NodeCreator<HelpfeelNode | PlainNode> = (
-	[raw],
-	opts,
-) =>
-	opts.context === "table"
-		? createPlainNode(raw)
-		: [
-				{
-					type: "helpfeel",
-					raw,
-					text: raw.substring(2),
-				},
-			];
+const createHelpfeelNode: NodeCreator<HelpfeelNode | PlainNode> = ([raw], opts) =>
+  opts.context === "table"
+    ? createPlainNode(raw)
+    : [
+        {
+          type: "helpfeel",
+          raw,
+          text: raw.substring(2),
+        },
+      ];
 
-export const HelpfeelNodeParser: NodeParser = createNodeParser(
-	createHelpfeelNode,
-	{
-		parseOnNested: false,
-		parseOnQuoted: false,
-		patterns: [helpfeelRegExp],
-	},
-);
+export const HelpfeelNodeParser: NodeParser = createNodeParser(createHelpfeelNode, {
+  parseOnNested: false,
+  parseOnQuoted: false,
+  patterns: [helpfeelRegExp],
+});

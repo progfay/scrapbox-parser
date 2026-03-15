@@ -8,21 +8,21 @@ import type { PlainNode, StrongNode } from "./type.ts";
 const strongRegExp = /\[\[(?:[^[]|\[[^[]).*?\]*\]\]/;
 
 const createStrongNode: NodeCreator<StrongNode | PlainNode> = ([raw], opts) =>
-	opts.context === "table"
-		? createPlainNode(raw)
-		: [
-				{
-					type: "strong",
-					raw,
-					nodes: convertToNodes(raw.substring(2, raw.length - 2), {
-						...opts,
-						nested: true,
-					}),
-				},
-			];
+  opts.context === "table"
+    ? createPlainNode(raw)
+    : [
+        {
+          type: "strong",
+          raw,
+          nodes: convertToNodes(raw.substring(2, raw.length - 2), {
+            ...opts,
+            nested: true,
+          }),
+        },
+      ];
 
 export const StrongNodeParser: NodeParser = createNodeParser(createStrongNode, {
-	parseOnNested: false,
-	parseOnQuoted: true,
-	patterns: [strongRegExp],
+  parseOnNested: false,
+  parseOnQuoted: true,
+  patterns: [strongRegExp],
 });

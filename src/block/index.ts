@@ -14,17 +14,17 @@ import { convertToTitle } from "./Title.ts";
 export type Block = Title | CodeBlock | Table | Line;
 
 export const convertToBlock = (pack: Pack): Block => {
-	switch (pack.type) {
-		case "title":
-			return convertToTitle(pack);
+  switch (pack.type) {
+    case "title":
+      return convertToTitle(pack);
 
-		case "codeBlock":
-			return convertToCodeBlock(pack);
+    case "codeBlock":
+      return convertToCodeBlock(pack);
 
-		case "table":
-			return convertToTable(pack);
+    case "table":
+      return convertToTable(pack);
 
-		case "line":
-			return convertToLine(pack);
-	}
+    case "line":
+      return convertToLine(pack);
+  }
 };

@@ -7,45 +7,39 @@ import type { TitlePack } from "./Title.ts";
 
 export type Pack = TitlePack | CodeBlockPack | TablePack | LinePack;
 
-const isChildRowOfPack = (
-	{ type, rows: [firstRow] }: Pack,
-	row: Row,
-): boolean =>
-	(type === "codeBlock" || type === "table") && row.indent > firstRow.indent;
+const isChildRowOfPack = ({ type, rows: [firstRow] }: Pack, row: Row): boolean =>
+  (type === "codeBlock" || type === "table") && row.indent > firstRow.indent;
 
 const packing = (packs: Pack[], row: Row): Pack[] => {
-	const lastPack = packs[packs.length - 1];
-	if (lastPack !== undefined && isChildRowOfPack(lastPack, row)) {
-		lastPack.rows.push(row);
-	} else {
-		packs.push({
-			type: /^\s*code:/.test(row.text)
-				? "codeBlock"
-				: /^\s*table:/.test(row.text)
-					? "table"
-					: "line",
-			rows: [row],
-		});
-	}
+  const lastPack = packs[packs.length - 1];
+  if (lastPack !== undefined && isChildRowOfPack(lastPack, row)) {
+    lastPack.rows.push(row);
+  } else {
+    packs.push({
+      type: /^\s*code:/.test(row.text)
+        ? "codeBlock"
+        : /^\s*table:/.test(row.text)
+          ? "table"
+          : "line",
+      rows: [row],
+    });
+  }
 
-	return packs;
+  return packs;
 };
 
-export const packRows = (
-	rows: Row[],
-	{ hasTitle = true }: ParserOption,
-): Pack[] => {
-	if (hasTitle) {
-		const [title, ...body] = rows;
-		if (title === undefined) return [];
-		return [
-			{
-				type: "title",
-				rows: [title],
-			},
-			...body.reduce(packing, []),
-		];
-	}
+export const packRows = (rows: Row[], { hasTitle = true }: ParserOption): Pack[] => {
+  if (hasTitle) {
+    const [title, ...body] = rows;
+    if (title === undefined) return [];
+    return [
+      {
+        type: "title",
+        rows: [title],
+      },
+      ...body.reduce(packing, []),
+    ];
+  }
 
-	return rows.reduce(packing, []);
+  return rows.reduce(packing, []);
 };
