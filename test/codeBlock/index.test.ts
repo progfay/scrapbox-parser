@@ -2,10 +2,10 @@ import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("Code Block", () => {
-	it("Simple code block", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`
+  it("Simple code block", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `
 code:hello.js
  function () {
    alert(document.location.href)
@@ -13,29 +13,29 @@ code:hello.js
    // You can also write comments!
  }
 `.trim(),
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Bulleted code block", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				` code:hello.js
+  it("Bulleted code block", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        ` code:hello.js
   function () {
     alert(document.location.href)
     console.log("hello")
     // You can also write comments!
   }`,
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Code block with bullet", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				` Bullet
+  it("Code block with bullet", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        ` Bullet
  code:hello.js
   function () {
     alert(document.location.href)
@@ -43,15 +43,15 @@ code:hello.js
     // You can also write comments!
   }
  Bullet`,
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Consecutive code blocks", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`
+  it("Consecutive code blocks", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `
 code:hello.js
  function () {
    alert(document.location.href)
@@ -65,8 +65,8 @@ code:hello.js
    // You can also write comments!
  }
 `.trim(),
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 });

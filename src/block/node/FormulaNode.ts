@@ -7,25 +7,19 @@ import type { FormulaNode, PlainNode } from "./type.ts";
 const formulaWithTailHalfSpaceRegExp = /\[\$ .+? \]/;
 const formulaRegExp = /\[\$ [^\]]+\]/;
 
-const createFormulaNode: NodeCreator<FormulaNode | PlainNode> = (
-	[raw],
-	opts,
-) =>
-	opts.context === "table"
-		? createPlainNode(raw)
-		: [
-				{
-					type: "formula",
-					raw,
-					formula: raw.substring(3, raw.length - (raw.endsWith(" ]") ? 2 : 1)),
-				},
-			];
+const createFormulaNode: NodeCreator<FormulaNode | PlainNode> = ([raw], opts) =>
+  opts.context === "table"
+    ? createPlainNode(raw)
+    : [
+        {
+          type: "formula",
+          raw,
+          formula: raw.substring(3, raw.length - (raw.endsWith(" ]") ? 2 : 1)),
+        },
+      ];
 
-export const FormulaNodeParser: NodeParser = createNodeParser(
-	createFormulaNode,
-	{
-		parseOnNested: false,
-		parseOnQuoted: true,
-		patterns: [formulaWithTailHalfSpaceRegExp, formulaRegExp],
-	},
-);
+export const FormulaNodeParser: NodeParser = createNodeParser(createFormulaNode, {
+  parseOnNested: false,
+  parseOnQuoted: true,
+  patterns: [formulaWithTailHalfSpaceRegExp, formulaRegExp],
+});

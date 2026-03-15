@@ -20,52 +20,43 @@ import { StrongNodeParser } from "./StrongNode.ts";
 import type { Node } from "./type.ts";
 
 export interface NodeParserOption {
-	nested: boolean;
-	quoted: boolean;
-	context: "line" | "table";
+  nested: boolean;
+  quoted: boolean;
+  context: "line" | "table";
 }
 export type NextNodeParser = () => Node[];
-export type NodeParser = (
-	text: string,
-	opts: NodeParserOption,
-	next: NextNodeParser,
-) => Node[];
-export type TerminateNodeParser = (
-	text: string,
-	opts: NodeParserOption,
-) => Node[];
+export type NodeParser = (text: string, opts: NodeParserOption, next: NextNodeParser) => Node[];
+export type TerminateNodeParser = (text: string, opts: NodeParserOption) => Node[];
 
-const FalsyEliminator: NodeParser = (text, _, next) =>
-	text !== "" ? next() : [];
+const FalsyEliminator: NodeParser = (text, _, next) => (text !== "" ? next() : []);
 
 const combineNodeParsers =
-	(...parsers: NodeParser[]) =>
-	(text: string, opts: NodeParserOption): Node[] =>
-		parsers.reduceRight(
-			(acc: NextNodeParser, parser: NodeParser): NextNodeParser =>
-				() =>
-					parser(text, opts, acc),
-			() => PlainNodeParser(text, opts),
-		)();
+  (...parsers: NodeParser[]) =>
+  (text: string, opts: NodeParserOption): Node[] =>
+    parsers.reduceRight(
+      (acc: NextNodeParser, parser: NodeParser): NextNodeParser =>
+        () =>
+          parser(text, opts, acc),
+      () => PlainNodeParser(text, opts),
+    )();
 
-export const convertToNodes: ReturnType<typeof combineNodeParsers> =
-	combineNodeParsers(
-		FalsyEliminator,
-		QuoteNodeParser,
-		HelpfeelNodeParser,
-		NumberListNodeParser,
-		CodeNodeParser,
-		CommandLineNodeParser,
-		BlankNodeParser,
-		DecorationNodeParser,
-		FormulaNodeParser,
-		StrongImageNodeParser,
-		StrongIconNodeParser,
-		StrongNodeParser,
-		ImageNodeParser,
-		ExternalLinkNodeParser,
-		IconNodeParser,
-		GoogleMapNodeParser,
-		InternalLinkNodeParser,
-		HashTagNodeParser,
-	);
+export const convertToNodes: ReturnType<typeof combineNodeParsers> = combineNodeParsers(
+  FalsyEliminator,
+  QuoteNodeParser,
+  HelpfeelNodeParser,
+  NumberListNodeParser,
+  CodeNodeParser,
+  CommandLineNodeParser,
+  BlankNodeParser,
+  DecorationNodeParser,
+  FormulaNodeParser,
+  StrongImageNodeParser,
+  StrongIconNodeParser,
+  StrongNodeParser,
+  ImageNodeParser,
+  ExternalLinkNodeParser,
+  IconNodeParser,
+  GoogleMapNodeParser,
+  InternalLinkNodeParser,
+  HashTagNodeParser,
+);

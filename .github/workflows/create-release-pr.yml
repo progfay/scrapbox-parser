@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version type'
+        description: "Version type"
         required: true
         type: choice
         options:

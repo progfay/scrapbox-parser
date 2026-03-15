@@ -2,63 +2,63 @@ import { describe, it } from "node:test";
 import { parse } from "../../src/index.ts";
 
 describe("Table", () => {
-	it("Simple table", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`
+  it("Simple table", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `
 table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Bulleted table", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				` table:bulleted
+  it("Bulleted table", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        ` table:bulleted
  ${"\t"}1${"\t"}2${"\t"}3
  ${"\t"}1 ${"\t"}2 ${"\t"}3
  ${"\t"}------${"\t"}------${"\t"}------
  ${"\t"}a${"\t"}b${"\t"}c`,
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Table with empty cells", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`table:${" "}
+  it("Table with empty cells", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `table:${" "}
 ${"\t"} ${"\t"}　${"\t"}${"  "}
 ${"\t"}${"\t"}${"\t"}`,
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Staggered table", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`table:Staggered
+  it("Staggered table", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `table:Staggered
 ${"\t"}1${"\t"}2${"\t"}3${"\t"}4
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1
 ${"\t"}1${"\t"}2
 ${"\t"}`,
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Consecutive table", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`
+  it("Consecutive table", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `
 table:hello
 ${"\t"}1${"\t"}2${"\t"}3
 ${"\t"}1 ${"\t"}2 ${"\t"}3
@@ -70,15 +70,15 @@ ${"\t"}1 ${"\t"}2 ${"\t"}3
 ${"\t"}------${"\t"}------${"\t"}------
 ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 
-	it("Node in table cells", ({ assert }) => {
-		assert.snapshot(
-			parse(
-				`
+  it("Node in table cells", ({ assert }) => {
+    assert.snapshot(
+      parse(
+        `
 table:node in table cells
 ${"\t"}#hashtag
 ${"\t"}[* deco]
@@ -102,8 +102,8 @@ ${"\t"}[[progfay.icon]]
 ${"\t"}[[https://image.com/image.png]]
 ${"\t"}[[strong]]
 `.trim(),
-				{ hasTitle: false },
-			),
-		);
-	});
+        { hasTitle: false },
+      ),
+    );
+  });
 });
