@@ -33,14 +33,11 @@
     "prepare": "npm run build",
     "test": "node --test --experimental-test-coverage",
     "test:update": "npm test -- --test-update-snapshots",
-    "lint": "npm run lint:vp && npm run lint:tsc",
-    "lint:vp": "vp lint",
-    "lint:tsc": "tsc -p ./tsconfig.lint.json",
+    "lint": "vp lint",
     "format": "vp fmt"
   },
   "devDependencies": {
     "@types/node": "24.12.0",
-    "typescript": "5.9.3",
     "vite-plus": "0.1.11"
   },
   "devEngines": {
