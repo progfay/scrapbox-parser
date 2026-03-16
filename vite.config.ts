@@ -13,9 +13,18 @@ export default defineConfig({
   lint: {
     ignorePatterns: ["dist/**", "coverage/**"],
     plugins: ["import", "typescript"],
+    options: { typeAware: true },
     rules: {
       "import/extensions": "error",
       "@typescript-eslint/no-inferrable-types": "error",
+      "@typescript-eslint/no-floating-promises": [
+        "error",
+        {
+          allowForKnownSafeCalls: [
+            { from: "file", name: ["describe", "it"], path: "./**/*.test.ts" },
+          ],
+        },
+      ],
     },
   },
   fmt: {},
