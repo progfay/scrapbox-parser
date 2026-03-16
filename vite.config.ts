@@ -13,6 +13,7 @@ export default defineConfig({
   lint: {
     ignorePatterns: ["dist/**", "coverage/**"],
     plugins: ["import", "typescript"],
+    options: { typeAware: true },
     rules: {
       "import/extensions": "error",
       "@typescript-eslint/no-inferrable-types": "error",
