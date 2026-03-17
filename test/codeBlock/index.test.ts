@@ -1,9 +1,9 @@
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src/index.ts";
 
 describe("Code Block", () => {
-  it("Simple code block", ({ assert }) => {
-    assert.snapshot(
+  it("Simple code block", () => {
+    expect(
       parse(
         `
 code:hello.js
@@ -15,11 +15,11 @@ code:hello.js
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Bulleted code block", ({ assert }) => {
-    assert.snapshot(
+  it("Bulleted code block", () => {
+    expect(
       parse(
         ` code:hello.js
   function () {
@@ -29,11 +29,11 @@ code:hello.js
   }`,
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Code block with bullet", ({ assert }) => {
-    assert.snapshot(
+  it("Code block with bullet", () => {
+    expect(
       parse(
         ` Bullet
  code:hello.js
@@ -45,11 +45,11 @@ code:hello.js
  Bullet`,
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Consecutive code blocks", ({ assert }) => {
-    assert.snapshot(
+  it("Consecutive code blocks", () => {
+    expect(
       parse(
         `
 code:hello.js
@@ -67,6 +67,6 @@ code:hello.js
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 });

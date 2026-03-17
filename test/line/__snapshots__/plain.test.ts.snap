@@ -1,10 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
 exports[`plain > Blank line 1`] = `
 [
   {
     "indent": 0,
+    "nodes": [],
     "type": "line",
-    "nodes": []
-  }
+  },
 ]
 `;
 
@@ -12,15 +14,15 @@ exports[`plain > Keep tail space 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "plain",
         "raw": "Tail space ->  ",
-        "text": "Tail space ->  "
-      }
-    ]
-  }
+        "text": "Tail space ->  ",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -28,14 +30,14 @@ exports[`plain > Simple plain text 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "plain",
         "raw": "Plain text",
-        "text": "Plain text"
-      }
-    ]
-  }
+        "text": "Plain text",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;

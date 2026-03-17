@@ -1,26 +1,25 @@
-import { deepStrictEqual, strictEqual } from "node:assert/strict";
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src/index.ts";
 
 describe("icon", () => {
-  it("Simple root icon", ({ assert }) => {
-    assert.snapshot(parse("[/icons/+1.icon]", { hasTitle: false }));
+  it("Simple root icon", () => {
+    expect(parse("[/icons/+1.icon]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Simple relative icon", ({ assert }) => {
-    assert.snapshot(parse("[me.icon]", { hasTitle: false }));
+  it("Simple relative icon", () => {
+    expect(parse("[me.icon]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Multiple icons", ({ assert }) => {
-    assert.snapshot(parse("[me.icon*3]", { hasTitle: false }));
+  it("Multiple icons", () => {
+    expect(parse("[me.icon*3]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Icon and internal link on same line", ({ assert }) => {
-    assert.snapshot(
+  it("Icon and internal link on same line", () => {
+    expect(
       parse("[Internal link][me.icon]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
   it("Each multiple icon must be different Object", () => {
@@ -30,7 +29,7 @@ describe("icon", () => {
       throw new Error("fail");
     }
 
-    strictEqual(block.nodes.length, 2);
-    deepStrictEqual(block.nodes[0], block.nodes[1]);
+    expect(block.nodes.length).toBe(2);
+    expect(block.nodes[0]).toStrictEqual(block.nodes[1]);
   });
 });

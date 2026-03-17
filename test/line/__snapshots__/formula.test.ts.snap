@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`formula > Formula followed immediately by a decoration notation with trailing spaces 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "formula": "1+1=2",
+        "raw": "[$ 1+1=2]",
+        "type": "formula",
+      },
+      {
+        "decos": [
+          ".",
+        ],
+        "nodes": [
+          {
+            "content": "",
+            "href": "link",
+            "pathType": "relative",
+            "raw": "[link]",
+            "type": "link",
+          },
+          {
+            "raw": " ",
+            "text": " ",
+            "type": "plain",
+          },
+        ],
+        "raw": "[. [link] ]",
+        "rawDecos": ".",
+        "type": "decoration",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`formula > Formula includes [] with tail half-space 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "formula": "[x]",
+        "raw": "[$ [x] ]",
+        "type": "formula",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`formula > Formula includes [] without tail half-space 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "formula": "[x",
+        "raw": "[$ [x]",
+        "type": "formula",
+      },
+      {
+        "raw": "]",
+        "text": "]",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
+exports[`formula > Simple formula 1`] = `
+[
+  {
+    "indent": 0,
+    "nodes": [
+      {
+        "formula": "\\frac{3}{2}^N",
+        "raw": "[$ \\frac{3}{2}^N]",
+        "type": "formula",
+      },
+    ],
+    "type": "line",
+  },
+]
+`;

@@ -1,31 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
 exports[`hashTag > HashTag in sentence with spaces 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "plain",
         "raw": "This is a",
-        "text": "This is a"
+        "text": "This is a",
+        "type": "plain",
       },
       {
-        "type": "plain",
         "raw": " ",
-        "text": " "
-      },
-      {
-        "type": "hashTag",
-        "raw": "#tag",
-        "href": "tag"
-      },
-      {
+        "text": " ",
         "type": "plain",
+      },
+      {
+        "href": "tag",
+        "raw": "#tag",
+        "type": "hashTag",
+      },
+      {
         "raw": " .",
-        "text": " ."
-      }
-    ]
-  }
+        "text": " .",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -33,15 +35,15 @@ exports[`hashTag > HashTag in sentence without spaces is not hashTag 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "plain",
         "raw": "→#notTag←",
-        "text": "→#notTag←"
-      }
-    ]
-  }
+        "text": "→#notTag←",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -49,15 +51,15 @@ exports[`hashTag > HashTag includes \`#\` 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "hashTag",
+        "href": "hash#Tag",
         "raw": "#hash#Tag",
-        "href": "hash#Tag"
-      }
-    ]
-  }
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -65,35 +67,35 @@ exports[`hashTag > Multiple hashTag 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "hashTag",
+        "href": "hoge",
         "raw": "#hoge",
-        "href": "hoge"
-      },
-      {
-        "type": "plain",
-        "raw": " ",
-        "text": " "
-      },
-      {
         "type": "hashTag",
+      },
+      {
+        "raw": " ",
+        "text": " ",
+        "type": "plain",
+      },
+      {
+        "href": "fuga",
         "raw": "#fuga",
-        "href": "fuga"
-      },
-      {
-        "type": "plain",
-        "raw": " ",
-        "text": " "
-      },
-      {
         "type": "hashTag",
+      },
+      {
+        "raw": " ",
+        "text": " ",
+        "type": "plain",
+      },
+      {
+        "href": "piyo",
         "raw": "#piyo",
-        "href": "piyo"
-      }
-    ]
-  }
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -101,15 +103,15 @@ exports[`hashTag > Only \`#\` is not hashTag 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "plain",
         "raw": "#",
-        "text": "#"
-      }
-    ]
-  }
+        "text": "#",
+        "type": "plain",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -117,14 +119,14 @@ exports[`hashTag > Simple hashTag 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "hashTag",
+        "href": "tag",
         "raw": "#tag",
-        "href": "tag"
-      }
-    ]
-  }
+        "type": "hashTag",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;

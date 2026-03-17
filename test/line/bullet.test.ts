@@ -1,29 +1,29 @@
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src/index.ts";
 
 describe("bullet", () => {
-  it("Single-byte space indent", ({ assert }) => {
-    assert.snapshot(
+  it("Single-byte space indent", () => {
+    expect(
       parse(" Single-byte space", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Double-byte space indent", ({ assert }) => {
-    assert.snapshot(
+  it("Double-byte space indent", () => {
+    expect(
       parse("　Double-byte space", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Tab indent", ({ assert }) => {
-    assert.snapshot(parse("	Tab", { hasTitle: false }));
+  it("Tab indent", () => {
+    expect(parse("	Tab", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Multi lines bullet", ({ assert }) => {
-    assert.snapshot(
+  it("Multi lines bullet", () => {
+    expect(
       parse(
         `
 no bullet (indent: 0)
@@ -33,6 +33,6 @@ no bullet (indent: 0)
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 });

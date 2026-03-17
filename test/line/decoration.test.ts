@@ -1,10 +1,9 @@
-import { deepStrictEqual } from "node:assert/strict";
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { type Decoration, type DecorationNode, type Line, parse } from "../../src/index.ts";
 
 describe("decoration", () => {
-  it("Simple decoration", ({ assert }) => {
-    assert.snapshot(
+  it("Simple decoration", () => {
+    expect(
       parse(
         `
 [* deco]
@@ -40,7 +39,7 @@ describe("decoration", () => {
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
   it("All decoration", () => {
@@ -70,58 +69,58 @@ describe("decoration", () => {
       "_",
       "~",
     ];
-    deepStrictEqual(received.sort(), decos.sort());
+    expect(received.sort()).toStrictEqual(decos.sort());
   });
 
-  it("Decoration * overflow", ({ assert }) => {
-    assert.snapshot(parse("[*********** 11*]", { hasTitle: false }));
+  it("Decoration * overflow", () => {
+    expect(parse("[*********** 11*]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration similar with externalLink", ({ assert }) => {
-    assert.snapshot(
+  it("Decoration similar with externalLink", () => {
+    expect(
       parse("[* hoge https://example.com]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Decoration with hashTag", ({ assert }) => {
-    assert.snapshot(
+  it("Decoration with hashTag", () => {
+    expect(
       parse("[* #tag]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Decoration with many [", ({ assert }) => {
-    assert.snapshot(parse("[! [[[[[[a]", { hasTitle: false }));
+  it("Decoration with many [", () => {
+    expect(parse("[! [[[[[[a]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration with many [ and link", ({ assert }) => {
-    assert.snapshot(parse("[! [[[[[[a]]", { hasTitle: false }));
+  it("Decoration with many [ and link", () => {
+    expect(parse("[! [[[[[[a]]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration with strong notation (it's just link)", ({ assert }) => {
-    assert.snapshot(parse("[* [[link]]]", { hasTitle: false }));
+  it("Decoration with strong notation (it's just link)", () => {
+    expect(parse("[* [[link]]]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration with icon notation", ({ assert }) => {
-    assert.snapshot(
+  it("Decoration with icon notation", () => {
+    expect(
       parse("[* [progfay.icon]]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Decoration with strong icon notation (it's just icon, not strong)", ({ assert }) => {
-    assert.snapshot(parse("[* [[progfay.icon]]]", { hasTitle: false }));
+  it("Decoration with strong icon notation (it's just icon, not strong)", () => {
+    expect(parse("[* [[progfay.icon]]]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration with strong image notation (it's just image, not strong)", ({ assert }) => {
-    assert.snapshot(
+  it("Decoration with strong image notation (it's just image, not strong)", () => {
+    expect(
       parse("[* [[https://example.com/image.png]]]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 });
