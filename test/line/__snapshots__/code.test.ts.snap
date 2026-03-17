@@ -1,16 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
 exports[`code > Empty code with backquote 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "code",
         "raw": "\`\`",
-        "text": ""
-      }
-    ]
-  }
+        "text": "",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;
 
@@ -18,14 +20,14 @@ exports[`code > Simple code with backquote 1`] = `
 [
   {
     "indent": 0,
-    "type": "line",
     "nodes": [
       {
-        "type": "code",
         "raw": "\`Simple code\`",
-        "text": "Simple code"
-      }
-    ]
-  }
+        "text": "Simple code",
+        "type": "code",
+      },
+    ],
+    "type": "line",
+  },
 ]
 `;

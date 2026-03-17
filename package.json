@@ -31,20 +31,13 @@
   "scripts": {
     "build": "vp pack",
     "prepare": "npm run build",
-    "test": "node --test --experimental-test-coverage",
-    "test:update": "npm test -- --test-update-snapshots",
+    "test": "vp test",
+    "test:update": "vp test --update",
     "lint": "vp lint",
     "format": "vp fmt"
   },
   "devDependencies": {
     "@types/node": "24.12.0",
     "vite-plus": "0.1.11"
-  },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": ">=24.10.0",
-      "onFail": "error"
-    }
   }
 }

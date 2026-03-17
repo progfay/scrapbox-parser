@@ -1,28 +1,28 @@
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src/index.ts";
 
 describe("line", () => {
-  it("Line that have multi node", ({ assert }) => {
-    assert.snapshot(parse("[Link][Link]", { hasTitle: false }));
+  it("Line that have multi node", () => {
+    expect(parse("[Link][Link]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration line includes internal link", ({ assert }) => {
-    assert.snapshot(parse("[* [Link]]", { hasTitle: false }));
+  it("Decoration line includes internal link", () => {
+    expect(parse("[* [Link]]", { hasTitle: false })).toMatchSnapshot();
   });
 
-  it("Decoration line includes external link", ({ assert }) => {
-    assert.snapshot(
+  it("Decoration line includes external link", () => {
+    expect(
       parse("[* [https://example.com example]]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Multi `]`", ({ assert }) => {
-    assert.snapshot(
+  it("Multi `]`", () => {
+    expect(
       parse("[* [Link]`code`[Link]]", {
         hasTitle: false,
       }),
-    );
+    ).toMatchSnapshot();
   });
 });

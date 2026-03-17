@@ -28,4 +28,7 @@ export default defineConfig({
     },
   },
   fmt: {},
+  test: {
+    include: ["test/**/*.test.ts"],
+  },
 });

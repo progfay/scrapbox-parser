@@ -1,9 +1,9 @@
-import { describe, it } from "node:test";
+import { describe, expect, it } from "vitest";
 import { parse } from "../../src/index.ts";
 
 describe("Table", () => {
-  it("Simple table", ({ assert }) => {
-    assert.snapshot(
+  it("Simple table", () => {
+    expect(
       parse(
         `
 table:hello
@@ -14,11 +14,11 @@ ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Bulleted table", ({ assert }) => {
-    assert.snapshot(
+  it("Bulleted table", () => {
+    expect(
       parse(
         ` table:bulleted
  ${"\t"}1${"\t"}2${"\t"}3
@@ -27,22 +27,22 @@ ${"\t"}a${"\t"}b${"\t"}c
  ${"\t"}a${"\t"}b${"\t"}c`,
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Table with empty cells", ({ assert }) => {
-    assert.snapshot(
+  it("Table with empty cells", () => {
+    expect(
       parse(
         `table:${" "}
 ${"\t"} ${"\t"}　${"\t"}${"  "}
 ${"\t"}${"\t"}${"\t"}`,
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Staggered table", ({ assert }) => {
-    assert.snapshot(
+  it("Staggered table", () => {
+    expect(
       parse(
         `table:Staggered
 ${"\t"}1${"\t"}2${"\t"}3${"\t"}4
@@ -52,11 +52,11 @@ ${"\t"}1${"\t"}2
 ${"\t"}`,
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Consecutive table", ({ assert }) => {
-    assert.snapshot(
+  it("Consecutive table", () => {
+    expect(
       parse(
         `
 table:hello
@@ -72,11 +72,11 @@ ${"\t"}a${"\t"}b${"\t"}c
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 
-  it("Node in table cells", ({ assert }) => {
-    assert.snapshot(
+  it("Node in table cells", () => {
+    expect(
       parse(
         `
 table:node in table cells
@@ -104,6 +104,6 @@ ${"\t"}[[strong]]
 `.trim(),
         { hasTitle: false },
       ),
-    );
+    ).toMatchSnapshot();
   });
 });
