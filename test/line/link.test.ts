@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vite-plus/test";
 import { parse } from "../../src/index.ts";
 
 describe("link", () => {
@@ -62,7 +62,9 @@ describe("link", () => {
   });
 
   it("Link with link", () => {
-    expect(parse("[https://example.com https://example.com]", { hasTitle: false })).toMatchSnapshot();
+    expect(
+      parse("[https://example.com https://example.com]", { hasTitle: false }),
+    ).toMatchSnapshot();
   });
 
   it("Link with GET parameters", () => {
