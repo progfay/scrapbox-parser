@@ -1,5 +1,10 @@
-import { describe, expect, it } from "vitest";
-import { type Decoration, type DecorationNode, type Line, parse } from "../../src/index.ts";
+import { describe, expect, it } from "vite-plus/test";
+import {
+  type Decoration,
+  type DecorationNode,
+  type Line,
+  parse,
+} from "../../src/index.ts";
 
 describe("decoration", () => {
   it("Simple decoration", () => {
@@ -113,7 +118,9 @@ describe("decoration", () => {
   });
 
   it("Decoration with strong icon notation (it's just icon, not strong)", () => {
-    expect(parse("[* [[progfay.icon]]]", { hasTitle: false })).toMatchSnapshot();
+    expect(
+      parse("[* [[progfay.icon]]]", { hasTitle: false }),
+    ).toMatchSnapshot();
   });
 
   it("Decoration with strong image notation (it's just image, not strong)", () => {

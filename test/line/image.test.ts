@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vite-plus/test";
 import { parse } from "../../src/index.ts";
 
 describe("image", () => {
@@ -41,9 +41,12 @@ describe("image", () => {
 
   it("Image with double image link", () => {
     expect(
-      parse("[https://example.com/forward.png https://example.com/backward.png]", {
-        hasTitle: false,
-      }),
+      parse(
+        "[https://example.com/forward.png https://example.com/backward.png]",
+        {
+          hasTitle: false,
+        },
+      ),
     ).toMatchSnapshot();
   });
 
