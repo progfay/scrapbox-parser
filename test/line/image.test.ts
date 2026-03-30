@@ -41,12 +41,9 @@ describe("image", () => {
 
   it("Image with double image link", () => {
     expect(
-      parse(
-        "[https://example.com/forward.png https://example.com/backward.png]",
-        {
-          hasTitle: false,
-        },
-      ),
+      parse("[https://example.com/forward.png https://example.com/backward.png]", {
+        hasTitle: false,
+      }),
     ).toMatchSnapshot();
   });
 

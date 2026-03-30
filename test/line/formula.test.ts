@@ -20,8 +20,6 @@ describe("formula", () => {
 
   // ref. https://github.com/progfay/scrapbox-parser/issues/1892
   it("Formula followed immediately by a decoration notation with trailing spaces", () => {
-    expect(
-      parse("[$ 1+1=2][. [link] ]", { hasTitle: false }),
-    ).toMatchSnapshot();
+    expect(parse("[$ 1+1=2][. [link] ]", { hasTitle: false })).toMatchSnapshot();
   });
 });
