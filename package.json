@@ -37,6 +37,6 @@
     "format": "vp fmt"
   },
   "devDependencies": {
-    "vite-plus": "0.1.13"
+    "vite-plus": "0.1.14"
   }
 }
