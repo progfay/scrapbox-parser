@@ -30,11 +30,9 @@
   },
   "scripts": {
     "build": "vp pack",
-    "prepare": "npm run build",
+    "prepare": "vpr build",
     "test": "vp test",
-    "test:update": "vp test --update",
-    "lint": "vp lint",
-    "format": "vp fmt"
+    "lint": "vp check"
   },
   "devDependencies": {
     "vite-plus": "1.4.0"
